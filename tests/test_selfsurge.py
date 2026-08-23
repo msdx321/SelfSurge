@@ -72,6 +72,24 @@ class CatalogConversionTest(unittest.TestCase):
                     source_proxy_count,
                     name,
                 )
+                source_reject_count = len(
+                    re.findall(
+                        r"^[^#\n]+,\s*REJECT(?:-DROP)?(?:\s*(?:,|//|$))",
+                        source,
+                        re.MULTILINE,
+                    )
+                )
+                self.assertEqual(
+                    len(
+                        re.findall(
+                            r"^[^#\n]+,\s*REJECT-DROP(?:\s*(?:,|//|$))",
+                            module,
+                            re.MULTILINE,
+                        )
+                    ),
+                    source_reject_count,
+                    name,
+                )
 
                 lines = module.splitlines()
                 self.assertTrue(lines[0].startswith("#!name="), name)

@@ -547,12 +547,12 @@ def _convert_rule(
     body, policy, options, comment = match.groups()
     options = options or ""
     comment = comment or ""
-    if policy in {"DIRECT", "REJECT"}:
-        return f"{body}, {policy}{options}{comment}"
+    if policy == "DIRECT":
+        return f"{body}, DIRECT{options}{comment}"
+    if policy in {"REJECT", "REJECT-DROP"}:
+        return f"{body}, REJECT-DROP{options}{comment}"
     if policy == "PROXY":
         return f"# Requires main-profile policy selection: {line}"
-    if policy == "REJECT-DROP":
-        return f"{body}, REJECT{options}{comment}"
     if policy in {"REJECT-DICT", "REJECT-IMG"}:
         rule_type, separator, pattern = body.partition(",")
         if rule_type.strip() == "URL-REGEX" and separator:
@@ -562,7 +562,7 @@ def _convert_rule(
             ):
                 rewrites[heading].append(converted)
             return f"# Converted to rewrite: {line}"
-        return f"{body}, REJECT{options}{comment}"
+        return f"{body}, REJECT-DROP{options}{comment}"
     return f"# Unsupported Loon policy {policy}: {line}"
 
 
