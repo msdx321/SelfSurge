@@ -1,0 +1,26 @@
+# Source: https://kelee.one/Tool/Loon/Lpx/iMaiCai_remove_ads.lpx
+# Adapted from Loon LPX to Surge module by SelfSurge.
+# License: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+#!name=小象超市去广告
+#!desc=移除开屏广告、应用内弹窗、猜你想买、横幅推广和悬浮窗。
+#!openUrl=https://apps.apple.com/app/id1444411068
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!category=去广告
+#!homepage=https://hub.kelee.one
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/iMaiCai.png
+#!date=2026-06-01 17:11:35
+
+[Map Local]
+^https:\/\/mall\.meituan\.com\/api\/c\/homepage\/splash data-type=text data="{}" header="Content-Type:application/json" status-code=200
+^https:\/\/mall\.meituan\.com\/api\/c\/homepage\/bubble\/operate\/info data-type=text data="{}" header="Content-Type:application/json" status-code=200
+^https:\/\/mall\.meituan\.com\/api\/c\/jigsaw\/code\/category-banner-\d+\/ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+^https:\/\/mall\.meituan\.com\/api\/c\/poi\/\d+\/order\/recommend\/v\d data-type=text data="{}" header="Content-Type:application/json" status-code=200
+^https:\/\/mall\.meituan\.com\/api\/c\/banner\/ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+^https:\/\/mall\.meituan\.com\/api\/c\/poi\/\d+\/personal\/recommend data-type=text data="{}" header="Content-Type:application/json" status-code=200
+^https:\/\/businessapi\.ksedt\.com\/signupindex\/jxlist data-type=text data="{}" header="Content-Type:application/json" status-code=200
+
+[Script]
+移除下发广告 = type=http-response,pattern=^https:\/\/portal-portm\.meituan\.com\/horn_ios\/mergeRequest,script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/iMaiCai/iMaiCai_remove_ads.js,requires-body=true
+
+[MITM]
+hostname = %APPEND% portal-portm.meituan.com, mall.meituan.com, businessapi.ksedt.com

@@ -1,0 +1,26 @@
+# Source: https://kelee.one/Tool/Loon/Lpx/YoudaoDict_remove_ads.lpx
+# Adapted from Loon LPX to Surge module by SelfSurge.
+# License: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+#!name=网易有道词典去广告
+#!desc=移除开屏广告、弹窗广告、右上角推广。
+#!openUrl=https://apps.apple.com/app/id353115739
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!category=去广告
+#!homepage=https://hub.kelee.one
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/YoudaoDict.png
+#!date=2026-06-01 17:11:35
+
+[Rule]
+# Invalid upstream Loon rule: ad-sdk-config.youdao.com
+
+[Map Local]
+^https:\/\/dict\.youdao\.com\/vip\/activity\/startup\/ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+^https:\/\/dict\.youdao\.com\/vip\/activity\/retention\/configs\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
+^https:\/\/dict\.youdao\.com\/vip\/activity\/retention\/match\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
+^https:\/\/dict\.youdao\.com\/vip\/user\/paid\/guide\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
+
+[Body Rewrite]
+http-response-jq ^https:\/\/dict\.youdao\.com\/homepage\/toolbar\/get\/ 'delpaths([["data","vipTag"]])'
+
+[MITM]
+hostname = %APPEND% dict.youdao.com

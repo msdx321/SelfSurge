@@ -1,0 +1,32 @@
+# Source: https://kelee.one/Tool/Loon/Lpx/Zhibo8_remove_ads.lpx
+# Adapted from Loon LPX to Surge module by SelfSurge.
+# License: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+#!name=直播吧去广告
+#!desc=移除信息流广告、横幅广告、弹窗广告、皮肤配置、悬浮挂件、热门搜索，移除青少年模式，精简我的页面。
+#!openUrl=https://apps.apple.com/app/id1228058501
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!category=去广告
+#!homepage=https://hub.kelee.one
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Zhibo8.png
+#!date=2026-07-03 08:23:50
+
+[Map Local]
+^https:\/\/rn\.qiumibao\.com\/news\/relation\.php$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+^https:\/\/guess\.qiumibao\.com\/api\/c\/notice$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+^https:\/\/guess\.qiumibao\.com\/api\/c\/pop$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+^https:\/\/guess\.qiumibao\.com\/api\/ep\/pop$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+^https:\/\/guess\.qiumibao\.com\/api\/c\/banner$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+^https:\/\/search\.qiumibao\.com\/hot\/word_list$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+
+[Body Rewrite]
+http-response-jq ^https:\/\/headline\.qiumibao\.com\/recommend\/list\? '.news|=map(select(.model=="news" or .model=="video"))'
+http-response-jq ^https:\/\/a\.qiumibao\.com\/found\/\? 'map(select(.is_game != true))'
+http-response-jq ^https:\/\/a\.qiumibao\.com\/ios\/config\/\? 'delpaths([["skin"],["advert"],["advert_config"],["mall"],["httpdns"],["reward"],["pgame"],["corner_mark"],["liveshop"],["theme"],["pop"],["live_activity_push"]])'
+http-response-jq ^https:\/\/a\.qiumibao\.com\/ios\/config\/\? '.all_sections.match_sections.labels |= ( if . then (.blacks_disable |= if . then map(select(. != "游戏")) else . end ) | (.show |= if . then map(select(. != "游戏")) else . end ) else . end )'
+http-response-jq ^https:\/\/guess\.qiumibao\.com\/api\/n\/rcd$ 'delpaths([["data","banner"]])'
+http-response-jq ^https:\/\/pre-match\.qiumibao\.com\/pre_match_data\/v\d\/\d+-\d+-\d+\/\d+_fund\.htm\? 'delpaths([["'del(","data"],["|"],["select(","type"],["=="],["\"guide\"))'"]])'
+http-response-jq ^https:\/\/guess\.qiumibao\.com\/api\/c\/menu$ 'delpaths([["data","banner"]])'
+http-response-jq ^https:\/\/s\.qiumibao\.com\/m\/ios\/json\/zhibo\/zuqiu\/\d+\/match\d+vl\.htm\? 'delpaths([["ep_v2"],["ep_live"]])'
+
+[MITM]
+hostname = %APPEND% headline.qiumibao.com, a.qiumibao.com, rn.qiumibao.com, guess.qiumibao.com, s.qiumibao.com, pre-match.qiumibao.com, search.qiumibao.com

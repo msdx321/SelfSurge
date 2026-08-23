@@ -1,0 +1,17 @@
+# Source: https://kelee.one/Tool/Loon/Lpx/DjDuoDuo_remove_ads.lpx
+# Adapted from Loon LPX to Surge module by SelfSurge.
+# License: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+#!name=DJ多多去广告
+#!desc=移除开屏广告及歌单广告
+#!openUrl=https://apps.apple.com/app/id1039764887
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!category=去广告
+#!homepage=https://hub.kelee.one
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/DjDuoDuo.png
+#!date=2026-08-22 12:51:37
+
+[Script]
+去广告 = type=http-response,pattern=^https:\/\/api\.dianyinduoduo\.com\/v4\/config\.php\?,script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/DjDuoDuo/DjDuoDuo_remove_ads.js,requires-body=true
+
+[MITM]
+hostname = %APPEND% api.dianyinduoduo.com

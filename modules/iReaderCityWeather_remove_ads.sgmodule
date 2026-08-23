@@ -1,0 +1,18 @@
+# Source: https://kelee.one/Tool/Loon/Lpx/iReaderCityWeather_remove_ads.lpx
+# Adapted from Loon LPX to Surge module by SelfSurge.
+# License: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+#!name=天气预报去广告
+#!desc=移除开屏广告、弹窗广告、横幅广告、悬浮挂件，精简我的页面。
+#!openUrl=https://apps.apple.com/app/id455611831
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!category=去广告
+#!homepage=https://hub.kelee.one
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/iReaderCityWeather.png
+#!date=2026-06-30 19:41:51
+
+[Rule]
+DOMAIN, adsys.nineton.cn, REJECT
+DOMAIN, adcdn.ccqyj.com, REJECT
+
+[Map Local]
+^http:\/\/weatherapi\.ccqyj\.com\/server\/listsv\d$ data-type=base64 data="eyJkYXRhIjpbeyJ0aXRsZSI6IuWwj+W3peWFtyIsInR5cGUiOjEsInNvcnQiOjEsImlkIjoiNWQ1ZmI3YzQxYTBjNDAwMTU2NzlhM2UzIiwibGlzdCI6W3sidGl0bGUiOiLkuLvpopjnmq7ogqQiLCJncm91cElkIjoiNWQ1ZmI3YzQxYTBjNDAwMTU2NzlhM2UzIiwiaW1hZ2UiOiJodHRwOi8vY2RuLndlYXRoZXIubmluZXRvbi5jbi9iNTJiZTI2YWUwNmY2ODI0ZDE3MTM3NWQwZGFjNTFmMS5wbmciLCJkYXJrX2ljb24iOiJodHRwOi8vY2RuLndlYXRoZXIubmluZXRvbi5jbi9lNzE0YWQ2NDIxOTY1YzgzNjhjYTZhZjQzOGFjZGUzNi5wbmciLCJ0eXBlIjoxLCJwcm90b2NvbCI6Im50d2VhdGhlcjovL29wZW50aGVtZSIsInNvcnQiOjExMDMsInZlcnNpb24iOjgxNCwicmlnaHRWZXJzaW9uIjowLCJzeW1ib2wiOjF9XX1dLCJjb2RlIjoxLCJpbmZvIjoib2sifQ==" header="Content-Type:application/json" status-code=200

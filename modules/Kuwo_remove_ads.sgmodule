@@ -1,0 +1,43 @@
+# Source: https://kelee.one/Tool/Loon/Lpx/Kuwo_remove_ads.lpx
+# Adapted from Loon LPX to Surge module by SelfSurge.
+# License: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+#!name=酷我音乐去广告
+#!desc=移除开屏广告、各类弹窗、悬浮窗、各类横幅广告、信息流广告、歌词评论区广告和播放器界面广告，精简侧边栏。
+#!openUrl=https://apps.apple.com/app/id588673713
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!category=去广告
+#!homepage=https://hub.kelee.one
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Kuwo.png
+#!date=2026-06-01 17:11:35
+
+[Rule]
+# Converted to rewrite: URL-REGEX, "^http:\/\/rich\.kuwo\.cn\/AdService\/", REJECT-DICT
+# Converted to rewrite: URL-REGEX, "^http:\/\/wapi\.kuwo\.cn\/openapi\/v\d\/user\/freeMode\/", REJECT-DICT
+# Converted to rewrite: URL-REGEX, "^http:\/\/wapi\.kuwo\.cn\/openapi\/v\d\/app\/pasterAdvert\/", REJECT-DICT
+# Converted to rewrite: URL-REGEX, "^http:\/\/wapi\.kuwo\.cn\/openapi\/v\d\/app\/startup\/config", REJECT-DICT
+# Converted to rewrite: URL-REGEX, "^http:\/\/rich\.kuwo\.cn\/EcomResourceServer\/", REJECT-DICT
+IP-CIDR, 111.206.98.63/32, REJECT, no-resolve
+# Converted to rewrite: URL-REGEX, "^http:\/\/searchrecterm\.kuwo\.cn\/recterm\.s", REJECT-DICT
+# Converted to rewrite: URL-REGEX, "^http:\/\/wapi\.kuwo\.cn\/openapi\/v\d\/app\/newMenuList\/menuListInfo", REJECT-DICT
+# Converted to rewrite: URL-REGEX, "^http:\/\/vip\d\.kuwo\.cn\/vip\/v\d\/sysinfo\?op=getRePayAndDoPayBox", REJECT-DICT
+# Converted to rewrite: URL-REGEX, "^http:\/\/wapi\.kuwo\.cn\/openapi\/v\d\/album\/adBar\/", REJECT-DICT
+
+[Map Local]
+"^http:\/\/rich\.kuwo\.cn\/AdService\/" data-type=text data="{}" header="Content-Type:application/json" status-code=200
+"^http:\/\/wapi\.kuwo\.cn\/openapi\/v\d\/user\/freeMode\/" data-type=text data="{}" header="Content-Type:application/json" status-code=200
+"^http:\/\/wapi\.kuwo\.cn\/openapi\/v\d\/app\/pasterAdvert\/" data-type=text data="{}" header="Content-Type:application/json" status-code=200
+"^http:\/\/wapi\.kuwo\.cn\/openapi\/v\d\/app\/startup\/config" data-type=text data="{}" header="Content-Type:application/json" status-code=200
+"^http:\/\/rich\.kuwo\.cn\/EcomResourceServer\/" data-type=text data="{}" header="Content-Type:application/json" status-code=200
+"^http:\/\/searchrecterm\.kuwo\.cn\/recterm\.s" data-type=text data="{}" header="Content-Type:application/json" status-code=200
+"^http:\/\/wapi\.kuwo\.cn\/openapi\/v\d\/app\/newMenuList\/menuListInfo" data-type=text data="{}" header="Content-Type:application/json" status-code=200
+"^http:\/\/vip\d\.kuwo\.cn\/vip\/v\d\/sysinfo\?op=getRePayAndDoPayBox" data-type=text data="{}" header="Content-Type:application/json" status-code=200
+"^http:\/\/wapi\.kuwo\.cn\/openapi\/v\d\/album\/adBar\/" data-type=text data="{}" header="Content-Type:application/json" status-code=200
+^https:\/\/vip\d\.kuwo\.cn\/commercia\/vipconf\/projectPage\/getPageContent data-type=text data="{}" header="Content-Type:application/json" status-code=200
+^https:\/\/tingshu\.kuwo\.cn\/v2\/api\/pay\/user\/info data-type=text data="{}" header="Content-Type:application/json" status-code=200
+^https:\/\/appi\.kuwo\.cn\/kuwopay\/personal\/cells data-type=text data="{}" header="Content-Type:application/json" status-code=200
+
+[Body Rewrite]
+http-response-jq ^http:\/\/wapi\.kuwo\.cn\/openapi\/v\d\/tingshu\/index\/radio 'walk( if type == "object" and .type == "stripAdvert" then del(.child) else . end )'
+
+[MITM]
+hostname = %APPEND% appi.kuwo.cn, mc.tencentmusic.com, vip*.kuwo.cn, tingshu.kuwo.cn

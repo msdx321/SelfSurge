@@ -1,0 +1,24 @@
+# Source: https://kelee.one/Tool/Loon/Lpx/VideoGo_remove_ads.lpx
+# Adapted from Loon LPX to Surge module by SelfSurge.
+# License: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+#!name=萤石云视频去广告
+#!desc=移除开屏广告、首页推广、我的页面推广。
+#!openUrl=https://apps.apple.com/app/id571195405
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!category=去广告
+#!homepage=https://hub.kelee.one
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/VideoGo.png
+#!date=2026-06-01 17:11:35
+
+[URL Rewrite]
+^https:\/\/api\.ys7\.com\/api\/ads _ reject
+
+[Map Local]
+^https:\/\/i\.ys7\.com\/api\/user\/tabList data-type=text data="{}" header="Content-Type:application/json" status-code=200
+^https:\/\/api\.ys7\.com\/v3\/config\/service\/entrance\/bannerInfo data-type=text data="{}" header="Content-Type:application/json" status-code=200
+^https:\/\/api\.ys7\.com\/v3\/intelligent-app\/apps\/linkage data-type=text data="{}" header="Content-Type:application/json" status-code=200
+^https:\/\/api\.ys7\.com\/v3\/configurations\/gray\/info\?grayTypes=185 data-type=text data="{}" header="Content-Type:application/json" status-code=200
+^https:\/\/api\.ys7\.com\/v3\/videoclips\/square\/video\/query data-type=text data="{}" header="Content-Type:application/json" status-code=200
+
+[MITM]
+hostname = %APPEND% api.ys7.com, i.ys7.com

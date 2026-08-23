@@ -1,0 +1,20 @@
+# Source: https://kelee.one/Tool/Loon/Lpx/XiaoHeiHe_remove_ads.lpx
+# Adapted from Loon LPX to Surge module by SelfSurge.
+# License: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+#!name=小黑盒去广告
+#!desc=移除开屏广告和热点板块信息流广告
+#!openUrl=https://apps.apple.com/app/id1244505010
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!category=去广告
+#!homepage=https://hub.kelee.one
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/XiaoHeiHe.png
+#!date=2026-06-01 17:11:35
+
+[Map Local]
+^https:\/\/api\.xiaoheihe\.cn\/account\/get_ads_info_v2 data-type=text data="{}" header="Content-Type:application/json" status-code=200
+
+[Body Rewrite]
+http-response-jq ^https:\/\/api\.xiaoheihe\.cn\/bbs\/app\/feeds\/news '.result.links |= map( if .content_type == 27 then del(.title, .ad_pm, .img_gif, .idea_id, .ad_report, .label, .source, .intranet_only, .ad_cm, .content_type, .PROTOCOL, .img, .ad_ratio) else . end )'
+
+[MITM]
+hostname = %APPEND% api.xiaoheihe.cn

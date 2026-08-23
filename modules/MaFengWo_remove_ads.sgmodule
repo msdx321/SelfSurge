@@ -1,0 +1,24 @@
+# Source: https://kelee.one/Tool/Loon/Lpx/MaFengWo_remove_ads.lpx
+# Adapted from Loon LPX to Surge module by SelfSurge.
+# License: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+#!name=马蜂窝去广告
+#!desc=移除首页信息流广告、商城横幅推广、我的页面弹窗。
+#!openUrl=https://apps.apple.com/app/id406596432
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!category=去广告
+#!homepage=https://hub.kelee.one
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/MaFengWo.png
+#!date=2026-06-01 17:11:35
+
+[Rule]
+DOMAIN, advert.mafengwo.cn, REJECT
+
+[Map Local]
+^https:\/\/mapi\.mafengwo\.cn\/user\/growth\/get_growth_tip\/v1\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
+
+[Body Rewrite]
+http-response-jq ^https:\/\/mapi\.mafengwo\.cn\/discovery\/get_index\/v7\? '.data.list |= map(select(.data.business_type != "gdcpm"))'
+http-response-jq ^https:\/\/mapi\.mafengwo\.cn\/sales\/home\/get_header\/v3\? '.data.list[] |= ( .data |= del(.banners) )'
+
+[MITM]
+hostname = %APPEND% mapi.mafengwo.cn

@@ -1,0 +1,34 @@
+# Source: https://kelee.one/Tool/Loon/Lpx/Prevent_DNS_Leaks.lpx
+# Adapted from Loon LPX to Surge module by SelfSurge.
+# License: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+#!name=DNS防泄露
+#!desc=专为小白设计的DNS防泄露
+#!author=非正常人类研究中心
+#!category=DNS
+#!homepage=https://hub.kelee.one
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/Other_icon/120px/Prevent_DNS_Leaks.png
+#!date=2026-06-01 17:11:35
+
+[Rule]
+# Unsupported Loon policy PROXY: DOMAIN-SUFFIX, dnsleaktest.com, PROXY
+# Unsupported Loon policy PROXY: DOMAIN-SUFFIX, dnsleak.com, PROXY
+# Unsupported Loon policy PROXY: DOMAIN-SUFFIX, expressvpn.com, PROXY
+# Unsupported Loon policy PROXY: DOMAIN-SUFFIX, nordvpn.com, PROXY
+# Unsupported Loon policy PROXY: DOMAIN-SUFFIX, surfshark.com, PROXY
+# Unsupported Loon policy PROXY: DOMAIN-SUFFIX, ipleak.net, PROXY
+# Unsupported Loon policy PROXY: DOMAIN-SUFFIX, perfect-privacy.com, PROXY
+# Unsupported Loon policy PROXY: DOMAIN-SUFFIX, browserleaks.com, PROXY
+# Unsupported Loon policy PROXY: DOMAIN-SUFFIX, browserleaks.org, PROXY
+# Unsupported Loon policy PROXY: DOMAIN-SUFFIX, vpnunlimited.com, PROXY
+# Unsupported Loon policy PROXY: DOMAIN-SUFFIX, whoer.net, PROXY
+# Unsupported Loon policy PROXY: DOMAIN-SUFFIX, whrq.net, PROXY
+# Unsupported Loon policy PROXY: DOMAIN-SUFFIX, astrill.com, PROXY
+# Unsupported Loon policy PROXY: DOMAIN-SUFFIX, astrill.org, PROXY
+# Unsupported Loon policy PROXY: DOMAIN-SUFFIX, dnsleak.asn247.net, PROXY
+# Unsupported Loon policy PROXY: DOMAIN-SUFFIX, surfshark.com, PROXY
+# Unsupported Loon policy PROXY: DOMAIN-SUFFIX, surfsharkdns.com, PROXY
+# Unsupported Loon policy PROXY: DOMAIN-SUFFIX, pixelscan.net, PROXY
+# Unsupported Loon policy PROXY: DOMAIN, ipv4.ping0.cc, PROXY
+# Unsupported Loon policy PROXY: DOMAIN, ipv6.ping0.cc, PROXY
+# Unsupported Loon policy PROXY: DOMAIN-SUFFIX, ipapi.co, PROXY
+# Unsupported Loon policy PROXY: DOMAIN, ip-scan.adspower.net, PROXY

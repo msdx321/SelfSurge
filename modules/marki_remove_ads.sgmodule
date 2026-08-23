@@ -1,0 +1,20 @@
+# Source: https://kelee.one/Tool/Loon/Lpx/marki_remove_ads.lpx
+# Adapted from Loon LPX to Surge module by SelfSurge.
+# License: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+#!name=马克水印相机去广告
+#!desc=移除开屏广告，拍摄首页悬浮挂件，侧边栏横幅广告。
+#!openUrl=https://apps.apple.com/app/id1518226677
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!category=去广告
+#!homepage=https://hub.kelee.one
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/marki.png
+#!date=2026-08-22 01:54:03
+
+[Map Local]
+^https:\/\/marki\.markiapp\.com\/mkg\/MomStats\/getFlowWindowList$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+^https?:\/\/marki\.markiapp\.com\/mkg\/Advertising\/ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+^https:\/\/marki\.markiapp\.com\/mkg\/MomStats\/getIntegralAdv$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+^https:\/\/market-callback\.markiapp\.com\/adcenter\/ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+
+[MITM]
+hostname = %APPEND% marki.markiapp.com, market-callback.markiapp.com

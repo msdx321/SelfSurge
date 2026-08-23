@@ -1,0 +1,32 @@
+# Source: https://kelee.one/Tool/Loon/Lpx/BabyTree_remove_ads.lpx
+# Adapted from Loon LPX to Surge module by SelfSurge.
+# License: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+#!name=宝宝树孕育去广告
+#!desc=过滤宝宝树孕育广告
+#!openUrl=https://apps.apple.com/app/id523063187
+#!author=RuCu6[https://github.com/RuCu6]
+#!category=去广告
+#!homepage=https://hub.kelee.one
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/BabyTree.png
+#!date=2026-06-01 17:11:35
+
+[Rule]
+# Converted to rewrite: URL-REGEX, "^http:\/\/go\.babytree\.com\/go_pregnancy\/api\/(index_activity\/get_app_index_activity|sign\/sign_h_5)\?", REJECT-DICT
+# Converted to rewrite: URL-REGEX, "^http:\/\/go\.babytree\.com\/go_search\/api\/mobile_search_new\/get_multi_search_default_keywords\?", REJECT-DICT
+# Converted to rewrite: URL-REGEX, "^http:\/\/m\.meitun\.com\/newapi\/router\/topic\/hometptf\/feedRecommend", REJECT-DICT
+URL-REGEX, "^http:\/\/pic08\.babytreeimg\.com\/knowledge\/2022\/0923\/\w+", REJECT
+# Converted to rewrite: URL-REGEX, "^http:\/\/plough\.babytree\.com\/plough\.do", REJECT-DICT
+
+[Map Local]
+"^http:\/\/go\.babytree\.com\/go_pregnancy\/api\/(index_activity\/get_app_index_activity|sign\/sign_h_5)\?" data-type=text data="{}" header="Content-Type:application/json" status-code=200
+"^http:\/\/go\.babytree\.com\/go_search\/api\/mobile_search_new\/get_multi_search_default_keywords\?" data-type=text data="{}" header="Content-Type:application/json" status-code=200
+"^http:\/\/m\.meitun\.com\/newapi\/router\/topic\/hometptf\/feedRecommend" data-type=text data="{}" header="Content-Type:application/json" status-code=200
+"^http:\/\/plough\.babytree\.com\/plough\.do" data-type=text data="{}" header="Content-Type:application/json" status-code=200
+
+[Script]
+调整整体配置 = type=http-response,pattern=^http:\/\/api\.babytree\.com\/bafconfigcenter_intf\/config\/get\?,script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/BabyTree/BabyTree_remove_ads.js,requires-body=true
+移除各页面推广 = type=http-response,pattern=^http:\/\/go\.babytree\.com\/go_pregnancy\/api\/(app_index\/get_app_tab|cms_column\/get_column_list|feeds\/get_index_feeds_list|user\/get_user_info)\?,script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/BabyTree/BabyTree_remove_ads.js,requires-body=true
+移除搜索列表推广 = type=http-response,pattern=^http:\/\/go\.babytree\.com\/go_search\/api\/mobile_search_new\/search_index,script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/BabyTree/BabyTree_remove_ads.js,requires-body=true
+
+[MITM]
+hostname = %APPEND% api.babytree.com, go.babytree.com

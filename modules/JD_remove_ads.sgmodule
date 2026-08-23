@@ -1,0 +1,26 @@
+# Source: https://kelee.one/Tool/Loon/Lpx/JD_remove_ads.lpx
+# Adapted from Loon LPX to Surge module by SelfSurge.
+# License: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+#!name=京东去广告
+#!desc=移除京东开屏广告，精简我的页面产品推广。
+#!openUrl=https://apps.apple.com/app/id414245413
+#!author=RuCu6[https://github.com/RuCu6], Maasea[https://github.com/Maasea]
+#!category=去广告
+#!homepage=https://hub.kelee.one
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/JD.png
+#!date=2026-06-01 17:11:35
+
+[Rule]
+URL-REGEX, "^http:\/\/\w{32}\.jddebug\.com\/diagnose\?", REJECT
+
+[Map Local]
+^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(searchBoxWord|stationPullService|uniformRecommend[06]) data-type=text data="{}" header="Content-Type:application/json" status-code=200
+
+[Body Rewrite]
+http-response-jq ^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=basicConfig 'if (getpath(["data","JDMessage","socketmonitor"]) | has("isSocketEstablishedAhead")) then setpath(["data","JDMessage","socketmonitor","isSocketEstablishedAhead"];0) else . end | if (getpath(["data","JDMessage","socketmonitor"]) | has("isSocketReport")) then setpath(["data","JDMessage","socketmonitor","isSocketReport"];0) else . end | if (getpath(["data","JDHttpToolKit","httpdns"]) | has("httpdns")) then setpath(["data","JDHttpToolKit","httpdns","httpdns"];0) else . end'
+
+[Script]
+移除京东广告 = type=http-response,pattern=^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(deliverLayer|getTabHomeInfo|myOrderInfo|orderTrackBusiness|personinfoBusiness|start|welcomeHome),script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/JD/JD_remove_ads.js,requires-body=true
+
+[MITM]
+hostname = %APPEND% api.m.jd.com

@@ -1,8 +1,11 @@
 import concurrent.futures
+import hashlib
+import json
 import re
 import unittest
+from urllib.parse import unquote
 
-from generate import catalog_entries
+from generate import ROOT, catalog_entries
 from selfsurge import convert_lpx, fetch_lpx
 
 
@@ -52,6 +55,28 @@ class CatalogConversionTest(unittest.TestCase):
                     re.findall(r"\{\{\{([A-Za-z0-9_]+)\}\}\}", module)
                 )
                 self.assertLessEqual(placeholders, declared, name)
+
+        generated = {path.name for path in (ROOT / "modules").glob("*.sgmodule")}
+        self.assertEqual(generated, {name for name, _ in entries})
+
+        manifest = json.loads((ROOT / "sources.json").read_text(encoding="utf-8"))
+        self.assertEqual(
+            manifest["modules"],
+            {f"modules/{name}": source_url for name, source_url in entries},
+        )
+        for relative, source in manifest["resources"].items():
+            content = (ROOT / relative).read_bytes()
+            self.assertEqual(
+                hashlib.sha256(content).hexdigest(), source["sha256"]
+            )
+
+        raw_prefix = (
+            "https://raw.githubusercontent.com/msdx321/SelfSurge/main/"
+        )
+        for module in (ROOT / "modules").glob("*.sgmodule"):
+            for url in re.findall(raw_prefix + r"[^,\s\"]+", module.read_text()):
+                relative = unquote(url.removeprefix(raw_prefix))
+                self.assertTrue((ROOT / relative).is_file(), url)
 
 
 if __name__ == "__main__":

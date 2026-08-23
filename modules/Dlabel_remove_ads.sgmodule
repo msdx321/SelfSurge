@@ -1,0 +1,18 @@
+# Source: https://kelee.one/Tool/Loon/Lpx/Dlabel_remove_ads.lpx
+# Adapted from Loon LPX to Surge module by SelfSurge.
+# License: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+#!name=Dlabel云标签去广告
+#!desc=移除开屏广告及首页横幅。
+#!openUrl=https://apps.apple.com/app/id1397719437
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!category=去广告
+#!homepage=https://hub.kelee.one
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Dlabel.png
+#!date=2026-06-01 17:11:35
+
+[Map Local]
+^https:\/\/dlabel\.ctaiot\.com\/api\/spreadstart\/list\.json\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
+^https:\/\/dlabel\.ctaiot\.com\/api\/spread\/journey\/select\.json\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
+
+[MITM]
+hostname = %APPEND% dlabel.ctaiot.com

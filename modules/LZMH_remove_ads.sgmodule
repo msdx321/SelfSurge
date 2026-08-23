@@ -1,0 +1,31 @@
+# Source: https://kelee.one/Tool/Loon/Lpx/LZMH_remove_ads.lpx
+# Adapted from Loon LPX to Surge module by SelfSurge.
+# License: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+#!name=联掌门户去广告
+#!desc=移除开屏广告、弹窗，移除首页、服务和发现页面无用内容。
+#!openUrl=https://apps.apple.com/app/id1070838360
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!category=去广告
+#!homepage=https://hub.kelee.one
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/LZMH.png
+#!date=2026-08-22 02:46:00
+
+[URL Rewrite]
+^http:\/\/lzmh\.lz-qs\.com:5090\/resource\/download\/ _ reject
+
+[Map Local]
+^https:\/\/lzmh\.lz-qs\.com:6025\/lzmh_app_api\/api\/v1\/app3rd\/getApp3rdGenreList\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
+^https:\/\/lzmh\.lz-qs\.com:6025\/lzmh_app_api\/api\/v1\/ad\/ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+^https:\/\/yuudnn\.lz-qs\.com:9220\/mssp-api\/api\/v1\/mrtb\/getAdSlotList$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+^https:\/\/yuudnn\.lz-qs\.com:9220\/mssp-api\/api\/v1\/mrtb\/requestAd$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+^https:\/\/yuudnn\.lz-qs\.com:9220\/mssp-api\/api\/v1\/mrtb\/getSdkStartConfigList$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+^https:\/\/lzmh\.lz-qs\.com:6025\/lzmh_app_api\/api\/v1\/index\/getRecommendList\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
+^https:\/\/yuudnn\.lz-qs\.com\/lzmh_app_api\/o2o\/api\/v2\/o2o\/homeInfo$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+^https:\/\/yuudnn\.lz-qs\.com\/lzmh_app_api\/o2o\/api\/v2\/o2o\/homeShopList$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+^https:\/\/yuudnn\.lz-qs\.com:9220\/mssp-api\/api\/v1\/mrtb\/getSdkAdSlotList$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+
+[Body Rewrite]
+http-response-jq ^https:\/\/lzmh\.lz-qs\.com:6025\/lzmh_app_api\/api\/v2\/user\/getUserBaseInfoAndConfig\? 'delpaths([["value","config"]])'
+
+[MITM]
+hostname = %APPEND% lzmh.lz-qs.com, yuudnn.lz-qs.com

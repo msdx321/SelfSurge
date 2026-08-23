@@ -1,0 +1,34 @@
+# Source: https://kelee.one/Tool/Loon/Lpx/36Kr_remove_ads.lpx
+# Adapted from Loon LPX to Surge module by SelfSurge.
+# License: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+#!name=36氪去广告
+#!desc=移除开屏广告、首页右上角运营位、信息流广告、文末广告，移除相关文章推荐、大家都在看及皮肤配置，精简搜索页面、我的页面及底栏。
+#!openUrl=https://apps.apple.com/app/id593394038
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!category=去广告
+#!homepage=https://hub.kelee.one
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/36Kr.png
+#!date=2026-06-01 17:11:35
+
+[Rule]
+DOMAIN, adx.36kr.com, REJECT
+DOMAIN, ad.jiemian.com, REJECT
+
+[Map Local]
+^https:\/\/gateway\.36kr\.com\/api\/mis\/nav\/me\/recom\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
+^https:\/\/gateway\.36kr\.com\/api\/mis\/nav\/search\/hotword\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
+^https:\/\/gateway\.36kr\.com\/api\/mis\/nav\/search\/topicListV2\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
+^https:\/\/gateway\.36kr\.com\/api\/adx\/ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+^https:\/\/gateway\.36kr\.com\/api\/mis\/page\/article\/recom\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
+^https:\/\/gateway\.36kr\.com\/api\/mis\/page\/newsflash\/recom\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
+^https:\/\/gateway\.36kr\.com\/api\/mis\/sys\/skin\/ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+
+[Body Rewrite]
+http-response-jq ^https:\/\/gateway\.36kr\.com\/api\/mis\/sys\/config\? 'delpaths([["data","contentConfig"],["data","positionConfigList"],["data","switchConfig","ios","sunrise_sign"],["data","switchConfig","ios","sunrise_sunit_task"],["data","switchConfig","ios","sunrise_sunit_mall"],["data","switchConfig","ios","sunrise_distribution_icon"],["data","secondFloorConfig"]])'
+http-response-jq ^https:\/\/36kr\.com\/global\/sensors\/config\/iOS\.conf\? 'if (getpath(["configs"]) | has("disableSDK")) then setpath(["configs","disableSDK"];true) else . end'
+http-response-jq ^https:\/\/gateway\.36kr\.com\/api\/mis\/nav\? '.data.navList |= [ .[] | select(.navNick == "home" or .navNick == "newsflash" or .navNick == "me") ]'
+http-response-jq ^https:\/\/gateway\.36kr\.com\/api\/mis\/nav\/home\/subnav\/recom\? '.data.bannerList |= map(select(.itemType != 0))'
+http-response-jq ^https:\/\/gateway\.36kr\.com\/api\/mis\/nav\/home\/subnav\/flow\/ 'delpaths([["data","adItemList"]])'
+
+[MITM]
+hostname = %APPEND% gateway.36kr.com, 36kr.com

@@ -1,0 +1,23 @@
+# Source: https://kelee.one/Tool/Loon/Lpx/YoudaoTrans_remove_ads.lpx
+# Adapted from Loon LPX to Surge module by SelfSurge.
+# License: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+#!name=有道翻译官去广告
+#!desc=移除开屏广告、横幅推广，精简首页。
+#!openUrl=https://apps.apple.com/app/id576337924
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!category=去广告
+#!homepage=https://hub.kelee.one
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/YoudaoTrans.png
+#!date=2026-06-01 17:11:35
+
+[Map Local]
+^https:\/\/gorgon\.youdao\.com\/gorgon\/v2\/request\.s data-type=text data="{}" header="Content-Type:application/json" status-code=200
+^https:\/\/gorgon\.youdao\.com\/gorgon\/brand\/prefetch\.s data-type=text data="{}" header="Content-Type:application/json" status-code=200
+^https:\/\/gorgon\.youdao\.com\/gorgon\/request\.s data-type=text data="{}" header="Content-Type:application/json" status-code=200
+^https:\/\/fanyiguan-server\.youdao\.com\/server\/banner\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
+^https:\/\/dict\.youdao\.com\/vip\/activity\/fanyiguan\/sevendayfree\/imei\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
+^https:\/\/dict\.youdao\.com\/wordbook\/recommend\?all=false data-type=text data="{}" header="Content-Type:application/json" status-code=200
+^https:\/\/api-overmind\.youdao\.com\/openapi\/get\/luna\/dict\/trans_abtest\/online\/iOS\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
+
+[MITM]
+hostname = %APPEND% gorgon.youdao.com, fanyiguan-server.youdao.com, api-overmind.youdao.com, dict.youdao.com

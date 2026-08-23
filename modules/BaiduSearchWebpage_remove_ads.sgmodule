@@ -1,0 +1,16 @@
+# Source: https://kelee.one/Tool/Loon/Lpx/BaiduSearchWebpage_remove_ads.lpx
+# Adapted from Loon LPX to Surge module by SelfSurge.
+# License: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+#!name=百度网页去广告
+#!desc=移除百度搜索移动端网页的首页广告信息流
+#!author=Keywos[https://github.com/Keywos]
+#!category=去广告
+#!homepage=https://hub.kelee.one
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Baidu.png
+#!date=2026-06-01 17:11:35
+
+[Script]
+移除百度搜索首页信息流广告 = type=http-response,pattern="^https?:\/\/(www|m)\.baidu\.com\/?($|\?from=\w{8,9})",script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/BaiduSearch/BaiduSearchHomePage_remove_ads.js,requires-body=true
+
+[MITM]
+hostname = %APPEND% m.baidu.com, www.baidu.com

@@ -1,0 +1,36 @@
+# Source: https://kelee.one/Tool/Loon/Lpx/KebidaDushu_remove_ads.lpx
+# Adapted from Loon LPX to Surge module by SelfSurge.
+# License: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+#!name=帆书去广告
+#!desc=移除弹窗和会员任务，精简首页、听书页面、课程菜单和我的页面。
+#!openUrl=https://apps.apple.com/app/id963152777
+#!author=Yuheng0101[https://github.com/Yuheng0101]
+#!category=去广告
+#!homepage=https://hub.kelee.one
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/KebidaDushu.png
+#!date=2026-06-01 17:11:35
+
+[URL Rewrite]
+^https?:\/\/popup\.dushu365\.com\/api\/v2\/sfo\/(user_)?popup_(config|display)s _ reject
+^https?:\/\/g[a-z0-9-]+\.dushu365\.com\/chief-orch\/config\/config\/v\d+\/(shortCut|appUpdateUnite|loadingAd) _ reject
+^https?:\/\/g[a-z0-9-]+\.dushu365\.com\/fs-retain\/trialVip\/v\d+\/requestTrialVipPopDoNotSendReward _ reject
+^https?:\/\/g[a-z0-9-]+\.dushu365\.com\/resource-orchestration-system\/vipLandingPage\/v\d+\/getVipLandingPageApp _ reject
+^https?:\/\/g[a-z0-9-]+\.dushu365\.com\/fandeng-orch\/dual2211\/config _ reject
+^https?:\/\/g[a-z0-9-]+\.dushu365\.com\/fdtalk-orch\/newcomerzone\/v\d+\/guide _ reject
+^https?:\/\/g[a-z0-9-]+\.dushu365\.com\/fandeng-orch\/bookboy\/v\d+\/vipPagePop _ reject
+^https?:\/\/g[a-z0-9-]+\.dushu365\.com\/chief-orch\/config\/config\/v\d+\/appConfig _ reject
+^https?:\/\/g[a-z0-9-]+\.dushu365\.com\/order-orchestration\/orderWeb\/exchange\/v100\/showExchangeButton _ reject
+
+[Script]
+帆书去广告 = type=http-response,pattern=^https?:\/\/g[a-z0-9-]+\.dushu365\.com\/chief-orch\/home\/bookPortal\/v105\/category,script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/KebidaDushu/KebidaDushu_remove_ads.js,requires-body=true
+帆书去广告 2 = type=http-response,pattern=^https?:\/\/g[a-z0-9-]+\.dushu365\.com\/abtest-front\/banner-modular\/get,script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/KebidaDushu/KebidaDushu_remove_ads.js,requires-body=true
+帆书去广告 3 = type=http-response,pattern=^https?:\/\/g[a-z0-9-]+\.dushu365\.com\/resource-orchestration-system\/book\/channel\/v100\/info,script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/KebidaDushu/KebidaDushu_remove_ads.js,requires-body=true
+帆书去广告 4 = type=http-response,pattern=^https?:\/\/g[a-z0-9-]+\.dushu365\.com\/fs-member\/user\/profile\/v100\/detail,script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/KebidaDushu/KebidaDushu_remove_ads.js,requires-body=true
+帆书去广告 5 = type=http-response,pattern=^https?:\/\/g[a-z0-9-]+\.dushu365\.com\/chief-orch\/home\/bookPortal\/v111\/forApp,script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/KebidaDushu/KebidaDushu_remove_ads.js,requires-body=true
+帆书去广告 6 = type=http-response,pattern=^https?:\/\/g[a-z0-9-]+\.dushu365\.com\/sns-orchestration-system\/homePage\/api\/v100\/myPage,script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/KebidaDushu/KebidaDushu_remove_ads.js,requires-body=true
+帆书去广告 7 = type=http-response,pattern=^https?:\/\/g[a-z0-9-]+\.dushu365\.com\/task-orchestration\/taskCenter\/api\/v101\/taskList,script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/KebidaDushu/KebidaDushu_remove_ads.js,requires-body=true
+帆书去广告 8 = type=http-response,pattern=^https?:\/\/g[a-z0-9-]+\.dushu365\.com\/resource-orchestration-system\/book\/v101\/content,script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/KebidaDushu/KebidaDushu_remove_ads.js,requires-body=true
+帆书去广告 9 = type=http-response,pattern=^https?:\/\/g[a-z0-9-]+\.dushu365\.com\/user-orchestration\/user\/api\/v101\/ceiltip,script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/KebidaDushu/KebidaDushu_remove_ads.js,requires-body=true
+
+[MITM]
+hostname = %APPEND% g*.dushu365.com
