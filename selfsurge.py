@@ -3,6 +3,7 @@ import base64
 import json
 import re
 import sys
+from functools import cache
 from urllib.error import HTTPError
 from urllib.parse import parse_qs, quote, urlsplit
 from urllib.request import Request, urlopen
@@ -120,9 +121,10 @@ def _split_parameters(value: str) -> list[str]:
 
 def _arguments(
     source: str,
-) -> tuple[dict[str, str], list[str], list[str]]:
+) -> tuple[dict[str, str], dict[str, str], list[str], list[str]]:
     section = None
     names = {}
+    kinds = {}
     defaults = []
     notes = []
 
@@ -159,6 +161,7 @@ def _arguments(
             raise ValueError(f"argument has no default: {stripped}")
 
         names[key] = surge_key
+        kinds[key] = kind
         defaults.append(f"{surge_key}:{values[0]}")
         details = [f"默认 {values[0]}"]
         if kind in {"select", "switch"}:
@@ -169,7 +172,7 @@ def _arguments(
             details.append(description)
         notes.append(f"# Surge 参数 {surge_key}：" + "；".join(details))
 
-    return names, defaults, notes
+    return names, kinds, defaults, notes
 
 
 def _replace_placeholders(value: str, arguments: dict[str, str]) -> str:
@@ -178,6 +181,23 @@ def _replace_placeholders(value: str, arguments: dict[str, str]) -> str:
             "{" + loon_name + "}", "{{{" + surge_name + "}}}"
         )
     return value
+
+
+@cache
+def _script_argument_style(url: str) -> str:
+    try:
+        script = fetch_text(url)
+    except (OSError, UnicodeError):
+        return "object"
+    if re.search(r"JSON\.parse\(\s*\$argument\s*\)", script):
+        return "json"
+    if re.search(
+        r"\$argument(?:\?\.)?(?:\.split|\[['\"]split['\"]\])"
+        r"\(\s*['\"]&['\"]",
+        script,
+    ):
+        return "query"
+    return "object"
 
 
 def _json_path(value: str) -> list[str | int]:
@@ -260,22 +280,62 @@ def _normalize_jq(value: str) -> str:
     return "".join(output).strip()
 
 
-def _jq(value: str) -> str | None:
+def _surge_safe_jq(value: str) -> str:
+    output = []
+    in_string = False
+    escaped = False
+    index = 0
+
+    while index < len(value):
+        char = value[index]
+        if in_string:
+            output.append(char)
+            if escaped:
+                escaped = False
+            elif char == "\\":
+                escaped = True
+            elif char == '"':
+                in_string = False
+            index += 1
+            continue
+        if char == '"':
+            in_string = True
+            output.append(char)
+            index += 1
+            continue
+        if char == "#":
+            index = value.find("\n", index)
+            if index == -1:
+                break
+            if output and not output[-1].isspace():
+                output.append(" ")
+            index += 1
+            continue
+        if char.isspace():
+            if output and not output[-1].isspace():
+                output.append(" ")
+            index += 1
+            continue
+        if char == ";" or value.startswith("//", index):
+            while output and output[-1].isspace():
+                output.pop()
+        output.append(char)
+        index += 1
+    return "".join(output).strip()
+
+
+def _jq(value: str) -> str:
     value = value.strip()
     if value.startswith('jq-path="') and value.endswith('"'):
         value = fetch_text(value[9:-1])
-        value = " ".join(
-            line.strip()
-            for line in value.splitlines()
-            if line.strip() and not line.lstrip().startswith("#")
-        )
     if value.startswith("'") and value.endswith("'"):
         value = value[1:-1]
     if not value:
-        return None
+        value = "."
     if "'" in value:
         raise ValueError("JQ expression contains an unsupported single quote")
-    return f"'{_normalize_jq(value)}'"
+    value = _surge_safe_jq(value)
+    return f"'{_surge_safe_jq(_normalize_jq(value))}'"
 
 
 def _mock_response(pattern: str, value: str) -> str:
@@ -395,47 +455,52 @@ def _convert_rewrite(
         surge_type = f"http-{http_type}-jq"
         if operation == "jq":
             expression = _jq(value)
-            if expression is None:
-                return [
-                    (
-                        "[Body Rewrite]",
-                        f"# Invalid empty upstream Loon JQ omitted: {pattern}",
-                    )
-                ]
             return [("[Body Rewrite]", f"{surge_type} {pattern} {expression}")]
+        if operation == "del" and re.fullmatch(
+            r"'del(?:paths)?\s*\(.*\)'", value
+        ):
+            return [
+                ("[Body Rewrite]", f"{surge_type} {pattern} {_jq(value)}")
+            ]
 
         words = value.split()
         if operation == "del":
             paths = [_json_path(word.replace(r"\x20", " ")) for word in words]
-            expression = "delpaths(" + json.dumps(
+            paths_json = json.dumps(
                 paths, ensure_ascii=False, separators=(",", ":")
-            ) + ")"
+            )
+            expression = (
+                f"reduce {paths_json}[] as $path (. ;"
+                ". as $before | try delpaths([$path]) catch $before)"
+            )
         else:
             if len(words) % 2:
                 raise ValueError(f"invalid JSON rewrite pairs: {line}")
-            expressions = []
+            items = []
             for key, raw_value in zip(words[::2], words[1::2]):
                 path = _json_path(key.replace(r"\x20", " "))
-                path_json = json.dumps(
-                    path, ensure_ascii=False, separators=(",", ":")
-                )
-                value_json = json.dumps(
-                    _loon_value(raw_value),
-                    ensure_ascii=False,
-                    separators=(",", ":"),
-                )
+                converted_value = _loon_value(raw_value)
                 if operation == "add":
-                    expressions.append(f"setpath({path_json};{value_json})")
+                    items.append([path, converted_value])
                     continue
-                parent = json.dumps(
-                    path[:-1], ensure_ascii=False, separators=(",", ":")
+                items.append([path, path[:-1], path[-1], converted_value])
+            items_json = json.dumps(
+                items, ensure_ascii=False, separators=(",", ":")
+            )
+            if operation == "add":
+                expression = (
+                    f"reduce {items_json}[] as $item (. ;"
+                    ". as $before | try setpath($item[0];$item[1]) "
+                    "catch $before)"
                 )
-                last = json.dumps(path[-1], ensure_ascii=False)
-                expressions.append(
-                    f"if (getpath({parent}) | has({last})) then "
-                    f"setpath({path_json};{value_json}) else . end"
+            else:
+                expression = (
+                    f"reduce {items_json}[] as $item (. ;"
+                    ". as $before | try (if (getpath($item[1]) | "
+                    "has($item[2])) then setpath($item[0];$item[3]) "
+                    "else . end) catch $before)"
                 )
-            expression = " | ".join(expressions)
+        expression = _surge_safe_jq(expression)
         return [("[Body Rewrite]", f"{surge_type} {pattern} '{expression}'")]
 
     body_action = re.fullmatch(r"(request|response)-body-replace-regex", action)
@@ -484,6 +549,8 @@ def _convert_rule(
     comment = comment or ""
     if policy in {"DIRECT", "REJECT"}:
         return f"{body}, {policy}{options}{comment}"
+    if policy == "PROXY":
+        return f"# Requires main-profile policy selection: {line}"
     if policy == "REJECT-DROP":
         return f"{body}, REJECT{options}{comment}"
     if policy in {"REJECT-DICT", "REJECT-IMG"}:
@@ -502,8 +569,9 @@ def _convert_rule(
 def _convert_script(
     line: str,
     arguments: dict[str, str],
+    argument_kinds: dict[str, str],
     used_names: dict[str, int],
-) -> tuple[list[str], str]:
+) -> tuple[list[str], str, str | None]:
     script_type, separator, remainder = line.partition(" ")
     if not separator or script_type not in {
         "http-request",
@@ -558,28 +626,75 @@ def _convert_script(
 
     notes = []
     argument = parameters.get("argument")
-    if argument:
-        argument = _replace_placeholders(argument, arguments)
+    named_arguments = None
+    if argument and argument.startswith("[") and argument.endswith("]"):
+        items = _split_parameters(argument[1:-1])
+        matches = [re.fullmatch(r"\{([^{}]+)\}", item) for item in items]
+        if matches and all(matches):
+            names = [match.group(1) for match in matches if match]
+            if all(name in arguments for name in names):
+                named_arguments = names
     enable = parameters.get("enable")
     if enable:
         enable_name = enable.strip("{}")
-        enable = _replace_placeholders(enable, arguments)
-        if argument and argument.startswith("[") and argument.endswith("]"):
-            argument = argument[:-1].rstrip() + f",{enable}]"
+        if enable_name not in arguments:
+            raise ValueError(f"undefined enable argument: {enable_name}")
+        if named_arguments is not None:
+            if enable_name not in named_arguments:
+                named_arguments.append(enable_name)
+        elif not argument and enable_name in arguments:
+            named_arguments = [enable_name]
         elif argument:
+            argument = _replace_placeholders(argument, arguments)
+            enable = _replace_placeholders(enable, arguments)
             argument = f"[{argument},{enable}]"
         else:
-            argument = enable
+            argument = _replace_placeholders(enable, arguments)
         notes.append(
             f"# Loon enable 参数 {arguments.get(enable_name, enable_name)} "
-            "已作为最后一个脚本参数传入；"
-            "脚本需读取该值并在 false 时直接退出。"
+            "已作为同名脚本参数字段传入；脚本需在 false 时直接退出。"
         )
+    if named_arguments is not None:
+        style = _script_argument_style(script_path)
+        if style == "query":
+            argument = "&".join(
+                f"{loon_name}=" + "{{{" + arguments[loon_name] + "}}}"
+                for loon_name in named_arguments
+            )
+        else:
+            fields = []
+            for loon_name in named_arguments:
+                surge_name = arguments[loon_name]
+                value = "{{{" + surge_name + "}}}"
+                if argument_kinds[loon_name] != "switch":
+                    value = f'"{value}"'
+                fields.append(
+                    f'{json.dumps(loon_name, ensure_ascii=False)}:{value}'
+                )
+            argument = "{" + ",".join(fields) + "}"
+            argument = '"' + argument.replace('"', r'\"') + '"'
+            if style == "object":
+                notes.append(
+                    "# Surge $argument 为字符串；上游脚本需先执行 "
+                    "JSON.parse($argument) 再读取同名字段。"
+                )
+    elif argument:
+        argument = _replace_placeholders(argument, arguments)
     if argument:
         if not (argument.startswith('"') and argument.endswith('"')):
             argument = f'"{argument}"'
         options.append(f"argument={argument}")
-    return notes, f"{name} = " + ",".join(options)
+    panel = None
+    if script_type == "generic":
+        panel_options = [
+            f'title="{name}"',
+            'content="点击刷新"',
+            f"script-name={name}",
+        ]
+        if icon := parameters.get("img-url"):
+            panel_options.extend([f"icon={icon}", "icon-color=#5d84f8"])
+        panel = f"{name} = " + ",".join(panel_options)
+    return notes, f"{name} = " + ",".join(options), panel
 
 
 def _metadata(line: str) -> str | None:
@@ -594,7 +709,9 @@ def _metadata(line: str) -> str | None:
         return "#!system=ios" if "macOS" not in value else None
     if key in {"system_version", "loon_version"}:
         return None
-    if key in {"input", "select", "open"}:
+    if key == "open":
+        return f"#!openUrl={value}"
+    if key in {"input", "select"}:
         return f"# Loon metadata: {line}"
     return line
 
@@ -604,11 +721,15 @@ def convert_lpx(
     source_url: str | None = None,
     unavailable_resources: set[str] | None = None,
 ) -> str:
-    arguments, argument_defaults, argument_notes = _arguments(source)
+    arguments, argument_kinds, argument_defaults, argument_notes = _arguments(
+        source
+    )
     metadata = []
+    metadata_notes = []
     general = []
     rules = []
     scripts = []
+    panels = []
     mitm = []
     rewrites = {
         "[URL Rewrite]": [],
@@ -637,7 +758,8 @@ def convert_lpx(
         if section is None:
             converted = _metadata(line)
             if converted is not None:
-                metadata.append(converted)
+                target = metadata if converted.startswith("#!") else metadata_notes
+                target.append(converted)
         elif section == "[Argument]":
             continue
         elif not stripped:
@@ -661,10 +783,12 @@ def convert_lpx(
             if stripped.startswith("#"):
                 scripts.append(stripped)
             else:
-                notes, converted = _convert_script(
-                    stripped, arguments, used_script_names
+                notes, converted, panel = _convert_script(
+                    stripped, arguments, argument_kinds, used_script_names
                 )
                 scripts.extend([*notes, converted])
+                if panel:
+                    panels.append(panel)
         elif section == "[MitM]":
             if stripped.startswith("#"):
                 mitm.append(stripped)
@@ -674,26 +798,72 @@ def convert_lpx(
                 raise ValueError(f"unsupported MITM setting: {stripped}")
             mitm.append(f"hostname = %APPEND% {value.strip()}")
 
-    output = []
-    if source_url:
-        output.extend(
-            [
-                f"# Source: {source_url}",
-                "# Adapted from Loon LPX to Surge module by SelfSurge.",
-                f"# License: CC BY-NC-SA 4.0 {CC_LICENSE_URL}",
-            ]
-        )
-    output.extend(metadata)
+    if (
+        rewrites["[Map Local]"] or rewrites["[Body Rewrite]"]
+    ) and not any(line.startswith("#!requirement=") for line in metadata):
+        metadata.append("#!requirement=CORE_VERSION>=20")
+    if panels and not any(line.startswith("#!system=") for line in metadata):
+        metadata.append("#!system=ios")
+
+    name = next((line for line in metadata if line.startswith("#!name=")), None)
+    if not name or not name.removeprefix("#!name="):
+        raise ValueError("LPX plugin has no name")
+    description = next(
+        (
+            line
+            for line in metadata
+            if line.startswith("#!desc=") and line.removeprefix("#!desc=")
+        ),
+        "#!desc=由 SelfSurge 从 Loon 插件转换。",
+    )
+    if any(
+        rule.startswith("# Requires main-profile policy selection:")
+        for rule in rules
+    ):
+        description += " 注意：PROXY 规则需在 Surge 主配置中手动指定策略。"
+    if panels:
+        description += " 注意：Surge Panel 不提供 Loon 的长按节点上下文。"
+    category = next(
+        (line for line in metadata if line.startswith("#!category=")),
+        "#!category=其他",
+    )
+    output = [
+        name,
+        description,
+        category,
+        *(
+            line
+            for line in metadata
+            if not line.startswith(("#!name=", "#!desc=", "#!category="))
+        ),
+    ]
     if argument_defaults:
         output.extend(
             [
                 "#!arguments=" + ",".join(argument_defaults),
-                "#!arguments-desc=Loon 选项已转为自由输入；"
-                "可选值见模块注释；enable 值作为脚本最后一个"
-                "参数传入。",
-                *argument_notes,
+                "#!arguments-desc=Loon 选项与策略已转为 Surge 自由输入；"
+                "脚本参数按同名字段传入，具体格式见模块注释；"
+                "enable 字段为 false 时脚本需立即退出。",
             ]
         )
+
+    notes = []
+    if source_url:
+        notes.extend(
+            [
+                f"# Source: {source_url}",
+                "# Adapted from Loon LPX to Surge module by SelfSurge.",
+                f"# Upstream LPX license: CC BY-NC-SA 4.0 {CC_LICENSE_URL}",
+            ]
+        )
+    notes.extend(metadata_notes)
+    notes.extend(argument_notes)
+    while notes and not notes[0]:
+        notes.pop(0)
+    while notes and not notes[-1]:
+        notes.pop()
+    if notes:
+        output.extend(["", *notes])
 
     while output and not output[-1]:
         output.pop()
@@ -702,6 +872,7 @@ def convert_lpx(
         ("[Rule]", rules),
         *rewrites.items(),
         ("[Script]", scripts),
+        ("[Panel]", panels),
         ("[MITM]", mitm),
     ]
     for heading, lines in sections:
