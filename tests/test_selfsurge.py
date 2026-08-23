@@ -7,8 +7,23 @@ import subprocess
 import unittest
 from urllib.parse import unquote
 
-from generate import ROOT, catalog_entries
-from selfsurge import _convert_rewrite, _surge_safe_jq, convert_lpx, fetch_lpx
+from generate import (
+    ROOT,
+    YOUTUBE_MODULE_NAME,
+    YOUTUBE_MODULE_URL,
+    YOUTUBE_REFERENCE_URL,
+    YOUTUBE_RESOURCE_PATHS,
+    catalog_entries,
+    youtube_module,
+)
+from selfsurge import (
+    _convert_rewrite,
+    _surge_safe_jq,
+    convert_lpx,
+    fetch_bytes,
+    fetch_lpx,
+    fetch_text,
+)
 
 
 SECTIONS = {
@@ -28,12 +43,15 @@ class CatalogConversionTest(unittest.TestCase):
     def test_every_hub_plugin_converts(self) -> None:
         entries = catalog_entries()
         self.assertEqual(len(entries), len({name for name, _ in entries}))
+        lpx_entries = [
+            entry for entry in entries if entry[0] != YOUTUBE_MODULE_NAME
+        ]
         source_jq_count = 0
         converted_jq_count = 0
         with concurrent.futures.ThreadPoolExecutor(max_workers=8) as executor:
-            sources = executor.map(fetch_lpx, (url for _, url in entries))
+            sources = executor.map(fetch_lpx, (url for _, url in lpx_entries))
 
-            for (name, source_url), source in zip(entries, sources):
+            for (name, source_url), source in zip(lpx_entries, sources):
                 module = convert_lpx(source, source_url=source_url)
                 self.assertIn(f"# Source: {source_url}", module)
                 self.assertNotIn("[Rewrite]", module)
@@ -182,9 +200,13 @@ class CatalogConversionTest(unittest.TestCase):
         self.assertEqual(result.stdout.strip(), '{"data":[1,3,5]}')
 
         manifest = json.loads((ROOT / "sources.json").read_text(encoding="utf-8"))
+        expected_modules = {
+            f"modules/{name}": source_url for name, source_url in entries
+        }
+        expected_modules[f"modules/{YOUTUBE_MODULE_NAME}"] = YOUTUBE_MODULE_URL
         self.assertEqual(
             manifest["modules"],
-            {f"modules/{name}": source_url for name, source_url in entries},
+            expected_modules,
         )
         web_catalog = json.loads(
             (ROOT / "web" / "catalog.json").read_text(encoding="utf-8")
@@ -222,6 +244,31 @@ class CatalogConversionTest(unittest.TestCase):
             for url in re.findall(raw_prefix + r"[^,\s\"]+", module.read_text()):
                 relative = unquote(url.removeprefix(raw_prefix))
                 self.assertTrue((ROOT / relative).is_file(), url)
+
+    def test_youtube_uses_maasea_surge_module(self) -> None:
+        source = fetch_text(YOUTUBE_MODULE_URL)
+        module = (ROOT / "modules" / YOUTUBE_MODULE_NAME).read_text(
+            encoding="utf-8"
+        )
+        self.assertEqual(module, youtube_module(source))
+        self.assertIn(f"# Selected via ddgksf2013: {YOUTUBE_REFERENCE_URL}", module)
+        self.assertIn("#!category=去广告", module)
+        self.assertIn("max-size=-1", module)
+        self.assertNotIn("kelee.one/Tool/Loon/Lpx/YouTube_remove_ads.lpx", module)
+
+        manifest = json.loads((ROOT / "sources.json").read_text(encoding="utf-8"))
+        self.assertEqual(
+            manifest["modules"][f"modules/{YOUTUBE_MODULE_NAME}"],
+            YOUTUBE_MODULE_URL,
+        )
+        for url, relative in YOUTUBE_RESOURCE_PATHS.items():
+            content = fetch_bytes(url)
+            self.assertEqual((ROOT / relative).read_bytes(), content)
+            self.assertEqual(manifest["resources"][relative.as_posix()]["url"], url)
+            self.assertEqual(
+                manifest["resources"][relative.as_posix()]["sha256"],
+                hashlib.sha256(content).hexdigest(),
+            )
 
 
 if __name__ == "__main__":

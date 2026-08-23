@@ -242,7 +242,7 @@
     "modules/Yitian_remove_ads.sgmodule": "https://kelee.one/Tool/Loon/Lpx/Yitian_remove_ads.lpx",
     "modules/YouKu_Video_remove_ads.sgmodule": "https://kelee.one/Tool/Loon/Lpx/YouKu_Video_remove_ads.lpx",
     "modules/YouTubeSubtitlesTranslation.sgmodule": "https://kelee.one/Tool/Loon/Lpx/YouTubeSubtitlesTranslation.lpx",
-    "modules/YouTube_remove_ads.sgmodule": "https://kelee.one/Tool/Loon/Lpx/YouTube_remove_ads.lpx",
+    "modules/YouTube_remove_ads.sgmodule": "https://raw.githubusercontent.com/Maasea/sgmodule/master/YouTube.Enhance.sgmodule",
     "modules/YoudaoDict_remove_ads.sgmodule": "https://kelee.one/Tool/Loon/Lpx/YoudaoDict_remove_ads.lpx",
     "modules/YoudaoNote_remove_ads.sgmodule": "https://kelee.one/Tool/Loon/Lpx/YoudaoNote_remove_ads.lpx",
     "modules/YoudaoTrans_remove_ads.sgmodule": "https://kelee.one/Tool/Loon/Lpx/YoudaoTrans_remove_ads.lpx",
@@ -287,6 +287,10 @@
     "resources/Zip/DREAME/d6996fee95380affdf740ee44a85fbe9___UNI__EDB922E.zip": {
       "sha256": "3562b1cc7cdb67f225e1d73e032741a41ace4559b3dc5738a205af5b5d4bf5c2",
       "url": "https://kelee.one/Resource/Zip/DREAME/d6996fee95380affdf740ee44a85fbe9___UNI__EDB922E.zip"
+    },
+    "resources/licenses/Maasea-sgmodule-LICENSE": {
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "url": "https://raw.githubusercontent.com/Maasea/sgmodule/master/LICENSE"
     },
     "scripts/12306/12306_remove_ads.js": {
       "sha256": "22a825d8149d952dd9c6c1c5c96fa3f830a0ebba975f8fc402f55ad1f40d4a8a",
@@ -621,12 +625,12 @@
       "url": "https://kelee.one/Resource/JavaScript/YouTube/YouTube_Subtitles_Translate/YouTube_Subtitles_response.js"
     },
     "scripts/YouTube/YouTube_remove_ads/YouTube_remove_ads_request.js": {
-      "sha256": "af0646890f9847aa4576181b0637e31b86a3e2f6dd4d2041a56ffa971aacc10b",
-      "url": "https://kelee.one/Resource/JavaScript/YouTube/YouTube_remove_ads/YouTube_remove_ads_request.js"
+      "sha256": "3ecca15e06e76a31720092c581180f648ef2c45e494644941ba985c878efbb26",
+      "url": "https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.request.js"
     },
     "scripts/YouTube/YouTube_remove_ads/YouTube_remove_ads_response.js": {
-      "sha256": "b926d339069a8f54e84bd5d29e8c8364ee9ea72bb170197e281b04eda49e3568",
-      "url": "https://kelee.one/Resource/JavaScript/YouTube/YouTube_remove_ads/YouTube_remove_ads_response.js"
+      "sha256": "f98483d5f5017514f82502253c0db5ce2d4ffb7839887aa2cadc22666f5a7f12",
+      "url": "https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.response.js"
     },
     "scripts/iMaiCai/iMaiCai_remove_ads.js": {
       "sha256": "f186eb3760ab578964cf713104a2a563c2b9365cb2e23311f165537de3fc8b06",

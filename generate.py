@@ -18,9 +18,35 @@ from selfsurge import (
 ROOT = Path(__file__).parent
 CATALOG_URL = "https://hub.kelee.one/list.json"
 GENERATED_DIRECTORIES = (Path("modules"), Path("scripts"), Path("resources"))
-PUBLISHED_MODULE_PREFIX = (
-    "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/"
+PUBLISHED_PREFIX = "https://raw.githubusercontent.com/msdx321/SelfSurge/main/"
+PUBLISHED_MODULE_PREFIX = PUBLISHED_PREFIX + "modules/"
+YOUTUBE_MODULE_NAME = "YouTube_remove_ads.sgmodule"
+YOUTUBE_MODULE_URL = (
+    "https://raw.githubusercontent.com/Maasea/sgmodule/master/"
+    "YouTube.Enhance.sgmodule"
 )
+YOUTUBE_REFERENCE_URL = (
+    "https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/"
+    "AdBlock/YoutubeAds.conf"
+)
+YOUTUBE_LICENSE_URL = (
+    "https://raw.githubusercontent.com/Maasea/sgmodule/master/LICENSE"
+)
+YOUTUBE_RESOURCE_PATHS = {
+    (
+        "https://raw.githubusercontent.com/Maasea/sgmodule/master/"
+        "Script/Youtube/youtube.response.js"
+    ): Path(
+        "scripts/YouTube/YouTube_remove_ads/YouTube_remove_ads_response.js"
+    ),
+    (
+        "https://raw.githubusercontent.com/Maasea/sgmodule/master/"
+        "Script/Youtube/youtube.request.js"
+    ): Path(
+        "scripts/YouTube/YouTube_remove_ads/YouTube_remove_ads_request.js"
+    ),
+    YOUTUBE_LICENSE_URL: Path("resources/licenses/Maasea-sgmodule-LICENSE"),
+}
 
 
 def catalog_entries() -> list[tuple[str, str]]:
@@ -75,6 +101,44 @@ def _module_metadata(module: str) -> dict[str, str]:
     return metadata
 
 
+def youtube_module(source: str) -> str:
+    for url, relative in YOUTUBE_RESOURCE_PATHS.items():
+        if url == YOUTUBE_LICENSE_URL:
+            continue
+        if url not in source:
+            raise ValueError(f"YouTube module is missing dependency: {url}")
+        source = source.replace(url, PUBLISHED_PREFIX + relative.as_posix())
+
+    lines = source.splitlines()
+    header_end = next(
+        (index for index, line in enumerate(lines) if not line.startswith("#!")),
+        len(lines),
+    )
+    header = lines[:header_end]
+    metadata = _module_metadata("\n".join(header))
+    if not metadata.get("name") or not metadata.get("desc"):
+        raise ValueError("YouTube module is missing name or description")
+    if "category" not in metadata:
+        desc_index = next(
+            index for index, line in enumerate(header) if line.startswith("#!desc=")
+        )
+        header.insert(desc_index + 1, "#!category=去广告")
+
+    body = lines[header_end:]
+    while body and not body[0]:
+        body.pop(0)
+    license_path = YOUTUBE_RESOURCE_PATHS[YOUTUBE_LICENSE_URL]
+    notes = [
+        "",
+        f"# Source: {YOUTUBE_MODULE_URL}",
+        f"# Selected via ddgksf2013: {YOUTUBE_REFERENCE_URL}",
+        "# Modified by SelfSurge: added category metadata and mirrored script paths.",
+        f"# License: Apache-2.0 {PUBLISHED_PREFIX}{license_path.as_posix()}",
+        "",
+    ]
+    return "\n".join(header + notes + body).rstrip() + "\n"
+
+
 def _write_generated(files: dict[Path, bytes]) -> None:
     expected = set(files)
     for directory in GENERATED_DIRECTORIES:
@@ -102,13 +166,15 @@ def _write_generated(files: dict[Path, bytes]) -> None:
 
 def main() -> None:
     entries = catalog_entries()
+    lpx_entries = [entry for entry in entries if entry[0] != YOUTUBE_MODULE_NAME]
     with concurrent.futures.ThreadPoolExecutor(max_workers=8) as executor:
         sources = dict(
             zip(
-                (url for _, url in entries),
-                executor.map(fetch_lpx, (url for _, url in entries)),
+                (url for _, url in lpx_entries),
+                executor.map(fetch_lpx, (url for _, url in lpx_entries)),
             )
         )
+    youtube_source = fetch_text(YOUTUBE_MODULE_URL)
 
     resource_sources = set().union(
         *(resource_urls(source) for source in sources.values())
@@ -122,12 +188,16 @@ def main() -> None:
     module_sources = {}
     for name, source_url in entries:
         relative = Path("modules", name)
-        module_sources[relative.as_posix()] = source_url
-        module = convert_lpx(
-            sources[source_url],
-            source_url=source_url,
-            unavailable_resources=unavailable,
-        )
+        if name == YOUTUBE_MODULE_NAME:
+            module_sources[relative.as_posix()] = YOUTUBE_MODULE_URL
+            module = youtube_module(youtube_source)
+        else:
+            module_sources[relative.as_posix()] = source_url
+            module = convert_lpx(
+                sources[source_url],
+                source_url=source_url,
+                unavailable_resources=unavailable,
+            )
         files[relative] = module.encode()
         metadata = _module_metadata(module)
         icon = metadata.get("icon", "")
@@ -150,6 +220,14 @@ def main() -> None:
         if content is None:
             continue
         relative = resource_path(url)
+        files[relative] = content
+        mirrored_sources[relative.as_posix()] = {
+            "url": url,
+            "sha256": hashlib.sha256(content).hexdigest(),
+        }
+
+    for url, relative in YOUTUBE_RESOURCE_PATHS.items():
+        content = fetch_bytes(url)
         files[relative] = content
         mirrored_sources[relative.as_posix()] = {
             "url": url,

@@ -1,7 +1,13 @@
-Generated Surge modules are adaptations of Loon configuration templates from
-https://hub.kelee.one/ and retain the supplied author metadata and source URL.
-They are distributed for non-commercial use under CC BY-NC-SA 4.0:
+Generated Surge modules, except YouTube_remove_ads.sgmodule, are adaptations of
+Loon configuration templates from https://hub.kelee.one/ and retain the
+supplied author metadata and source URL. They are distributed for
+non-commercial use under CC BY-NC-SA 4.0:
 https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+YouTube_remove_ads.sgmodule and its mirrored scripts come from Maasea's
+Apache-2.0-licensed native Surge module. SelfSurge adds category metadata and
+replaces its script URLs with local mirrors. The upstream license is mirrored
+at resources/licenses/Maasea-sgmodule-LICENSE.
 
 Files under scripts/ and resources/ are unmodified mirrors. Copyright and
 license terms remain with their respective upstream authors. sources.json
