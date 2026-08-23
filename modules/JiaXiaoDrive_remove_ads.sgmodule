@@ -1,14 +1,16 @@
-# Source: https://kelee.one/Tool/Loon/Lpx/JiaXiaoDrive_remove_ads.lpx
-# Adapted from Loon LPX to Surge module by SelfSurge.
-# License: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 #!name=驾校一点通去广告
 #!desc=移除开屏广告、各页面广告横幅、弹窗广告，移除社区广告。
+#!category=去广告
 #!openUrl=https://apps.apple.com/app/id620262310
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
-#!category=去广告
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/JiaXiaoDrive.png
 #!date=2026-06-01 17:11:35
+#!requirement=CORE_VERSION>=20
+
+# Source: https://kelee.one/Tool/Loon/Lpx/JiaXiaoDrive_remove_ads.lpx
+# Adapted from Loon LPX to Surge module by SelfSurge.
+# Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Map Local]
 ^https:\/\/richmanrules\.ksedt\.com\/serverConfig\/3\/adConfig\.json data-type=text data="{}" header="Content-Type:application/json" status-code=200
@@ -18,7 +20,7 @@
 ^https:\/\/richmanrules\.ksedt\.com\/intellectWaterfall\/find$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
 
 [Body Rewrite]
-http-response-jq ^https:\/\/api\.ksedt\.com\/api\/config\/ 'delpaths([["result","homead"],["result","h5_promotion_page"],["result","advert_interval"],["result","abtest_h5url"],["result","launchApp"],["result","goucheConfig"],["result","gouche"],["result","mainLiveConfig"],["result","discover"],["result","adSdkSwitch4testPointVideo"],["result","adSdkSwitch4simulationExam"],["result","examPageLoadADSwitch"]])'
+http-response-jq ^https:\/\/api\.ksedt\.com\/api\/config\/ 'reduce [["result","homead"],["result","h5_promotion_page"],["result","advert_interval"],["result","abtest_h5url"],["result","launchApp"],["result","goucheConfig"],["result","gouche"],["result","mainLiveConfig"],["result","discover"],["result","adSdkSwitch4testPointVideo"],["result","adSdkSwitch4simulationExam"],["result","examPageLoadADSwitch"]][] as $path (.;. as $before | try delpaths([$path]) catch $before)'
 
 [MITM]
 hostname = %APPEND% richmanrules.ksedt.com, gouche.ksedt.com, muses.ksedt.com, op.ksedt.com, api.ksedt.com

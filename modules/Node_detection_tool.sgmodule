@@ -1,15 +1,22 @@
-# Source: https://kelee.one/Tool/Loon/Lpx/Node_detection_tool.lpx
-# Adapted from Loon LPX to Surge module by SelfSurge.
-# License: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 #!name=节点检测工具
-#!desc=适用于Loon的节点检测工具，可进行地理位置、节点解锁、入口落地等查询。请在所有节点页面选择一个节点长按，出现菜单后进行测试。
-#!author=xream[https://github.com/xream], Keywos[https://github.com/Keywos], KOP-XIAO[https://github.com/KOP-XIAO], dcpengx[https://github.com/dcpengx]
+#!desc=适用于Loon的节点检测工具，可进行地理位置、节点解锁、入口落地等查询。请在所有节点页面选择一个节点长按，出现菜单后进行测试。 注意：Surge Panel 不提供 Loon 的长按节点上下文。
 #!category=节点检测
+#!author=xream[https://github.com/xream], Keywos[https://github.com/Keywos], KOP-XIAO[https://github.com/KOP-XIAO], dcpengx[https://github.com/dcpengx]
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/Other_icon/120px/Node_detection_tool.png
 #!date=2026-06-01 17:11:35
+#!system=ios
+
+# Source: https://kelee.one/Tool/Loon/Lpx/Node_detection_tool.lpx
+# Adapted from Loon LPX to Surge module by SelfSurge.
+# Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Script]
 入口落地查询 = type=generic,script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/Node_detection_tool/NetworkEntryAndExitQueries.js,timeout=10
 地理位置查询 = type=generic,script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/Node_detection_tool/LocationDetection.js,timeout=10
 节点解锁查询 = type=generic,script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/Node_detection_tool/NodeUnlockDetection.js,timeout=20
+
+[Panel]
+入口落地查询 = title="入口落地查询",content="点击刷新",script-name=入口落地查询,icon=globe.asia.australia.system,icon-color=#5d84f8
+地理位置查询 = title="地理位置查询",content="点击刷新",script-name=地理位置查询,icon=location.circle.system,icon-color=#5d84f8
+节点解锁查询 = title="节点解锁查询",content="点击刷新",script-name=节点解锁查询,icon=play.circle.system,icon-color=#5d84f8

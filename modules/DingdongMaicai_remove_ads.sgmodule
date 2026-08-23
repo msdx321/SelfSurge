@@ -1,14 +1,16 @@
-# Source: https://kelee.one/Tool/Loon/Lpx/DingdongMaicai_remove_ads.lpx
-# Adapted from Loon LPX to Surge module by SelfSurge.
-# License: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 #!name=叮咚买菜去广告
 #!desc=移除开屏广告、弹窗推广、搜索推荐、信息流广告、悬浮广告、各页面购物推荐、精简我的页面，移除底栏和各页面AI入口。
+#!category=去广告
 #!openUrl=https://apps.apple.com/app/id768082524
 #!author=zirawell[https://github.com/zirawell], 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md], wish
-#!category=去广告
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/DingdongMaicai.png
 #!date=2026-06-01 17:11:35
+#!requirement=CORE_VERSION>=20
+
+# Source: https://kelee.one/Tool/Loon/Lpx/DingdongMaicai_remove_ads.lpx
+# Adapted from Loon LPX to Surge module by SelfSurge.
+# Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Rule]
 DOMAIN, trackercollect.ddxq.mobi, REJECT
@@ -32,11 +34,11 @@ DOMAIN, rttrack.ddxq.mobi, REJECT
 ^https:\/\/maicai\.api\.ddxq\.mobi\/guide-service\/userLike\/flowData$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
 
 [Body Rewrite]
-http-response-jq ^https:\/\/maicai\.api\.ddxq\.mobi\/homeApi\/categoriesNewDetail\? 'delpaths([["data","ad_info"]])'
-http-response-jq ^https:\/\/maicai\.api\.ddxq\.mobi\/tool\/getConfig\? 'delpaths([["data","ai_enter_config"]])'
-http-response-jq ^https?:\/\/maicai\.api\.ddxq\.mobi\/homeApi\/newDetails\? 'delpaths([["data","top_advert_data"],["data","suspension"]])'
+http-response-jq ^https:\/\/maicai\.api\.ddxq\.mobi\/homeApi\/categoriesNewDetail\? 'reduce [["data","ad_info"]][] as $path (.;. as $before | try delpaths([$path]) catch $before)'
+http-response-jq ^https:\/\/maicai\.api\.ddxq\.mobi\/tool\/getConfig\? 'reduce [["data","ai_enter_config"]][] as $path (.;. as $before | try delpaths([$path]) catch $before)'
+http-response-jq ^https?:\/\/maicai\.api\.ddxq\.mobi\/homeApi\/newDetails\? 'reduce [["data","top_advert_data"],["data","suspension"]][] as $path (.;. as $before | try delpaths([$path]) catch $before)'
 http-response-jq ^https?:\/\/maicai\.api\.ddxq\.mobi\/homeApi\/newDetails\? '.data.list |= map(select(has("capsule_freedom_zone") | not))'
-http-response-jq ^https:\/\/maicai\.api\.ddxq\.mobi\/guide-service\/productApi\/productDetail\/info\? 'delpaths([["data","detail","chatEntry"]])'
+http-response-jq ^https:\/\/maicai\.api\.ddxq\.mobi\/guide-service\/productApi\/productDetail\/info\? 'reduce [["data","detail","chatEntry"]][] as $path (.;. as $before | try delpaths([$path]) catch $before)'
 http-response-jq ^https?:\/\/maicai\.api\.ddxq\.mobi\/homeApi\/bottomNavi 'del(.data.adId?) | if (.data.bottom_list? | length > 0) then .data.bottom_list |= map(select(.type != "eatwhat")) else . end'
 http-response-jq ^https?:\/\/maicai\.api\.ddxq\.mobi\/homeApi\/homeFlowDetail 'walk( if type == "object" and has("list") then .list |= map( if type == "object" and has("multi_advertise_data_list") then del(.multi_advertise_data_list) else . end ) else . end )'
 

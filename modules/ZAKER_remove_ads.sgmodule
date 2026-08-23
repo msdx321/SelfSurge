@@ -1,22 +1,24 @@
-# Source: https://kelee.one/Tool/Loon/Lpx/ZAKER_remove_ads.lpx
-# Adapted from Loon LPX to Surge module by SelfSurge.
-# License: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 #!name=ZAKER去广告
 #!desc=移除开屏广告、置顶轮播图广告和文末广告。
+#!category=去广告
 #!openUrl=https://apps.apple.com/app/id462149227
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
-#!category=去广告
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/ZAKER.png
 #!date=2026-06-01 17:11:35
+#!requirement=CORE_VERSION>=20
+
+# Source: https://kelee.one/Tool/Loon/Lpx/ZAKER_remove_ads.lpx
+# Adapted from Loon LPX to Surge module by SelfSurge.
+# Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Map Local]
 ^https:\/\/iphone\.myzaker\.com\/zaker\/cover\.php\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
 ^https:\/\/iphone\.myzaker\.com\/zaker\/block_top_ad\.php\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
 
 [Body Rewrite]
-http-response-jq ^https:\/\/iphone\.myzaker\.com\/zaker\/article_mongo_sec\.php\? 'delpaths([["data","ad_url"]])'
-http-response-jq ^https:\/\/ggs\.myzaker\.com\/zk_article_ad\.php\? 'delpaths([["data","article_bottom"],["data","recommend_ad"]])'
+http-response-jq ^https:\/\/iphone\.myzaker\.com\/zaker\/article_mongo_sec\.php\? 'reduce [["data","ad_url"]][] as $path (.;. as $before | try delpaths([$path]) catch $before)'
+http-response-jq ^https:\/\/ggs\.myzaker\.com\/zk_article_ad\.php\? 'reduce [["data","article_bottom"],["data","recommend_ad"]][] as $path (.;. as $before | try delpaths([$path]) catch $before)'
 http-response-jq ^https:\/\/iphone\.myzaker\.com\/zaker\/follow_promote\.php\? '.data.list |= map(select(.type != "web"))'
 http-response-jq ^https:\/\/iphone\.myzaker\.com\/zaker\/car_tab\/index\.php\? '.data.gallery |= map(select(.type != "web"))'
 

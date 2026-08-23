@@ -1,14 +1,19 @@
-# Source: https://kelee.one/Tool/Loon/Lpx/NodeLinkCheck.lpx
-# Adapted from Loon LPX to Surge module by SelfSurge.
-# License: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 #!name=代理链路检测
-#!desc=查看目标节点的代理走向，在插件列表中点击此插件上的链接查看使用方法。
+#!desc=查看目标节点的代理走向，在插件列表中点击此插件上的链接查看使用方法。 注意：Surge Panel 不提供 Loon 的长按节点上下文。
+#!category=节点检测
 #!openUrl=https://github.com/luestr/ProxyResource/blob/main/Resource/Markdown/NodeLinkCheck/README.md
 #!author=I-am-R-E[https://github.com/I-am-R-E]
-#!category=节点检测
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Stack.png
 #!date=2026-06-01 17:11:35
+#!system=ios
+
+# Source: https://kelee.one/Tool/Loon/Lpx/NodeLinkCheck.lpx
+# Adapted from Loon LPX to Surge module by SelfSurge.
+# Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Script]
 代理链路检测 = type=generic,script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/NodeLinkCheck/NodeLinkCheck.js
+
+[Panel]
+代理链路检测 = title="代理链路检测",content="点击刷新",script-name=代理链路检测,icon=link.circle.system,icon-color=#5d84f8

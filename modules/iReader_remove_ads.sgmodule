@@ -1,14 +1,16 @@
-# Source: https://kelee.one/Tool/Loon/Lpx/iReader_remove_ads.lpx
-# Adapted from Loon LPX to Surge module by SelfSurge.
-# License: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 #!name=掌阅去广告
 #!desc=移除开屏广告、悬浮广告、弹窗广告、朗读音色广告及我的页面广告，移除各页面的横幅轮播图。
+#!category=去广告
 #!openUrl=https://apps.apple.com/app/id463150061
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
-#!category=去广告
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/iReader.png
 #!date=2026-06-01 17:11:35
+#!requirement=CORE_VERSION>=20
+
+# Source: https://kelee.one/Tool/Loon/Lpx/iReader_remove_ads.lpx
+# Adapted from Loon LPX to Surge module by SelfSurge.
+# Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Rule]
 DOMAIN, saad.ms.zhangyue.net, REJECT
@@ -22,7 +24,7 @@ DOMAIN, saad.ms.zhangyue.net, REJECT
 https:\/\/(webboot\.zhangyue\.com|ih2\.ireader\.com)\/zyam\/app\/app\.php\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
 
 [Body Rewrite]
-http-response-jq ^https:\/\/(webboot\.zhangyue\.com|ih2\.ireader\.com)\/zybook4\/iphone\/u\/p\/api\.php\? 'delpaths([["Splash"]])'
+http-response-jq ^https:\/\/(webboot\.zhangyue\.com|ih2\.ireader\.com)\/zybook4\/iphone\/u\/p\/api\.php\? 'reduce [["Splash"]][] as $path (.;. as $before | try delpaths([$path]) catch $before)'
 http-response-jq ^https:\/\/(webboot\.zhangyue\.com|ih2\.ireader\.com)\/bookstore\/read\/visual\/channel\/list\? '.body.list |= map(select(.id | contains("ad_") | not))'
 
 [MITM]

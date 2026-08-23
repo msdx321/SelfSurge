@@ -1,14 +1,15 @@
-# Source: https://kelee.one/Tool/Loon/Lpx/VVebo_repair.lpx
-# Adapted from Loon LPX to Surge module by SelfSurge.
-# License: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 #!name=VVebo时间线修复
 #!desc=修复失效的用户时间线和我的页面。使用此插件前需要禁用微博去广告插件，避免插件冲突导致失效。
+#!category=功能增强
 #!openUrl=https://apps.apple.com/app/id670910957
 #!author=suiyuran[https://github.com/suiyuran], androidcn[https://github.com/androidcn]
-#!category=功能增强
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/VVebo.png
 #!date=2026-06-01 17:11:35
+
+# Source: https://kelee.one/Tool/Loon/Lpx/VVebo_repair.lpx
+# Adapted from Loon LPX to Surge module by SelfSurge.
+# Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Script]
 修复时间线 = type=http-request,pattern=^https:\/\/api\.weibo\.cn\/2\/users\/show\?,script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/VVebo/VVebo_repair.js

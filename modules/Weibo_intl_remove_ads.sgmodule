@@ -1,14 +1,16 @@
-# Source: https://kelee.one/Tool/Loon/Lpx/Weibo_intl_remove_ads.lpx
-# Adapted from Loon LPX to Surge module by SelfSurge.
-# License: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 #!name=微博轻享版去广告
 #!desc=移除开屏广告、时间线广告及评论区广告，移除发现页面横幅推广、最常访问、主页访客及热门视频，移除搜索填充词。
+#!category=去广告
 #!openUrl=https://apps.apple.com/app/id1215210046
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
-#!category=去广告
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Weibo_intl.png
 #!date=2026-06-01 17:11:35
+#!requirement=CORE_VERSION>=20
+
+# Source: https://kelee.one/Tool/Loon/Lpx/Weibo_intl_remove_ads.lpx
+# Adapted from Loon LPX to Surge module by SelfSurge.
+# Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Map Local]
 ^https:\/\/bootpreload\.uve\.weibo\.com\/v1\/ad\/preload$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
@@ -17,11 +19,11 @@
 ^https:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=get_searching_info data-type=text data="{}" header="Content-Type:application/json" status-code=200
 
 [Body Rewrite]
-http-response-jq ^https:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=trends 'delpaths([["data","banner"],["data","user_footprint"],["data","profile_accessrecord"],["data","native_content"]])'
+http-response-jq ^https:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=trends 'reduce [["data","banner"],["data","user_footprint"],["data","profile_accessrecord"],["data","native_content"]][] as $path (.;. as $before | try delpaths([$path]) catch $before)'
 http-response-jq ^https:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=trends '.data.discover |= map(select(.schema != "尊享会员"))'
-http-response-jq ^https:\/\/api\.weibo\.cn\/2\/statuses\/friends\/timeline$ 'delpaths([["advertises"],["ad"],["ad_version_2_weibo"]])'
+http-response-jq ^https:\/\/api\.weibo\.cn\/2\/statuses\/friends\/timeline$ 'reduce [["advertises"],["ad"],["ad_version_2_weibo"]][] as $path (.;. as $before | try delpaths([$path]) catch $before)'
 http-response-jq ^https:\/\/api\.weibo\.cn\/2\/statuses\/friends\/timeline$ '.statuses|=map(select(.ad_marked!=true))'
-http-response-jq ^https:\/\/api\.weibo\.cn\/2\/statuses\/unread_hot_timeline$ 'delpaths([["ad"],["ad_version_2_weibo"]])'
+http-response-jq ^https:\/\/api\.weibo\.cn\/2\/statuses\/unread_hot_timeline$ 'reduce [["ad"],["ad_version_2_weibo"]][] as $path (.;. as $before | try delpaths([$path]) catch $before)'
 http-response-jq ^https:\/\/api\.weibo\.cn\/2\/statuses\/unread_hot_timeline$ '.statuses|=map(select(.ad_marked!=true))'
 http-response-jq ^https:\/\/api\.weibo\.cn\/2\/comments\/build_comments\? '.datas[].data.ad_from_comment? = true'
 http-response-jq ^https:\/\/api\.weibo\.cn\/2\/statuses\/container_detail\? '.pageHeader.data.items |= ( if . == null then [] else map(select(.data.itemid != "top_searching")) end )'

@@ -1,14 +1,16 @@
-# Source: https://kelee.one/Tool/Loon/Lpx/Baidu_input_method_remove_ads.lpx
-# Adapted from Loon LPX to Surge module by SelfSurge.
-# License: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 #!name=百度输入法去广告
 #!desc=过滤百度输入法广告，替换个人主页随机图。
+#!category=去广告
 #!openUrl=https://apps.apple.com/app/id916139408
 #!author=Keywos[https://github.com/Keywos]
-#!category=去广告
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Baidu_input_method.png
 #!date=2026-06-01 17:11:35
+#!requirement=CORE_VERSION>=20
+
+# Source: https://kelee.one/Tool/Loon/Lpx/Baidu_input_method_remove_ads.lpx
+# Adapted from Loon LPX to Surge module by SelfSurge.
+# Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Map Local]
 ^https?:\/\/mime\.baidu\.com\/v5\/start_screen_ads/list data-type=text data="{}" header="Content-Type:application/json" status-code=200

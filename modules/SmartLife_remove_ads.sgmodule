@@ -1,14 +1,16 @@
-# Source: https://kelee.one/Tool/Loon/Lpx/SmartLife_remove_ads.lpx
-# Adapted from Loon LPX to Surge module by SelfSurge.
-# License: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 #!name=慧生活798去广告
 #!desc=移除开屏广告、横幅广告，精简底栏。
+#!category=去广告
 #!openUrl=https://apps.apple.com/app/id1490809012
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
-#!category=去广告
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/SmartLife.png
 #!date=2026-07-01 21:36:10
+#!requirement=CORE_VERSION>=20
+
+# Source: https://kelee.one/Tool/Loon/Lpx/SmartLife_remove_ads.lpx
+# Adapted from Loon LPX to Surge module by SelfSurge.
+# Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Map Local]
 ^https:\/\/i\.ilife798\.com\/api\/v\d\/acc\/score\/mission-lst$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
@@ -16,7 +18,7 @@
 ^https:\/\/i\.ilife798\.com\/api\/v\d\/ui\/app\/master$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
 
 [Body Rewrite]
-http-response-jq ^https:\/\/i\.ilife798\.com\/api\/v\d\/acc\/login$ 'delpaths([["data","ar"],["data","showAd"]])'
+http-response-jq ^https:\/\/i\.ilife798\.com\/api\/v\d\/acc\/login$ 'reduce [["data","ar"],["data","showAd"]][] as $path (.;. as $before | try delpaths([$path]) catch $before)'
 
 [MITM]
 hostname = %APPEND% i.ilife798.com

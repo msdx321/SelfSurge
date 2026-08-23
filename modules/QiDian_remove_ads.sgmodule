@@ -1,14 +1,16 @@
-# Source: https://kelee.one/Tool/Loon/Lpx/QiDian_remove_ads.lpx
-# Adapted from Loon LPX to Surge module by SelfSurge.
-# License: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 #!name=起点读书去广告
 #!desc=移除起点读书开屏广告、每日导读、各类弹窗、文末广告、搜索填充词，精简我的页面。
+#!category=去广告
 #!openUrl=https://apps.apple.com/app/id534174796
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
-#!category=去广告
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/QiDian.png
 #!date=2026-06-01 17:11:35
+#!requirement=CORE_VERSION>=20
+
+# Source: https://kelee.one/Tool/Loon/Lpx/QiDian_remove_ads.lpx
+# Adapted from Loon LPX to Surge module by SelfSurge.
+# Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Map Local]
 ^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v4\/client\/getsplashscreen\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
@@ -26,10 +28,10 @@
 ^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/young\/getconf$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
 
 [Body Rewrite]
-http-response-jq ^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/client\/getconf$ 'if (getpath(["Data"]) | has("WolfEye")) then setpath(["Data","WolfEye"];0) else . end | if (getpath(["Data","CloudSetting"]) | has("TeenShowFreq")) then setpath(["Data","CloudSetting","TeenShowFreq"];0) else . end'
-http-response-jq ^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/client\/getconf$ 'delpaths([["Data","ActivityPageBackPushNoticeFrequency"],["Data","ActivityIcon"],["Data","ActivityPopup"],["Data","LuckBag"]])'
-http-response-jq ^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v2\/dailyrecommend\/getdailyrecommend\? 'if (getpath(["Data"]) | has("Items")) then setpath(["Data","Items"];[]) else . end'
-http-response-jq ^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v3\/user\/getaccountpage\? 'delpaths([["Data","BenefitButtonList"]])'
+http-response-jq ^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/client\/getconf$ 'reduce [[["Data","WolfEye"],["Data"],"WolfEye",0],[["Data","CloudSetting","TeenShowFreq"],["Data","CloudSetting"],"TeenShowFreq",0]][] as $item (.;. as $before | try (if (getpath($item[1]) | has($item[2])) then setpath($item[0];$item[3]) else . end) catch $before)'
+http-response-jq ^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/client\/getconf$ 'reduce [["Data","ActivityPageBackPushNoticeFrequency"],["Data","ActivityIcon"],["Data","ActivityPopup"],["Data","LuckBag"]][] as $path (.;. as $before | try delpaths([$path]) catch $before)'
+http-response-jq ^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v2\/dailyrecommend\/getdailyrecommend\? 'reduce [[["Data","Items"],["Data"],"Items",[]]][] as $item (.;. as $before | try (if (getpath($item[1]) | has($item[2])) then setpath($item[0];$item[3]) else . end) catch $before)'
+http-response-jq ^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v3\/user\/getaccountpage\? 'reduce [["Data","BenefitButtonList"]][] as $path (.;. as $before | try delpaths([$path]) catch $before)'
 
 [MITM]
 hostname = %APPEND% magev6.if.qidian.com, ywab.reader.qq.com

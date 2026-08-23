@@ -1,21 +1,23 @@
-# Source: https://kelee.one/Tool/Loon/Lpx/Yueyou_remove_ads.lpx
-# Adapted from Loon LPX to Surge module by SelfSurge.
-# License: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 #!name=阅友去广告
 #!desc=移除开屏广告、弹窗广告和阅读页面广告，移除底栏福利按钮。
+#!category=去广告
 #!openUrl=https://apps.apple.com/app/id1066723192
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
-#!category=去广告
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Yueyou.png
 #!date=2026-06-01 17:11:35
+#!requirement=CORE_VERSION>=20
+
+# Source: https://kelee.one/Tool/Loon/Lpx/Yueyou_remove_ads.lpx
+# Adapted from Loon LPX to Surge module by SelfSurge.
+# Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Rule]
 DOMAIN, ads.reader.yueyouxs.com, REJECT
 
 [Body Rewrite]
-http-response-jq ^https:\/\/goway\.reader\.yueyouxs\.com\/assemble\/app\/basic\/getAppInfo\? 'delpaths([["data","isShowDLPopup"],["data","isShowGame"],["data","touTiaoShowDlPopup"],["data","offLineDownload","WatchVideoBtnDesc"],["data","readVipFirstCfg"],["data","readVipNormalCfg"],["data","notifyAd"],["data","hotStartSplashTime"],["data","hotStartReqSwitch"],["data","isShowBFTab"],["data","popReqDelayTime"],["data","benefitCfg"],["data","chestTask"],["data","hotStartAd"],["data","activeTagList"],["data","secondOrderCfg"],["data","secondOrderList"],["data","blockedWordsCfg"],["data","aaReportListCfg"],["data","pddAdSwitch"],["data","isShowShelfAuthPopup"],["data","firstPopUpAmount"]])'
-http-response-jq ^https:\/\/goway\.reader\.yueyouxs\.com\/assemble\/app\/basic\/getAppInfo\? 'if (getpath(["data"]) | has("isAdClosed")) then setpath(["data","isAdClosed"];true) else . end'
+http-response-jq ^https:\/\/goway\.reader\.yueyouxs\.com\/assemble\/app\/basic\/getAppInfo\? 'reduce [["data","isShowDLPopup"],["data","isShowGame"],["data","touTiaoShowDlPopup"],["data","offLineDownload","WatchVideoBtnDesc"],["data","readVipFirstCfg"],["data","readVipNormalCfg"],["data","notifyAd"],["data","hotStartSplashTime"],["data","hotStartReqSwitch"],["data","isShowBFTab"],["data","popReqDelayTime"],["data","benefitCfg"],["data","chestTask"],["data","hotStartAd"],["data","activeTagList"],["data","secondOrderCfg"],["data","secondOrderList"],["data","blockedWordsCfg"],["data","aaReportListCfg"],["data","pddAdSwitch"],["data","isShowShelfAuthPopup"],["data","firstPopUpAmount"]][] as $path (.;. as $before | try delpaths([$path]) catch $before)'
+http-response-jq ^https:\/\/goway\.reader\.yueyouxs\.com\/assemble\/app\/basic\/getAppInfo\? 'reduce [[["data","isAdClosed"],["data"],"isAdClosed",true]][] as $item (.;. as $before | try (if (getpath($item[1]) | has($item[2])) then setpath($item[0];$item[3]) else . end) catch $before)'
 
 [MITM]
 hostname = %APPEND% goway.reader.yueyouxs.com

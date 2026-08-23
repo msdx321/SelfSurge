@@ -1,14 +1,16 @@
-# Source: https://kelee.one/Tool/Loon/Lpx/DREAME_remove_ads.lpx
-# Adapted from Loon LPX to Surge module by SelfSurge.
-# License: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 #!name=DREAME去广告
 #!desc=移除开屏广告、首页大图推广、横幅推广，精简底栏，阻止桌面图标替换。仅支持2.5.1版。
+#!category=去广告
 #!openUrl=https://apps.apple.com/app/id1564419343
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
-#!category=去广告
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/DREAME.png
 #!date=2026-06-01 17:11:35
+#!requirement=CORE_VERSION>=20
+
+# Source: https://kelee.one/Tool/Loon/Lpx/DREAME_remove_ads.lpx
+# Adapted from Loon LPX to Surge module by SelfSurge.
+# Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Map Local]
 ^https:\/\/cn\.iot\.dreame\.tech:\d+\/dreame-product\/public\/advertisement\/ data-type=text data="{}" header="Content-Type:application/json" status-code=200
@@ -17,7 +19,7 @@
 ^https:\/\/cn\.iot\.dreame\.tech:\d+\/dreame-product\/public\/common-plugin$ data-type=base64 data="eyJjb2RlIjowLCJzdWNjZXNzIjp0cnVlLCJkYXRhIjp7InZlcnNpb24iOjExNDQsImFwcFZlciI6MjAsInVybCI6Imh0dHBzOi8va2VsZWUub25lL1Jlc291cmNlL1ppcC9EUkVBTUUvZDY5OTZmZWU5NTM4MGFmZmRmNzQwZWU0NGE4NWZiZTlfX19VTklfX0VEQjkyMkUuemlwIiwibWQ1IjoiZTBjYzljYjc3ZDllMGNmMjc1ZTQxZTczZGJhM2Y5ODgiLCJ2YWxpZERhdGUiOiIiLCJjaGFuZ2VMb2ciOiIiLCJzdGF0dXMiOiIifSwibXNnIjoi5pON5L2c5oiQ5YqfIn0=" header="Content-Type:application/json" status-code=200
 
 [Body Rewrite]
-http-response-jq ^https:\/\/cn\.iot\.dreame\.tech:13267\/dreame-system\/dreame-app\/setting\/query$ 'delpaths([["data","appIconConfig"]])'
+http-response-jq ^https:\/\/cn\.iot\.dreame\.tech:13267\/dreame-system\/dreame-app\/setting\/query$ 'reduce [["data","appIconConfig"]][] as $path (.;. as $before | try delpaths([$path]) catch $before)'
 
 [MITM]
 hostname = %APPEND% cn-mall.dreame.tech, cn-wxmall.dreame.tech, cn.iot.dreame.tech

@@ -1,14 +1,16 @@
-# Source: https://kelee.one/Tool/Loon/Lpx/Taqu_remove_ads.lpx
-# Adapted from Loon LPX to Surge module by SelfSurge.
-# License: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 #!name=他趣去广告
 #!desc=移除各类弹窗、横幅，精简我的页面。
+#!category=去广告
 #!openUrl=https://apps.apple.com/app/id539988420
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
-#!category=去广告
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Taqu.png
 #!date=2026-06-12 14:11:11
+#!requirement=CORE_VERSION>=20
+
+# Source: https://kelee.one/Tool/Loon/Lpx/Taqu_remove_ads.lpx
+# Adapted from Loon LPX to Surge module by SelfSurge.
+# Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Map Local]
 ^https:\/\/gw-cn\.jiaoliuqu\.com\/taqu-homepage\/v\d\/Banner\/getBannerByPositions\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
@@ -24,7 +26,7 @@
 [Body Rewrite]
 http-response-jq ^https:\/\/gw-cn\.jiaoliuqu\.com\/mp-dolphin\/v\d\/rec\/recByPositions\? '.info.data |= map( if .materials and (.materials | type) == "array" then .materials |= map(select(has("adPosition") | not)) else . end )'
 http-response-jq ^https:\/\/gw-cn\.jiaoliuqu\.com\/mp-dolphin\/v\d\/rec\/recByPositions\? '.info.data |= map( if .materials and (.materials | type) == "array" then .materials |= map(select((keys | length) != 2 or (keys | sort) != ["link", "pic"])) else . end )'
-http-response-jq ^https:\/\/gw-cn\.jiaoliuqu\.com\/bbs\/v5\/Home\/getHomePageModulesBySortV\d\? '(.info.data.modules_list // []) |= [.[] | [.[] | del(.relaction_title, .scrollow_contents)]] | (.info.data.top_fix_list // []) |= [.[] | del(.subtitle_list)]'
+http-response-jq ^https:\/\/gw-cn\.jiaoliuqu\.com\/bbs\/v5\/Home\/getHomePageModulesBySortV\d\? '(.info.data.modules_list// []) |= [.[] | [.[] | del(.relaction_title, .scrollow_contents)]] | (.info.data.top_fix_list// []) |= [.[] | del(.subtitle_list)]'
 
 [MITM]
 hostname = %APPEND% gw-cn.jiaoliuqu.com

@@ -1,14 +1,16 @@
-# Source: https://kelee.one/Tool/Loon/Lpx/MeituMYXJ_remove_ads.lpx
-# Adapted from Loon LPX to Surge module by SelfSurge.
-# License: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 #!name=美颜相机去广告
 #!desc=移除开屏广告、应用内弹窗，精简首页和我的页面。
+#!category=去广告
 #!openUrl=https://apps.apple.com/app/id592331499
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
-#!category=去广告
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/MeituMYXJ.png
 #!date=2026-06-01 17:11:35
+#!requirement=CORE_VERSION>=20
+
+# Source: https://kelee.one/Tool/Loon/Lpx/MeituMYXJ_remove_ads.lpx
+# Adapted from Loon LPX to Surge module by SelfSurge.
+# Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Rule]
 DOMAIN, adui.tg.meitu.com, REJECT
@@ -18,8 +20,8 @@ DOMAIN, adui.tg.meitu.com, REJECT
 ^https:\/\/api\.meiyan\.com\/vip\/permission_update_popup\.json\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
 
 [Body Rewrite]
-http-response-jq ^https:\/\/api\.meiyan\.com\/operation\/get_config\.json\? 'delpaths([["response","time_limit"],["response","bubble"],["response","person_center"]])'
-http-response-jq ^https:\/\/api\.meiyan\.com\/operation\/get_config\.json\? 'if (getpath(["response","function_pop","meiyan_style"]) | has("is_pop")) then setpath(["response","function_pop","meiyan_style","is_pop"];false) else . end | if (getpath(["response","onoff","vip_half_window_exit_remain_popup"]) | has("open")) then setpath(["response","onoff","vip_half_window_exit_remain_popup","open"];0) else . end | if (getpath(["response","onoff"]) | has("vip_home_exit_remain_popup")) then setpath(["response","onoff","vip_home_exit_remain_popup"];0) else . end'
+http-response-jq ^https:\/\/api\.meiyan\.com\/operation\/get_config\.json\? 'reduce [["response","time_limit"],["response","bubble"],["response","person_center"]][] as $path (.;. as $before | try delpaths([$path]) catch $before)'
+http-response-jq ^https:\/\/api\.meiyan\.com\/operation\/get_config\.json\? 'reduce [[["response","function_pop","meiyan_style","is_pop"],["response","function_pop","meiyan_style"],"is_pop",false],[["response","onoff","vip_half_window_exit_remain_popup","open"],["response","onoff","vip_half_window_exit_remain_popup"],"open",0],[["response","onoff","vip_home_exit_remain_popup"],["response","onoff"],"vip_home_exit_remain_popup",0]][] as $item (.;. as $before | try (if (getpath($item[1]) | has($item[2])) then setpath($item[0];$item[3]) else . end) catch $before)'
 
 [Script]
 精简首页功能栏目并移除美颜推荐 = type=http-response,pattern=^https:\/\/api\.meiyan\.com\/operation\/home\.json\?,script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/MeituMYXJ/MeituMYXJ_remove_ads.js,requires-body=true

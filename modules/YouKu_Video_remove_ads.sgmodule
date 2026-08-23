@@ -1,14 +1,16 @@
-# Source: https://kelee.one/Tool/Loon/Lpx/YouKu_Video_remove_ads.lpx
-# Adapted from Loon LPX to Surge module by SelfSurge.
-# License: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 #!name=优酷视频去广告
 #!desc=移除开屏广告、视频广告、信息流广告。其余广告由于请求已加密，故无法移除。
+#!category=去广告
 #!openUrl=https://apps.apple.com/app/id336141475
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md], RuCu6[https://github.com/RuCu6]
-#!category=去广告
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/YouKu_Video.png
 #!date=2026-06-01 17:11:35
+#!requirement=CORE_VERSION>=20
+
+# Source: https://kelee.one/Tool/Loon/Lpx/YouKu_Video_remove_ads.lpx
+# Adapted from Loon LPX to Surge module by SelfSurge.
+# Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Rule]
 DOMAIN, push.m.youku.com, DIRECT
@@ -37,8 +39,8 @@ DOMAIN, pre-acs.youku.com, REJECT
 DOMAIN, youku-acs.m.taobao.com, REJECT
 
 [Body Rewrite]
-http-response-jq ^https:\/\/un-acs\.youku\.com\/gw\/mtop\.youku\.play\.ups\.appinfo\.get 'delpaths([["data","data","ad"],["data","data","watermark"],["data","data","ykad"]])'
-http-response-jq ^https:\/\/push\.m\.youku\.com\/collect-api\/get_push_interval_config_wx\? 'delpaths([["data","tipContent"],["data","tipContentNew"]])'
+http-response-jq ^https:\/\/un-acs\.youku\.com\/gw\/mtop\.youku\.play\.ups\.appinfo\.get 'reduce [["data","data","ad"],["data","data","watermark"],["data","data","ykad"]][] as $path (.;. as $before | try delpaths([$path]) catch $before)'
+http-response-jq ^https:\/\/push\.m\.youku\.com\/collect-api\/get_push_interval_config_wx\? 'reduce [["data","tipContent"],["data","tipContentNew"]][] as $path (.;. as $before | try delpaths([$path]) catch $before)'
 
 [MITM]
 hostname = %APPEND% push.m.youku.com, un-acs.youku.com

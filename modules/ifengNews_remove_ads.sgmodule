@@ -1,14 +1,16 @@
-# Source: https://kelee.one/Tool/Loon/Lpx/ifengNews_remove_ads.lpx
-# Adapted from Loon LPX to Surge module by SelfSurge.
-# License: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 #!name=凤凰新闻去广告
 #!desc=移除皮肤、开屏广告、信息流广告、文末广告、视频流广告、评论区广告，移除信息流订阅号文章、文末推荐阅读，精简我的页面。
+#!category=去广告
 #!openUrl=https://apps.apple.com/app/id395133418
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
-#!category=去广告
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/ifengNews.png
 #!date=2026-07-01 11:32:25
+#!requirement=CORE_VERSION>=20
+
+# Source: https://kelee.one/Tool/Loon/Lpx/ifengNews_remove_ads.lpx
+# Adapted from Loon LPX to Surge module by SelfSurge.
+# Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [URL Rewrite]
 ^https:\/\/config\.nine\.ifeng\.com\/news\/h5prepublish\? _ reject
@@ -28,11 +30,11 @@
 
 [Body Rewrite]
 http-response-jq ^https:\/\/config\.nine\.ifeng\.com\/news\/cow\? '.bottomNav|=map(select(.NavId=="bottomNavNews" or .NavId=="bottomNavMine"))'
-http-response-jq ^https:\/\/config\.nine\.ifeng\.com\/news\/cow\? 'delpaths([["zip_url"]])'
+http-response-jq ^https:\/\/config\.nine\.ifeng\.com\/news\/cow\? 'reduce [["zip_url"]][] as $path (.;. as $before | try delpaths([$path]) catch $before)'
 http-response-jq ^https:\/\/config\.nine\.ifeng\.com\/news\/channel\? '.defaultChannel |= map(select(.id == "commenterch" or .id == "sy" or .id == "vipchannel" or .id == "rank_hot_merge" or .id == "rtnews" or .id == "sp" or .id == "mil" or .id == "finance" or .id == "history" or .id == "momentsnew" or .id == "taihai" or .id == "focusnews" or .id == "rcmd" or .id == "tw" or .id == "HK" or .id == "dawanqu1"))'
-http-response-jq ^https:\/\/config\.nine\.ifeng\.com\/news\/channel\? 'delpaths([["more"],["youngChannel"]])'
+http-response-jq ^https:\/\/config\.nine\.ifeng\.com\/news\/channel\? 'reduce [["more"],["youngChannel"]][] as $path (.;. as $before | try delpaths([$path]) catch $before)'
 http-response-jq ^https:\/\/nine\.ifeng\.com\/headline\? 'walk( if type == "object" and has("item") and (.item | type == "array") then .item |= map(select(.type == "phvideo" or .type == "doc" or .type == "phreclist")) else . end )'
-http-response-jq ^https:\/\/nine\.ifeng\.com\/getNewsDocs\? 'delpaths([["body","showAdvert"],["body","adData"]])'
+http-response-jq ^https:\/\/nine\.ifeng\.com\/getNewsDocs\? 'reduce [["body","showAdvert"],["body","adData"]][] as $path (.;. as $before | try delpaths([$path]) catch $before)'
 http-response-jq ^https:\/\/nine\.ifeng\.com\/phoenixTvChannel\? 'map( if has("item") then .item|=map(select(.type=="columnfastmessagescroll" or .type=="phvideo" or .type=="videoseriesrecommendmarquee" or .type=="short")) else . end )'
 http-response-jq ^https:\/\/nine\.ifeng\.com\/videoimmersionlistv\d\? 'map( if has("item") then .item|=map(select(.type=="miniVideo" or .type=="phvideo")) else . end )'
 http-response-jq ^https:\/\/nine\.ifeng\.com\/shortList\? 'map(.item|=map(select(.type=="short")))'

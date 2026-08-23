@@ -1,18 +1,19 @@
-# Source: https://kelee.one/Tool/Loon/Lpx/Auto_Join_TF.lpx
-# Adapted from Loon LPX to Surge module by SelfSurge.
-# License: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 #!name=自动加入TestFlight
-#!desc=自动监控TestFlight名额，一旦有新的名额即刻加入。
+#!desc=自动监控TestFlight名额，一旦有新的名额即刻加入。 注意：PROXY 规则需在 Surge 主配置中手动指定策略。
+#!category=定时任务
 #!openUrl=https://apps.apple.com/app/id899247664
 #!author=奶思[https://github.com/fmz200], DecoAri[https://github.com/DecoAri], xream[https://github.com/xream]
-#!category=定时任务
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/TestFlight.png
-# Loon metadata: #!input=App_ID
 #!date=2026-06-01 17:11:35
-
 #!arguments=CaptureAccountToken:false,RunTask:false,RunMonitor:true,TaskCron:0 0/2 * * * ?,TaskMonitor:0 * * * * ?
-#!arguments-desc=Loon 选项已转为自由输入；可选值见模块注释；enable 值作为脚本最后一个参数传入。
+#!arguments-desc=Loon 选项与策略已转为 Surge 自由输入；脚本参数按同名字段传入，具体格式见模块注释；enable 字段为 false 时脚本需立即退出。
+
+# Source: https://kelee.one/Tool/Loon/Lpx/Auto_Join_TF.lpx
+# Adapted from Loon LPX to Surge module by SelfSurge.
+# Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+# Loon metadata: #!input=App_ID
+
 # Surge 参数 CaptureAccountToken：默认 false；可选 false | true；捕获账号令牌；此开关控制插件是否捕获账户令牌
 # Surge 参数 RunTask：默认 false；可选 false | true；自动加入TF；此开关控制是否启动定时任务
 # Surge 参数 RunMonitor：默认 true；可选 true | false；监控TF位置；此开关控制是否启动定时任务
@@ -20,12 +21,15 @@
 # Surge 参数 TaskMonitor：默认 0 * * * * ?；监控TF定时参数；这里需要输入符合CRON表达式的参数
 
 [Rule]
-# Unsupported Loon policy PROXY: DOMAIN, testflight.apple.com, PROXY
+# Requires main-profile policy selection: DOMAIN, testflight.apple.com, PROXY
 
 [Script]
-# Loon enable 参数 CaptureAccountToken 已作为最后一个脚本参数传入；脚本需读取该值并在 false 时直接退出。
-获取账号令牌 = type=http-request,pattern=^https?:\/\/testflight\.apple\.com\/v3\/accounts\/.*\/apps$,script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/TestFlight/CaptureAccountToken.js,argument="{{{CaptureAccountToken}}}"
-# Loon enable 参数 RunTask 已作为最后一个脚本参数传入；脚本需读取该值并在 false 时直接退出。
-自动加入TF = type=cron,cronexp="{{{TaskCron}}}",script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/TestFlight/AutoJoinTF.js,timeout=600,argument="{{{RunTask}}}"
-# Loon enable 参数 RunMonitor 已作为最后一个脚本参数传入；脚本需读取该值并在 false 时直接退出。
-监控TF位置 = type=cron,cronexp="{{{TaskMonitor}}}",script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/TestFlight/AutoMonitorTF.js,timeout=30,argument="{{{RunMonitor}}}"
+# Loon enable 参数 CaptureAccountToken 已作为同名脚本参数字段传入；脚本需在 false 时直接退出。
+# Surge $argument 为字符串；上游脚本需先执行 JSON.parse($argument) 再读取同名字段。
+获取账号令牌 = type=http-request,pattern=^https?:\/\/testflight\.apple\.com\/v3\/accounts\/.*\/apps$,script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/TestFlight/CaptureAccountToken.js,argument="{\"CaptureAccountToken\":{{{CaptureAccountToken}}}}"
+# Loon enable 参数 RunTask 已作为同名脚本参数字段传入；脚本需在 false 时直接退出。
+# Surge $argument 为字符串；上游脚本需先执行 JSON.parse($argument) 再读取同名字段。
+自动加入TF = type=cron,cronexp="{{{TaskCron}}}",script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/TestFlight/AutoJoinTF.js,timeout=600,argument="{\"RunTask\":{{{RunTask}}}}"
+# Loon enable 参数 RunMonitor 已作为同名脚本参数字段传入；脚本需在 false 时直接退出。
+# Surge $argument 为字符串；上游脚本需先执行 JSON.parse($argument) 再读取同名字段。
+监控TF位置 = type=cron,cronexp="{{{TaskMonitor}}}",script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/TestFlight/AutoMonitorTF.js,timeout=30,argument="{\"RunMonitor\":{{{RunMonitor}}}}"

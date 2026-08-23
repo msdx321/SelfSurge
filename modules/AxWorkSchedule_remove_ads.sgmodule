@@ -1,14 +1,16 @@
-# Source: https://kelee.one/Tool/Loon/Lpx/AxWorkSchedule_remove_ads.lpx
-# Adapted from Loon LPX to Surge module by SelfSurge.
-# License: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 #!name=排班日历去广告
 #!desc=移除开屏广告、横幅广告。
+#!category=去广告
 #!openUrl=https://apps.apple.com/app/id1451024401
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
-#!category=去广告
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/AxWorkSchedule.png
 #!date=2026-07-02 00:10:15
+#!requirement=CORE_VERSION>=20
+
+# Source: https://kelee.one/Tool/Loon/Lpx/AxWorkSchedule_remove_ads.lpx
+# Adapted from Loon LPX to Surge module by SelfSurge.
+# Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Map Local]
 ^https:\/\/schedule-api\.julanling\.com\/api\d\/get_splash$ data-type=text data="{}" header="Content-Type:application/json" status-code=200

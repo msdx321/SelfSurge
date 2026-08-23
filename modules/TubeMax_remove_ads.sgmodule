@@ -1,17 +1,18 @@
-# Source: https://kelee.one/Tool/Loon/Lpx/TubeMax_remove_ads.lpx
-# Adapted from Loon LPX to Surge module by SelfSurge.
-# License: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 #!name=TubeMax去广告
-#!desc=过滤TubeMax广告
+#!desc=过滤TubeMax广告 注意：PROXY 规则需在 Surge 主配置中手动指定策略。
+#!category=去广告
 #!openUrl=https://apps.apple.com/app/id1634335563
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
-#!category=去广告
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/TubeMax.png
 #!date=2026-06-01 17:11:35
 
+# Source: https://kelee.one/Tool/Loon/Lpx/TubeMax_remove_ads.lpx
+# Adapted from Loon LPX to Surge module by SelfSurge.
+# Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+
 [Rule]
-# Unsupported Loon policy PROXY: DOMAIN, app.tubemaxapp.com, PROXY
+# Requires main-profile policy selection: DOMAIN, app.tubemaxapp.com, PROXY
 DOMAIN-SUFFIX, adjust.com, REJECT
 DOMAIN-SUFFIX, applvn.com, REJECT
 DOMAIN-SUFFIX, app-measurement.com, REJECT

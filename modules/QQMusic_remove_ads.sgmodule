@@ -1,14 +1,15 @@
-# Source: https://kelee.one/Tool/Loon/Lpx/QQMusic_remove_ads.lpx
-# Adapted from Loon LPX to Surge module by SelfSurge.
-# License: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 #!name=QQ音乐去广告
 #!desc=过滤QQ音乐广告
+#!category=去广告
 #!openUrl=https://apps.apple.com/app/id414603431
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
-#!category=去广告
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/QQMusic.png
 #!date=2026-06-01 17:11:35
+
+# Source: https://kelee.one/Tool/Loon/Lpx/QQMusic_remove_ads.lpx
+# Adapted from Loon LPX to Surge module by SelfSurge.
+# Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Rule]
 DOMAIN, adstats.tencentmusic.com, REJECT

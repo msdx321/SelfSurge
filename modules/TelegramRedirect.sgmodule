@@ -1,17 +1,18 @@
-# Source: https://kelee.one/Tool/Loon/Lpx/TelegramRedirect.lpx
-# Adapted from Loon LPX to Surge module by SelfSurge.
-# License: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 #!name=Telegram重定向
 #!desc=适用于安装了多个不同Telegram客户端的用户，用于在指定客户端中打开公开或私有群组及频道的Telegram短链。
+#!category=去广告
 #!openUrl=https://apps.apple.com/app/id1127750481
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
-#!category=去广告
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Telegram.png
 #!date=2026-08-03 15:27:21
-
 #!arguments=app:tg
-#!arguments-desc=Loon 选项已转为自由输入；可选值见模块注释；enable 值作为脚本最后一个参数传入。
+#!arguments-desc=Loon 选项与策略已转为 Surge 自由输入；脚本参数按同名字段传入，具体格式见模块注释；enable 字段为 false 时脚本需立即退出。
+
+# Source: https://kelee.one/Tool/Loon/Lpx/TelegramRedirect.lpx
+# Adapted from Loon LPX to Surge module by SelfSurge.
+# Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+
 # Surge 参数 app：默认 tg；可选 tg | sg | turrit | ime | ng | lingo；客户端；指定跳转的客户端
 
 [URL Rewrite]

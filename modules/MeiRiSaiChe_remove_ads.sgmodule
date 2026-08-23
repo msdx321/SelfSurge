@@ -1,17 +1,19 @@
-# Source: https://kelee.one/Tool/Loon/Lpx/MeiRiSaiChe_remove_ads.lpx
-# Adapted from Loon LPX to Surge module by SelfSurge.
-# License: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 #!name=每日赛车去广告
 #!desc=移除开屏广告、信息流广告。
+#!category=去广告
 #!openUrl=https://apps.apple.com/app/id1590997618
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
-#!category=去广告
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/MeiRiSaiChe.png
 #!date=2026-07-02 20:41:31
+#!requirement=CORE_VERSION>=20
+
+# Source: https://kelee.one/Tool/Loon/Lpx/MeiRiSaiChe_remove_ads.lpx
+# Adapted from Loon LPX to Surge module by SelfSurge.
+# Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Body Rewrite]
-http-response-jq ^https:\/\/api\.romielf\.com\/index\/indexv\d\? 'if (getpath(["data"]) | has("advertisement")) then setpath(["data","advertisement"];[]) else . end | if (getpath(["data"]) | has("listadvertising")) then setpath(["data","listadvertising"];[]) else . end'
+http-response-jq ^https:\/\/api\.romielf\.com\/index\/indexv\d\? 'reduce [[["data","advertisement"],["data"],"advertisement",[]],[["data","listadvertising"],["data"],"listadvertising",[]]][] as $item (.;. as $before | try (if (getpath($item[1]) | has($item[2])) then setpath($item[0];$item[3]) else . end) catch $before)'
 http-response-jq ^https:\/\/api\.romielf\.com\/index\/indexv\d\? '.data.list |= map(select(.type == 1))'
 
 [MITM]

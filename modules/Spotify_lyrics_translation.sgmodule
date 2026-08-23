@@ -1,14 +1,15 @@
-# Source: https://kelee.one/Tool/Loon/Lpx/Spotify_lyrics_translation.lpx
-# Adapted from Loon LPX to Surge module by SelfSurge.
-# License: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 #!name=Spotify歌词增强
 #!desc=将Spotify的外语歌词翻译为简体中文，并提供双语翻译支持。
+#!category=功能增强
 #!openUrl=https://apps.apple.com/app/id324684580
 #!author=VirgilClyne[https://github.com/VirgilClyne]
-#!category=功能增强
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Spotify.png
 #!date=2026-06-01 17:11:35
+
+# Source: https://kelee.one/Tool/Loon/Lpx/Spotify_lyrics_translation.lpx
+# Adapted from Loon LPX to Surge module by SelfSurge.
+# Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Script]
 跟踪响应·JSON = type=http-response,pattern=^https?:\/\/api\.spotify\.com\/v1\/tracks\?,script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/Spotify/Spotify_response.js,requires-body=true

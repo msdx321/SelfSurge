@@ -101,7 +101,7 @@
   {
     "category": "数据管理",
     "date": "2026-06-01 17:11:35",
-    "description": "JavaScript数据管理器，用于管理脚本储存的数据。使用前请在本插件的详情页面为[PROXY]项分配代理策略。",
+    "description": "JavaScript数据管理器，用于管理脚本储存的数据。使用前请在本插件的详情页面为[PROXY]项分配代理策略。 注意：PROXY 规则需在 Surge 主配置中手动指定策略。",
     "file": "BoxJs.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/Other_icon/120px/BoxJS.png",
     "name": "BoxJs",
@@ -137,7 +137,7 @@
   {
     "category": "DNS",
     "date": "2026-06-01 17:11:35",
-    "description": "专为小白设计的DNS防泄露",
+    "description": "专为小白设计的DNS防泄露 注意：PROXY 规则需在 Surge 主配置中手动指定策略。",
     "file": "Prevent_DNS_Leaks.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/Other_icon/120px/Prevent_DNS_Leaks.png",
     "name": "DNS防泄露",
@@ -344,7 +344,7 @@
   {
     "category": "资源转换",
     "date": "2026-06-01 17:11:35",
-    "description": "将其他工具的Rewrite、Rule和JavaScript资源转换为Loon能识别的格式，使用前请在本插件的详情页面为[PROXY]项分配代理策略。在插件列表中点击此插件上的链接查看使用方法。",
+    "description": "将其他工具的Rewrite、Rule和JavaScript资源转换为Loon能识别的格式，使用前请在本插件的详情页面为[PROXY]项分配代理策略。在插件列表中点击此插件上的链接查看使用方法。 注意：PROXY 规则需在 Surge 主配置中手动指定策略。",
     "file": "Script-Hub.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/Other_icon/120px/Script-Hub.png",
     "name": "Script-Hub",
@@ -389,7 +389,7 @@
   {
     "category": "订阅管理",
     "date": "2026-06-01 17:11:35",
-    "description": "高级订阅管理工具，定时任务默认为每天23点55分，可在插件设置中自定义。使用前请在本插件的详情页面为[PROXY]项分配代理策略。",
+    "description": "高级订阅管理工具，定时任务默认为每天23点55分，可在插件设置中自定义。使用前请在本插件的详情页面为[PROXY]项分配代理策略。 注意：PROXY 规则需在 Surge 主配置中手动指定策略。",
     "file": "Sub-Store.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/Other_icon/120px/Sub-Store.png",
     "name": "Sub-Store",
@@ -416,7 +416,7 @@
   {
     "category": "功能增强",
     "date": "2026-06-01 17:11:35",
-    "description": "解除TestFlight的区域限制，支持tvOS。",
+    "description": "解除TestFlight的区域限制，支持tvOS。 注意：PROXY 规则需在 Surge 主配置中手动指定策略。",
     "file": "TestFlightRegionUnlock.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/TestFlight.png",
     "name": "TestFlight地区解锁",
@@ -425,7 +425,7 @@
   {
     "category": "去广告",
     "date": "2026-06-01 17:11:35",
-    "description": "过滤TubeMax广告",
+    "description": "过滤TubeMax广告 注意：PROXY 规则需在 Surge 主配置中手动指定策略。",
     "file": "TubeMax_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/TubeMax.png",
     "name": "TubeMax去广告",
@@ -470,7 +470,7 @@
   {
     "category": "节点检测",
     "date": "2026-06-01 17:11:35",
-    "description": "显示WARP节点的详细信息，请在所有节点页面选择一个节点长按，出现菜单后进行测试。",
+    "description": "显示WARP节点的详细信息，请在所有节点页面选择一个节点长按，出现菜单后进行测试。 注意：Surge Panel 不提供 Loon 的长按节点上下文。",
     "file": "WARP_Node_Query.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/1.1.1.1.png",
     "name": "WARP节点查询",
@@ -650,7 +650,7 @@
   {
     "category": "去广告",
     "date": "2026-08-12 04:37:59",
-    "description": "过滤哔哩哔哩广告、移除青少年模式弹窗和交互式弹幕、移除无用功能和链接跟踪参数，增加空降助手以便跳过视频中插入的广告。此插件仅建议iOS 15以上设备使用，且必须启用MitM-over-HTTP/2功能。\\n\\n空降助手是第三方提供的功能，依赖于Android版空降助手的服务器数据运作，可能会存在不准确或者失效的问题，此功能与哔哩哔哩官方无关。",
+    "description": "过滤哔哩哔哩广告、移除青少年模式弹窗和交互式弹幕、移除无用功能和链接跟踪参数，增加空降助手以便跳过视频中插入的广告。此插件仅建议iOS 15以上设备使用，且必须启用MitM-over-HTTP/2功能。\\n\\n空降助手是第三方提供的功能，依赖于Android版空降助手的服务器数据运作，可能会存在不准确或者失效的问题，此功能与哔哩哔哩官方无关。 注意：PROXY 规则需在 Surge 主配置中手动指定策略。",
     "file": "Bilibili_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Bilibili.png",
     "name": "哔哩哔哩去广告",
@@ -776,7 +776,7 @@
   {
     "category": "节点检测",
     "date": "2026-06-01 17:11:35",
-    "description": "查看目标节点的代理走向，在插件列表中点击此插件上的链接查看使用方法。",
+    "description": "查看目标节点的代理走向，在插件列表中点击此插件上的链接查看使用方法。 注意：Surge Panel 不提供 Loon 的长按节点上下文。",
     "file": "NodeLinkCheck.sgmodule",
     "icon": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Stack.png",
     "name": "代理链路检测",
@@ -1127,7 +1127,7 @@
   {
     "category": "节点检测",
     "date": "2026-06-01 17:11:35",
-    "description": "适用于Loon的节点检测工具，可进行地理位置、节点解锁、入口落地等查询。请在所有节点页面选择一个节点长按，出现菜单后进行测试。",
+    "description": "适用于Loon的节点检测工具，可进行地理位置、节点解锁、入口落地等查询。请在所有节点页面选择一个节点长按，出现菜单后进行测试。 注意：Surge Panel 不提供 Loon 的长按节点上下文。",
     "file": "Node_detection_tool.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/Other_icon/120px/Node_detection_tool.png",
     "name": "节点检测工具",
@@ -2304,7 +2304,7 @@
     "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/ZhiLianZhaoPin_remove_ads.sgmodule"
   },
   {
-    "category": "",
+    "category": "其他",
     "date": "2026-06-01 17:11:35",
     "description": "移除内容的水印编号",
     "file": "UnnooQuan_remove_watermark.sgmodule",
@@ -2360,7 +2360,7 @@
   {
     "category": "定时任务",
     "date": "2026-06-01 17:11:35",
-    "description": "自动监控TestFlight名额，一旦有新的名额即刻加入。",
+    "description": "自动监控TestFlight名额，一旦有新的名额即刻加入。 注意：PROXY 规则需在 Surge 主配置中手动指定策略。",
     "file": "Auto_Join_TF.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/TestFlight.png",
     "name": "自动加入TestFlight",

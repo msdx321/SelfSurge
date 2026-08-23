@@ -1,14 +1,16 @@
-# Source: https://kelee.one/Tool/Loon/Lpx/Huxiu_remove_ads.lpx
-# Adapted from Loon LPX to Surge module by SelfSurge.
-# License: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 #!name=虎嗅去广告
 #!desc=移除广告配置、信息流直播预约横幅、相关文章推荐、48小时热文推荐，精简搜索页面。
+#!category=去广告
 #!openUrl=https://apps.apple.com/app/id557509598
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
-#!category=去广告
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Huxiu.png
 #!date=2026-06-01 17:11:35
+#!requirement=CORE_VERSION>=20
+
+# Source: https://kelee.one/Tool/Loon/Lpx/Huxiu_remove_ads.lpx
+# Adapted from Loon LPX to Surge module by SelfSurge.
+# Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Rule]
 DOMAIN, api-ad-product.huxiu.com, REJECT
@@ -21,7 +23,7 @@ DOMAIN, api-ad-product.huxiu.com, REJECT
 ^https:\/\/api-web-moment\.huxiu\.com\/v3\/moment\/getDetailRecdArticle$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
 
 [Body Rewrite]
-http-response-jq ^https:\/\/api-ms-feed\.huxiu\.com\/v1\/media\/recommend$ 'delpaths([["data","live"]])'
+http-response-jq ^https:\/\/api-ms-feed\.huxiu\.com\/v1\/media\/recommend$ 'reduce [["data","live"]][] as $path (.;. as $before | try delpaths([$path]) catch $before)'
 
 [MITM]
 hostname = %APPEND% api-ms-config.huxiu.com, api-web-feed.huxiu.com, api-search.huxiu.com, api-article.huxiu.com, api-web-moment.huxiu.com, api-ms-feed.huxiu.com

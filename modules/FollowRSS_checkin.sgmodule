@@ -1,23 +1,25 @@
-# Source: https://kelee.one/Tool/Loon/Lpx/FollowRSS_checkin.lpx
-# Adapted from Loon LPX to Surge module by SelfSurge.
-# License: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 #!name=Follow每日签到
 #!desc=Follow每日签到，需要进入此插件的主页链接，阅读使用说明操作。
+#!category=签到
 #!openUrl=https://follow.is
 #!author=gideonsenku[https://github.com/gideonsenku], 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
-#!category=签到
 #!homepage=https://github.com/luestr/ProxyResource/blob/main/Resource/Markdown/FollowRSS/README.md
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/FollowRSS.png
 #!date=2026-06-01 17:11:35
-
 #!arguments=token:,cookie:,cron:0 1 * * *
-#!arguments-desc=Loon 选项已转为自由输入；可选值见模块注释；enable 值作为脚本最后一个参数传入。
+#!arguments-desc=Loon 选项与策略已转为 Surge 自由输入；脚本参数按同名字段传入，具体格式见模块注释；enable 字段为 false 时脚本需立即退出。
+
+# Source: https://kelee.one/Tool/Loon/Lpx/FollowRSS_checkin.lpx
+# Adapted from Loon LPX to Surge module by SelfSurge.
+# Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+
 # Surge 参数 token：默认 ；csrfToken；这里需要输入csrfToken的值
 # Surge 参数 cookie：默认 ；Cookie；这里需要输入Cookie的值
 # Surge 参数 cron：默认 0 1 * * *；定时参数；这里需要输入符合CRON表达式的参数
 
 [Script]
-Follow每日签到 = type=cron,cronexp="{{{cron}}}",script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/FollowRSS/FollowRSS_checkin.js,timeout=120,argument="[{{{token}}},{{{cookie}}}]"
+# Surge $argument 为字符串；上游脚本需先执行 JSON.parse($argument) 再读取同名字段。
+Follow每日签到 = type=cron,cronexp="{{{cron}}}",script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/FollowRSS/FollowRSS_checkin.js,timeout=120,argument="{\"token\":\"{{{token}}}\",\"cookie\":\"{{{cookie}}}\"}"
 
 [MITM]
 hostname = %APPEND% api.follow.is

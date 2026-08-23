@@ -1,14 +1,16 @@
-# Source: https://kelee.one/Tool/Loon/Lpx/Meizhixiuxing_remove_ads.lpx
-# Adapted from Loon LPX to Surge module by SelfSurge.
-# License: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 #!name=美丽修行去广告
 #!desc=移除开屏广告、首页广告、发现页广告、美修盒页面广告、下拉广告、弹窗广告、搜索推广、版本更新弹窗及我的页面广告。
+#!category=去广告
 #!openUrl=https://apps.apple.com/app/id1089854728
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
-#!category=去广告
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Meizhixiuxing.png
 #!date=2026-06-01 17:11:35
+#!requirement=CORE_VERSION>=20
+
+# Source: https://kelee.one/Tool/Loon/Lpx/Meizhixiuxing_remove_ads.lpx
+# Adapted from Loon LPX to Surge module by SelfSurge.
+# Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Map Local]
 ^https:\/\/api\.bevol\.com\/appmain\/app\/home\/launch$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
@@ -17,10 +19,10 @@
 ^https:\/\/api\.bevol\.com\/seach\/foundAndTopSearch$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
 
 [Body Rewrite]
-http-response-jq ^https:\/\/api\.bevol\.com\/appmain\/app\/home\/page$ 'delpaths([["result","versionPopUp"],["result","isShowSearchLabel"],["result","isShowSearchFeedBack"],["result","centerBannerAdvert"],["result","programmaticAdvertising"],["result","mattsData"],["result","questionnaireMap"],["result","appPullDownAdvert"]])'
-http-response-jq ^https:\/\/api\.bevol\.com\/appmain\/app\/home\/feed$ 'delpaths([["result","banners"]])'
+http-response-jq ^https:\/\/api\.bevol\.com\/appmain\/app\/home\/page$ 'reduce [["result","versionPopUp"],["result","isShowSearchLabel"],["result","isShowSearchFeedBack"],["result","centerBannerAdvert"],["result","programmaticAdvertising"],["result","mattsData"],["result","questionnaireMap"],["result","appPullDownAdvert"]][] as $path (.;. as $before | try delpaths([$path]) catch $before)'
+http-response-jq ^https:\/\/api\.bevol\.com\/appmain\/app\/home\/feed$ 'reduce [["result","banners"]][] as $path (.;. as $before | try delpaths([$path]) catch $before)'
 http-response-jq ^https:\/\/api\.bevol\.com\/appmain\/app\/home\/feed$ '. | .result.returnList |= (map(select(.tname == "userPart"))) | .result.returnList |= map(select(. | has("adId") | not))'
-http-response-jq ^https:\/\/api\.bevol\.com\/trialbox\/shop\/app\/homePage$ 'delpaths([["result","firstPersonActivity"],["result","mainActivity"],["result","brandZone"],["result","imageAD2"],["result","couponPopupInfo"]])'
+http-response-jq ^https:\/\/api\.bevol\.com\/trialbox\/shop\/app\/homePage$ 'reduce [["result","firstPersonActivity"],["result","mainActivity"],["result","brandZone"],["result","imageAD2"],["result","couponPopupInfo"]][] as $path (.;. as $before | try delpaths([$path]) catch $before)'
 
 [MITM]
 hostname = %APPEND% api.bevol.com

@@ -1,14 +1,16 @@
-# Source: https://kelee.one/Tool/Loon/Lpx/MojiWeather_remove_ads.lpx
-# Adapted from Loon LPX to Surge module by SelfSurge.
-# License: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 #!name=墨迹天气去广告
 #!desc=移除天气页面横幅、工具栏，移除时景关注页面推荐，精简我的页面。
+#!category=去广告
 #!openUrl=https://apps.apple.com/app/id434209233
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
-#!category=去广告
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/MojiWeather.png
 #!date=2026-06-01 17:11:35
+#!requirement=CORE_VERSION>=20
+
+# Source: https://kelee.one/Tool/Loon/Lpx/MojiWeather_remove_ads.lpx
+# Adapted from Loon LPX to Surge module by SelfSurge.
+# Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [URL Rewrite]
 ^https:\/\/fcard\.api\.moji\.com\/flycard\/flyCard\? _ reject

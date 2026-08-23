@@ -1,17 +1,18 @@
-# Source: https://kelee.one/Tool/Loon/Lpx/IThome_remove_ads.lpx
-# Adapted from Loon LPX to Surge module by SelfSurge.
-# License: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 #!name=IT之家去广告
 #!desc=过滤IT之家信息流广告和文末广告，自定义移除置顶和轮播图，自定义移除项需在插件配置。
+#!category=去广告
 #!openUrl=https://apps.apple.com/app/id570610859
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
-#!category=去广告
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/IThome.png
 #!date=2026-06-01 17:11:35
-
 #!arguments=removePinnedArticles:false,removeAllBanners:false
-#!arguments-desc=Loon 选项已转为自由输入；可选值见模块注释；enable 值作为脚本最后一个参数传入。
+#!arguments-desc=Loon 选项与策略已转为 Surge 自由输入；脚本参数按同名字段传入，具体格式见模块注释；enable 字段为 false 时脚本需立即退出。
+
+# Source: https://kelee.one/Tool/Loon/Lpx/IThome_remove_ads.lpx
+# Adapted from Loon LPX to Surge module by SelfSurge.
+# Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+
 # Surge 参数 removePinnedArticles：默认 false；可选 false | true；移除置顶文章；启用后将移除置顶文章
 # Surge 参数 removeAllBanners：默认 false；可选 false | true；移除全部横幅；启用后将移除全部横幅
 
@@ -19,7 +20,8 @@
 ^https?:\/\/dat\.ruanmei\.com\/ithome\/money\/acd\.json$ _ reject
 
 [Script]
-IT之家去广告 = type=http-response,pattern=^https:\/\/napi\.ithome\.com\/api\/(news\/indexv2\/iphone\/\d+|topmenu\/getfeeds\?),script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/IThome/IThome_remove_ads.js,requires-body=true,argument="[{{{removeAllBanners}}},{{{removePinnedArticles}}}]"
+# Surge $argument 为字符串；上游脚本需先执行 JSON.parse($argument) 再读取同名字段。
+IT之家去广告 = type=http-response,pattern=^https:\/\/napi\.ithome\.com\/api\/(news\/indexv2\/iphone\/\d+|topmenu\/getfeeds\?),script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/IThome/IThome_remove_ads.js,requires-body=true,argument="{\"removeAllBanners\":{{{removeAllBanners}}},\"removePinnedArticles\":{{{removePinnedArticles}}}}"
 
 [MITM]
 hostname = %APPEND% napi.ithome.com, api.zuihuimai.com, dat.ruanmei.com

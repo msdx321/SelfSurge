@@ -1,14 +1,16 @@
-# Source: https://kelee.one/Tool/Loon/Lpx/HKDouYin_remove_ads.lpx
-# Adapted from Loon LPX to Surge module by SelfSurge.
-# License: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 #!name=香港抖音去广告
 #!desc=精简左右侧边栏、移除底栏切换，其余内容后续再完善。
+#!category=去广告
 #!openUrl=https://apps.apple.com/app/id1142110895
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
-#!category=去广告
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/TikTok.png
 #!date=2026-06-01 17:11:35
+#!requirement=CORE_VERSION>=20
+
+# Source: https://kelee.one/Tool/Loon/Lpx/HKDouYin_remove_ads.lpx
+# Adapted from Loon LPX to Surge module by SelfSurge.
+# Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Rule]
 AND, ((IP-CIDR, 101.126.58.201/32, no-resolve), (DEST-PORT, 6443)), REJECT
@@ -24,10 +26,10 @@ AND, ((OR, ((DOMAIN-SUFFIX, bytegecko.com), (DOMAIN-SUFFIX, byteeffecttos.com)))
 ^https:\/\/zlink\.ugsdk\.cn\/ad\/ _ reject
 
 [Body Rewrite]
-http-response-jq ^https:\/\/((aweme\.snssdk\.com|api5-normal-m\.amemv\.com)|api5-normal-m\.amemv\.com)\/aweme\/homepage\/sidebar_data\/\? 'delpaths([["data_map","recently_apps"],["data_map","recently_users"]])'
-http-response-jq ^https:\/\/(aweme\.snssdk\.com|api5-normal-m\.amemv\.com)\/aweme\/homepage\/render\/\? 'delpaths([["data","tab_config"]])'
+http-response-jq ^https:\/\/((aweme\.snssdk\.com|api5-normal-m\.amemv\.com)|api5-normal-m\.amemv\.com)\/aweme\/homepage\/sidebar_data\/\? 'reduce [["data_map","recently_apps"],["data_map","recently_users"]][] as $path (.;. as $before | try delpaths([$path]) catch $before)'
+http-response-jq ^https:\/\/(aweme\.snssdk\.com|api5-normal-m\.amemv\.com)\/aweme\/homepage\/render\/\? 'reduce [["data","tab_config"]][] as $path (.;. as $before | try delpaths([$path]) catch $before)'
 http-response-jq ^https:\/\/(aweme\.snssdk\.com|api5-normal-m\.amemv\.com)\/aweme\/homepage\/render\/\? '.data.tab_list[]? |= ( if .extra.side_bar.modules != null then .extra.side_bar.modules[]?.items[]? |= ( if .data.first_page_module?.module_title == "常用功能" then .data={} else . end ) else . end ) | .data.tab_list |= map( if .extra.tab_list != null then .extra.tab_list |= map(select(.tab_id | IN("homepage_tablive", "homepage_follow", "homepage_hot_container"))) else . end ) | .data.tab_list |= map(select(.extra.tab_list != null and (.extra.tab_list | length > 0)))'
-http-response-jq ^https:\/\/(aweme\.snssdk\.com|api5-normal-m\.amemv\.com)\/tfe\/api\/request_combine\/v1\/\?need_personal_recommend 'if (getpath(["data","/service/settings/v3/","body","data","settings"]) | has("homepage_two_session_tab_skin_2025")) then setpath(["data","/service/settings/v3/","body","data","settings","homepage_two_session_tab_skin_2025"];false) else . end | if (getpath(["data","/service/settings/v3/","body","data","settings"]) | has("homepage_tab_skin_enable")) then setpath(["data","/service/settings/v3/","body","data","settings","homepage_tab_skin_enable"];false) else . end'
+http-response-jq ^https:\/\/(aweme\.snssdk\.com|api5-normal-m\.amemv\.com)\/tfe\/api\/request_combine\/v1\/\?need_personal_recommend 'reduce [[["data","/service/settings/v3/","body","data","settings","homepage_two_session_tab_skin_2025"],["data","/service/settings/v3/","body","data","settings"],"homepage_two_session_tab_skin_2025",false],[["data","/service/settings/v3/","body","data","settings","homepage_tab_skin_enable"],["data","/service/settings/v3/","body","data","settings"],"homepage_tab_skin_enable",false]][] as $item (.;. as $before | try (if (getpath($item[1]) | has($item[2])) then setpath($item[0];$item[3]) else . end) catch $before)'
 
 [MITM]
 hostname = %APPEND% aweme.snssdk.com, api5-normal-m.amemv.com

@@ -1,21 +1,22 @@
-# Source: https://kelee.one/Tool/Loon/Lpx/Sub-Store.lpx
-# Adapted from Loon LPX to Surge module by SelfSurge.
-# License: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 #!name=Sub-Store
-#!desc=高级订阅管理工具，定时任务默认为每天23点55分，可在插件设置中自定义。使用前请在本插件的详情页面为[PROXY]项分配代理策略。
+#!desc=高级订阅管理工具，定时任务默认为每天23点55分，可在插件设置中自定义。使用前请在本插件的详情页面为[PROXY]项分配代理策略。 注意：PROXY 规则需在 Surge 主配置中手动指定策略。
+#!category=订阅管理
 #!openUrl=https://sub.store
 #!author=Peng-YM[https://github.com/Peng-YM]
-#!category=订阅管理
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/Other_icon/120px/Sub-Store.png
 #!date=2026-06-01 17:11:35
-
 #!arguments=cron:55 23 * * *
-#!arguments-desc=Loon 选项已转为自由输入；可选值见模块注释；enable 值作为脚本最后一个参数传入。
+#!arguments-desc=Loon 选项与策略已转为 Surge 自由输入；脚本参数按同名字段传入，具体格式见模块注释；enable 字段为 false 时脚本需立即退出。
+
+# Source: https://kelee.one/Tool/Loon/Lpx/Sub-Store.lpx
+# Adapted from Loon LPX to Surge module by SelfSurge.
+# Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+
 # Surge 参数 cron：默认 55 23 * * *；定时参数；这里需要输入符合CRON表达式的参数
 
 [Rule]
-# Unsupported Loon policy PROXY: DOMAIN, sub-store.vercel.app, PROXY
+# Requires main-profile policy selection: DOMAIN, sub-store.vercel.app, PROXY
 
 [Script]
 Sub-Store Core = type=http-request,pattern=^https?:\/\/sub\.store\/((download)|api\/(preview|sync|(utils\/node-info))),script-path=https://github.com/sub-store-org/Sub-Store/releases/latest/download/sub-store-1.min.js,requires-body=true,timeout=120

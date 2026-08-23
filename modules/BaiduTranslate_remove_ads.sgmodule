@@ -1,14 +1,16 @@
-# Source: https://kelee.one/Tool/Loon/Lpx/BaiduTranslate_remove_ads.lpx
-# Adapted from Loon LPX to Surge module by SelfSurge.
-# License: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 #!name=百度翻译去广告
 #!desc=移除开屏广告、横幅广告，精简我的页面。
+#!category=去广告
 #!openUrl=https://apps.apple.com/app/id605670941
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
-#!category=去广告
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/BaiduTranslate.png
 #!date=2026-06-30 23:28:03
+#!requirement=CORE_VERSION>=20
+
+# Source: https://kelee.one/Tool/Loon/Lpx/BaiduTranslate_remove_ads.lpx
+# Adapted from Loon LPX to Surge module by SelfSurge.
+# Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [URL Rewrite]
 ^https:\/\/fanyi-app\.baidu\.com\/static\/react-activity\/page\/courseBoutique\.html\? _ reject
@@ -17,8 +19,8 @@
 ^https:\/\/fanyi-app\.baidu\.com\/transapp\/v2\/api\/launch\/config\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
 
 [Body Rewrite]
-http-response-jq ^https:\/\/fanyi-app\.baidu\.com\/transapp\/comment\/my\? 'delpaths([["data","taskBanner"],["data","act"]])'
-http-response-jq ^https:\/\/fanyi-app\.baidu\.com\/transapp\/recitewd\/myplan\? 'delpaths([["data","activityRec"],["data","activityRecList"]])'
+http-response-jq ^https:\/\/fanyi-app\.baidu\.com\/transapp\/comment\/my\? 'reduce [["data","taskBanner"],["data","act"]][] as $path (.;. as $before | try delpaths([$path]) catch $before)'
+http-response-jq ^https:\/\/fanyi-app\.baidu\.com\/transapp\/recitewd\/myplan\? 'reduce [["data","activityRec"],["data","activityRecList"]][] as $path (.;. as $before | try delpaths([$path]) catch $before)'
 
 [MITM]
 hostname = %APPEND% fanyi-app.baidu.com

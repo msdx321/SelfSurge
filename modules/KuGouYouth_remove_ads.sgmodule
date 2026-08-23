@@ -1,14 +1,16 @@
-# Source: https://kelee.one/Tool/Loon/Lpx/KuGouYouth_remove_ads.lpx
-# Adapted from Loon LPX to Surge module by SelfSurge.
-# License: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 #!name=酷狗概念版去广告
 #!desc=移除广告服务模块、播放器广告，精简乐库及搜索页面。
+#!category=去广告
 #!openUrl=https://apps.apple.com/app/id1480205582
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
-#!category=去广告
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/KuGouYouth.png
 #!date=2026-06-01 17:11:35
+#!requirement=CORE_VERSION>=20
+
+# Source: https://kelee.one/Tool/Loon/Lpx/KuGouYouth_remove_ads.lpx
+# Adapted from Loon LPX to Surge module by SelfSurge.
+# Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Map Local]
 ^https:\/\/gateway\.kugou\.com\/ads\.service\/ data-type=text data="{}" header="Content-Type:application/json" status-code=200

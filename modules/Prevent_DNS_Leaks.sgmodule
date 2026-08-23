@@ -1,34 +1,35 @@
-# Source: https://kelee.one/Tool/Loon/Lpx/Prevent_DNS_Leaks.lpx
-# Adapted from Loon LPX to Surge module by SelfSurge.
-# License: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 #!name=DNS防泄露
-#!desc=专为小白设计的DNS防泄露
-#!author=非正常人类研究中心
+#!desc=专为小白设计的DNS防泄露 注意：PROXY 规则需在 Surge 主配置中手动指定策略。
 #!category=DNS
+#!author=非正常人类研究中心
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/Other_icon/120px/Prevent_DNS_Leaks.png
 #!date=2026-06-01 17:11:35
 
+# Source: https://kelee.one/Tool/Loon/Lpx/Prevent_DNS_Leaks.lpx
+# Adapted from Loon LPX to Surge module by SelfSurge.
+# Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+
 [Rule]
-# Unsupported Loon policy PROXY: DOMAIN-SUFFIX, dnsleaktest.com, PROXY
-# Unsupported Loon policy PROXY: DOMAIN-SUFFIX, dnsleak.com, PROXY
-# Unsupported Loon policy PROXY: DOMAIN-SUFFIX, expressvpn.com, PROXY
-# Unsupported Loon policy PROXY: DOMAIN-SUFFIX, nordvpn.com, PROXY
-# Unsupported Loon policy PROXY: DOMAIN-SUFFIX, surfshark.com, PROXY
-# Unsupported Loon policy PROXY: DOMAIN-SUFFIX, ipleak.net, PROXY
-# Unsupported Loon policy PROXY: DOMAIN-SUFFIX, perfect-privacy.com, PROXY
-# Unsupported Loon policy PROXY: DOMAIN-SUFFIX, browserleaks.com, PROXY
-# Unsupported Loon policy PROXY: DOMAIN-SUFFIX, browserleaks.org, PROXY
-# Unsupported Loon policy PROXY: DOMAIN-SUFFIX, vpnunlimited.com, PROXY
-# Unsupported Loon policy PROXY: DOMAIN-SUFFIX, whoer.net, PROXY
-# Unsupported Loon policy PROXY: DOMAIN-SUFFIX, whrq.net, PROXY
-# Unsupported Loon policy PROXY: DOMAIN-SUFFIX, astrill.com, PROXY
-# Unsupported Loon policy PROXY: DOMAIN-SUFFIX, astrill.org, PROXY
-# Unsupported Loon policy PROXY: DOMAIN-SUFFIX, dnsleak.asn247.net, PROXY
-# Unsupported Loon policy PROXY: DOMAIN-SUFFIX, surfshark.com, PROXY
-# Unsupported Loon policy PROXY: DOMAIN-SUFFIX, surfsharkdns.com, PROXY
-# Unsupported Loon policy PROXY: DOMAIN-SUFFIX, pixelscan.net, PROXY
-# Unsupported Loon policy PROXY: DOMAIN, ipv4.ping0.cc, PROXY
-# Unsupported Loon policy PROXY: DOMAIN, ipv6.ping0.cc, PROXY
-# Unsupported Loon policy PROXY: DOMAIN-SUFFIX, ipapi.co, PROXY
-# Unsupported Loon policy PROXY: DOMAIN, ip-scan.adspower.net, PROXY
+# Requires main-profile policy selection: DOMAIN-SUFFIX, dnsleaktest.com, PROXY
+# Requires main-profile policy selection: DOMAIN-SUFFIX, dnsleak.com, PROXY
+# Requires main-profile policy selection: DOMAIN-SUFFIX, expressvpn.com, PROXY
+# Requires main-profile policy selection: DOMAIN-SUFFIX, nordvpn.com, PROXY
+# Requires main-profile policy selection: DOMAIN-SUFFIX, surfshark.com, PROXY
+# Requires main-profile policy selection: DOMAIN-SUFFIX, ipleak.net, PROXY
+# Requires main-profile policy selection: DOMAIN-SUFFIX, perfect-privacy.com, PROXY
+# Requires main-profile policy selection: DOMAIN-SUFFIX, browserleaks.com, PROXY
+# Requires main-profile policy selection: DOMAIN-SUFFIX, browserleaks.org, PROXY
+# Requires main-profile policy selection: DOMAIN-SUFFIX, vpnunlimited.com, PROXY
+# Requires main-profile policy selection: DOMAIN-SUFFIX, whoer.net, PROXY
+# Requires main-profile policy selection: DOMAIN-SUFFIX, whrq.net, PROXY
+# Requires main-profile policy selection: DOMAIN-SUFFIX, astrill.com, PROXY
+# Requires main-profile policy selection: DOMAIN-SUFFIX, astrill.org, PROXY
+# Requires main-profile policy selection: DOMAIN-SUFFIX, dnsleak.asn247.net, PROXY
+# Requires main-profile policy selection: DOMAIN-SUFFIX, surfshark.com, PROXY
+# Requires main-profile policy selection: DOMAIN-SUFFIX, surfsharkdns.com, PROXY
+# Requires main-profile policy selection: DOMAIN-SUFFIX, pixelscan.net, PROXY
+# Requires main-profile policy selection: DOMAIN, ipv4.ping0.cc, PROXY
+# Requires main-profile policy selection: DOMAIN, ipv6.ping0.cc, PROXY
+# Requires main-profile policy selection: DOMAIN-SUFFIX, ipapi.co, PROXY
+# Requires main-profile policy selection: DOMAIN, ip-scan.adspower.net, PROXY

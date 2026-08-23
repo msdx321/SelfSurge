@@ -1,14 +1,15 @@
-# Source: https://kelee.one/Tool/Loon/Lpx/QQ_Redirect.lpx
-# Adapted from Loon LPX to Surge module by SelfSurge.
-# License: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 #!name=QQ链接解锁
 #!desc=解除QQ内访问非白名单之外的地址提示停止访问该页面的限制，并移除跟踪参数，使用前需要清除QQ的缓存数据。
+#!category=去广告
 #!openUrl=https://apps.apple.com/app/id444934666
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
-#!category=去广告
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/QQ.png
 #!date=2026-06-01 17:11:35
+
+# Source: https://kelee.one/Tool/Loon/Lpx/QQ_Redirect.lpx
+# Adapted from Loon LPX to Surge module by SelfSurge.
+# Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [URL Rewrite]
 (^https:\/\/c\.pc\.qq\.com\/middlem\.html\?pfurl=)(http.*)(&pfuin=.*) $2 307
