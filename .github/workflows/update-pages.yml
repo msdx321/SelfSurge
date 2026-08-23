@@ -1,0 +1,61 @@
+name: Update catalog and publish Pages
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "17 3 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  update-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+        with:
+          ref: main
+
+      - name: Update generated files
+        if: github.event_name != 'push'
+        run: python3 generate.py
+
+      - name: Test conversion
+        run: python3 -m unittest discover -s tests -v
+
+      - name: Commit updates
+        if: github.event_name != 'push'
+        run: |
+          git add modules scripts resources sources.json web/catalog.json
+          if git diff --cached --quiet; then
+            echo "No catalog changes"
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit -m "chore: update Hub catalog"
+            git push
+          fi
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: web
+
+      - name: Deploy Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
