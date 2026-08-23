@@ -13,9 +13,9 @@
 # Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Rule]
-DOMAIN, abyss.cyapi.cn, REJECT
-DOMAIN, ad.cyapi.cn, REJECT
-DOMAIN, gather.colorfulclouds.net, REJECT
+DOMAIN, abyss.cyapi.cn, REJECT-DROP
+DOMAIN, ad.cyapi.cn, REJECT-DROP
+DOMAIN, gather.colorfulclouds.net, REJECT-DROP
 
 [Map Local]
 ^https:\/\/biz\.cyapi\.cn\/(p\/v1\/entries|p\/v1\/trial_card\/info|v2\/product) data-type=text data="{}" header="Content-Type:application/json" status-code=200

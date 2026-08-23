@@ -16,17 +16,17 @@
 DOMAIN-SUFFIX, soulapp.cn, DIRECT
 IP-CIDR, 8.210.3.170/32, DIRECT, no-resolve
 IP-CIDR, 47.75.72.47/32, DIRECT, no-resolve
-DOMAIN, ad-h5-cdn.soulapp.cn, REJECT
-DOMAIN, ad-h5-station-cdn.soulapp.cn, REJECT
-DOMAIN, ad-r.soulapp.cn, REJECT
-DOMAIN, soul-ad.soulapp.cn, REJECT
-IP-CIDR, 47.56.131.76/32, REJECT, no-resolve
-IP-CIDR, 47.97.215.55/32, REJECT, no-resolve
-IP-CIDR, 47.99.42.29/32, REJECT, no-resolve
-IP-CIDR, 47.110.187.87/32, REJECT, no-resolve
-IP-CIDR, 47.243.147.125/32, REJECT, no-resolve
-IP-CIDR, 120.27.235.201/32, REJECT, no-resolve
-IP-CIDR, 121.196.197.147/32, REJECT, no-resolve
+DOMAIN, ad-h5-cdn.soulapp.cn, REJECT-DROP
+DOMAIN, ad-h5-station-cdn.soulapp.cn, REJECT-DROP
+DOMAIN, ad-r.soulapp.cn, REJECT-DROP
+DOMAIN, soul-ad.soulapp.cn, REJECT-DROP
+IP-CIDR, 47.56.131.76/32, REJECT-DROP, no-resolve
+IP-CIDR, 47.97.215.55/32, REJECT-DROP, no-resolve
+IP-CIDR, 47.99.42.29/32, REJECT-DROP, no-resolve
+IP-CIDR, 47.110.187.87/32, REJECT-DROP, no-resolve
+IP-CIDR, 47.243.147.125/32, REJECT-DROP, no-resolve
+IP-CIDR, 120.27.235.201/32, REJECT-DROP, no-resolve
+IP-CIDR, 121.196.197.147/32, REJECT-DROP, no-resolve
 
 [Map Local]
 ^https:\/\/ssp\.soulapp\.cn\/api\/q data-type=text data="{}" header="Content-Type:application/json" status-code=200

@@ -18,7 +18,7 @@
 # Surge 参数 useractivity：默认 true；可选 true | false；启用Apple设备接力；此开关控制是否使用Apple设备接力
 
 [Rule]
-AND, ((DOMAIN-SUFFIX, spotify.com), (PROTOCOL, QUIC)), REJECT
+AND, ((DOMAIN-SUFFIX, spotify.com), (PROTOCOL, QUIC)), REJECT-DROP
 
 [URL Rewrite]
 ^https:\/\/(?:\w+-spclient|spclient\.wg)\.spotify\.com(?::443)?\/artistview\/v1\/artist\/(.*)&platform=iphone https://spclient.wg.spotify.com/artistview/v1/artist/$1&platform=ipad header

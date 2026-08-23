@@ -14,8 +14,8 @@
 
 [Rule]
 DOMAIN-SUFFIX, uve.weibo.com, DIRECT
-DOMAIN, huodong.weibo.cn, REJECT
-DOMAIN-SUFFIX, biz.weibo.com, REJECT
+DOMAIN, huodong.weibo.cn, REJECT-DROP
+DOMAIN-SUFFIX, biz.weibo.com, REJECT-DROP
 
 [Map Local]
 ^https:\/\/api\.weibo\.cn\/2\/(?:ug\/checkin\/list|push\/daily|push\/info) data-type=text data="{}" header="Content-Type:application/json" status-code=200

@@ -13,7 +13,7 @@
 # Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Rule]
-DOMAIN, adx-api.zdmimg.com, REJECT
+DOMAIN, adx-api.zdmimg.com, REJECT-DROP
 
 [URL Rewrite]
 ^https:\/\/h5\.smzdm\.com\/user\/coupon\/coupon_list\? _ reject

@@ -13,15 +13,15 @@
 # Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Rule]
-DOMAIN, ads.service.kugou.com, REJECT
-DOMAIN, adstats.tencentmusic.com, REJECT
-DOMAIN, adsmind.gdtimg.com, REJECT
-DOMAIN, adserviceretry.kugou.com, REJECT
-DOMAIN, adserviceretry.kglink.cn, REJECT
-DOMAIN, ad.tencentmusic.com, REJECT
-DOMAIN, adservice.kugou.com, REJECT
-DOMAIN, splashimgretrybssdl.cloud.kugou.com, REJECT
-URL-REGEX, "^http:\/\/log\.stat\.kugou\.com\/mobile\/ad\.html", REJECT
+DOMAIN, ads.service.kugou.com, REJECT-DROP
+DOMAIN, adstats.tencentmusic.com, REJECT-DROP
+DOMAIN, adsmind.gdtimg.com, REJECT-DROP
+DOMAIN, adserviceretry.kugou.com, REJECT-DROP
+DOMAIN, adserviceretry.kglink.cn, REJECT-DROP
+DOMAIN, ad.tencentmusic.com, REJECT-DROP
+DOMAIN, adservice.kugou.com, REJECT-DROP
+DOMAIN, splashimgretrybssdl.cloud.kugou.com, REJECT-DROP
+URL-REGEX, "^http:\/\/log\.stat\.kugou\.com\/mobile\/ad\.html", REJECT-DROP
 
 [Map Local]
 ^https:\/\/fx\.service\.kugou\.com\/mfx-kugoulive\/ad\/ data-type=text data="{}" header="Content-Type:application/json" status-code=200

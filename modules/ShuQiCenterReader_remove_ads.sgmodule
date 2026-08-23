@@ -13,7 +13,7 @@
 # Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Rule]
-DOMAIN, render-web.11222.cn, REJECT
+DOMAIN, render-web.11222.cn, REJECT-DROP
 
 [URL Rewrite]
 ^https:\/\/ocean\.shuqireader\.com\/api\/render\/load\/resource _ reject

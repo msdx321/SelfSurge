@@ -17,8 +17,8 @@
 # Surge 参数 per_filter_video_thread：默认 true；可选 true | false；拦截推荐页面视频帖；此项决定是否拦截首页推荐标签下的视频帖
 
 [Rule]
-DOMAIN, 180.76.76.200, REJECT
-IP-CIDR, 180.76.76.200/32, REJECT, no-resolve
+DOMAIN, 180.76.76.200, REJECT-DROP
+IP-CIDR, 180.76.76.200/32, REJECT-DROP, no-resolve
 
 [Map Local]
 ^https?:\/\/tiebac\.baidu\.com\/c\/f\/forum\/getInterestClassList$ data-type=text data="{}" header="Content-Type:application/json" status-code=200

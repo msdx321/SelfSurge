@@ -13,7 +13,7 @@
 # Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Rule]
-DOMAIN, ad.chelaile.net.cn, REJECT
+DOMAIN, ad.chelaile.net.cn, REJECT-DROP
 
 [URL Rewrite]
 ^https:\/\/cdn\.web\.chelaile\.net\.cn\/info-flow\/index\.html\? _ reject

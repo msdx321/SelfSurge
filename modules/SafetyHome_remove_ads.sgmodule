@@ -13,7 +13,7 @@
 # Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Rule]
-DOMAIN, ad.iot.360.cn, REJECT
+DOMAIN, ad.iot.360.cn, REJECT-DROP
 
 [Map Local]
 ^https:\/\/app\.home\.360\.cn\/v1\/config\/custom_config data-type=text data="{}" header="Content-Type:application/json" status-code=200

@@ -13,7 +13,7 @@
 # Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Rule]
-DOMAIN, sdk.ad.sfys365.com, REJECT
+DOMAIN, sdk.ad.sfys365.com, REJECT-DROP
 
 [Map Local]
 ^https:\/\/client-lz\.rili\.cn\/lizhi\/api\/auth\/voice_room_entrance\/list\? data-type=text data="{}" header="Content-Type:application/json" status-code=200

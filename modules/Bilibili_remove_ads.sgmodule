@@ -23,11 +23,11 @@
 
 [Rule]
 # Requires main-profile policy selection: DOMAIN, bsbsb.top, PROXY
-DOMAIN, api.biliapi.com, REJECT
-DOMAIN, app.biliapi.com, REJECT
-DOMAIN, api.biliapi.net, REJECT
-DOMAIN, app.biliapi.net, REJECT
-AND, ((DOMAIN-SUFFIX, chat.bilibili.com), (OR, ((DOMAIN-KEYWORD, stun), (DOMAIN-KEYWORD, tracker), (DOMAIN-KEYWORD, p2p)))), REJECT
+DOMAIN, api.biliapi.com, REJECT-DROP
+DOMAIN, app.biliapi.com, REJECT-DROP
+DOMAIN, api.biliapi.net, REJECT-DROP
+DOMAIN, app.biliapi.net, REJECT-DROP
+AND, ((DOMAIN-SUFFIX, chat.bilibili.com), (OR, ((DOMAIN-KEYWORD, stun), (DOMAIN-KEYWORD, tracker), (DOMAIN-KEYWORD, p2p)))), REJECT-DROP
 
 [Map Local]
 ^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/list\? data-type=base64 data="eyJjb2RlIjowLCJtZXNzYWdlIjoiT0siLCJ0dGwiOjEsImRhdGEiOnsibWF4X3RpbWUiOjAsIm1pbl9pbnRlcnZhbCI6MzE1MzYwMDAsInB1bGxfaW50ZXJ2YWwiOjMxNTM2MDAwLCJrZWVwX2lkcyI6W10sInNob3ciOltdLCJsaXN0Ijpbe31dLCJzcGxhc2hfcmVxdWVzdF9pZCI6IiJ9fQ==" header="Content-Type:text/plain" status-code=200

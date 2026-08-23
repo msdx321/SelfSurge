@@ -13,7 +13,7 @@
 # Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Rule]
-URL-REGEX, "^https:\/\/(ask|cgate)\.zhaopin\.com\/operation\/ad\/", REJECT
+URL-REGEX, "^https:\/\/(ask|cgate)\.zhaopin\.com\/operation\/ad\/", REJECT-DROP
 
 [URL Rewrite]
 ^https:\/\/cgate\.zhaopin\.com\/bdp\/commercial\/queryLinkData$ _ reject

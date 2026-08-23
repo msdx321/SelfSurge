@@ -13,9 +13,9 @@
 # Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Rule]
-DOMAIN, adapi.izuiyou.com, REJECT
+DOMAIN, adapi.izuiyou.com, REJECT-DROP
 # Converted to rewrite: URL-REGEX, "^http:\/\/mercury-gateway\.ixiaochuan\.cn\/mercury\/v1\/ad\/", REJECT-DICT
-URL-REGEX, "^http:\/\/file-share\.izuiyou\.com\/octopus\/media\/templates\/search_home_page_(nv|nv_v2)\/search_home_page_nv", REJECT
+URL-REGEX, "^http:\/\/file-share\.izuiyou\.com\/octopus\/media\/templates\/search_home_page_(nv|nv_v2)\/search_home_page_nv", REJECT-DROP
 
 [URL Rewrite]
 ^https?:\/\/api\.izuiyou\.com\/ad\/ _ reject

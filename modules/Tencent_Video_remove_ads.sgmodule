@@ -13,22 +13,22 @@
 # Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Rule]
-DOMAIN, adsmind.gdtimg.com, REJECT
-DOMAIN, info4.video.qq.com, REJECT
-DOMAIN, info6.video.qq.com, REJECT
-DOMAIN, ios.video.mpush.qq.com, REJECT
-DOMAIN, otheve.beacon.qq.com, REJECT
-DOMAIN, pgdt.gtimg.cn, REJECT
-DOMAIN, tpns.qq.com, REJECT
-DOMAIN, vv6.video.qq.com, REJECT
-DOMAIN-SUFFIX, gdt.qq.com, REJECT
-DOMAIN-SUFFIX, l.qq.com, REJECT
-DOMAIN-KEYWORD, trace.qq.com, REJECT
-DOMAIN-KEYWORD, trace.video.qq.com, REJECT
-IP-CIDR, 47.110.187.87/32, REJECT, no-resolve
-URL-REGEX, "^http:\/\/[\d\.:]*\/?(defaultts\.tc|vmind\.qqvideo\.tc|finderpdd\.video)\.qq\.com\/\w+", REJECT
-URL-REGEX, "^http:\/\/apd-vlive\.apdcdn\.tc\.qq\.com\/vmind\.qqvideo\.tc\.qq\.com\/\w+", REJECT
-URL-REGEX, "^http:\/\/apd-\w+\.v\.smtcdns\.com\/(defaultts|omts|vmind\.qqvideo)\.tc\.qq\.com\/\w+", REJECT
+DOMAIN, adsmind.gdtimg.com, REJECT-DROP
+DOMAIN, info4.video.qq.com, REJECT-DROP
+DOMAIN, info6.video.qq.com, REJECT-DROP
+DOMAIN, ios.video.mpush.qq.com, REJECT-DROP
+DOMAIN, otheve.beacon.qq.com, REJECT-DROP
+DOMAIN, pgdt.gtimg.cn, REJECT-DROP
+DOMAIN, tpns.qq.com, REJECT-DROP
+DOMAIN, vv6.video.qq.com, REJECT-DROP
+DOMAIN-SUFFIX, gdt.qq.com, REJECT-DROP
+DOMAIN-SUFFIX, l.qq.com, REJECT-DROP
+DOMAIN-KEYWORD, trace.qq.com, REJECT-DROP
+DOMAIN-KEYWORD, trace.video.qq.com, REJECT-DROP
+IP-CIDR, 47.110.187.87/32, REJECT-DROP, no-resolve
+URL-REGEX, "^http:\/\/[\d\.:]*\/?(defaultts\.tc|vmind\.qqvideo\.tc|finderpdd\.video)\.qq\.com\/\w+", REJECT-DROP
+URL-REGEX, "^http:\/\/apd-vlive\.apdcdn\.tc\.qq\.com\/vmind\.qqvideo\.tc\.qq\.com\/\w+", REJECT-DROP
+URL-REGEX, "^http:\/\/apd-\w+\.v\.smtcdns\.com\/(defaultts|omts|vmind\.qqvideo)\.tc\.qq\.com\/\w+", REJECT-DROP
 
 [Map Local]
 ^https?:\/\/vv\.video\.qq\.com\/(diff|get)vmind data-type=text data="{}" header="Content-Type:application/json" status-code=200

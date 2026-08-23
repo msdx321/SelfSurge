@@ -24,10 +24,10 @@
 # Surge 参数 LogLevel：默认 WARN；可选 WARN | OFF | ERROR | INFO | DEBUG | ALL；[调试]日志等级；选择脚本日志的输出等级，低于所选等级的日志将全部输出。
 
 [Rule]
-DOMAIN, weather-analytics-events.apple.com, REJECT
-DOMAIN, tether.edge.apple, REJECT
-DOMAIN-SUFFIX, tthr.apple.com, REJECT
-AND, ((OR, ((IP-ASN, 714, no-resolve), (IP-ASN, 6185, no-resolve))), (PROTOCOL, QUIC)), REJECT
+DOMAIN, weather-analytics-events.apple.com, REJECT-DROP
+DOMAIN, tether.edge.apple, REJECT-DROP
+DOMAIN-SUFFIX, tthr.apple.com, REJECT-DROP
+AND, ((OR, ((IP-ASN, 714, no-resolve), (IP-ASN, 6185, no-resolve))), (PROTOCOL, QUIC)), REJECT-DROP
 
 [Script]
 天气可用性响应 = type=http-response,pattern=^https?:\/\/weatherkit\.apple\.com\/api\/v1\/availability\/,script-path=https://github.com/NSRingo/WeatherKit/releases/download/v3.1.0/response.bundle.js,requires-body=true,argument="Weather.Provider={{{Weather_Provider}}}&NextHour.Provider={{{NextHour_Provider}}}&AirQuality.Calculate.Algorithm={{{AirQuality_Calculate_Algorithm}}}&API.ColorfulClouds.Token={{{API_ColorfulClouds_Token}}}&API.QWeather.Host={{{API_QWeather_Host}}}&API.QWeather.Token={{{API_QWeather_Token}}}&API.WAQI.Token={{{API_WAQI_Token}}}&Storage={{{Storage}}}&LogLevel={{{LogLevel}}}"

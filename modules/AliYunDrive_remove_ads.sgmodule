@@ -13,7 +13,7 @@
 # Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Rule]
-IP-CIDR, 203.107.1.1/24, REJECT, no-resolve
+IP-CIDR, 203.107.1.1/24, REJECT-DROP, no-resolve
 
 [Map Local]
 ^https:\/\/member\.alipan\.com\/v2\/activity\/sign_in_luckyBottle data-type=text data="{}" header="Content-Type:application/json" status-code=200

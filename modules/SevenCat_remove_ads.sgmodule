@@ -13,9 +13,9 @@
 # Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Rule]
-DOMAIN, cdn-ad.wtzw.com, REJECT
-DOMAIN, cdn-new-ad.wtzw.com, REJECT
-DOMAIN-SUFFIX, gdt.qq.com, REJECT
+DOMAIN, cdn-ad.wtzw.com, REJECT-DROP
+DOMAIN, cdn-new-ad.wtzw.com, REJECT-DROP
+DOMAIN-SUFFIX, gdt.qq.com, REJECT-DROP
 
 [URL Rewrite]
 ^https:\/\/sf3-fe-tos\.pglstatp-toutiao\.com\/obj\/ad-pattern\/ _ reject

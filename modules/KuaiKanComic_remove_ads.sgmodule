@@ -13,9 +13,9 @@
 # Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Rule]
-DOMAIN, ad.v3mh.com, REJECT
-DOMAIN, ipv6.kkmh.com, REJECT
-DOMAIN, ipv4.kkmh.com, REJECT
+DOMAIN, ad.v3mh.com, REJECT-DROP
+DOMAIN, ipv6.kkmh.com, REJECT-DROP
+DOMAIN, ipv4.kkmh.com, REJECT-DROP
 
 [Map Local]
 ^https:\/\/(cdn-)?api\.kkmh\.com\/v\d\/ad\/ data-type=text data="{}" header="Content-Type:application/json" status-code=200

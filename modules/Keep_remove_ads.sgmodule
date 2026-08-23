@@ -13,7 +13,7 @@
 # Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Rule]
-DOMAIN, kad.gotokeep.com, REJECT
+DOMAIN, kad.gotokeep.com, REJECT-DROP
 
 [Map Local]
 ^https:\/\/api\.gotokeep\.com\/op-engine-webapp\/v1\/ad\/ data-type=text data="{}" header="Content-Type:application/json" status-code=200

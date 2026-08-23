@@ -13,7 +13,7 @@
 # Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Rule]
-DOMAIN, saad.ms.zhangyue.net, REJECT
+DOMAIN, saad.ms.zhangyue.net, REJECT-DROP
 
 [Map Local]
 ^https:\/\/(webboot\.zhangyue\.com|ih2\.ireader\.com)\/zyapi\/bookstore\/ad\/ data-type=text data="{}" header="Content-Type:application/json" status-code=200

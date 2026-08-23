@@ -12,30 +12,30 @@
 # Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Rule]
-DOMAIN, acdn.adnxs.com, REJECT
-DOMAIN, mediation.adnxs.com, REJECT
-DOMAIN, sin3-ib.adnxs.com, REJECT
-DOMAIN, sdkconfig.ad.xiaomi.com, REJECT
-DOMAIN, data.mistat.xiaomi.com, REJECT
-DOMAIN, tracking.intl.miui.com, REJECT
-DOMAIN, sdkconfig.ad.xiaomi.com, REJECT
-DOMAIN-SUFFIX, doubleclick-cn.net, REJECT
-DOMAIN-SUFFIX, doubleclick.net, REJECT
-DOMAIN, business.msstatic.com, REJECT
-DOMAIN-SUFFIX, v1d.szbdyd.com, REJECT
-URL-REGEX, "^http:\/\/cdn\.wup\.huya\.com\/launch\/queryHttpDns$", REJECT
-DOMAIN-SUFFIX, m1.ad.10010.com, REJECT
-DOMAIN, ad.21cn.com, REJECT
-DOMAIN, ad.k.21cn.com, REJECT
-DOMAIN, admarket.21cn.com, REJECT
-DOMAIN, adshows.21cn.com, REJECT
-IP-CIDR, 122.229.8.47/32, REJECT, no-resolve
-IP-CIDR, 122.229.29.89/32, REJECT, no-resolve
+DOMAIN, acdn.adnxs.com, REJECT-DROP
+DOMAIN, mediation.adnxs.com, REJECT-DROP
+DOMAIN, sin3-ib.adnxs.com, REJECT-DROP
+DOMAIN, sdkconfig.ad.xiaomi.com, REJECT-DROP
+DOMAIN, data.mistat.xiaomi.com, REJECT-DROP
+DOMAIN, tracking.intl.miui.com, REJECT-DROP
+DOMAIN, sdkconfig.ad.xiaomi.com, REJECT-DROP
+DOMAIN-SUFFIX, doubleclick-cn.net, REJECT-DROP
+DOMAIN-SUFFIX, doubleclick.net, REJECT-DROP
+DOMAIN, business.msstatic.com, REJECT-DROP
+DOMAIN-SUFFIX, v1d.szbdyd.com, REJECT-DROP
+URL-REGEX, "^http:\/\/cdn\.wup\.huya\.com\/launch\/queryHttpDns$", REJECT-DROP
+DOMAIN-SUFFIX, m1.ad.10010.com, REJECT-DROP
+DOMAIN, ad.21cn.com, REJECT-DROP
+DOMAIN, ad.k.21cn.com, REJECT-DROP
+DOMAIN, admarket.21cn.com, REJECT-DROP
+DOMAIN, adshows.21cn.com, REJECT-DROP
+IP-CIDR, 122.229.8.47/32, REJECT-DROP, no-resolve
+IP-CIDR, 122.229.29.89/32, REJECT-DROP, no-resolve
 # Converted to rewrite: URL-REGEX, "^http:\/\/p\.kuaidi100\.com\/mobile\/mobileapi\.do", REJECT-DICT
 # Converted to rewrite: URL-REGEX, "^http:\/\/p\.kuaidi100\.com\/advertisement\/", REJECT-DICT
-DOMAIN, mall-dsp2.qinlinkeji.com, REJECT // 首页商品信息流
-DOMAIN, mallapi2.qinlinkeji.com, REJECT // 商城页面
-DOMAIN, open-pixon.ads-pixiv.net, REJECT
+DOMAIN, mall-dsp2.qinlinkeji.com, REJECT-DROP // 首页商品信息流
+DOMAIN, mallapi2.qinlinkeji.com, REJECT-DROP // 商城页面
+DOMAIN, open-pixon.ads-pixiv.net, REJECT-DROP
 
 [URL Rewrite]
 ^https?:\/\/api-access\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk _ reject

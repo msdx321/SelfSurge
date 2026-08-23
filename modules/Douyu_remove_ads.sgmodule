@@ -13,10 +13,10 @@
 # Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Rule]
-URL-REGEX, "^http:\/\/linkmicschedule\.douyucdn\.cn\/im_schedule\/im_gate_list", REJECT
-AND, ((DEST-PORT, 18000), (PROTOCOL, STUN)), REJECT
-DOMAIN, stun1.douyucdn.cn, REJECT
-DOMAIN, stun1.qvb.qcloud.com, REJECT
+URL-REGEX, "^http:\/\/linkmicschedule\.douyucdn\.cn\/im_schedule\/im_gate_list", REJECT-DROP
+AND, ((DEST-PORT, 18000), (PROTOCOL, STUN)), REJECT-DROP
+DOMAIN, stun1.douyucdn.cn, REJECT-DROP
+DOMAIN, stun1.qvb.qcloud.com, REJECT-DROP
 # Moved from invalid Loon [Rule]: ^(http:\/\/)((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\/(hlsh5p1\.douyucdn2\.cn)(.*) 307 $1$5$6
 
 [URL Rewrite]

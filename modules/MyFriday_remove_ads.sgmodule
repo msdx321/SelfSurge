@@ -12,5 +12,5 @@
 # Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Rule]
-DOMAIN, ad.myfriday.cn, REJECT
-IP-CIDR, 182.92.244.70/32, REJECT, no-resolve
+DOMAIN, ad.myfriday.cn, REJECT-DROP
+IP-CIDR, 182.92.244.70/32, REJECT-DROP, no-resolve

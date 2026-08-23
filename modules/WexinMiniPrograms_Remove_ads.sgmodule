@@ -13,12 +13,12 @@
 # Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Rule]
-DOMAIN, wxsnsdy.wxs.qq.com, REJECT
-DOMAIN, wxsmsdy.video.qq.com, REJECT
-DOMAIN, wxsnsdythumb.wxs.qq.com, REJECT
-DOMAIN, ads-shopping.shouqianba.com, REJECT
-DOMAIN, ad.maoyan.com, REJECT
-DOMAIN, e.jparking.cn, REJECT
+DOMAIN, wxsnsdy.wxs.qq.com, REJECT-DROP
+DOMAIN, wxsmsdy.video.qq.com, REJECT-DROP
+DOMAIN, wxsnsdythumb.wxs.qq.com, REJECT-DROP
+DOMAIN, ads-shopping.shouqianba.com, REJECT-DROP
+DOMAIN, ad.maoyan.com, REJECT-DROP
+DOMAIN, e.jparking.cn, REJECT-DROP
 
 [URL Rewrite]
 ^https:\/\/webapi\.qmai\.cn\/web\/cmk-center\/marketing\/canvas\/advert-reach _ reject

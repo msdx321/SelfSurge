@@ -13,9 +13,9 @@
 # Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Rule]
-DOMAIN, amap-aos-info-nogw.amap.com, REJECT
-DOMAIN, free-aos-cdn-image.amap.com, REJECT
-DOMAIN-SUFFIX, v.smtcdns.com, REJECT
+DOMAIN, amap-aos-info-nogw.amap.com, REJECT-DROP
+DOMAIN, free-aos-cdn-image.amap.com, REJECT-DROP
+DOMAIN-SUFFIX, v.smtcdns.com, REJECT-DROP
 
 [Map Local]
 ^https:\/\/m5\.amap\.com\/ws\/shield\/search\/new_hotword\? data-type=text data="{}" header="Content-Type:application/json" status-code=200

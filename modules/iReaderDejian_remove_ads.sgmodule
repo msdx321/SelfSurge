@@ -13,8 +13,8 @@
 # Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Rule]
-DOMAIN, smad.ms.zhangyue.net, REJECT
-DOMAIN, saad.ms.zhangyue.net, REJECT
+DOMAIN, smad.ms.zhangyue.net, REJECT-DROP
+DOMAIN, saad.ms.zhangyue.net, REJECT-DROP
 
 [Map Local]
 ^https:\/\/dj\.palmestore\.com\/djad\/ data-type=text data="{}" header="Content-Type:application/json" status-code=200

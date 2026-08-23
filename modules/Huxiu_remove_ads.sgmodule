@@ -13,7 +13,7 @@
 # Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Rule]
-DOMAIN, api-ad-product.huxiu.com, REJECT
+DOMAIN, api-ad-product.huxiu.com, REJECT-DROP
 
 [Map Local]
 ^https:\/\/api-ms-config\.huxiu\.com\/v1\/adConfig$ data-type=text data="{}" header="Content-Type:application/json" status-code=200

@@ -12,14 +12,14 @@
 # Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Rule]
-DOMAIN, adstats.tencentmusic.com, REJECT
-DOMAIN, ad.tencentmusic.com, REJECT
-DOMAIN, adcdn.tencentmusic.com, REJECT
-DOMAIN, adcdn6.tencentmusic.com, REJECT
-DOMAIN, adexpo.tencentmusic.com, REJECT
-DOMAIN, adclick.tencentmusic.com, REJECT
-DOMAIN, mc.tencentmusic.com, REJECT
-DOMAIN, monitor.music.qq.com, REJECT
-DOMAIN, tmead.y.qq.com, REJECT
-DOMAIN, tmeadbak.y.qq.com, REJECT
-DOMAIN, tmeadquic.y.qq.com, REJECT
+DOMAIN, adstats.tencentmusic.com, REJECT-DROP
+DOMAIN, ad.tencentmusic.com, REJECT-DROP
+DOMAIN, adcdn.tencentmusic.com, REJECT-DROP
+DOMAIN, adcdn6.tencentmusic.com, REJECT-DROP
+DOMAIN, adexpo.tencentmusic.com, REJECT-DROP
+DOMAIN, adclick.tencentmusic.com, REJECT-DROP
+DOMAIN, mc.tencentmusic.com, REJECT-DROP
+DOMAIN, monitor.music.qq.com, REJECT-DROP
+DOMAIN, tmead.y.qq.com, REJECT-DROP
+DOMAIN, tmeadbak.y.qq.com, REJECT-DROP
+DOMAIN, tmeadquic.y.qq.com, REJECT-DROP

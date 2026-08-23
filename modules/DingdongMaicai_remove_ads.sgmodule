@@ -13,9 +13,9 @@
 # Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Rule]
-DOMAIN, trackercollect.ddxq.mobi, REJECT
-DOMAIN, ddfs-public.ddimg.mobi, REJECT
-DOMAIN, rttrack.ddxq.mobi, REJECT
+DOMAIN, trackercollect.ddxq.mobi, REJECT-DROP
+DOMAIN, ddfs-public.ddimg.mobi, REJECT-DROP
+DOMAIN, rttrack.ddxq.mobi, REJECT-DROP
 
 [URL Rewrite]
 ^https?:\/\/maicai\.api\.ddxq\.mobi\/advert\/ _ reject

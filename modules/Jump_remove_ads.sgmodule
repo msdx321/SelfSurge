@@ -13,13 +13,13 @@
 # Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Rule]
-DOMAIN, zlsdk.1rtb.net, REJECT
-DOMAIN, jp.ad.gameley.com, REJECT
-DOMAIN, toblog.ctobsnssdk.com, REJECT
-DOMAIN, s3plus.meituan.net, REJECT
-DOMAIN, images.pinduoduo.com, REJECT
-DOMAIN, qh-material.taobao.com, REJECT
-DOMAIN-SUFFIX, admobile.top, REJECT
+DOMAIN, zlsdk.1rtb.net, REJECT-DROP
+DOMAIN, jp.ad.gameley.com, REJECT-DROP
+DOMAIN, toblog.ctobsnssdk.com, REJECT-DROP
+DOMAIN, s3plus.meituan.net, REJECT-DROP
+DOMAIN, images.pinduoduo.com, REJECT-DROP
+DOMAIN, qh-material.taobao.com, REJECT-DROP
+DOMAIN-SUFFIX, admobile.top, REJECT-DROP
 
 [Body Rewrite]
 http-response-jq ^https:?\/\/switch.jumpvg.com\/jump\/getlaunchad\/v2$ 'del(.data.adList)|.data.launchAd.showType=0'

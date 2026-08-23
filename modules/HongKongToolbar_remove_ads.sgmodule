@@ -12,8 +12,8 @@
 # Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Rule]
-URL-REGEX, "^https:\/\/a\.881903\.com\/live\/preroll\/.*\/.*", REJECT
-URL-REGEX, "^https:\/\/a\.881903\.com\/v\d\/app\/game\/.*", REJECT
+URL-REGEX, "^https:\/\/a\.881903\.com\/live\/preroll\/.*\/.*", REJECT-DROP
+URL-REGEX, "^https:\/\/a\.881903\.com\/v\d\/app\/game\/.*", REJECT-DROP
 
 [MITM]
 hostname = %APPEND% a.881903.com

@@ -13,8 +13,8 @@
 # Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Rule]
-DOMAIN, ad.seeyouyima.com, REJECT
-DOMAIN, axxd.xmseeyouyima.com, REJECT
+DOMAIN, ad.seeyouyima.com, REJECT-DROP
+DOMAIN, axxd.xmseeyouyima.com, REJECT-DROP
 
 [URL Rewrite]
 ^https:\/\/circle\.(xm)?seeyouyima\.com\/v\d\/article_recommend\? _ reject

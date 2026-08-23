@@ -13,8 +13,8 @@
 # Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Rule]
-DOMAIN, adsys.nineton.cn, REJECT
-DOMAIN, adcdn.ccqyj.com, REJECT
+DOMAIN, adsys.nineton.cn, REJECT-DROP
+DOMAIN, adcdn.ccqyj.com, REJECT-DROP
 
 [Map Local]
 ^http:\/\/weatherapi\.ccqyj\.com\/server\/listsv\d$ data-type=base64 data="eyJkYXRhIjpbeyJ0aXRsZSI6IuWwj+W3peWFtyIsInR5cGUiOjEsInNvcnQiOjEsImlkIjoiNWQ1ZmI3YzQxYTBjNDAwMTU2NzlhM2UzIiwibGlzdCI6W3sidGl0bGUiOiLkuLvpopjnmq7ogqQiLCJncm91cElkIjoiNWQ1ZmI3YzQxYTBjNDAwMTU2NzlhM2UzIiwiaW1hZ2UiOiJodHRwOi8vY2RuLndlYXRoZXIubmluZXRvbi5jbi9iNTJiZTI2YWUwNmY2ODI0ZDE3MTM3NWQwZGFjNTFmMS5wbmciLCJkYXJrX2ljb24iOiJodHRwOi8vY2RuLndlYXRoZXIubmluZXRvbi5jbi9lNzE0YWQ2NDIxOTY1YzgzNjhjYTZhZjQzOGFjZGUzNi5wbmciLCJ0eXBlIjoxLCJwcm90b2NvbCI6Im50d2VhdGhlcjovL29wZW50aGVtZSIsInNvcnQiOjExMDMsInZlcnNpb24iOjgxNCwicmlnaHRWZXJzaW9uIjowLCJzeW1ib2wiOjF9XX1dLCJjb2RlIjoxLCJpbmZvIjoib2sifQ==" header="Content-Type:application/json" status-code=200

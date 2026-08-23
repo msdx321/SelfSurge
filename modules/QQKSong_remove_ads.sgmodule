@@ -13,40 +13,40 @@
 # Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Rule]
-DOMAIN, adsmind.gdtimg.com, REJECT
-DOMAIN, adsmind.ugdtimg.com, REJECT
-DOMAIN, c2.gdt.qq.com, REJECT
-DOMAIN, huatuocode.huatuo.qq.com, REJECT
-DOMAIN, info4.video.qq.com, REJECT
-DOMAIN, info6.video.qq.com, REJECT
-DOMAIN, ios.bugly.qq.com, REJECT
-DOMAIN, ios.video.mpush.qq.com, REJECT
-DOMAIN, mi.gdt.qq.com, REJECT
-DOMAIN, otheve.beacon.qq.com, REJECT
-DOMAIN, pgdt.gtimg.cn, REJECT
-DOMAIN, pgdt.ugdtimg.com, REJECT
-DOMAIN, qzs.gdtimg.com, REJECT
-DOMAIN, qzs.qq.com, REJECT
-DOMAIN, rmonitor.qq.com, REJECT
-DOMAIN, sdk.e.qq.com, REJECT
-DOMAIN, sdkconfig.video.qq.com, REJECT
-DOMAIN, t.gdt.qq.com, REJECT
-DOMAIN, tmead.y.qq.com, REJECT
-DOMAIN, tmeadbak.y.qq.com, REJECT
-DOMAIN, tmeadcomm.y.qq.com, REJECT
-DOMAIN, tpns.qq.com, REJECT
-DOMAIN, v.gdt.qq.com, REJECT
-DOMAIN, v2.gdt.qq.com, REJECT
-DOMAIN, win.gdt.qq.com, REJECT
-DOMAIN, wup.imtt.qq.com, REJECT
-DOMAIN, tpstelemetry.tencent.com, REJECT
-DOMAIN-KEYWORD, trace.qq.com, REJECT
-DOMAIN-KEYWORD, trace.video.qq.com, REJECT
-DOMAIN-SUFFIX, gdt.qq.com, REJECT
-DOMAIN-SUFFIX, l.qq.com, REJECT
-DOMAIN-SUFFIX, ugdtimg.com, REJECT
-IP-CIDR, 47.110.187.87/32, REJECT, no-resolve
-URL-REGEX, "^http:\/\/y\.gtimg\.cn\/music\/common\/upload\/t_k_main_page_banner\/", REJECT
+DOMAIN, adsmind.gdtimg.com, REJECT-DROP
+DOMAIN, adsmind.ugdtimg.com, REJECT-DROP
+DOMAIN, c2.gdt.qq.com, REJECT-DROP
+DOMAIN, huatuocode.huatuo.qq.com, REJECT-DROP
+DOMAIN, info4.video.qq.com, REJECT-DROP
+DOMAIN, info6.video.qq.com, REJECT-DROP
+DOMAIN, ios.bugly.qq.com, REJECT-DROP
+DOMAIN, ios.video.mpush.qq.com, REJECT-DROP
+DOMAIN, mi.gdt.qq.com, REJECT-DROP
+DOMAIN, otheve.beacon.qq.com, REJECT-DROP
+DOMAIN, pgdt.gtimg.cn, REJECT-DROP
+DOMAIN, pgdt.ugdtimg.com, REJECT-DROP
+DOMAIN, qzs.gdtimg.com, REJECT-DROP
+DOMAIN, qzs.qq.com, REJECT-DROP
+DOMAIN, rmonitor.qq.com, REJECT-DROP
+DOMAIN, sdk.e.qq.com, REJECT-DROP
+DOMAIN, sdkconfig.video.qq.com, REJECT-DROP
+DOMAIN, t.gdt.qq.com, REJECT-DROP
+DOMAIN, tmead.y.qq.com, REJECT-DROP
+DOMAIN, tmeadbak.y.qq.com, REJECT-DROP
+DOMAIN, tmeadcomm.y.qq.com, REJECT-DROP
+DOMAIN, tpns.qq.com, REJECT-DROP
+DOMAIN, v.gdt.qq.com, REJECT-DROP
+DOMAIN, v2.gdt.qq.com, REJECT-DROP
+DOMAIN, win.gdt.qq.com, REJECT-DROP
+DOMAIN, wup.imtt.qq.com, REJECT-DROP
+DOMAIN, tpstelemetry.tencent.com, REJECT-DROP
+DOMAIN-KEYWORD, trace.qq.com, REJECT-DROP
+DOMAIN-KEYWORD, trace.video.qq.com, REJECT-DROP
+DOMAIN-SUFFIX, gdt.qq.com, REJECT-DROP
+DOMAIN-SUFFIX, l.qq.com, REJECT-DROP
+DOMAIN-SUFFIX, ugdtimg.com, REJECT-DROP
+IP-CIDR, 47.110.187.87/32, REJECT-DROP, no-resolve
+URL-REGEX, "^http:\/\/y\.gtimg\.cn\/music\/common\/upload\/t_k_main_page_banner\/", REJECT-DROP
 
 [URL Rewrite]
 ^https:\/\/tmeadkg\.y\.qq\.com\/maproxy\/getAd$ _ reject

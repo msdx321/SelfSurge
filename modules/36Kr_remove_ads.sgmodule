@@ -13,8 +13,8 @@
 # Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Rule]
-DOMAIN, adx.36kr.com, REJECT
-DOMAIN, ad.jiemian.com, REJECT
+DOMAIN, adx.36kr.com, REJECT-DROP
+DOMAIN, ad.jiemian.com, REJECT-DROP
 
 [Map Local]
 ^https:\/\/gateway\.36kr\.com\/api\/mis\/nav\/me\/recom\? data-type=text data="{}" header="Content-Type:application/json" status-code=200

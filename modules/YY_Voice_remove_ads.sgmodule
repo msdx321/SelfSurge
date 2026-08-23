@@ -13,9 +13,9 @@
 # Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Rule]
-DOMAIN, splash.yy.com, REJECT
-DOMAIN, dsp-ad.yy.com, REJECT
-DOMAIN, ysad.yy.com, REJECT
+DOMAIN, splash.yy.com, REJECT-DROP
+DOMAIN, dsp-ad.yy.com, REJECT-DROP
+DOMAIN, ysad.yy.com, REJECT-DROP
 
 [Map Local]
 ^https:\/\/yyapp-fastnet\.yy\.com\/dispatch\? data-type=text data="{}" header="Content-Type:application/json" status-code=200

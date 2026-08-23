@@ -13,12 +13,12 @@
 # Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Rule]
-IP-CIDR, 103.44.59.54/32, REJECT, no-resolve
-IP-CIDR, 111.63.147.158/32, REJECT, no-resolve
-IP-CIDR, 116.211.198.237/32, REJECT, no-resolve
+IP-CIDR, 103.44.59.54/32, REJECT-DROP, no-resolve
+IP-CIDR, 111.63.147.158/32, REJECT-DROP, no-resolve
+IP-CIDR, 116.211.198.237/32, REJECT-DROP, no-resolve
 DOMAIN-SUFFIX, cupid.iqiyi.com, DIRECT
-DOMAIN, api.iqiyi.com, REJECT
-DOMAIN, access.if.iqiyi.com, REJECT
+DOMAIN, api.iqiyi.com, REJECT-DROP
+DOMAIN, access.if.iqiyi.com, REJECT-DROP
 
 [Map Local]
 ^https?:\/\/iface2\.iqiyi\.com\/control\/3\.0\/init_proxy\? data-type=text data="{}" header="Content-Type:application/json" status-code=200

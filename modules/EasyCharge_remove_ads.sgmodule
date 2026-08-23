@@ -13,7 +13,7 @@
 # Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Rule]
-DOMAIN, adash-evone.echargenet.com, REJECT
+DOMAIN, adash-evone.echargenet.com, REJECT-DROP
 
 [Map Local]
 ^https:\/\/aserver-evone\.echargenet\.com\/orange\/datacenter\/snapshot-meta\? data-type=text data="{}" header="Content-Type:application/json" status-code=200

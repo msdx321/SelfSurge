@@ -12,6 +12,6 @@
 # Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Rule]
-DOMAIN, api-ad.kajicam.com, REJECT
-DOMAIN, zjres-ad.kajicam.com, REJECT
-DOMAIN, popup-api.b612kaji.com, REJECT
+DOMAIN, api-ad.kajicam.com, REJECT-DROP
+DOMAIN, zjres-ad.kajicam.com, REJECT-DROP
+DOMAIN, popup-api.b612kaji.com, REJECT-DROP

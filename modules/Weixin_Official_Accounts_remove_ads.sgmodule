@@ -13,7 +13,7 @@
 # Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Rule]
-DOMAIN-SUFFIX, wxs.qq.com, REJECT
+DOMAIN-SUFFIX, wxs.qq.com, REJECT-DROP
 
 [Map Local]
 ^https:\/\/mp\.weixin\.qq\.com\/mp\/(cps_product_info|getappmsgad|jsmonitor|masonryfeed|relatedarticle)\? data-type=text data="{}" header="Content-Type:application/json" status-code=200

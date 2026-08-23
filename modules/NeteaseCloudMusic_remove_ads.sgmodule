@@ -28,12 +28,12 @@
 # Surge 参数 PRCN：默认 false；可选 false | true；[隐藏首页]你的专属歌单
 
 [Rule]
-DOMAIN, iadmat.nosdn.127.net, REJECT
-DOMAIN, iadmatapk.nosdn.127.net, REJECT
-DOMAIN, iadmusicmat.music.126.net, REJECT
-DOMAIN, iadmusicmatvideo.music.126.net, REJECT
-DOMAIN, ipv4.music.163.com, REJECT
-DOMAIN, ipv6.music.163.com, REJECT
+DOMAIN, iadmat.nosdn.127.net, REJECT-DROP
+DOMAIN, iadmatapk.nosdn.127.net, REJECT-DROP
+DOMAIN, iadmusicmat.music.126.net, REJECT-DROP
+DOMAIN, iadmusicmatvideo.music.126.net, REJECT-DROP
+DOMAIN, ipv4.music.163.com, REJECT-DROP
+DOMAIN, ipv6.music.163.com, REJECT-DROP
 
 [Map Local]
 ^https?:\/\/interface\d?\.music\.163\.com\/e?api\/(ocpc\/)?ad\/ data-type=text data="" status-code=200
