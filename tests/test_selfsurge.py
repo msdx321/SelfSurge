@@ -41,7 +41,8 @@ class SoulTest(unittest.TestCase):
             "移除Soul广告 = type=http-response,pattern=", module
         )
         self.assertIn(
-            "script-path=https://kelee.one/Resource/JavaScript/Soul/"
+            "script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/"
+            "main/scripts/Soul/"
             "Soul_remove_ads.js,requires-body=true",
             module,
         )

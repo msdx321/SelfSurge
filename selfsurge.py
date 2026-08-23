@@ -5,6 +5,10 @@ from urllib.request import Request, urlopen
 
 
 LOON_USER_AGENT = "Loon/1022 CFNetwork/1498.700.2 Darwin/23.6.0"
+KELEE_SCRIPT_PREFIX = "https://kelee.one/Resource/JavaScript/"
+PUBLISHED_SCRIPT_PREFIX = (
+    "https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/"
+)
 
 
 def _plugin_url(value: str) -> str:
@@ -22,10 +26,14 @@ def _plugin_url(value: str) -> str:
     return value
 
 
-def fetch_lpx(url: str) -> str:
-    request = Request(_plugin_url(url), headers={"User-Agent": LOON_USER_AGENT})
+def fetch_text(url: str) -> str:
+    request = Request(url, headers={"User-Agent": LOON_USER_AGENT})
     with urlopen(request, timeout=30) as response:
-        source = response.read().decode("utf-8-sig")
+        return response.read().decode("utf-8-sig")
+
+
+def fetch_lpx(url: str) -> str:
+    source = fetch_text(_plugin_url(url))
 
     if not any(line.startswith("#!name=") for line in source.splitlines()):
         raise ValueError("response is not an LPX plugin")
@@ -74,9 +82,12 @@ def _convert_script(line: str) -> str:
         if key == "tag":
             name = value
         else:
-            parameters.append(f"{key}={value}")
             if key == "script-path":
-                script_path = value
+                script_path = value.replace(
+                    KELEE_SCRIPT_PREFIX, PUBLISHED_SCRIPT_PREFIX, 1
+                )
+                value = script_path
+            parameters.append(f"{key}={value}")
 
     if script_path is None:
         raise ValueError(f"script-path is required: {line}")
