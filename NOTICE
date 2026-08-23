@@ -1,0 +1,12 @@
+Generated Surge modules are adaptations of Loon configuration templates from
+https://hub.kelee.one/ and retain the supplied author metadata and source URL.
+They are distributed for non-commercial use under CC BY-NC-SA 4.0:
+https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+Files under scripts/ and resources/ are unmodified mirrors. Copyright and
+license terms remain with their respective upstream authors. sources.json
+records each upstream URL and SHA-256 checksum; SelfSurge does not relicense
+those files.
+
+Script-Hub was studied as a behavioral reference. Its GPL-3.0 source code was
+not copied into SelfSurge.

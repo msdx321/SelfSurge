@@ -1,54 +1,57 @@
+import concurrent.futures
+import re
 import unittest
 
+from generate import catalog_entries
 from selfsurge import convert_lpx, fetch_lpx
 
 
-BLOCK_ADVERTISERS_URL = (
-    "https://kelee.one/Tool/Loon/Lpx/BlockAdvertisers.lpx"
-)
-SOUL_INSTALL_URL = (
-    "loon://import?plugin="
-    "https://kelee.one/Tool/Loon/Lpx/Soul_remove_ads.lpx"
-)
+SECTIONS = {
+    "[General]",
+    "[Rule]",
+    "[URL Rewrite]",
+    "[Map Local]",
+    "[Header Rewrite]",
+    "[Body Rewrite]",
+    "[Script]",
+    "[MITM]",
+}
 
 
-class BlockAdvertisersTest(unittest.TestCase):
-    def test_download_and_convert(self) -> None:
-        module = convert_lpx(fetch_lpx(BLOCK_ADVERTISERS_URL))
+class CatalogConversionTest(unittest.TestCase):
+    def test_every_hub_plugin_converts(self) -> None:
+        entries = catalog_entries()
+        self.assertEqual(len(entries), len({name for name, _ in entries}))
+        with concurrent.futures.ThreadPoolExecutor(max_workers=8) as executor:
+            sources = executor.map(fetch_lpx, (url for _, url in entries))
 
-        self.assertIn("#!name=广告平台拦截器", module)
-        self.assertIn("[Rule]", module)
-        self.assertIn("[URL Rewrite]", module)
-        self.assertIn(
-            r"^https:\/\/video-dsp\.pddpic\.com\/market-dsp-video\/ _ reject",
-            module,
-        )
-        self.assertIn("hostname = %APPEND% video-dsp.pddpic.com, ", module)
+            for (name, source_url), source in zip(entries, sources):
+                module = convert_lpx(source, source_url=source_url)
+                self.assertIn(f"# Source: {source_url}", module)
+                self.assertNotIn("[Rewrite]", module)
+                self.assertNotIn("[Argument]", module)
+                self.assertNotIn("{{{{{", module)
 
+                headings = {
+                    line
+                    for line in module.splitlines()
+                    if line.startswith("[") and line.endswith("]")
+                }
+                self.assertLessEqual(headings, SECTIONS, name)
 
-class SoulTest(unittest.TestCase):
-    def test_import_url_and_complex_sections(self) -> None:
-        module = convert_lpx(fetch_lpx(SOUL_INSTALL_URL))
-
-        self.assertIn("#!name=Soul去广告", module)
-        self.assertIn("[Map Local]", module)
-        self.assertIn('data-type=text data="{}"', module)
-        self.assertIn('data-type=text data="" status-code=200', module)
-        self.assertIn("[Body Rewrite]", module)
-        self.assertIn("'del(.data)'", module)
-        self.assertIn("[Script]", module)
-        self.assertIn(
-            "移除Soul广告 = type=http-response,pattern=", module
-        )
-        self.assertIn(
-            "script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/"
-            "main/scripts/Soul/"
-            "Soul_remove_ads.js,requires-body=true",
-            module,
-        )
-        self.assertIn(
-            "hostname = %APPEND% api*.soulapp.cn, ", module
-        )
+                declared = set()
+                arguments = re.search(
+                    r"^#!arguments=(.*)$", module, re.MULTILINE
+                )
+                if arguments:
+                    declared = {
+                        item.split(":", 1)[0]
+                        for item in arguments.group(1).split(",")
+                    }
+                placeholders = set(
+                    re.findall(r"\{\{\{([A-Za-z0-9_]+)\}\}\}", module)
+                )
+                self.assertLessEqual(placeholders, declared, name)
 
 
 if __name__ == "__main__":
