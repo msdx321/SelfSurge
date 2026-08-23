@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <title>SelfSurge 模块</title>
+    <style>
+      :root {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        color: #172033;
+        background: #f5f7fb;
+      }
+
+      * { box-sizing: border-box; }
+      body { margin: 0; }
+      main { width: min(1040px, calc(100% - 32px)); margin: 48px auto; }
+      h1 { margin: 0; font-size: clamp(2rem, 6vw, 3.5rem); letter-spacing: -.04em; }
+      .intro { margin: 10px 0 28px; color: #667085; }
+      .toolbar { position: sticky; top: 0; z-index: 1; padding: 12px 0; background: #f5f7fbe8; backdrop-filter: blur(10px); }
+      label { display: block; font-size: .875rem; font-weight: 650; }
+      input {
+        width: 100%; margin-top: 8px; padding: 13px 15px; border: 1px solid #d0d5dd;
+        border-radius: 12px; background: #fff; color: inherit; font: inherit;
+      }
+      input:focus { outline: 3px solid #a9c7ff; border-color: #2970ff; }
+      #status { min-height: 24px; margin: 12px 0; color: #667085; font-size: .875rem; }
+      #modules { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 14px; }
+      article {
+        display: grid; grid-template-columns: 48px 1fr; gap: 14px; padding: 18px;
+        border: 1px solid #e4e7ec; border-radius: 16px; background: #fff;
+        box-shadow: 0 2px 8px #1018280a;
+      }
+      article img { width: 48px; height: 48px; border-radius: 12px; object-fit: cover; background: #eef2f6; }
+      article h2 { margin: 1px 0 5px; font-size: 1rem; }
+      .description {
+        display: -webkit-box; min-height: 42px; margin: 0; overflow: hidden;
+        color: #667085; font-size: .875rem; line-height: 1.5;
+        -webkit-box-orient: vertical; -webkit-line-clamp: 2;
+      }
+      .meta { margin: 10px 0 13px; color: #98a2b3; font-size: .75rem; }
+      .actions { display: flex; flex-wrap: wrap; gap: 8px; }
+      .actions a, .actions button {
+        padding: 8px 10px; border: 1px solid #d0d5dd; border-radius: 9px;
+        background: #fff; color: #344054; font: inherit; font-size: .8rem;
+        line-height: 1; text-decoration: none; cursor: pointer;
+      }
+      .actions .install { border-color: #175cd3; background: #175cd3; color: #fff; }
+      .actions a:hover, .actions button:hover { filter: brightness(.96); }
+      .empty { grid-column: 1 / -1; padding: 50px 0; text-align: center; color: #667085; }
+
+      @media (prefers-color-scheme: dark) {
+        :root { color: #f2f4f7; background: #101828; }
+        .toolbar { background: #101828e8; }
+        input, article, .actions a, .actions button { border-color: #344054; background: #1d2939; color: #f2f4f7; }
+        .intro, #status, .description, .empty { color: #98a2b3; }
+        .actions .install { border-color: #528bff; background: #2970ff; }
+      }
+
+      @media (max-width: 520px) {
+        main { width: min(100% - 24px, 1040px); margin-top: 28px; }
+        #modules { grid-template-columns: 1fr; }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>SelfSurge</h1>
+      <p class="intro">查找模块，然后导入 Surge。模块和脚本均从本仓库加载。</p>
+      <div class="toolbar">
+        <label for="search">搜索模块</label>
+        <input id="search" type="search" placeholder="名称、分类或说明" autocomplete="off">
+      </div>
+      <p id="status" role="status">正在加载模块…</p>
+      <section id="modules" aria-label="模块列表"></section>
+    </main>
+
+    <template id="module-card">
+      <article>
+        <img alt="" loading="lazy">
+        <div>
+          <h2></h2>
+          <p class="description"></p>
+          <p class="meta"></p>
+          <div class="actions">
+            <a class="install">导入 Surge</a>
+            <a class="view" target="_blank" rel="noreferrer">查看模块</a>
+            <button type="button">复制链接</button>
+          </div>
+        </div>
+      </article>
+    </template>
+
+    <script>
+      const search = document.querySelector("#search");
+      const status = document.querySelector("#status");
+      const modules = document.querySelector("#modules");
+      const template = document.querySelector("#module-card");
+      let catalog = [];
+
+      function render() {
+        const query = search.value.trim().toLocaleLowerCase();
+        const visible = catalog.filter((item) =>
+          [item.name, item.category, item.description, item.file]
+            .join(" ").toLocaleLowerCase().includes(query)
+        );
+        const fragment = document.createDocumentFragment();
+
+        for (const item of visible) {
+          const card = template.content.cloneNode(true);
+          const image = card.querySelector("img");
+          image.src = item.icon || "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E";
+          card.querySelector("h2").textContent = item.name;
+          card.querySelector(".description").textContent = item.description || "暂无说明";
+          card.querySelector(".meta").textContent = [item.category, item.date].filter(Boolean).join(" · ");
+          const install = card.querySelector(".install");
+          install.href = `surge:///install-module?url=${encodeURIComponent(item.url)}`;
+          card.querySelector(".view").href = item.url;
+          card.querySelector("button").addEventListener("click", async (event) => {
+            try {
+              await navigator.clipboard.writeText(item.url);
+              event.currentTarget.textContent = "已复制";
+            } catch {
+              event.currentTarget.textContent = "复制失败";
+            }
+          });
+          fragment.append(card);
+        }
+
+        modules.replaceChildren(fragment);
+        status.textContent = `显示 ${visible.length} / ${catalog.length} 个模块`;
+        if (!visible.length) {
+          const empty = document.createElement("p");
+          empty.className = "empty";
+          empty.textContent = "没有匹配的模块";
+          modules.append(empty);
+        }
+      }
+
+      search.addEventListener("input", render);
+      fetch("./catalog.json")
+        .then((response) => {
+          if (!response.ok) throw new Error(`HTTP ${response.status}`);
+          return response.json();
+        })
+        .then((items) => { catalog = items; render(); })
+        .catch(() => { status.textContent = "模块目录加载失败，请稍后重试。"; });
+    </script>
+  </body>
+</html>

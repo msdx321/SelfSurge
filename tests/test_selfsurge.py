@@ -64,6 +64,23 @@ class CatalogConversionTest(unittest.TestCase):
             manifest["modules"],
             {f"modules/{name}": source_url for name, source_url in entries},
         )
+        web_catalog = json.loads(
+            (ROOT / "web" / "catalog.json").read_text(encoding="utf-8")
+        )
+        self.assertEqual(
+            {item["file"] for item in web_catalog},
+            {name for name, _ in entries},
+        )
+        self.assertTrue(
+            all(
+                item["url"]
+                == (
+                    "https://raw.githubusercontent.com/msdx321/"
+                    f"SelfSurge/main/modules/{item['file']}"
+                )
+                for item in web_catalog
+            )
+        )
         for relative, source in manifest["resources"].items():
             content = (ROOT / relative).read_bytes()
             self.assertEqual(

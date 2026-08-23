@@ -18,6 +18,9 @@ from selfsurge import (
 ROOT = Path(__file__).parent
 CATALOG_URL = "https://hub.kelee.one/list.json"
 GENERATED_DIRECTORIES = (Path("modules"), Path("scripts"), Path("resources"))
+PUBLISHED_MODULE_PREFIX = (
+    "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/"
+)
 
 
 def catalog_entries() -> list[tuple[str, str]]:
@@ -59,6 +62,17 @@ def _download_resource(url: str) -> tuple[str, bytes | None]:
         if error.code == 404:
             return url, None
         raise
+
+
+def _module_metadata(module: str) -> dict[str, str]:
+    metadata = {}
+    for line in module.splitlines():
+        if not line.startswith("#!"):
+            continue
+        key, separator, value = line[2:].partition("=")
+        if separator:
+            metadata[key] = value
+    return metadata
 
 
 def _write_generated(files: dict[Path, bytes]) -> None:
@@ -104,15 +118,32 @@ def main() -> None:
     unavailable = {url for url, content in resources.items() if content is None}
 
     files = {}
+    web_catalog = []
     module_sources = {}
     for name, source_url in entries:
         relative = Path("modules", name)
         module_sources[relative.as_posix()] = source_url
-        files[relative] = convert_lpx(
+        module = convert_lpx(
             sources[source_url],
             source_url=source_url,
             unavailable_resources=unavailable,
-        ).encode()
+        )
+        files[relative] = module.encode()
+        metadata = _module_metadata(module)
+        icon = metadata.get("icon", "")
+        if urlsplit(icon).scheme != "https":
+            icon = ""
+        web_catalog.append(
+            {
+                "category": metadata.get("category", ""),
+                "date": metadata.get("date", ""),
+                "description": metadata.get("desc", ""),
+                "file": name,
+                "icon": icon,
+                "name": metadata.get("name", Path(name).stem),
+                "url": PUBLISHED_MODULE_PREFIX + name,
+            }
+        )
 
     mirrored_sources = {}
     for url, content in resources.items():
@@ -134,6 +165,10 @@ def main() -> None:
     }
     (ROOT / "sources.json").write_text(
         json.dumps(manifest, ensure_ascii=False, indent=2, sort_keys=True) + "\n",
+        encoding="utf-8",
+    )
+    (ROOT / "web" / "catalog.json").write_text(
+        json.dumps(web_catalog, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
     )
     print(
