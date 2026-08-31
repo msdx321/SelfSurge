@@ -1,0 +1,31 @@
+#!name=新浪财经去广告
+#!desc=移除开屏广告、弹窗广告、横幅广告、信息流广告，精简我的页面。
+#!category=去广告
+#!openUrl=https://apps.apple.com/app/id430165157
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!homepage=https://hub.kelee.one
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/SinaStock.png
+#!date=2026-08-26 14:19:33
+#!requirement=CORE_VERSION>=20
+
+# Source: https://kelee.one/Tool/Loon/Lpx/SinaStock_remove_ads.lpx
+# Adapted from Loon LPX to Surge module by SelfSurge.
+# Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+[Map Local]
+(?i)^https:\/\/news\.cj\.sina\.cn\/search\/tips\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/search\.cj\.sina\.cn\/stock\/get_index_new\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/news\.cj\.sina\.cn\/search\/tips\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/recommend\.cj\.sina\.cn\/app\/v2\/search\/discovery$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/quotes\.sina\.com\.cn\/cn\/api\/openapi\.php\/PriceChangeService\.getSearchList\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
+
+[Body Rewrite]
+http-response-jq (?i)^https:\/\/news\.cj\.sina\.cn\/app\/v1\/news724\/list\? 'reduce [["result","data","ad"]][] as $path (.;. as $before | try delpaths([$path]) catch $before)'
+http-response-jq (?i)^https:\/\/app\.cj\.sina\.com\.cn\/apps\/api\/user\/center\? '.result.data |= with_entries(select(.key == "button" or .key == "account" or .key == "balance"))'
+http-response-jq (?i)^https:\/\/news\.cj\.sina\.cn\/toutiao\/content\? 'del(.result.data[]?.ad, .result.data[]?.report)'
+http-response-jq (?i)^https:\/\/app\.cj\.sina\.com\.cn\/api\/deal\/index\? 'reduce [["data","banner"]][] as $path (.;. as $before | try delpaths([$path]) catch $before)'
+http-response-jq (?i)^https:\/\/app\.cj\.sina\.com\.cn\/clientSetting\/api\/start\/init\? 'reduce [["result","data","search_ad"],["result","data","center_ads"],["result","data","banner_new_tagid"],["result","data","ad_hasAddScreenParam"],["result","data","us_trade"],["result","data","open_account"],["result","data","us_hq_trade"]][] as $path (.;. as $before | try delpaths([$path]) catch $before)'
+http-response-jq (?i)^https:\/\/(newscj\.xincai\.com|news\.cj\.sina\.cn)\/app\/v1\/feed\? '.data.feed.data |= map(select((.author// "") != ""))'
+
+[MITM]
+hostname = %APPEND% app.cj.sina.com.cn, news.cj.sina.cn, search.cj.sina.cn, recommend.cj.sina.cn, quotes.sina.com.cn, newscj.xincai.com

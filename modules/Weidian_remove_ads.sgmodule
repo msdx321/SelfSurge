@@ -1,0 +1,34 @@
+#!name=微店去广告
+#!desc=移除开屏广告、弹窗广告、猜你喜欢、猜你想搜、关注推荐，精简搜索页和我的页面。
+#!category=去广告
+#!openUrl=https://apps.apple.com/app/id860384719
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!homepage=https://hub.kelee.one
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Weidian.png
+#!date=2026-08-27 22:53:53
+#!requirement=CORE_VERSION>=20
+
+# Source: https://kelee.one/Tool/Loon/Lpx/Weidian_remove_ads.lpx
+# Adapted from Loon LPX to Surge module by SelfSurge.
+# Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+[Map Local]
+(?i)^https:\/\/thor\.weidian\.com\/ares\/home\.splash\/ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/thor\.weidian\.com\/warlock\/recommend\.guessULike\/ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/thor\.weidian\.com\/poseidon\/exhibit\.spaceJson\/ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/thor\.weidian\.com\/ares\/app\.dialog\/ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/thor\.weidian\.com\/warlock\/recommend\.guessULike\/ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/thor\.weidian\.com\/feedserver\/feed\.similarRecFeeds\/ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/thor\.weidian\.com\/faith\/search\.hotRecShadowWord\/ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/thor\.weidian\.com\/faith\/search\.getProcessTopics\/ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/thor\.weidian\.com\/feedserver\/feed\.listGoodUsers\/ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/thor\.weidian\.com\/feedserver\/feed\.myFollow\/ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/thor\.weidian\.com\/ares\/recommend\.getSpecialFocusList\/ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/thor\.weidian\.com\/ares\/collect\.recommendShop\/ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+
+[Script]
+配置修改 = type=http-response,pattern=(?i)^https:\/\/thor\.weidian\.com\/appconf\/getAppConfig\/,script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/Weidian/getAppConfig.js,requires-body=true,binary-body-mode=true
+精简钱包区 = type=http-response,pattern=(?i)^https:\/\/thor\.weidian\.com\/wgs\/wallet\.query\.order\.entrance\/,script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/Weidian/wallet.js,requires-body=true,binary-body-mode=true
+
+[MITM]
+hostname = %APPEND% thor.weidian.com

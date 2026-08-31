@@ -1,0 +1,23 @@
+#!name=PICOOC去广告
+#!desc=移除开屏广告、悬浮广告，拦截发现页，精简我的页面。
+#!category=去广告
+#!openUrl=https://apps.apple.com/app/id729928969
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!homepage=https://hub.kelee.one
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/PICOOC.png
+#!date=2026-08-27 09:50:52
+#!requirement=CORE_VERSION>=20
+
+# Source: https://kelee.one/Tool/Loon/Lpx/PICOOC_remove_ads.lpx
+# Adapted from Loon LPX to Surge module by SelfSurge.
+# Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+[Map Local]
+(?i)^https:\/\/api2\.picooc\.com\/v\d\/api\/focus\/strategy\/execute\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/api2\.picooc\.com\/v\d\/api\/dietGuide\/query\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/api2\.picooc\.com\/program\/listMainProgram\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/a\.picooc\.com\/v\d\/api\/camp\/sys\/config\/coupon\/pattern\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/api2\.picooc\.com\/v\d\/api\/account\/getTabsInfo\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
+
+[MITM]
+hostname = %APPEND% api2.picooc.com, a.picooc.com

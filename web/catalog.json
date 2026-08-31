@@ -28,6 +28,15 @@
   },
   {
     "category": "去广告",
+    "date": "2026-08-24 18:59:19",
+    "description": "移除开屏广告、弹窗广告、活动角标、商城。",
+    "file": "5EPlay_remove_ads.sgmodule",
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/5EPlay.png",
+    "name": "5EPlay去广告",
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/5EPlay_remove_ads.sgmodule"
+  },
+  {
+    "category": "去广告",
     "date": "2026-06-01 17:11:35",
     "description": "移除开屏广告、首页右上角运营位、信息流广告、文末广告，移除相关文章推荐、大家都在看及皮肤配置，精简搜索页面、我的页面及底栏。",
     "file": "36Kr_remove_ads.sgmodule",
@@ -277,6 +286,15 @@
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/OKOK.png",
     "name": "OKOK去广告",
     "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/OKOK_remove_ads.sgmodule"
+  },
+  {
+    "category": "去广告",
+    "date": "2026-08-27 09:50:52",
+    "description": "移除开屏广告、悬浮广告，拦截发现页，精简我的页面。",
+    "file": "PICOOC_remove_ads.sgmodule",
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/PICOOC.png",
+    "name": "PICOOC去广告",
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/PICOOC_remove_ads.sgmodule"
   },
   {
     "category": "去广告",
@@ -1171,8 +1189,8 @@
   },
   {
     "category": "去广告",
-    "date": "2026-08-24 06:35:29",
-    "description": "移除开屏广告、侧滑页面广告、消息广告、浮窗广告、横幅广告、信息流广告、弹窗广告，精简侧滑页面。",
+    "date": "2026-08-27 06:29:33",
+    "description": "移除开屏广告、侧滑页面广告、消息广告、浮窗广告、横幅广告、信息流广告、弹窗广告。",
     "file": "Jin10Data_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Jin10Data.png",
     "name": "金十数据去广告",
@@ -1612,6 +1630,15 @@
   },
   {
     "category": "去广告",
+    "date": "2026-08-26 11:08:19",
+    "description": "移除开屏广告、弹窗广告、广告下发、用户行为上报，精简搜索页、育儿页和我的页面，拦截商城页面。",
+    "file": "Qbb_remove_ads.sgmodule",
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Qbb.png",
+    "name": "亲宝宝去广告",
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Qbb_remove_ads.sgmodule"
+  },
+  {
+    "category": "去广告",
     "date": "2026-06-01 17:11:35",
     "description": "移除开屏广告、信息流广告、各类相关内容推荐，精简我的页面。",
     "file": "QtingFM_remove_ads.sgmodule",
@@ -1909,6 +1936,15 @@
   },
   {
     "category": "去广告",
+    "date": "2026-08-27 22:53:53",
+    "description": "移除开屏广告、弹窗广告、猜你喜欢、猜你想搜、关注推荐，精简搜索页和我的页面。",
+    "file": "Weidian_remove_ads.sgmodule",
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Weidian.png",
+    "name": "微店去广告",
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Weidian_remove_ads.sgmodule"
+  },
+  {
+    "category": "去广告",
     "date": "2026-06-01 17:11:35",
     "description": "移除开屏广告、信息流广告、文末广告、首页轮播图推广。",
     "file": "WPForum_remove_ads.sgmodule",
@@ -2134,7 +2170,16 @@
   },
   {
     "category": "去广告",
-    "date": "2026-06-01 17:11:35",
+    "date": "2026-08-26 14:19:33",
+    "description": "移除开屏广告、弹窗广告、横幅广告、信息流广告，精简我的页面。",
+    "file": "SinaStock_remove_ads.sgmodule",
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/SinaStock.png",
+    "name": "新浪财经去广告",
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/SinaStock_remove_ads.sgmodule"
+  },
+  {
+    "category": "去广告",
+    "date": "2026-08-24 19:33:07",
     "description": "移除开屏广告、各类横幅广告、信息流广告、帖内广告、新用户定向广告、各类弹窗、股票精选推荐、基金精选推荐、聪明的投资者推荐、私募推荐、直播推荐。",
     "file": "Snowball_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Snowball.png",
@@ -2383,6 +2428,15 @@
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/ZongHeng.png",
     "name": "纵横小说去广告",
     "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/ZongHeng_remove_ads.sgmodule"
+  },
+  {
+    "category": "去广告",
+    "date": "2026-08-27 20:03:32",
+    "description": "移除开屏广告、悬浮广告、横幅广告、轮播图广告，精简我的页面。",
+    "file": "iWallBiZhi_remove_ads.sgmodule",
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/iWallBiZhi.png",
+    "name": "最美壁纸去广告",
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/iWallBiZhi_remove_ads.sgmodule"
   },
   {
     "category": "去广告",
