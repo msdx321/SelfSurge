@@ -373,9 +373,56 @@ def _mock_response(pattern: str, value: str) -> str:
     )
 
 
+def _conditional_json_rewrite(line: str) -> str | None:
+    match = re.fullmatch(
+        r"(request|response) if \$\{url\} ~= /(.+)/(i?) then "
+        r"(request|response)\.json\.(delete|jq)\((.+)\)",
+        line,
+    )
+    if not match:
+        return None
+
+    direction, pattern, case_insensitive, body_direction, operation, raw = (
+        match.groups()
+    )
+    if direction != body_direction:
+        return None
+    if case_insensitive:
+        pattern = f"(?i){pattern}"
+
+    value = json.loads(raw)
+    if operation == "jq" and isinstance(value, str):
+        return f"{pattern} {direction}-body-json-jq '{value}'"
+    if operation == "delete":
+        paths = [value] if isinstance(value, str) else value
+        if isinstance(paths, list) and all(
+            isinstance(path, str) for path in paths
+        ):
+            encoded_paths = " ".join(
+                path.replace(" ", r"\x20") for path in paths
+            )
+            return f"{pattern} {direction}-body-json-del {encoded_paths}"
+    raise ValueError(f"invalid conditional JSON rewrite: {line}")
+
+
 def _conditional_rewrite(
     line: str, arguments: dict[str, str]
 ) -> tuple[str, str] | None:
+    reject = re.fullmatch(
+        r"request if \$\{url\} ~= /(.+)/(i?) then reject_dict\((\d+)\)",
+        line,
+    )
+    if reject:
+        pattern, case_insensitive, status_code = reject.groups()
+        if case_insensitive:
+            pattern = f"(?i){pattern}"
+        return (
+            "[Map Local]",
+            f'{pattern} data-type=text data="{{}}" '
+            "header=\"Content-Type:application/json\" "
+            f"status-code={status_code}",
+        )
+
     match = re.fullmatch(
         r'request if \$\{url\} ~= /(.+)/ as item then redirect\('
         r'(302|307), "\$\{app\}://(resolve\?domain|join\?invite)='
@@ -398,6 +445,10 @@ def _conditional_rewrite(
 def _convert_rewrite(
     line: str, arguments: dict[str, str]
 ) -> list[tuple[str, str]]:
+    conditional_json = _conditional_json_rewrite(line)
+    if conditional_json:
+        return _convert_rewrite(conditional_json, arguments)
+
     conditional = _conditional_rewrite(line, arguments)
     if conditional:
         return [conditional]
@@ -572,6 +623,25 @@ def _convert_script(
     argument_kinds: dict[str, str],
     used_names: dict[str, int],
 ) -> tuple[list[str], str, str | None]:
+    conditional = re.fullmatch(
+        r'(request|response) if \$\{url\} ~= /(.+)/(i?) then script\("([^"]+)"\) '
+        r"with (.+)",
+        line,
+    )
+    if conditional:
+        direction, pattern, case_insensitive, script_path, parameters = (
+            conditional.groups()
+        )
+        if case_insensitive:
+            pattern = f"(?i){pattern}"
+        parameters = parameters.replace(
+            "requires_body=", "requires-body="
+        ).replace("binary_body_mode=", "binary-body-mode=")
+        line = (
+            f"http-{direction} {pattern} script-path={script_path}, "
+            f"{parameters}"
+        )
+
     script_type, separator, remainder = line.partition(" ")
     if not separator or script_type not in {
         "http-request",
@@ -607,6 +677,8 @@ def _convert_script(
     if not script_path:
         raise ValueError(f"script-path is required: {line}")
     name = parameters.get("tag") or urlsplit(script_path).path.rsplit("/", 1)[-1]
+    if conditional:
+        name = name.strip('"')
     name = name.removesuffix(".js")
     used_names[name] = used_names.get(name, 0) + 1
     if used_names[name] > 1:

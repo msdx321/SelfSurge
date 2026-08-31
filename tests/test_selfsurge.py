@@ -70,8 +70,9 @@ class CatalogConversionTest(unittest.TestCase):
 
                 source_jq_count += len(
                     re.findall(
-                        r"\b(?:request|response)-body-json-"
-                        r"(?:jq|add|del|replace)\b",
+                        r"\b(?:(?:request|response)-body-json-"
+                        r"(?:jq|add|del|replace)|"
+                        r"(?:request|response)\.json\.(?:delete|jq))\b",
                         source,
                     )
                 )
