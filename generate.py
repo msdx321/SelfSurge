@@ -186,18 +186,23 @@ def main() -> None:
     files = {}
     web_catalog = []
     module_sources = {}
+    errors = []
     for name, source_url in entries:
         relative = Path("modules", name)
-        if name == YOUTUBE_MODULE_NAME:
-            module_sources[relative.as_posix()] = YOUTUBE_MODULE_URL
-            module = youtube_module(youtube_source)
-        else:
-            module_sources[relative.as_posix()] = source_url
-            module = convert_lpx(
-                sources[source_url],
-                source_url=source_url,
-                unavailable_resources=unavailable,
-            )
+        try:
+            if name == YOUTUBE_MODULE_NAME:
+                module_sources[relative.as_posix()] = YOUTUBE_MODULE_URL
+                module = youtube_module(youtube_source)
+            else:
+                module_sources[relative.as_posix()] = source_url
+                module = convert_lpx(
+                    sources[source_url],
+                    source_url=source_url,
+                    unavailable_resources=unavailable,
+                )
+        except ValueError as error:
+            errors.append(f"{name}: {error}")
+            continue
         files[relative] = module.encode()
         metadata = _module_metadata(module)
         icon = metadata.get("icon", "")
@@ -213,6 +218,12 @@ def main() -> None:
                 "name": metadata.get("name", Path(name).stem),
                 "url": PUBLISHED_MODULE_PREFIX + name,
             }
+        )
+
+    if errors:
+        raise ValueError(
+            f"{len(errors)} module(s) failed conversion; generated files unchanged:\n"
+            + "\n".join(errors)
         )
 
     mirrored_sources = {}

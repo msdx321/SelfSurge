@@ -373,82 +373,171 @@ def _mock_response(pattern: str, value: str) -> str:
     )
 
 
-def _conditional_json_rewrite(line: str) -> str | None:
+def _conditional_parts(line: str) -> tuple[str, str, str | None, str] | None:
+    """Parse one URL condition without absorbing extra conditions into its regex."""
+    if not re.match(r"(?:request|response)\s+if\b", line):
+        return None
     match = re.fullmatch(
-        r"(request|response) if \$\{url\} ~= /(.+)/(i?) then "
-        r"(request|response)\.json\.(delete|jq)\((.+)\)",
+        r"(request|response)\s+if\s+\$\{url\}\s*~=\s*"
+        r"/((?:\\.|\[(?:\\.|[^\]\\])*\]|[^/\\\[])*)/([A-Za-z]*)"
+        r"(?:\s+as\s+([A-Za-z_]\w*))?\s+then\s+(.+)",
         line,
     )
     if not match:
-        return None
+        raise ValueError("only a single URL regex condition can be converted")
+    direction, pattern, flags, capture, action = match.groups()
+    if set(flags) - set("ims") or len(set(flags)) != len(flags):
+        raise ValueError(f"unsupported regex flags: {flags}")
+    # Surge uses whitespace to separate rewrite fields.
+    pattern = re.sub(r"\s", lambda match: rf"\x{ord(match[0]):02x}", pattern)
+    if flags:
+        pattern = f"(?{flags}){pattern}"
+    return direction, pattern, capture, action
 
-    direction, pattern, case_insensitive, body_direction, operation, raw = (
-        match.groups()
+
+def _conditional_status(value) -> int:
+    # Loon accepts 100–599, but Surge Map Local cannot represent 1xx responses.
+    if type(value) is not int or not 200 <= value <= 599:
+        raise ValueError(f"status cannot be represented by Surge Map Local: {value}")
+    return value
+
+
+def _conditional_response(
+    pattern: str, kind: str, data: str, status: int, encoded: bool = False
+) -> tuple[str, str]:
+    content_types = {
+        "json": "application/json",
+        "text": "text/plain",
+        "plain": "text/plain",
+        "css": "text/css",
+        "html": "text/html",
+        "javascript": "application/javascript",
+        "png": "image/png",
+        "gif": "image/gif",
+        "jpeg": "image/jpeg",
+        "tiff": "image/tiff",
+        "svg": "image/svg+xml",
+        "mp4": "video/mp4",
+    }
+    if kind not in content_types:
+        raise ValueError(f"unsupported mock content type: {kind}")
+    if encoded:
+        base64.b64decode(data, validate=True)
+    else:
+        data = base64.b64encode(data.encode()).decode()
+    return (
+        "[Map Local]",
+        f'{pattern} data-type=base64 data="{data}" '
+        f'header="Content-Type:{content_types[kind]}" status-code={status}',
     )
-    if direction != body_direction:
-        return None
-    if case_insensitive:
-        pattern = f"(?i){pattern}"
-
-    value = json.loads(raw)
-    if operation == "jq" and isinstance(value, str):
-        return f"{pattern} {direction}-body-json-jq '{value}'"
-    if operation == "delete":
-        paths = [value] if isinstance(value, str) else value
-        if isinstance(paths, list) and all(
-            isinstance(path, str) for path in paths
-        ):
-            encoded_paths = " ".join(
-                path.replace(" ", r"\x20") for path in paths
-            )
-            return f"{pattern} {direction}-body-json-del {encoded_paths}"
-    raise ValueError(f"invalid conditional JSON rewrite: {line}")
 
 
 def _conditional_rewrite(
     line: str, arguments: dict[str, str]
 ) -> tuple[str, str] | None:
-    reject = re.fullmatch(
-        r"request if \$\{url\} ~= /(.+)/(i?) then reject_dict\((\d+)\)",
-        line,
-    )
-    if reject:
-        pattern, case_insensitive, status_code = reject.groups()
-        if case_insensitive:
-            pattern = f"(?i){pattern}"
+    conditional = _conditional_parts(line)
+    if conditional is None:
+        return None
+    direction, pattern, capture, action = conditional
+    match = re.fullmatch(r"([\w.]+)\s*\((.*)\)", action)
+    if not match:
+        raise ValueError(f"unsupported conditional action: {action}")
+    operation, raw = match.groups()
+    values = json.loads(f"[{raw}]")
+
+    if direction == "request" and operation in {"redirect", "url.replace"}:
+        status = "header"
+        if operation == "redirect":
+            if (
+                len(values) != 2
+                or type(values[0]) is not int
+                or values[0] not in {302, 307}
+            ):
+                raise ValueError(f"invalid redirect arguments: {raw}")
+            status, values = values[0], values[1:]
+        if len(values) != 1 or not isinstance(values[0], str):
+            raise ValueError(f"invalid URL replacement: {raw}")
+
+        def replace_variable(match: re.Match) -> str:
+            name = match[1]
+            if name in arguments:
+                return "{{{" + arguments[name] + "}}}"
+            if capture and re.fullmatch(re.escape(capture) + r"\.\d+", name):
+                return "$" + name.rsplit(".", 1)[1]
+            raise ValueError(f"unsupported URL replacement variable: {name}")
+
+        target = re.sub(r"\$\{([^{}]+)\}", replace_variable, values[0])
+        if not target or re.search(r"\s", target):
+            raise ValueError(
+                f"URL replacement must not be empty or contain whitespace: {target}"
+            )
+        return "[URL Rewrite]", f"{pattern} {target} {status}"
+
+    if "${" in raw:
+        raise ValueError(f"dynamic arguments are unsupported for {operation}")
+
+    if direction == "request" and operation in {
+        "reject", "reject_dict", "reject_array", "reject_img"
+    }:
+        if len(values) not in ({1, 2} if operation == "reject" else {1}):
+            raise ValueError(f"invalid {operation} arguments: {raw}")
+        status = _conditional_status(values[0])
+        if operation == "reject_img":
+            return "[Map Local]", f"{pattern} data-type=tiny-gif status-code={status}"
+        if operation == "reject":
+            data = values[1] if len(values) == 2 else ""
+            if not isinstance(data, str):
+                raise ValueError(f"reject body must be a string: {raw}")
+            if data:
+                return _conditional_response(pattern, "text", data, status)
+        else:
+            data = "{}" if operation == "reject_dict" else "[]"
+        header = (
+            ' header="Content-Type:application/json"'
+            if operation != "reject" else ""
+        )
         return (
             "[Map Local]",
-            f'{pattern} data-type=text data="{{}}" '
-            "header=\"Content-Type:application/json\" "
-            f"status-code={status_code}",
+            f'{pattern} data-type=text data="{data}"{header} status-code={status}',
         )
 
-    match = re.fullmatch(
-        r'request if \$\{url\} ~= /(.+)/ as item then redirect\('
-        r'(302|307), "\$\{app\}://(resolve\?domain|join\?invite)='
-        r'\$\{item\.1\}"\)',
-        line,
-    )
-    if not match:
-        return None
-    app = arguments.get("app", "app")
-    return (
-        "[URL Rewrite]",
-        f"{match.group(1)} "
-        + "{{{"
-        + app
-        + "}}}"
-        + f"://{match.group(3)}=$1 {match.group(2)}",
-    )
+    if direction == "response" and operation == "response.body.mock":
+        if not 2 <= len(values) <= 4 or not all(
+            isinstance(value, str) for value in values[:2]
+        ):
+            raise ValueError(f"invalid response mock arguments: {raw}")
+        kind, data = values[:2]
+        status = _conditional_status(values[2] if len(values) >= 3 else 200)
+        encoded = values[3] if len(values) == 4 else False
+        if not isinstance(encoded, bool):
+            raise ValueError(f"mock base64 flag must be a boolean: {raw}")
+        return _conditional_response(pattern, kind, data, status, encoded)
+
+    if (
+        operation in {f"{direction}.json.jq", f"{direction}.json.delete"}
+        and len(values) == 1
+    ):
+        value = values[0]
+        if operation.endswith(".jq") and isinstance(value, str):
+            return "[Body Rewrite]", f"http-{direction}-jq {pattern} {_jq(value)}"
+        if operation.endswith(".delete"):
+            paths = [value] if isinstance(value, str) else value
+            if isinstance(paths, list) and paths and all(
+                isinstance(path, str) and path for path in paths
+            ):
+                encoded_paths = " ".join(
+                    path.replace(" ", r"\x20") for path in paths
+                )
+                return _convert_rewrite(
+                    f"{pattern} {direction}-body-json-del {encoded_paths}",
+                    arguments,
+                )[0]
+    raise ValueError(f"unsupported conditional action or arguments: {action}")
 
 
 def _convert_rewrite(
     line: str, arguments: dict[str, str]
 ) -> list[tuple[str, str]]:
-    conditional_json = _conditional_json_rewrite(line)
-    if conditional_json:
-        return _convert_rewrite(conditional_json, arguments)
-
     conditional = _conditional_rewrite(line, arguments)
     if conditional:
         return [conditional]
@@ -623,17 +712,17 @@ def _convert_script(
     argument_kinds: dict[str, str],
     used_names: dict[str, int],
 ) -> tuple[list[str], str, str | None]:
-    conditional = re.fullmatch(
-        r'(request|response) if \$\{url\} ~= /(.+)/(i?) then script\("([^"]+)"\) '
-        r"with (.+)",
-        line,
-    )
+    conditional = _conditional_parts(line)
     if conditional:
-        direction, pattern, case_insensitive, script_path, parameters = (
-            conditional.groups()
+        direction, pattern, _, action = conditional
+        match = re.fullmatch(
+            r'script\(\s*("(?:\\.|[^"\\])*")\s*\)(?:\s+with\s+(.+))?',
+            action,
         )
-        if case_insensitive:
-            pattern = f"(?i){pattern}"
+        if not match:
+            raise ValueError(f"unsupported conditional script: {action}")
+        script_path = json.loads(match[1])
+        parameters = match[2] or ""
         parameters = parameters.replace(
             "requires_body=", "requires-body="
         ).replace("binary_body_mode=", "binary-body-mode=")
@@ -812,7 +901,7 @@ def convert_lpx(
     used_script_names = {}
     section = None
 
-    for line in source.splitlines():
+    for line_number, line in enumerate(source.splitlines(), 1):
         stripped = line.strip()
         if stripped.startswith("[") and stripped.endswith("]"):
             section = stripped
@@ -849,15 +938,28 @@ def convert_lpx(
         elif section == "[Rewrite]":
             if stripped.startswith("#"):
                 continue
-            for heading, converted in _convert_rewrite(stripped, arguments):
+            try:
+                converted_rules = _convert_rewrite(stripped, arguments)
+            except ValueError as error:
+                raise ValueError(
+                    f"{source_url or '<input>'}:{line_number} {section}: "
+                    f"{error}\n  {stripped}"
+                ) from error
+            for heading, converted in converted_rules:
                 rewrites[heading].append(converted)
         elif section == "[Script]":
             if stripped.startswith("#"):
                 scripts.append(stripped)
             else:
-                notes, converted, panel = _convert_script(
-                    stripped, arguments, argument_kinds, used_script_names
-                )
+                try:
+                    notes, converted, panel = _convert_script(
+                        stripped, arguments, argument_kinds, used_script_names
+                    )
+                except ValueError as error:
+                    raise ValueError(
+                        f"{source_url or '<input>'}:{line_number} {section}: "
+                        f"{error}\n  {stripped}"
+                    ) from error
                 scripts.extend([*notes, converted])
                 if panel:
                     panels.append(panel)
