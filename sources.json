@@ -31,6 +31,7 @@
     "modules/BiliComic_remove_ads.sgmodule": "https://kelee.one/Tool/Loon/Lpx/BiliComic_remove_ads.lpx",
     "modules/Bilibili_remove_ads.sgmodule": "https://kelee.one/Tool/Loon/Lpx/Bilibili_remove_ads.lpx",
     "modules/BitqiuPan_remove_ads.sgmodule": "https://kelee.one/Tool/Loon/Lpx/BitqiuPan_remove_ads.lpx",
+    "modules/Bixin_remove_ads.sgmodule": "https://kelee.one/Tool/Loon/Lpx/Bixin_remove_ads.lpx",
     "modules/BlockAdvertisers.sgmodule": "https://kelee.one/Tool/Loon/Lpx/BlockAdvertisers.lpx",
     "modules/Block_HTTPDNS.sgmodule": "https://kelee.one/Tool/Loon/Lpx/Block_HTTPDNS.lpx",
     "modules/BodianMusic_remove_ads.sgmodule": "https://kelee.one/Tool/Loon/Lpx/BodianMusic_remove_ads.lpx",
@@ -342,6 +343,14 @@
     "scripts/Bilibili/Bilibili_proto_response_kokoryh.js": {
       "sha256": "e68042a18b2f89cd8e29258be9960c02692d691c184d678eb8d0f22d38809cea",
       "url": "https://kelee.one/Resource/JavaScript/Bilibili/Bilibili_proto_response_kokoryh.js"
+    },
+    "scripts/Bixin/common_tab.js": {
+      "sha256": "779cce9e7ca26323f8965b07412056e3f6d825b7a0e99e5d5707ebf24d6b898c",
+      "url": "https://kelee.one/Resource/JavaScript/Bixin/common_tab.js"
+    },
+    "scripts/Bixin/my_page.js": {
+      "sha256": "06eb371ea79bae01f6f0bcced91af0cd534312e5266586f17aa94bd69958f7ee",
+      "url": "https://kelee.one/Resource/JavaScript/Bixin/my_page.js"
     },
     "scripts/BooHee/BooHee_remove_ads.js": {
       "sha256": "8b044d530e905fd358dbe155ec75aa8ee460450bed5bf8634556716d544ff388",

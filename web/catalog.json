@@ -1,7 +1,7 @@
 [
   {
     "category": "去广告, 依赖",
-    "date": "2026-07-04 20:05:14",
+    "date": "2026-09-03 16:04:36",
     "description": "此插件是所有去广告插件的依赖，拦截常见的HTTPDNS服务，以确保这些请求都能够在Loon的DNS框架下工作。",
     "file": "Block_HTTPDNS.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/Other_icon/120px/HTTPDNS.png",
@@ -685,6 +685,15 @@
   },
   {
     "category": "去广告",
+    "date": "2026-08-28 17:10:45",
+    "description": "移除弹窗广告、悬浮广告、横幅广告、轮播图广告，精简搜索页及我的页面。",
+    "file": "Bixin_remove_ads.sgmodule",
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Bixin.png",
+    "name": "比心去广告",
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Bixin_remove_ads.sgmodule"
+  },
+  {
+    "category": "去广告",
     "date": "2026-06-01 17:11:35",
     "description": "精简应用配置，禁用P2P传输。移除开屏广告、横幅推广、悬浮广告、歌曲广告、商城入口、搜索推广、评论区推广、试听语音提醒。",
     "file": "BodianMusic_remove_ads.sgmodule",
@@ -847,11 +856,11 @@
   },
   {
     "category": "去广告",
-    "date": "2026-06-01 17:11:35",
-    "description": "移除开屏广告、弹窗广告、横幅推广，精简底栏和我的页面。",
+    "date": "2026-09-04 18:10:18",
+    "description": "移除开屏广告、弹窗广告、横幅推广，精简我的页面。",
     "file": "DiDi_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/DiDi.png",
-    "name": "滴滴出行去广告",
+    "name": "滴滴去广告",
     "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/DiDi_remove_ads.sgmodule"
   },
   {
