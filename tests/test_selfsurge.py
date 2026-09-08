@@ -1,11 +1,13 @@
 import concurrent.futures
 import hashlib
 import json
+import os
 import re
 import shutil
 import subprocess
 import unittest
 from urllib.parse import unquote
+from unittest.mock import patch
 
 from generate import (
     ROOT,
@@ -14,6 +16,7 @@ from generate import (
     YOUTUBE_REFERENCE_URL,
     YOUTUBE_RESOURCE_PATHS,
     catalog_entries,
+    module_warnings,
     youtube_module,
 )
 from selfsurge import (
@@ -25,6 +28,8 @@ from selfsurge import (
     fetch_text,
 )
 
+
+LIVE_UPSTREAM = os.environ.get("SELFSURGE_LIVE_TESTS") == "1"
 
 SECTIONS = {
     "[General]",
@@ -41,32 +46,54 @@ SECTIONS = {
 
 class CatalogConversionTest(unittest.TestCase):
     def test_every_hub_plugin_converts(self) -> None:
-        entries = catalog_entries()
+        if not LIVE_UPSTREAM:
+            self.enterContext(patch(
+                "selfsurge.urlopen",
+                side_effect=AssertionError("offline validation attempted network access"),
+            ))
+        manifest = json.loads((ROOT / "sources.json").read_text(encoding="utf-8"))
+        entries = (
+            catalog_entries() if LIVE_UPSTREAM else [
+                (relative.removeprefix("modules/"), url)
+                for relative, url in manifest["modules"].items()
+            ]
+        )
         self.assertEqual(len(entries), len({name for name, _ in entries}))
         lpx_entries = [
             entry for entry in entries if entry[0] != YOUTUBE_MODULE_NAME
         ]
         source_jq_count = 0
         converted_jq_count = 0
-        with concurrent.futures.ThreadPoolExecutor(max_workers=8) as executor:
-            sources = executor.map(fetch_lpx, (url for _, url in lpx_entries))
-
-            for (name, source_url), source in zip(lpx_entries, sources):
-                module = convert_lpx(source, source_url=source_url)
-                self.assertIn(f"# Source: {source_url}", module)
-                self.assertNotIn("[Rewrite]", module)
-                self.assertNotIn("[Argument]", module)
-                self.assertNotIn("{{{{{", module)
-                self.assertNotIn("# Unsupported Loon policy", module)
-                self.assertNotIn("omitted", module)
-                self.assertNotRegex(module, r'argument="\[\{\{\{')
+        sources = {}
+        if LIVE_UPSTREAM:
+            with concurrent.futures.ThreadPoolExecutor(max_workers=8) as executor:
+                sources = dict(zip(
+                    (url for _, url in lpx_entries),
+                    executor.map(fetch_lpx, (url for _, url in lpx_entries)),
+                ))
+        script_sources = {}
+        for name, source_url in lpx_entries:
+            source = sources.get(source_url)
+            module = (
+                convert_lpx(source, source_url=source_url, script_sources=script_sources)
+                if source is not None else
+                (ROOT / "modules" / name).read_text(encoding="utf-8")
+            )
+            self.assertIn(f"# Source: {source_url}", module)
+            self.assertNotIn("[Rewrite]", module)
+            self.assertNotIn("[Argument]", module)
+            self.assertNotIn("{{{{{", module)
+            self.assertNotIn("# Unsupported Loon policy", module)
+            self.assertNotIn("omitted", module)
+            self.assertNotRegex(module, r'argument="\[\{\{\{')
+            self.assertNotIn("img-url=", module)
+            if source is not None:
                 source_generic_count = len(
                     re.findall(r"^generic\s+", source, re.MULTILINE)
                 )
                 self.assertEqual(
                     module.count("script-name="), source_generic_count, name
                 )
-                self.assertNotIn("img-url=", module)
 
                 source_jq_count += len(
                     re.findall(
@@ -110,55 +137,55 @@ class CatalogConversionTest(unittest.TestCase):
                     name,
                 )
 
-                lines = module.splitlines()
-                self.assertTrue(lines[0].startswith("#!name="), name)
-                header = []
-                for line in lines:
-                    if not line.startswith("#!"):
-                        break
-                    header.append(line)
-                metadata = {
-                    key: value
-                    for line in header
-                    for key, separator, value in [line[2:].partition("=")]
-                    if separator
-                }
-                for key in ("name", "desc", "category"):
-                    self.assertTrue(metadata.get(key), f"{name}: {key}")
-                    self.assertEqual(
-                        sum(line.startswith(f"#!{key}=") for line in header),
-                        1,
-                        f"{name}: duplicate {key}",
-                    )
-                if "[Map Local]" in module or "[Body Rewrite]" in module:
-                    self.assertEqual(
-                        metadata.get("requirement"), "CORE_VERSION>=20", name
-                    )
-                self.assertFalse(
-                    any(line.startswith("#!") for line in lines[len(header) :]),
-                    name,
+            lines = module.splitlines()
+            self.assertTrue(lines[0].startswith("#!name="), name)
+            header = []
+            for line in lines:
+                if not line.startswith("#!"):
+                    break
+                header.append(line)
+            metadata = {
+                key: value
+                for line in header
+                for key, separator, value in [line[2:].partition("=")]
+                if separator
+            }
+            for key in ("name", "desc", "category"):
+                self.assertTrue(metadata.get(key), f"{name}: {key}")
+                self.assertEqual(
+                    sum(line.startswith(f"#!{key}=") for line in header),
+                    1,
+                    f"{name}: duplicate {key}",
                 )
+            if "[Map Local]" in module or "[Body Rewrite]" in module:
+                self.assertEqual(
+                    metadata.get("requirement"), "CORE_VERSION>=20", name
+                )
+            self.assertFalse(
+                any(line.startswith("#!") for line in lines[len(header) :]),
+                name,
+            )
 
-                headings = {
-                    line
-                    for line in module.splitlines()
-                    if line.startswith("[") and line.endswith("]")
-                }
-                self.assertLessEqual(headings, SECTIONS, name)
+            headings = {
+                line
+                for line in module.splitlines()
+                if line.startswith("[") and line.endswith("]")
+            }
+            self.assertLessEqual(headings, SECTIONS, name)
 
-                declared = set()
-                arguments = re.search(
-                    r"^#!arguments=(.*)$", module, re.MULTILINE
-                )
-                if arguments:
-                    declared = {
-                        item.split(":", 1)[0]
-                        for item in arguments.group(1).split(",")
-                    }
-                placeholders = set(
-                    re.findall(r"\{\{\{([A-Za-z0-9_]+)\}\}\}", module)
-                )
-                self.assertLessEqual(placeholders, declared, name)
+            declared = set()
+            arguments = re.search(
+                r"^#!arguments=(.*)$", module, re.MULTILINE
+            )
+            if arguments:
+                declared = {
+                    item.split(":", 1)[0]
+                    for item in arguments.group(1).split(",")
+                }
+            placeholders = set(
+                re.findall(r"\{\{\{([A-Za-z0-9_]+)\}\}\}", module)
+            )
+            self.assertLessEqual(placeholders, declared, name)
 
         self.assertEqual(converted_jq_count, source_jq_count)
 
@@ -200,7 +227,6 @@ class CatalogConversionTest(unittest.TestCase):
         )
         self.assertEqual(result.stdout.strip(), '{"data":[1,3,5]}')
 
-        manifest = json.loads((ROOT / "sources.json").read_text(encoding="utf-8"))
         expected_modules = {
             f"modules/{name}": source_url for name, source_url in entries
         }
@@ -232,6 +258,9 @@ class CatalogConversionTest(unittest.TestCase):
                 for item in web_catalog
             )
         )
+        for item in web_catalog:
+            module = (ROOT / "modules" / item["file"]).read_text(encoding="utf-8")
+            self.assertEqual(item["warnings"], module_warnings(module), item["file"])
         for relative, source in manifest["resources"].items():
             content = (ROOT / relative).read_bytes()
             self.assertEqual(
@@ -247,11 +276,16 @@ class CatalogConversionTest(unittest.TestCase):
                 self.assertTrue((ROOT / relative).is_file(), url)
 
     def test_youtube_uses_maasea_surge_module(self) -> None:
-        source = fetch_text(YOUTUBE_MODULE_URL)
+        if not LIVE_UPSTREAM:
+            self.enterContext(patch(
+                "selfsurge.urlopen",
+                side_effect=AssertionError("offline validation attempted network access"),
+            ))
         module = (ROOT / "modules" / YOUTUBE_MODULE_NAME).read_text(
             encoding="utf-8"
         )
-        self.assertEqual(module, youtube_module(source))
+        if LIVE_UPSTREAM:
+            self.assertEqual(module, youtube_module(fetch_text(YOUTUBE_MODULE_URL)))
         self.assertIn(f"# Selected via ddgksf2013: {YOUTUBE_REFERENCE_URL}", module)
         self.assertIn("#!category=去广告", module)
         self.assertIn("max-size=-1", module)
@@ -263,8 +297,9 @@ class CatalogConversionTest(unittest.TestCase):
             YOUTUBE_MODULE_URL,
         )
         for url, relative in YOUTUBE_RESOURCE_PATHS.items():
-            content = fetch_bytes(url)
-            self.assertEqual((ROOT / relative).read_bytes(), content)
+            content = (ROOT / relative).read_bytes()
+            if LIVE_UPSTREAM:
+                self.assertEqual(content, fetch_bytes(url))
             self.assertEqual(manifest["resources"][relative.as_posix()]["url"], url)
             self.assertEqual(
                 manifest["resources"][relative.as_posix()]["sha256"],

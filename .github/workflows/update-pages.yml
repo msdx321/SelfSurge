@@ -1,6 +1,7 @@
-name: Update catalog and publish Pages
+name: Validate, update catalog and publish Pages
 
 on:
+  pull_request:
   push:
     branches: [main]
   schedule:
@@ -8,17 +9,36 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
-  pages: write
-  id-token: write
+  contents: read
 
 concurrency:
-  group: pages
+  group: pages-${{ github.ref }}
   cancel-in-progress: false
 
 jobs:
-  update-and-deploy:
+  validate:
     runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v10
+        with:
+          python-version: "3.12"
+          enable-cache: false
+
+      - name: Validate checked-in files offline
+        run: uv run --no-project python -m unittest discover -s tests -v
+
+  update-and-deploy:
+    needs: validate
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -26,14 +46,24 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v6
         with:
-          ref: main
+          ref: ${{ github.event_name == 'push' && github.sha || 'main' }}
+
+      - name: Set up uv
+        if: github.event_name != 'push'
+        uses: astral-sh/setup-uv@v10
+        with:
+          python-version: "3.12"
+          enable-cache: false
 
       - name: Update generated files
         if: github.event_name != 'push'
-        run: python3 generate.py
+        run: uv run --no-project python generate.py
 
-      - name: Test conversion
-        run: python3 -m unittest discover -s tests -v
+      - name: Check live upstream compatibility
+        if: github.event_name != 'push'
+        env:
+          SELFSURGE_LIVE_TESTS: "1"
+        run: uv run --no-project python -m unittest discover -s tests -v
 
       - name: Commit updates
         if: github.event_name != 'push'
