@@ -3,7 +3,6 @@ import base64
 import json
 import re
 import sys
-from functools import cache
 from urllib.error import HTTPError
 from urllib.parse import parse_qs, quote, urlsplit
 from urllib.request import Request, urlopen
@@ -183,12 +182,18 @@ def _replace_placeholders(value: str, arguments: dict[str, str]) -> str:
     return value
 
 
-@cache
-def _script_argument_style(url: str) -> str:
+def _script_argument_style(
+    url: str, script_sources: dict[str, bytes | None]
+) -> str:
     try:
-        script = fetch_text(url)
-    except (OSError, UnicodeError):
-        return "object"
+        if url not in script_sources:
+            script_sources[url] = fetch_bytes(url)
+        content = script_sources[url]
+        if content is None:
+            raise ValueError(f"cannot inspect script arguments: unavailable script {url}")
+        script = content.decode("utf-8-sig")
+    except (OSError, UnicodeError) as error:
+        raise ValueError(f"cannot inspect script arguments for {url}: {error}") from error
     if re.search(r"JSON\.parse\(\s*\$argument\s*\)", script):
         return "json"
     if re.search(
@@ -711,6 +716,7 @@ def _convert_script(
     arguments: dict[str, str],
     argument_kinds: dict[str, str],
     used_names: dict[str, int],
+    script_sources: dict[str, bytes | None],
 ) -> tuple[list[str], str, str | None]:
     conditional = _conditional_parts(line)
     if conditional:
@@ -816,7 +822,7 @@ def _convert_script(
             "已作为同名脚本参数字段传入；脚本需在 false 时直接退出。"
         )
     if named_arguments is not None:
-        style = _script_argument_style(script_path)
+        style = _script_argument_style(script_path, script_sources)
         if style == "query":
             argument = "&".join(
                 f"{loon_name}=" + "{{{" + arguments[loon_name] + "}}}"
@@ -881,7 +887,10 @@ def convert_lpx(
     source: str,
     source_url: str | None = None,
     unavailable_resources: set[str] | None = None,
+    script_sources: dict[str, bytes | None] | None = None,
 ) -> str:
+    if script_sources is None:
+        script_sources = {}
     arguments, argument_kinds, argument_defaults, argument_notes = _arguments(
         source
     )
@@ -953,7 +962,8 @@ def convert_lpx(
             else:
                 try:
                     notes, converted, panel = _convert_script(
-                        stripped, arguments, argument_kinds, used_script_names
+                        stripped, arguments, argument_kinds, used_script_names,
+                        script_sources,
                     )
                 except ValueError as error:
                     raise ValueError(

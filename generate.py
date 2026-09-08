@@ -182,6 +182,7 @@ def main() -> None:
     with concurrent.futures.ThreadPoolExecutor(max_workers=8) as executor:
         resources = dict(executor.map(_download_resource, sorted(resource_sources)))
     unavailable = {url for url, content in resources.items() if content is None}
+    script_sources = resources.copy()
 
     files = {}
     web_catalog = []
@@ -199,6 +200,7 @@ def main() -> None:
                     sources[source_url],
                     source_url=source_url,
                     unavailable_resources=unavailable,
+                    script_sources=script_sources,
                 )
         except ValueError as error:
             errors.append(f"{name}: {error}")
