@@ -6,7 +6,8 @@
     "file": "Block_HTTPDNS.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/Other_icon/120px/HTTPDNS.png",
     "name": "HTTPDNS拦截器",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Block_HTTPDNS.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Block_HTTPDNS.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告, 依赖",
@@ -15,7 +16,8 @@
     "file": "BlockAdvertisers.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/Website_icon/120px/TencentAd.png",
     "name": "广告平台拦截器",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/BlockAdvertisers.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/BlockAdvertisers.sgmodule",
+    "warnings": []
   },
   {
     "category": "配置管理",
@@ -24,7 +26,8 @@
     "file": "1.1.1.1.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/1.1.1.1.png",
     "name": "1.1.1.1配置管理",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/1.1.1.1.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/1.1.1.1.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -33,7 +36,8 @@
     "file": "5EPlay_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/5EPlay.png",
     "name": "5EPlay去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/5EPlay_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/5EPlay_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -42,7 +46,8 @@
     "file": "36Kr_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/36Kr.png",
     "name": "36氪去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/36Kr_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/36Kr_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -51,7 +56,8 @@
     "file": "123NetWorkDisk_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/123NetWorkDisk.png",
     "name": "123云盘去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/123NetWorkDisk_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/123NetWorkDisk_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -60,7 +66,8 @@
     "file": "360SmartCamera_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/360SmartCamera.png",
     "name": "360摄像机去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/360SmartCamera_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/360SmartCamera_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -69,7 +76,8 @@
     "file": "SafetyHome_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/SafetyHome.png",
     "name": "360智慧生活去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/SafetyHome_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/SafetyHome_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -78,7 +86,8 @@
     "file": "555DY_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/555DY.png",
     "name": "555电影去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/555DY_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/555DY_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -87,7 +96,8 @@
     "file": "12306_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/12306.png",
     "name": "12306去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/12306_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/12306_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "功能增强",
@@ -96,7 +106,8 @@
     "file": "AppleWeatherEnhancer.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/AppleWeather.png",
     "name": "Apple天气增强",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/AppleWeatherEnhancer.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/AppleWeatherEnhancer.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -105,7 +116,8 @@
     "file": "SnowCamera_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/SnowCamera.png",
     "name": "B612咔叽去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/SnowCamera_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/SnowCamera_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "数据管理",
@@ -114,7 +126,10 @@
     "file": "BoxJs.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/Other_icon/120px/BoxJS.png",
     "name": "BoxJs",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/BoxJs.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/BoxJs.sgmodule",
+    "warnings": [
+      "代理规则未启用，请在 Surge 主配置中手动指定策略。"
+    ]
   },
   {
     "category": "去广告",
@@ -123,7 +138,8 @@
     "file": "CCLive_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/CCLive.png",
     "name": "CC直播去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/CCLive_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/CCLive_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -132,7 +148,8 @@
     "file": "DjDuoDuo_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/DjDuoDuo.png",
     "name": "DJ多多去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/DjDuoDuo_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/DjDuoDuo_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -141,7 +158,8 @@
     "file": "Dlabel_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Dlabel.png",
     "name": "Dlabel云标签去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Dlabel_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Dlabel_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "DNS",
@@ -150,7 +168,10 @@
     "file": "Prevent_DNS_Leaks.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/Other_icon/120px/Prevent_DNS_Leaks.png",
     "name": "DNS防泄露",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Prevent_DNS_Leaks.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Prevent_DNS_Leaks.sgmodule",
+    "warnings": [
+      "代理规则未启用，请在 Surge 主配置中手动指定策略。"
+    ]
   },
   {
     "category": "去广告",
@@ -159,7 +180,8 @@
     "file": "DREAME_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/DREAME.png",
     "name": "DREAME去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/DREAME_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/DREAME_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -168,7 +190,8 @@
     "file": "EcovacsHome_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/EcovacsHome.png",
     "name": "ECOVACS HOME去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/EcovacsHome_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/EcovacsHome_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -177,7 +200,8 @@
     "file": "EasyCharge_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/EasyCharge.png",
     "name": "e充电去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/EasyCharge_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/EasyCharge_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "功能增强",
@@ -186,7 +210,8 @@
     "file": "Fileball_mount.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Fileball.png",
     "name": "Fileball网盘挂载",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Fileball_mount.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Fileball_mount.sgmodule",
+    "warnings": []
   },
   {
     "category": "签到",
@@ -195,7 +220,10 @@
     "file": "FollowRSS_checkin.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/FollowRSS.png",
     "name": "Follow每日签到",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/FollowRSS_checkin.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/FollowRSS_checkin.sgmodule",
+    "warnings": [
+      "上游脚本可能需要修改后才能读取参数，请先查看模块注释。"
+    ]
   },
   {
     "category": "去广告",
@@ -204,7 +232,8 @@
     "file": "Foodie_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Foodie.png",
     "name": "Foodie去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Foodie_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Foodie_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -213,7 +242,8 @@
     "file": "Google.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Google.png",
     "name": "Google搜索重定向",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Google.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Google.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -222,7 +252,8 @@
     "file": "HongKongToolbar_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/HongKongToolbar.png",
     "name": "Hong Kong Toolbar去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/HongKongToolbar_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/HongKongToolbar_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "功能增强",
@@ -231,7 +262,8 @@
     "file": "IPATool.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/Other_icon/120px/IPATool.png",
     "name": "IPA工具箱助手",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/IPATool.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/IPATool.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -240,7 +272,10 @@
     "file": "IThome_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/IThome.png",
     "name": "IT之家去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/IThome_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/IThome_remove_ads.sgmodule",
+    "warnings": [
+      "上游脚本可能需要修改后才能读取参数，请先查看模块注释。"
+    ]
   },
   {
     "category": "去广告",
@@ -249,7 +284,8 @@
     "file": "Jump_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Jump.png",
     "name": "Jump去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Jump_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Jump_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -258,7 +294,8 @@
     "file": "Keep_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Keep.png",
     "name": "Keep去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Keep_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Keep_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -267,7 +304,8 @@
     "file": "KOOK_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/KOOK.png",
     "name": "KOOK去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/KOOK_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/KOOK_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -276,7 +314,8 @@
     "file": "Line_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Line.png",
     "name": "Line去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Line_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Line_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -285,7 +324,8 @@
     "file": "OKOK_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/OKOK.png",
     "name": "OKOK去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/OKOK_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/OKOK_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -294,7 +334,8 @@
     "file": "PICOOC_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/PICOOC.png",
     "name": "PICOOC去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/PICOOC_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/PICOOC_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -303,7 +344,8 @@
     "file": "Pinterest_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Pinterest.png",
     "name": "Pinterest去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Pinterest_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Pinterest_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -312,7 +354,8 @@
     "file": "QQ_Redirect.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/QQ.png",
     "name": "QQ链接解锁",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/QQ_Redirect.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/QQ_Redirect.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -321,7 +364,8 @@
     "file": "QQMusic_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/QQMusic.png",
     "name": "QQ音乐去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/QQMusic_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/QQMusic_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -330,7 +374,8 @@
     "file": "Reddit_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Reddit.png",
     "name": "Reddit去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Reddit_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Reddit_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -339,7 +384,8 @@
     "file": "ReelShort_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/ReelShort.png",
     "name": "ReelShort去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/ReelShort_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/ReelShort_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -348,7 +394,8 @@
     "file": "Roborock_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Roborock.png",
     "name": "Roborock去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Roborock_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Roborock_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -357,7 +404,8 @@
     "file": "RQrun_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/RQrun.png",
     "name": "RQrun去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/RQrun_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/RQrun_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "资源转换",
@@ -366,7 +414,10 @@
     "file": "Script-Hub.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/Other_icon/120px/Script-Hub.png",
     "name": "Script-Hub",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Script-Hub.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Script-Hub.sgmodule",
+    "warnings": [
+      "代理规则未启用，请在 Surge 主配置中手动指定策略。"
+    ]
   },
   {
     "category": "去广告",
@@ -375,7 +426,8 @@
     "file": "Sofascore_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Sofascore.png",
     "name": "Sofascore去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Sofascore_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Sofascore_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -384,7 +436,8 @@
     "file": "Soul_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Soul.png",
     "name": "Soul去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Soul_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Soul_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -393,7 +446,8 @@
     "file": "Spotify_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Spotify.png",
     "name": "Spotify去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Spotify_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Spotify_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "功能增强",
@@ -402,7 +456,8 @@
     "file": "Spotify_lyrics_translation.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Spotify.png",
     "name": "Spotify歌词增强",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Spotify_lyrics_translation.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Spotify_lyrics_translation.sgmodule",
+    "warnings": []
   },
   {
     "category": "订阅管理",
@@ -411,7 +466,10 @@
     "file": "Sub-Store.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/Other_icon/120px/Sub-Store.png",
     "name": "Sub-Store",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Sub-Store.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Sub-Store.sgmodule",
+    "warnings": [
+      "代理规则未启用，请在 Surge 主配置中手动指定策略。"
+    ]
   },
   {
     "category": "去广告",
@@ -420,7 +478,8 @@
     "file": "TelegramRedirect.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Telegram.png",
     "name": "Telegram重定向",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/TelegramRedirect.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/TelegramRedirect.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -429,7 +488,8 @@
     "file": "TeraBox_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/TeraBox.png",
     "name": "TeraBox去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/TeraBox_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/TeraBox_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "功能增强",
@@ -438,7 +498,10 @@
     "file": "TestFlightRegionUnlock.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/TestFlight.png",
     "name": "TestFlight地区解锁",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/TestFlightRegionUnlock.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/TestFlightRegionUnlock.sgmodule",
+    "warnings": [
+      "代理规则未启用，请在 Surge 主配置中手动指定策略。"
+    ]
   },
   {
     "category": "去广告",
@@ -447,7 +510,10 @@
     "file": "TubeMax_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/TubeMax.png",
     "name": "TubeMax去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/TubeMax_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/TubeMax_remove_ads.sgmodule",
+    "warnings": [
+      "代理规则未启用，请在 Surge 主配置中手动指定策略。"
+    ]
   },
   {
     "category": "去广告",
@@ -456,7 +522,8 @@
     "file": "Tumblr_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Tumblr.png",
     "name": "Tumblr去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Tumblr_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Tumblr_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -465,7 +532,8 @@
     "file": "Uki_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Uki.png",
     "name": "Uki去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Uki_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Uki_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "功能增强",
@@ -474,7 +542,8 @@
     "file": "VVebo_repair.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/VVebo.png",
     "name": "VVebo时间线修复",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/VVebo_repair.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/VVebo_repair.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -483,7 +552,8 @@
     "file": "WakeupSchedule_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/WakeupSchedule.png",
     "name": "WakeUp课程表去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/WakeupSchedule_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/WakeupSchedule_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "节点检测",
@@ -492,7 +562,10 @@
     "file": "WARP_Node_Query.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/1.1.1.1.png",
     "name": "WARP节点查询",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/WARP_Node_Query.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/WARP_Node_Query.sgmodule",
+    "warnings": [
+      "面板不支持 Loon 的长按节点功能。"
+    ]
   },
   {
     "category": "签到",
@@ -501,7 +574,10 @@
     "file": "WPS_checkin.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/WPS.png",
     "name": "WPS每日签到",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/WPS_checkin.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/WPS_checkin.sgmodule",
+    "warnings": [
+      "开关是否生效取决于上游脚本，请确认脚本支持关闭选项。"
+    ]
   },
   {
     "category": "去广告",
@@ -510,7 +586,8 @@
     "file": "YouTube_remove_ads.sgmodule",
     "icon": "",
     "name": "Youtube (Music) Enhance",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/YouTube_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/YouTube_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "功能增强",
@@ -519,7 +596,8 @@
     "file": "YouTubeSubtitlesTranslation.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/YouTube.png",
     "name": "YouTube双语翻译",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/YouTubeSubtitlesTranslation.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/YouTubeSubtitlesTranslation.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -528,7 +606,8 @@
     "file": "YY_Voice_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/YY_Voice.png",
     "name": "YY去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/YY_Voice_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/YY_Voice_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -537,7 +616,8 @@
     "file": "YYVoiceTool_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/YYVoiceTool.png",
     "name": "YY语音去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/YYVoiceTool_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/YYVoiceTool_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -546,7 +626,8 @@
     "file": "ZAKER_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/ZAKER.png",
     "name": "ZAKER去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/ZAKER_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/ZAKER_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -555,7 +636,8 @@
     "file": "Aiinquiry_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Aiinquiry.png",
     "name": "爱企查去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Aiinquiry_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Aiinquiry_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -564,7 +646,8 @@
     "file": "iQiYi_Video_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/iQiYi_Video.png",
     "name": "爱奇艺去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/iQiYi_Video_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/iQiYi_Video_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -573,7 +656,8 @@
     "file": "AliYunDrive_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/AliYunDrive.png",
     "name": "阿里云盘去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/AliYunDrive_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/AliYunDrive_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -582,7 +666,8 @@
     "file": "BaiduMap_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/BaiduMap.png",
     "name": "百度地图去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/BaiduMap_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/BaiduMap_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -591,7 +676,8 @@
     "file": "BaiduTranslate_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/BaiduTranslate.png",
     "name": "百度翻译去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/BaiduTranslate_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/BaiduTranslate_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -600,7 +686,8 @@
     "file": "Baidu_input_method_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Baidu_input_method.png",
     "name": "百度输入法去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Baidu_input_method_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Baidu_input_method_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -609,7 +696,8 @@
     "file": "Tieba_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Tieba.png",
     "name": "百度贴吧去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Tieba_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Tieba_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -618,7 +706,8 @@
     "file": "BaiduNetDisk_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/BaiduNetDisk.png",
     "name": "百度网盘去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/BaiduNetDisk_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/BaiduNetDisk_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -627,7 +716,8 @@
     "file": "BaiduSearchWebpage_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Baidu.png",
     "name": "百度网页去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/BaiduSearchWebpage_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/BaiduSearchWebpage_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -636,7 +726,8 @@
     "file": "BaiduWenku_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/BaiduWenku.png",
     "name": "百度文库去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/BaiduWenku_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/BaiduWenku_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -645,7 +736,8 @@
     "file": "BabyTree_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/BabyTree.png",
     "name": "宝宝树孕育去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/BabyTree_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/BabyTree_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -654,7 +746,8 @@
     "file": "Beike_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Beike.png",
     "name": "贝壳找房去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Beike_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Beike_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -663,7 +756,8 @@
     "file": "BiliComic_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/BiliComic.png",
     "name": "哔哩哔哩漫画去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/BiliComic_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/BiliComic_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -672,7 +766,11 @@
     "file": "Bilibili_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Bilibili.png",
     "name": "哔哩哔哩去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Bilibili_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Bilibili_remove_ads.sgmodule",
+    "warnings": [
+      "代理规则未启用，请在 Surge 主配置中手动指定策略。",
+      "开关是否生效取决于上游脚本，请确认脚本支持关闭选项。"
+    ]
   },
   {
     "category": "去广告",
@@ -681,7 +779,8 @@
     "file": "BitqiuPan_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/BitqiuPan.png",
     "name": "比特球云盘去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/BitqiuPan_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/BitqiuPan_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -690,7 +789,8 @@
     "file": "Bixin_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Bixin.png",
     "name": "比心去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Bixin_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Bixin_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -699,7 +799,8 @@
     "file": "BodianMusic_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/BodianMusic.png",
     "name": "波点音乐去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/BodianMusic_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/BodianMusic_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -708,7 +809,8 @@
     "file": "BooHee_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/BooHee.png",
     "name": "薄荷健康去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/BooHee_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/BooHee_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -717,7 +819,8 @@
     "file": "Cainiao_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Cainiao.png",
     "name": "菜鸟去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Cainiao_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Cainiao_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -726,7 +829,8 @@
     "file": "CaixinMedia_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/CaixinMedia.png",
     "name": "财新去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/CaixinMedia_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/CaixinMedia_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -735,7 +839,8 @@
     "file": "ColorfulClouds_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/ColorfulClouds.png",
     "name": "彩云天气去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/ColorfulClouds_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/ColorfulClouds_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -744,7 +849,8 @@
     "file": "Cece_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Cece.png",
     "name": "测测去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Cece_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Cece_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -753,7 +859,8 @@
     "file": "MyFriday_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/MyFriday.png",
     "name": "超级课程表去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/MyFriday_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/MyFriday_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -762,7 +869,8 @@
     "file": "Chelaile_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Chelaile.png",
     "name": "车来了去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Chelaile_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Chelaile_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -771,7 +879,8 @@
     "file": "ChengFenMiao_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/ChengFenMiao.png",
     "name": "成分喵去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/ChengFenMiao_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/ChengFenMiao_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -780,7 +889,8 @@
     "file": "SkyworthDigitalPicamera_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/SkyworthDigitalPicamera.png",
     "name": "创维智慧云去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/SkyworthDigitalPicamera_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/SkyworthDigitalPicamera_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -789,7 +899,8 @@
     "file": "Chuzhan_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Chuzhan.png",
     "name": "触站去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Chuzhan_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Chuzhan_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -798,7 +909,8 @@
     "file": "XFuse_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/XFuse.png",
     "name": "磁力宅播放器去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/XFuse_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/XFuse_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "节点检测",
@@ -807,7 +919,10 @@
     "file": "NodeLinkCheck.sgmodule",
     "icon": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Stack.png",
     "name": "代理链路检测",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/NodeLinkCheck.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/NodeLinkCheck.sgmodule",
+    "warnings": [
+      "面板不支持 Loon 的长按节点功能。"
+    ]
   },
   {
     "category": "去广告",
@@ -816,7 +931,8 @@
     "file": "Damai_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Damai.png",
     "name": "大麦去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Damai_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Damai_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -825,7 +941,8 @@
     "file": "Dayima_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Dayima.png",
     "name": "大姨妈月经期助手去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Dayima_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Dayima_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -834,7 +951,8 @@
     "file": "iReaderDejian_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/iReaderDejian.png",
     "name": "得间小说去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/iReaderDejian_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/iReaderDejian_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -843,7 +961,8 @@
     "file": "Dewu_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Dewu.png",
     "name": "得物去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Dewu_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Dewu_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -852,7 +971,8 @@
     "file": "DidaPincheTaxi_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/DidaPincheTaxi.png",
     "name": "滴答出行去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/DidaPincheTaxi_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/DidaPincheTaxi_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -861,7 +981,8 @@
     "file": "DiDi_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/DiDi.png",
     "name": "滴滴去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/DiDi_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/DiDi_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -870,7 +991,8 @@
     "file": "DingdongMaicai_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/DingdongMaicai.png",
     "name": "叮咚买菜去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/DingdongMaicai_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/DingdongMaicai_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -879,7 +1001,8 @@
     "file": "DouBan_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/DouBan.png",
     "name": "豆瓣去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/DouBan_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/DouBan_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -888,7 +1011,8 @@
     "file": "DoubanRead_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/DoubanRead.png",
     "name": "豆瓣阅读去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/DoubanRead_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/DoubanRead_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -897,7 +1021,8 @@
     "file": "Douyu_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Douyu.png",
     "name": "斗鱼去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Douyu_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Douyu_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -906,7 +1031,8 @@
     "file": "DuiTang_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/DuiTang.png",
     "name": "堆糖去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/DuiTang_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/DuiTang_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -915,7 +1041,8 @@
     "file": "TCLnScreen_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/TCLnScreen.png",
     "name": "多屏互动去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/TCLnScreen_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/TCLnScreen_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -924,7 +1051,8 @@
     "file": "DragonRead_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/DragonRead.png",
     "name": "番茄小说去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/DragonRead_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/DragonRead_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -933,7 +1061,8 @@
     "file": "KebidaDushu_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/KebidaDushu.png",
     "name": "帆书去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/KebidaDushu_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/KebidaDushu_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -942,7 +1071,8 @@
     "file": "FlyerTea_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/FlyerTea.png",
     "name": "飞客去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/FlyerTea_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/FlyerTea_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -951,7 +1081,8 @@
     "file": "TaobaoTravel_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/TaobaoTravel.png",
     "name": "飞猪旅行去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/TaobaoTravel_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/TaobaoTravel_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -960,7 +1091,8 @@
     "file": "FenBi_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/FenBi.png",
     "name": "粉笔去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/FenBi_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/FenBi_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -969,7 +1101,8 @@
     "file": "FC_Box_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/FC_Box.png",
     "name": "丰巢去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/FC_Box_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/FC_Box_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -978,7 +1111,8 @@
     "file": "ifengNews_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/ifengNews.png",
     "name": "凤凰新闻去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/ifengNews_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/ifengNews_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -987,7 +1121,8 @@
     "file": "RiskBird_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/RiskBird.png",
     "name": "风鸟去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/RiskBird_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/RiskBird_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -996,7 +1131,8 @@
     "file": "LiveLab_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/LiveLab.png",
     "name": "纷玩岛去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/LiveLab_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/LiveLab_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1005,7 +1141,8 @@
     "file": "GuideRank_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/GuideRank.png",
     "name": "盖得排行去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/GuideRank_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/GuideRank_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1014,7 +1151,8 @@
     "file": "Amap_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Amap.png",
     "name": "高德地图去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Amap_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Amap_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1023,7 +1161,8 @@
     "file": "GaoDing_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/GaoDing.png",
     "name": "稿定设计去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/GaoDing_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/GaoDing_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1032,7 +1171,8 @@
     "file": "AlcidaeVideo_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/AlcidaeVideo.png",
     "name": "海雀去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/AlcidaeVideo_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/AlcidaeVideo_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1041,7 +1181,10 @@
     "file": "EasyBike_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/EasyBike.png",
     "name": "哈罗去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/EasyBike_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/EasyBike_remove_ads.sgmodule",
+    "warnings": [
+      "部分资源无法镜像，仍使用上游链接，可能无法加载。"
+    ]
   },
   {
     "category": "去广告",
@@ -1050,7 +1193,8 @@
     "file": "Umetrip_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Umetrip.png",
     "name": "航旅纵横去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Umetrip_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Umetrip_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1059,7 +1203,8 @@
     "file": "YunmaiScale_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/YunmaiScale.png",
     "name": "好轻去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/YunmaiScale_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/YunmaiScale_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1068,7 +1213,8 @@
     "file": "MrHema_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/MrHema.png",
     "name": "盒马去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/MrHema_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/MrHema_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1077,7 +1223,8 @@
     "file": "FinanceNews_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/FinanceNews.png",
     "name": "华尔街见闻去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/FinanceNews_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/FinanceNews_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1086,7 +1233,8 @@
     "file": "HantingHotels_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/HantingHotels.png",
     "name": "华住会去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/HantingHotels_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/HantingHotels_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1095,7 +1243,8 @@
     "file": "SmartLife_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/SmartLife.png",
     "name": "慧生活798去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/SmartLife_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/SmartLife_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1104,7 +1253,8 @@
     "file": "HUPU_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/HUPU.png",
     "name": "虎扑去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/HUPU_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/HUPU_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1113,7 +1263,8 @@
     "file": "Huxiu_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Huxiu.png",
     "name": "虎嗅去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Huxiu_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Huxiu_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1122,7 +1273,8 @@
     "file": "JiaKaoBaoDian_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/JiaKaoBaoDian.png",
     "name": "驾考宝典去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/JiaKaoBaoDian_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/JiaKaoBaoDian_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1131,7 +1283,8 @@
     "file": "91160_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/91160.png",
     "name": "健康160去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/91160_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/91160_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1140,7 +1293,8 @@
     "file": "SeasunJX3_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/SeasunJX3.png",
     "name": "剑网三无界去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/SeasunJX3_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/SeasunJX3_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1149,7 +1303,8 @@
     "file": "JiaXiaoDrive_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/JiaXiaoDrive.png",
     "name": "驾校一点通去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/JiaXiaoDrive_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/JiaXiaoDrive_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "节点检测",
@@ -1158,7 +1313,10 @@
     "file": "Node_detection_tool.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/Other_icon/120px/Node_detection_tool.png",
     "name": "节点检测工具",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Node_detection_tool.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Node_detection_tool.sgmodule",
+    "warnings": [
+      "面板不支持 Loon 的长按节点功能。"
+    ]
   },
   {
     "category": "功能增强",
@@ -1167,7 +1325,8 @@
     "file": "JD_Price.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/JD.png",
     "name": "京东比价",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/JD_Price.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/JD_Price.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1176,7 +1335,8 @@
     "file": "JD_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/JD.png",
     "name": "京东去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/JD_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/JD_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1185,7 +1345,8 @@
     "file": "JDWaimai_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/JDWaimai.png",
     "name": "京东外卖去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/JDWaimai_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/JDWaimai_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1194,7 +1355,8 @@
     "file": "WPS_Documents_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/WPS_Documents.png",
     "name": "金山文档去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/WPS_Documents_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/WPS_Documents_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1203,7 +1365,8 @@
     "file": "Jin10Data_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Jin10Data.png",
     "name": "金十数据去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Jin10Data_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Jin10Data_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1212,7 +1375,8 @@
     "file": "ChatCam_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/ChatCam.png",
     "name": "看家王去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/ChatCam_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/ChatCam_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1221,7 +1385,8 @@
     "file": "Remove_ads_by_keli.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/Other_icon/120px/KeLee.png",
     "name": "可莉广告过滤器",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Remove_ads_by_keli.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Remove_ads_by_keli.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1230,7 +1395,8 @@
     "file": "KuaiDi100_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/KuaiDi100.png",
     "name": "快递100去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/KuaiDi100_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/KuaiDi100_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1239,7 +1405,8 @@
     "file": "KuaiDuiZuoYe_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/KuaiDuiZuoYe.png",
     "name": "快对去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/KuaiDuiZuoYe_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/KuaiDuiZuoYe_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1248,7 +1415,8 @@
     "file": "QuickSearch.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Safari.png",
     "name": "快捷搜索",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/QuickSearch.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/QuickSearch.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1257,7 +1425,8 @@
     "file": "KuaiKanComic_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/KuaiKanComic.png",
     "name": "快看漫画去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/KuaiKanComic_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/KuaiKanComic_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1266,7 +1435,8 @@
     "file": "KuaiShou_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/KuaiShou.png",
     "name": "快手去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/KuaiShou_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/KuaiShou_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1275,7 +1445,8 @@
     "file": "KwaiVideoeditor_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/KwaiVideoeditor.png",
     "name": "快影去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/KwaiVideoeditor_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/KwaiVideoeditor_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1284,7 +1455,8 @@
     "file": "QuarkBrowser_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/QuarkBrowser.png",
     "name": "夸克去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/QuarkBrowser_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/QuarkBrowser_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1293,7 +1465,8 @@
     "file": "QuarkScanking_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/QuarkScanking.png",
     "name": "夸克扫描王去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/QuarkScanking_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/QuarkScanking_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1302,7 +1475,8 @@
     "file": "CoolApk_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/CoolApk.png",
     "name": "酷安去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/CoolApk_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/CoolApk_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1311,7 +1485,8 @@
     "file": "KuGouYouth_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/KuGouYouth.png",
     "name": "酷狗概念版去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/KuGouYouth_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/KuGouYouth_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1320,7 +1495,8 @@
     "file": "KGRing_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/KGRing.png",
     "name": "酷狗铃声去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/KGRing_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/KGRing_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1329,7 +1505,8 @@
     "file": "KuGou_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/KuGou.png",
     "name": "酷狗音乐去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/KuGou_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/KuGou_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1338,7 +1515,8 @@
     "file": "KuroBBS_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/KuroBBS.png",
     "name": "库街区去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/KuroBBS_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/KuroBBS_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1347,7 +1525,8 @@
     "file": "Kuwo_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Kuwo.png",
     "name": "酷我音乐去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Kuwo_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Kuwo_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1356,7 +1535,8 @@
     "file": "TV_Assistant_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/TV_Assistant.png",
     "name": "乐播投屏去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/TV_Assistant_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/TV_Assistant_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1365,7 +1545,8 @@
     "file": "2bulu_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/2bulu.png",
     "name": "两步路户外助手去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/2bulu_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/2bulu_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1374,7 +1555,8 @@
     "file": "LZMH_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/LZMH.png",
     "name": "联掌门户去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/LZMH_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/LZMH_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1383,7 +1565,8 @@
     "file": "RoboTaxi_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/RoboTaxi.png",
     "name": "萝卜快跑去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/RoboTaxi_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/RoboTaxi_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1392,7 +1575,8 @@
     "file": "MaFengWo_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/MaFengWo.png",
     "name": "马蜂窝去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/MaFengWo_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/MaFengWo_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1401,7 +1585,8 @@
     "file": "marki_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/marki.png",
     "name": "马克水印相机去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/marki_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/marki_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1410,7 +1595,8 @@
     "file": "MangoTV_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Mango_TV.png",
     "name": "芒果TV去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/MangoTV_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/MangoTV_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1419,7 +1605,8 @@
     "file": "MKZ_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/MKZ.png",
     "name": "漫客栈去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/MKZ_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/MKZ_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1428,7 +1615,8 @@
     "file": "CatEarFM_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/CatEarFM.png",
     "name": "猫耳FM去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/CatEarFM_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/CatEarFM_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1437,7 +1625,8 @@
     "file": "Meizhixiuxing_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Meizhixiuxing.png",
     "name": "美丽修行去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Meizhixiuxing_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Meizhixiuxing_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1446,7 +1635,8 @@
     "file": "MeiRiSaiChe_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/MeiRiSaiChe.png",
     "name": "每日赛车去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/MeiRiSaiChe_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/MeiRiSaiChe_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1455,7 +1645,8 @@
     "file": "MeiShiJie_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/MeiShiJie.png",
     "name": "美食杰去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/MeiShiJie_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/MeiShiJie_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1464,7 +1655,8 @@
     "file": "MeiTu_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/MeiTu.png",
     "name": "美图秀秀去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/MeiTu_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/MeiTu_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1473,7 +1665,8 @@
     "file": "MeituMYXJ_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/MeituMYXJ.png",
     "name": "美颜相机去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/MeituMYXJ_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/MeituMYXJ_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1482,7 +1675,8 @@
     "file": "MeetYou_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/MeetYou.png",
     "name": "美柚去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/MeetYou_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/MeetYou_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1491,7 +1685,8 @@
     "file": "MoeGirlWiki_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/MoeGirlWiki.png",
     "name": "萌娘百科去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/MoeGirlWiki_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/MoeGirlWiki_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1500,7 +1695,8 @@
     "file": "miHoYoBBS_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/miHoYoBBS.png",
     "name": "米游社去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/miHoYoBBS_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/miHoYoBBS_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1509,7 +1705,8 @@
     "file": "MojiWeather_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/MojiWeather.png",
     "name": "墨迹天气去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/MojiWeather_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/MojiWeather_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1518,7 +1715,8 @@
     "file": "MaiMai_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/MaiMai.png",
     "name": "脉脉去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/MaiMai_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/MaiMai_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1527,7 +1725,8 @@
     "file": "FerrisWheel_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/FerrisWheel.png",
     "name": "摩天轮去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/FerrisWheel_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/FerrisWheel_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1536,7 +1735,8 @@
     "file": "MotorFans_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/MotorFans.png",
     "name": "摩托范去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/MotorFans_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/MotorFans_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1545,7 +1745,8 @@
     "file": "CSG_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/CSG.png",
     "name": "南网在线去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/CSG_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/CSG_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1554,7 +1755,8 @@
     "file": "AxWorkSchedule_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/AxWorkSchedule.png",
     "name": "排班日历去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/AxWorkSchedule_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/AxWorkSchedule_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1563,7 +1765,8 @@
     "file": "PangguaiLife_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/PangguaiLife.png",
     "name": "胖乖生活去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/PangguaiLife_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/PangguaiLife_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1572,7 +1775,8 @@
     "file": "DubbingShow_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/DubbingShow.png",
     "name": "配音秀去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/DubbingShow_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/DubbingShow_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1581,7 +1785,8 @@
     "file": "PinDuoDuo_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/PinDuoDuo.png",
     "name": "拼多多去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/PinDuoDuo_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/PinDuoDuo_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1590,7 +1795,8 @@
     "file": "PiPiXia_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/PiPiXia.png",
     "name": "皮皮虾去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/PiPiXia_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/PiPiXia_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1599,7 +1805,8 @@
     "file": "PuPuMall_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/PuPuMall.png",
     "name": "朴朴超市去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/PuPuMall_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/PuPuMall_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1608,7 +1815,8 @@
     "file": "51Job_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/51Job.png",
     "name": "前程无忧去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/51Job_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/51Job_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1617,7 +1825,8 @@
     "file": "AutoHome_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/AutoHome.png",
     "name": "汽车之家去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/AutoHome_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/AutoHome_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1626,7 +1835,8 @@
     "file": "QiDian_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/QiDian.png",
     "name": "起点读书去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/QiDian_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/QiDian_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1635,7 +1845,8 @@
     "file": "SevenCat_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/SevenCat.png",
     "name": "七猫小说去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/SevenCat_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/SevenCat_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1644,7 +1855,8 @@
     "file": "Qbb_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Qbb.png",
     "name": "亲宝宝去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Qbb_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Qbb_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1653,7 +1865,8 @@
     "file": "QtingFM_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/QtingFM.png",
     "name": "蜻蜓FM去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/QtingFM_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/QtingFM_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1662,7 +1875,8 @@
     "file": "SodaMusic_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/SodaMusic.png",
     "name": "汽水音乐去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/SodaMusic_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/SodaMusic_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1671,7 +1885,8 @@
     "file": "QiXinBao_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/QiXinBao.png",
     "name": "启信宝去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/QiXinBao_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/QiXinBao_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1680,7 +1895,8 @@
     "file": "QQKSong_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/QQKSong.png",
     "name": "全民K歌去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/QQKSong_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/QQKSong_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1689,7 +1905,8 @@
     "file": "LuckinCoffee_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/LuckinCoffee.png",
     "name": "瑞幸咖啡去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/LuckinCoffee_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/LuckinCoffee_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1698,7 +1915,8 @@
     "file": "YueDanBa_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/YueDanBa.png",
     "name": "省钱快报去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/YueDanBa_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/YueDanBa_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1707,7 +1925,8 @@
     "file": "smzdm_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/smzdm.png",
     "name": "什么值得买去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/smzdm_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/smzdm_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1716,7 +1935,8 @@
     "file": "ShouYinTongMerchant_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/ShouYinTongMerchant.png",
     "name": "收银通商户端去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/ShouYinTongMerchant_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/ShouYinTongMerchant_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1725,7 +1945,8 @@
     "file": "SF-Express_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/SF-Express.png",
     "name": "顺丰速运去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/SF-Express_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/SF-Express_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1734,7 +1955,8 @@
     "file": "ShuQiCenterReader_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/ShuQiCenterReader.png",
     "name": "书旗小说去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/ShuQiCenterReader_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/ShuQiCenterReader_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1743,7 +1965,8 @@
     "file": "DigitalHeartbeat_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/DigitalHeartbeat.png",
     "name": "数字心动去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/DigitalHeartbeat_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/DigitalHeartbeat_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1752,7 +1975,8 @@
     "file": "KingdeeMyMoney_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/KingdeeMyMoney.png",
     "name": "随手记去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/KingdeeMyMoney_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/KingdeeMyMoney_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1761,7 +1985,8 @@
     "file": "Taobao_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Taobao.png",
     "name": "淘宝去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Taobao_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Taobao_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1770,7 +1995,8 @@
     "file": "Taopiaopiao_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Taopiaopiao.png",
     "name": "淘票票去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Taopiaopiao_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Taopiaopiao_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1779,7 +2005,8 @@
     "file": "Taqu_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Taqu.png",
     "name": "他趣去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Taqu_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Taqu_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1788,7 +2015,10 @@
     "file": "Tencent_Video_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Tencent_Video.png",
     "name": "腾讯视频去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Tencent_Video_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Tencent_Video_remove_ads.sgmodule",
+    "warnings": [
+      "部分资源无法镜像，仍使用上游链接，可能无法加载。"
+    ]
   },
   {
     "category": "去广告",
@@ -1797,7 +2027,8 @@
     "file": "TXDocs_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/TXDocs.png",
     "name": "腾讯文档去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/TXDocs_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/TXDocs_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1806,7 +2037,8 @@
     "file": "TmallCampus_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/TmallCampus.png",
     "name": "天猫校园去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/TmallCampus_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/TmallCampus_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1815,7 +2047,8 @@
     "file": "TianQiTong_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/TianQiTong.png",
     "name": "天气通去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/TianQiTong_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/TianQiTong_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1824,7 +2057,8 @@
     "file": "iReaderCityWeather_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/iReaderCityWeather.png",
     "name": "天气预报去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/iReaderCityWeather_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/iReaderCityWeather_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1833,7 +2067,8 @@
     "file": "CrazyRope_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/CrazyRope.png",
     "name": "天天跳绳去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/CrazyRope_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/CrazyRope_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1842,7 +2077,8 @@
     "file": "TuGuaiShou_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/TuGuaiShou.png",
     "name": "图怪兽去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/TuGuaiShou_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/TuGuaiShou_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1851,7 +2087,8 @@
     "file": "Daily_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Daily.png",
     "name": "推栏去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Daily_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Daily_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1860,7 +2097,8 @@
     "file": "WaCaiJiZhang_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/WaCaiJiZhang.png",
     "name": "挖财记账去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/WaCaiJiZhang_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/WaCaiJiZhang_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1869,7 +2107,8 @@
     "file": "Wacai_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Wacai.png",
     "name": "挖财记账去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Wacai_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Wacai_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1878,7 +2117,8 @@
     "file": "NetEaseGodlike_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/NetEaseGodlike.png",
     "name": "网易大神去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/NetEaseGodlike_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/NetEaseGodlike_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1887,7 +2127,8 @@
     "file": "NeteaseNews_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/NeteaseNews.png",
     "name": "网易新闻去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/NeteaseNews_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/NeteaseNews_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1896,7 +2137,10 @@
     "file": "YoudaoDict_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/YoudaoDict.png",
     "name": "网易有道词典去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/YoudaoDict_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/YoudaoDict_remove_ads.sgmodule",
+    "warnings": [
+      "部分上游规则无效，已跳过；具体规则见模块注释。"
+    ]
   },
   {
     "category": "去广告",
@@ -1905,7 +2149,8 @@
     "file": "MailMaster_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/MailMaster.png",
     "name": "网易邮箱大师去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/MailMaster_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/MailMaster_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1914,7 +2159,8 @@
     "file": "NeteaseCloudMusic_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/NeteaseCloudMusic.png",
     "name": "网易云音乐去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/NeteaseCloudMusic_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/NeteaseCloudMusic_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1923,7 +2169,8 @@
     "file": "PerfectWorldEsport_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/PerfectWorldEsport.png",
     "name": "完美世界电竞去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/PerfectWorldEsport_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/PerfectWorldEsport_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1932,7 +2179,8 @@
     "file": "Weibo_intl_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Weibo_intl.png",
     "name": "微博轻享版去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Weibo_intl_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Weibo_intl_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1941,7 +2189,8 @@
     "file": "Weibo_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Weibo.png",
     "name": "微博去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Weibo_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Weibo_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1950,7 +2199,8 @@
     "file": "Weidian_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Weidian.png",
     "name": "微店去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Weidian_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Weidian_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1959,7 +2209,8 @@
     "file": "WPForum_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/WPForum.png",
     "name": "威锋去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/WPForum_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/WPForum_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1968,7 +2219,8 @@
     "file": "Weimai_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Weimai.png",
     "name": "微脉圈去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Weimai_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Weimai_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1977,7 +2229,8 @@
     "file": "Weixin_Official_Accounts_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Weixin.png",
     "name": "微信公众号去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Weixin_Official_Accounts_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Weixin_Official_Accounts_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "功能增强",
@@ -1986,7 +2239,8 @@
     "file": "Weixin_external_links_unlock.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Weixin.png",
     "name": "微信外部链接解锁",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Weixin_external_links_unlock.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Weixin_external_links_unlock.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -1995,7 +2249,8 @@
     "file": "WexinMiniPrograms_Remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/WeixinMiniPrograms.png",
     "name": "微信小程序去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/WexinMiniPrograms_Remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/WexinMiniPrograms_Remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -2004,7 +2259,8 @@
     "file": "Walmart_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Walmart.png",
     "name": "沃尔玛去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Walmart_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Walmart_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -2013,7 +2269,8 @@
     "file": "SnailSleep_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/SnailSleep.png",
     "name": "蜗牛睡眠去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/SnailSleep_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/SnailSleep_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -2022,7 +2279,8 @@
     "file": "WutaCamera_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/WutaCamera.png",
     "name": "无他相机去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/WutaCamera_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/WutaCamera_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -2031,7 +2289,8 @@
     "file": "XiaChuFang_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/XiaChuFang.png",
     "name": "下厨房去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/XiaChuFang_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/XiaChuFang_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -2040,7 +2299,8 @@
     "file": "HKDouYin_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/TikTok.png",
     "name": "香港抖音去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/HKDouYin_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/HKDouYin_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -2049,7 +2309,8 @@
     "file": "OraySunlogin_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/OraySunlogin.png",
     "name": "向日葵去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/OraySunlogin_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/OraySunlogin_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -2058,7 +2319,8 @@
     "file": "FleaMarket_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/FleaMarket.png",
     "name": "闲鱼去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/FleaMarket_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/FleaMarket_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -2067,7 +2329,8 @@
     "file": "XiaobaiPrint_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/XiaobaiPrint.png",
     "name": "小白智慧打印去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/XiaobaiPrint_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/XiaobaiPrint_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -2076,7 +2339,8 @@
     "file": "XiaoCan_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/XiaoCan.png",
     "name": "小蚕霸王餐去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/XiaoCan_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/XiaoCan_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -2085,7 +2349,8 @@
     "file": "ShopKeeperAdmin_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/ShopKeeperAdmin.png",
     "name": "小店掌柜去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/ShopKeeperAdmin_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/ShopKeeperAdmin_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -2094,7 +2359,8 @@
     "file": "XiaoHeiHe_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/XiaoHeiHe.png",
     "name": "小黑盒去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/XiaoHeiHe_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/XiaoHeiHe_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -2103,7 +2369,8 @@
     "file": "RedPaper_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/RedPaper.png",
     "name": "小红书去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/RedPaper_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/RedPaper_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -2112,7 +2379,8 @@
     "file": "XiaojukejiCharge_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/XiaojukejiCharge.png",
     "name": "小桔充电去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/XiaojukejiCharge_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/XiaojukejiCharge_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -2121,7 +2389,8 @@
     "file": "MiaoRead_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/MiaoRead.png",
     "name": "小喵看书去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/MiaoRead_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/MiaoRead_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -2130,7 +2399,8 @@
     "file": "XiaomiSpeaker_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/XiaomiSpeaker.png",
     "name": "小米音箱去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/XiaomiSpeaker_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/XiaomiSpeaker_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -2139,7 +2409,8 @@
     "file": "HeartideBrainWave_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/HeartideBrainWave.png",
     "name": "小睡眠去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/HeartideBrainWave_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/HeartideBrainWave_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -2148,7 +2419,8 @@
     "file": "iMaiCai_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/iMaiCai.png",
     "name": "小象超市去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/iMaiCai_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/iMaiCai_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -2157,7 +2429,8 @@
     "file": "CosmosPodcast_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/CosmosPodcast.png",
     "name": "小宇宙去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/CosmosPodcast_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/CosmosPodcast_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -2166,7 +2439,8 @@
     "file": "Himalaya_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Himalaya.png",
     "name": "喜马拉雅去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Himalaya_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Himalaya_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -2175,7 +2449,8 @@
     "file": "OnTheWay_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/OnTheWay.png",
     "name": "行者户外去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/OnTheWay_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/OnTheWay_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -2184,7 +2459,8 @@
     "file": "SinaStock_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/SinaStock.png",
     "name": "新浪财经去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/SinaStock_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/SinaStock_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -2193,7 +2469,8 @@
     "file": "Snowball_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Snowball.png",
     "name": "雪球去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Snowball_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Snowball_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -2202,7 +2479,8 @@
     "file": "ChaoXingStudy_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/ChaoXingStudy.png",
     "name": "学习通去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/ChaoXingStudy_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/ChaoXingStudy_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -2211,7 +2489,8 @@
     "file": "XunLei_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/XunLei.png",
     "name": "迅雷去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/XunLei_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/XunLei_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -2220,7 +2499,8 @@
     "file": "YiKaoBang_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/YiKaoBang.png",
     "name": "医考帮去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/YiKaoBang_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/YiKaoBang_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -2229,7 +2509,8 @@
     "file": "BaiduPhoto_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/BaiduPhoto.png",
     "name": "一刻相册去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/BaiduPhoto_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/BaiduPhoto_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -2238,7 +2519,8 @@
     "file": "VideoGo_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/VideoGo.png",
     "name": "萤石云视频去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/VideoGo_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/VideoGo_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -2247,7 +2529,8 @@
     "file": "Yitian_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Yitian.png",
     "name": "一甜相机去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Yitian_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Yitian_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -2256,7 +2539,8 @@
     "file": "YiSchool_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/YiSchool.png",
     "name": "易校园去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/YiSchool_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/YiSchool_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -2265,7 +2549,8 @@
     "file": "YoudaoTrans_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/YoudaoTrans.png",
     "name": "有道翻译官去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/YoudaoTrans_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/YoudaoTrans_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -2274,7 +2559,8 @@
     "file": "YoudaoNote_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/YoudaoNote.png",
     "name": "有道云笔记去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/YoudaoNote_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/YoudaoNote_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -2283,7 +2569,8 @@
     "file": "YouKu_Video_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/YouKu_Video.png",
     "name": "优酷视频去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/YouKu_Video_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/YouKu_Video_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -2292,7 +2579,8 @@
     "file": "Yueyou_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Yueyou.png",
     "name": "阅友去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Yueyou_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Yueyou_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -2301,7 +2589,8 @@
     "file": "NarwelRobots_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/NarwelRobots.png",
     "name": "云鲸智能去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/NarwelRobots_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/NarwelRobots_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -2310,7 +2599,8 @@
     "file": "ValorantBible_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/ValorantBible.png",
     "name": "掌上无畏契约去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/ValorantBible_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/ValorantBible_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -2319,7 +2609,8 @@
     "file": "LOL_Bible_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/LOL_Bible.png",
     "name": "掌上英雄联盟去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/LOL_Bible_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/LOL_Bible_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -2328,7 +2619,8 @@
     "file": "iReader_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/iReader.png",
     "name": "掌阅去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/iReader_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/iReader_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -2337,7 +2629,8 @@
     "file": "Zhibo8_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Zhibo8.png",
     "name": "直播吧去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Zhibo8_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Zhibo8_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -2346,7 +2639,8 @@
     "file": "SuZhouCitizenCard_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/SuZhouCitizenCard.png",
     "name": "智慧苏州去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/SuZhouCitizenCard_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/SuZhouCitizenCard_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -2355,7 +2649,8 @@
     "file": "Zhihu_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Zhihu.png",
     "name": "知乎去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Zhihu_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Zhihu_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -2364,7 +2659,8 @@
     "file": "ZhiLianZhaoPin_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/ZhiLianZhaoPin.png",
     "name": "智联招聘去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/ZhiLianZhaoPin_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/ZhiLianZhaoPin_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "其他",
@@ -2373,7 +2669,8 @@
     "file": "UnnooQuan_remove_watermark.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/UnnooQuan.png",
     "name": "知识星球去水印",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/UnnooQuan_remove_watermark.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/UnnooQuan_remove_watermark.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -2382,7 +2679,8 @@
     "file": "PICC_Insurance_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/PICC_Insurance.png",
     "name": "中国人保去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/PICC_Insurance_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/PICC_Insurance_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -2391,7 +2689,8 @@
     "file": "WeatherChina_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/WeatherChina.png",
     "name": "中国天气去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/WeatherChina_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/WeatherChina_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -2400,7 +2699,8 @@
     "file": "mobileClouds_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/mobileClouds.png",
     "name": "中国移动云盘去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/mobileClouds_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/mobileClouds_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -2409,7 +2709,8 @@
     "file": "EtouchEcalendar_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/EtouchEcalendar.png",
     "name": "中华万年历去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/EtouchEcalendar_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/EtouchEcalendar_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -2418,7 +2719,8 @@
     "file": "ZhuanZhuan_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/ZhuanZhuan.png",
     "name": "转转去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/ZhuanZhuan_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/ZhuanZhuan_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "定时任务",
@@ -2427,7 +2729,12 @@
     "file": "Auto_Join_TF.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/TestFlight.png",
     "name": "自动加入TestFlight",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Auto_Join_TF.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Auto_Join_TF.sgmodule",
+    "warnings": [
+      "代理规则未启用，请在 Surge 主配置中手动指定策略。",
+      "上游脚本可能需要修改后才能读取参数，请先查看模块注释。",
+      "开关是否生效取决于上游脚本，请确认脚本支持关闭选项。"
+    ]
   },
   {
     "category": "去广告",
@@ -2436,7 +2743,8 @@
     "file": "ZongHeng_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/ZongHeng.png",
     "name": "纵横小说去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/ZongHeng_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/ZongHeng_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -2445,7 +2753,8 @@
     "file": "iWallBiZhi_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/iWallBiZhi.png",
     "name": "最美壁纸去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/iWallBiZhi_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/iWallBiZhi_remove_ads.sgmodule",
+    "warnings": []
   },
   {
     "category": "去广告",
@@ -2454,6 +2763,7 @@
     "file": "ZuiYou_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/ZuiYou.png",
     "name": "最右去广告",
-    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/ZuiYou_remove_ads.sgmodule"
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/ZuiYou_remove_ads.sgmodule",
+    "warnings": []
   }
 ]

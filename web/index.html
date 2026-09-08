@@ -39,6 +39,8 @@
         -webkit-box-orient: vertical; -webkit-line-clamp: 2;
       }
       .meta { margin: 10px 0 13px; color: #98a2b3; font-size: .75rem; }
+      .warnings { margin: 0 0 13px; padding: 10px 10px 10px 26px; border-radius: 9px; background: #fffaeb; color: #93370d; font-size: .8rem; line-height: 1.5; }
+      .warnings li + li { margin-top: 6px; }
       .actions { display: flex; flex-wrap: wrap; gap: 8px; }
       .actions a, .actions button {
         padding: 8px 10px; border: 1px solid #d0d5dd; border-radius: 9px;
@@ -55,6 +57,7 @@
         input, article, .actions a, .actions button { border-color: #344054; background: #1d2939; color: #f2f4f7; }
         .intro, #status, .description, .empty { color: #98a2b3; }
         .actions .install { border-color: #528bff; background: #2970ff; }
+        .warnings { background: #432b14; color: #fedf89; }
       }
 
       @media (max-width: 520px) {
@@ -82,6 +85,7 @@
           <h2></h2>
           <p class="description"></p>
           <p class="meta"></p>
+          <ul class="warnings" aria-label="使用注意事项" hidden></ul>
           <div class="actions">
             <a class="install">导入 Surge</a>
             <a class="view" target="_blank" rel="noreferrer">查看模块</a>
@@ -113,6 +117,13 @@
           card.querySelector("h2").textContent = item.name;
           card.querySelector(".description").textContent = item.description || "暂无说明";
           card.querySelector(".meta").textContent = [item.category, item.date].filter(Boolean).join(" · ");
+          const warnings = card.querySelector(".warnings");
+          for (const message of item.warnings || []) {
+            const warning = document.createElement("li");
+            warning.textContent = message;
+            warnings.append(warning);
+          }
+          warnings.hidden = !warnings.children.length;
           const install = card.querySelector(".install");
           install.href = `surge:///install-module?url=${encodeURIComponent(item.url)}`;
           card.querySelector(".view").href = item.url;

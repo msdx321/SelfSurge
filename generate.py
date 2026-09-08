@@ -101,6 +101,34 @@ def _module_metadata(module: str) -> dict[str, str]:
     return metadata
 
 
+def module_warnings(module: str) -> list[str]:
+    messages = {
+        "# Requires main-profile policy selection:":
+            "代理规则未启用，请在 Surge 主配置中手动指定策略。",
+        "# Invalid upstream Loon rule:":
+            "部分上游规则无效，已跳过；具体规则见模块注释。",
+        "# Unsupported Loon policy":
+            "部分上游策略不受支持，相关规则已跳过；详情见模块注释。",
+        "# Surge $argument 为字符串":
+            "上游脚本可能需要修改后才能读取参数，请先查看模块注释。",
+        "# Loon enable 参数":
+            "开关是否生效取决于上游脚本，请确认脚本支持关闭选项。",
+    }
+    lines = module.splitlines()
+    warnings = [
+        message for prefix, message in messages.items()
+        if any(line.startswith(prefix) for line in lines)
+    ]
+    if "[Panel]" in lines:
+        warnings.append("面板不支持 Loon 的长按节点功能。")
+    if any(
+        resource_urls(line) for line in lines
+        if line.strip() and not line.lstrip().startswith("#")
+    ):
+        warnings.append("部分资源无法镜像，仍使用上游链接，可能无法加载。")
+    return warnings
+
+
 def youtube_module(source: str) -> str:
     for url, relative in YOUTUBE_RESOURCE_PATHS.items():
         if url == YOUTUBE_LICENSE_URL:
@@ -219,6 +247,7 @@ def main() -> None:
                 "icon": icon,
                 "name": metadata.get("name", Path(name).stem),
                 "url": PUBLISHED_MODULE_PREFIX + name,
+                "warnings": module_warnings(module),
             }
         )
 
