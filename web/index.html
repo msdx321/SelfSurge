@@ -117,11 +117,12 @@
           install.href = `surge:///install-module?url=${encodeURIComponent(item.url)}`;
           card.querySelector(".view").href = item.url;
           card.querySelector("button").addEventListener("click", async (event) => {
+            const button = event.currentTarget;
             try {
               await navigator.clipboard.writeText(item.url);
-              event.currentTarget.textContent = "已复制";
+              button.textContent = "已复制";
             } catch {
-              event.currentTarget.textContent = "复制失败";
+              button.textContent = "复制失败";
             }
           });
           fragment.append(card);
