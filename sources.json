@@ -192,6 +192,7 @@
     "modules/Soul_remove_ads.sgmodule": "https://kelee.one/Tool/Loon/Lpx/Soul_remove_ads.lpx",
     "modules/Spotify_lyrics_translation.sgmodule": "https://kelee.one/Tool/Loon/Lpx/Spotify_lyrics_translation.lpx",
     "modules/Spotify_remove_ads.sgmodule": "https://kelee.one/Tool/Loon/Lpx/Spotify_remove_ads.lpx",
+    "modules/StartUpAds.sgmodule": "https://ddgksf2013.top/rewrite/StartUpAds.conf",
     "modules/SuZhouCitizenCard_remove_ads.sgmodule": "https://kelee.one/Tool/Loon/Lpx/SuZhouCitizenCard_remove_ads.lpx",
     "modules/Sub-Store.sgmodule": "https://kelee.one/Tool/Loon/Lpx/Sub-Store.lpx",
     "modules/TCLnScreen_remove_ads.sgmodule": "https://kelee.one/Tool/Loon/Lpx/TCLnScreen_remove_ads.lpx",
@@ -527,6 +528,46 @@
     "scripts/Spotify/Translate_response.js": {
       "sha256": "8d93f76a8e58f6073e857f6e11750a9e5ebef9d7bc11fa12d18a2d95365841f9",
       "url": "https://kelee.one/Resource/JavaScript/Spotify/Translate_response.js"
+    },
+    "scripts/StartUpAds/31c2534f03f3ad0c.js": {
+      "sha256": "020399e7a5571227ad7cb7e8515c39bb3b5fbab9874e0ab3c2a6bee5240163a5",
+      "url": "https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/qidian.js"
+    },
+    "scripts/StartUpAds/3870622a38761496.js": {
+      "sha256": "cb80f9bcc73f21bb2a61650db6c203faf40373d97b99c752a07c113cd2c635a1",
+      "url": "https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/dict.js"
+    },
+    "scripts/StartUpAds/56531eec41cf1df7.js": {
+      "sha256": "26d2b77d365bed05baac95d6bf42f8950b0899fd8e49d60ce5e8a26caa8be2c8",
+      "url": "https://raw.githubusercontent.com/ddgksf2013/Scripts/master/abchina.js"
+    },
+    "scripts/StartUpAds/5ae2830a3bb127b5.js": {
+      "sha256": "24173b13433fc3c46b29577301c044425b1159f24f6fe577eef9a8227120f201",
+      "url": "https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/hanglvzongheng.js"
+    },
+    "scripts/StartUpAds/8d8d2065a9b987e5.js": {
+      "sha256": "b4af6e3ea6d58d20567a04e47f7dc7de137307773a6f06e5916b9278c9c00717",
+      "url": "https://raw.githubusercontent.com/ddgksf2013/Scripts/master/baishitv.js"
+    },
+    "scripts/StartUpAds/a121ed1c1e7631ae.js": {
+      "sha256": "e98f28a8d930fa2c873ed6fa1b618d60a7360ced8b6bd6a4ed40f76085400f5f",
+      "url": "https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/iqiyi_open_ads.js"
+    },
+    "scripts/StartUpAds/a143ff8f765edbf7.js": {
+      "sha256": "7f4a7b8170640d7479f0e0d9124dc29ee8764e5260ff39d1b67394c16294a147",
+      "url": "https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/stay.js"
+    },
+    "scripts/StartUpAds/e583e8f4e2693b04.js": {
+      "sha256": "faebd8707d3d25183764ceceda4620fc1be6d1c34e6b9abf19722df42a48b9ba",
+      "url": "https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/ahfs.js"
+    },
+    "scripts/StartUpAds/e698ff0e64bf0dc6.js": {
+      "sha256": "645e358b4f666d5e10678041d873a7e69e0b4e93ae491223af19f549eee03f08",
+      "url": "https://raw.githubusercontent.com/ddgksf2013/Scripts/master/pinganads.js"
+    },
+    "scripts/StartUpAds/e96cc9631bed175e.js": {
+      "sha256": "8d6b94ed0ac8a06ed42c8d52c5ec998d47e604bbd3d6f466aacb53fef7f98ab3",
+      "url": "https://raw.githubusercontent.com/ddgksf2013/Scripts/master/dongqiudi.js"
     },
     "scripts/TV_Assistant/TV_Assistant_remove_ads.js": {
       "sha256": "a957df12593369f6ce111a79619ba88cdad4870aa18b639ff1942a92d441bb18",

@@ -2765,5 +2765,15 @@
     "name": "最右去广告",
     "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/ZuiYou_remove_ads.sgmodule",
     "warnings": []
+  },
+  {
+    "category": "去广告",
+    "date": "2026-08-29",
+    "description": "补充现有去广告模块未覆盖的主机；请配合现有模块使用。",
+    "file": "StartUpAds.sgmodule",
+    "icon": "",
+    "name": "墨鱼去开屏 2.0 · 补充规则",
+    "url": "https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/StartUpAds.sgmodule",
+    "warnings": []
   }
 ]
