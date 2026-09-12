@@ -1,6 +1,7 @@
 import concurrent.futures
 import hashlib
 import json
+import re
 from pathlib import Path, PurePosixPath
 from urllib.error import HTTPError
 from urllib.parse import urlsplit
@@ -13,6 +14,7 @@ from selfsurge import (
     plugin_url,
     resource_urls,
 )
+from startupads import STARTUP_MODULE_NAME, STARTUP_MODULE_URL, startup_module
 
 
 ROOT = Path(__file__).parent
@@ -65,6 +67,9 @@ def catalog_entries() -> list[tuple[str, str]]:
         entries.append((name, source_url))
     if not entries:
         raise ValueError("Hub catalog contains no LPX plugins")
+    if STARTUP_MODULE_NAME in names:
+        raise ValueError(f"duplicate module filename: {STARTUP_MODULE_NAME}")
+    entries.append((STARTUP_MODULE_NAME, STARTUP_MODULE_URL))
     return entries
 
 
@@ -194,7 +199,10 @@ def _write_generated(files: dict[Path, bytes]) -> None:
 
 def main() -> None:
     entries = catalog_entries()
-    lpx_entries = [entry for entry in entries if entry[0] != YOUTUBE_MODULE_NAME]
+    lpx_entries = [
+        entry for entry in entries
+        if entry[0] not in {YOUTUBE_MODULE_NAME, STARTUP_MODULE_NAME}
+    ]
     with concurrent.futures.ThreadPoolExecutor(max_workers=8) as executor:
         sources = dict(
             zip(
@@ -216,10 +224,23 @@ def main() -> None:
     web_catalog = []
     module_sources = {}
     errors = []
+    startup_resources = {}
     for name, source_url in entries:
         relative = Path("modules", name)
         try:
-            if name == YOUTUBE_MODULE_NAME:
+            if name == STARTUP_MODULE_NAME:
+                if errors:
+                    continue
+                module_sources[relative.as_posix()] = STARTUP_MODULE_URL
+                module = startup_module(
+                    fetch_bytes(STARTUP_MODULE_URL, user_agent="surge").decode("utf-8-sig"),
+                    [content.decode() for path, content in files.items() if path.suffix == ".sgmodule"],
+                )
+                for url in sorted(set(re.findall(r'(?:script-path=|data=")(https://[^",\s]+)', module))):
+                    dependency = Path("scripts/StartUpAds", hashlib.sha256(url.encode()).hexdigest()[:16] + ".js")
+                    startup_resources[url] = dependency
+                    module = module.replace(url, PUBLISHED_PREFIX + dependency.as_posix())
+            elif name == YOUTUBE_MODULE_NAME:
                 module_sources[relative.as_posix()] = YOUTUBE_MODULE_URL
                 module = youtube_module(youtube_source)
             else:
@@ -268,8 +289,8 @@ def main() -> None:
             "sha256": hashlib.sha256(content).hexdigest(),
         }
 
-    for url, relative in YOUTUBE_RESOURCE_PATHS.items():
-        content = fetch_bytes(url)
+    for url, relative in (YOUTUBE_RESOURCE_PATHS | startup_resources).items():
+        content = fetch_bytes(url, user_agent="surge")
         files[relative] = content
         mirrored_sources[relative.as_posix()] = {
             "url": url,

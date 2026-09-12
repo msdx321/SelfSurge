@@ -60,7 +60,9 @@ class CatalogConversionTest(unittest.TestCase):
         )
         self.assertEqual(len(entries), len({name for name, _ in entries}))
         lpx_entries = [
-            entry for entry in entries if entry[0] != YOUTUBE_MODULE_NAME
+            entry for entry in entries
+            if entry[0] != YOUTUBE_MODULE_NAME
+            and (not LIVE_UPSTREAM or entry[0] != "StartUpAds.sgmodule")
         ]
         source_jq_count = 0
         converted_jq_count = 0

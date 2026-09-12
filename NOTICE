@@ -1,4 +1,4 @@
-Generated Surge modules, except YouTube_remove_ads.sgmodule, are adaptations of
+Generated Surge modules, except YouTube_remove_ads.sgmodule and StartUpAds.sgmodule, are adaptations of
 Loon configuration templates from https://hub.kelee.one/ and retain the
 supplied author metadata and source URL. They are distributed for
 non-commercial use under CC BY-NC-SA 4.0:
@@ -8,6 +8,13 @@ YouTube_remove_ads.sgmodule and its mirrored scripts come from Maasea's
 Apache-2.0-licensed native Surge module. SelfSurge adds category metadata and
 replaces its script URLs with local mirrors. The upstream license is mirrored
 at resources/licenses/Maasea-sgmodule-LICENSE.
+
+StartUpAds.sgmodule is adapted from ddgksf2013's Quantumult X rewrite at
+https://ddgksf2013.top/rewrite/StartUpAds.conf (fetched with User-Agent: surge).
+It retains upstream attribution and supplements the existing modules, which
+take precedence for duplicate patterns and app hosts. Non-ad routing and
+TestFlight/membership tweaks are excluded. Upstream terms remain applicable;
+SelfSurge does not relicense this source.
 
 Files under scripts/ and resources/ are unmodified mirrors. Copyright and
 license terms remain with their respective upstream authors. sources.json

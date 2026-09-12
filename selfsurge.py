@@ -39,8 +39,8 @@ def plugin_url(value: str) -> str:
     return value
 
 
-def fetch_bytes(url: str) -> bytes:
-    request = Request(url, headers={"User-Agent": LOON_USER_AGENT})
+def fetch_bytes(url: str, user_agent: str = LOON_USER_AGENT) -> bytes:
+    request = Request(url, headers={"User-Agent": user_agent})
     error = None
     for _ in range(3):
         try:
