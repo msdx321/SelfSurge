@@ -761,7 +761,7 @@
   },
   {
     "category": "去广告",
-    "date": "2026-08-12 04:37:59",
+    "date": "2026-09-14 09:14:54",
     "description": "过滤哔哩哔哩广告、移除青少年模式弹窗和交互式弹幕、移除无用功能和链接跟踪参数，增加空降助手以便跳过视频中插入的广告。此插件仅建议iOS 15以上设备使用，且必须启用MitM-over-HTTP/2功能。\\n\\n空降助手是第三方提供的功能，依赖于Android版空降助手的服务器数据运作，可能会存在不准确或者失效的问题，此功能与哔哩哔哩官方无关。 注意：PROXY 规则需在 Surge 主配置中手动指定策略。",
     "file": "Bilibili_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Bilibili.png",
@@ -976,7 +976,7 @@
   },
   {
     "category": "去广告",
-    "date": "2026-09-04 18:10:18",
+    "date": "2026-09-11 00:35:13",
     "description": "移除开屏广告、弹窗广告、横幅推广，精简我的页面。",
     "file": "DiDi_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/DiDi.png",
@@ -2624,7 +2624,7 @@
   },
   {
     "category": "去广告",
-    "date": "2026-07-03 08:23:50",
+    "date": "2026-09-14 15:46:32",
     "description": "移除信息流广告、横幅广告、弹窗广告、皮肤配置、悬浮挂件、热门搜索，移除青少年模式，精简我的页面。",
     "file": "Zhibo8_remove_ads.sgmodule",
     "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Zhibo8.png",

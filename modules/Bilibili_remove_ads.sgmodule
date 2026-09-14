@@ -6,7 +6,7 @@
 #!system=ios
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Bilibili.png
-#!date=2026-08-12 04:37:59
+#!date=2026-09-14 09:14:54
 #!requirement=CORE_VERSION>=20
 #!arguments=displayUpList:show,purifyComment:true,optimizeRequest:true,sponsorBlock:false,logLevel:off
 #!arguments-desc=Loon 选项与策略已转为 Surge 自由输入；脚本参数按同名字段传入，具体格式见模块注释；enable 字段为 false 时脚本需立即退出。

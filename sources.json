@@ -338,11 +338,11 @@
       "url": "https://kelee.one/Resource/JavaScript/Bilibili/Bilibili_json_kokoryh.js"
     },
     "scripts/Bilibili/Bilibili_proto_request_kokoryh.js": {
-      "sha256": "96a516d6d72d61c295584a975027387870b79219e0c23b7485b7e8892b4261e9",
+      "sha256": "1b7e1d51efd960b10a22ea322630e72ecee646f2fdaad8a097c9e530fde1a857",
       "url": "https://kelee.one/Resource/JavaScript/Bilibili/Bilibili_proto_request_kokoryh.js"
     },
     "scripts/Bilibili/Bilibili_proto_response_kokoryh.js": {
-      "sha256": "e68042a18b2f89cd8e29258be9960c02692d691c184d678eb8d0f22d38809cea",
+      "sha256": "e4a8426cffbfca85c78286126a10813051a2d1aeed018119bbabe3db5da85728",
       "url": "https://kelee.one/Resource/JavaScript/Bilibili/Bilibili_proto_response_kokoryh.js"
     },
     "scripts/Bixin/common_tab.js": {
