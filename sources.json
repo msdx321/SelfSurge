@@ -178,8 +178,10 @@
     "modules/Script-Hub.sgmodule": "https://kelee.one/Tool/Loon/Lpx/Script-Hub.lpx",
     "modules/SeasunJX3_remove_ads.sgmodule": "https://kelee.one/Tool/Loon/Lpx/SeasunJX3_remove_ads.lpx",
     "modules/SevenCat_remove_ads.sgmodule": "https://kelee.one/Tool/Loon/Lpx/SevenCat_remove_ads.lpx",
+    "modules/ShandongSchool_remove_ads.sgmodule": "https://kelee.one/Tool/Loon/Lpx/ShandongSchool_remove_ads.lpx",
     "modules/ShopKeeperAdmin_remove_ads.sgmodule": "https://kelee.one/Tool/Loon/Lpx/ShopKeeperAdmin_remove_ads.lpx",
     "modules/ShouYinTongMerchant_remove_ads.sgmodule": "https://kelee.one/Tool/Loon/Lpx/ShouYinTongMerchant_remove_ads.lpx",
+    "modules/ShoujiDesk_remove_ads.sgmodule": "https://kelee.one/Tool/Loon/Lpx/ShoujiDesk_remove_ads.lpx",
     "modules/ShuQiCenterReader_remove_ads.sgmodule": "https://kelee.one/Tool/Loon/Lpx/ShuQiCenterReader_remove_ads.lpx",
     "modules/SinaStock_remove_ads.sgmodule": "https://kelee.one/Tool/Loon/Lpx/SinaStock_remove_ads.lpx",
     "modules/SkyworthDigitalPicamera_remove_ads.sgmodule": "https://kelee.one/Tool/Loon/Lpx/SkyworthDigitalPicamera_remove_ads.lpx",
@@ -496,6 +498,10 @@
     "scripts/RiskBird/RiskBird_remove_ads.js": {
       "sha256": "56a1c10a6422423845a8486fbc5deff60f37e6aa9e40fc439317e7e2c57fc9e2",
       "url": "https://kelee.one/Resource/JavaScript/RiskBird/RiskBird_remove_ads.js"
+    },
+    "scripts/ShoujiDesk/base_init.js": {
+      "sha256": "d588c5dae21ce09cb39617aa7abbd01cf976ec148083b45fc261fccccd67d68d",
+      "url": "https://kelee.one/Resource/JavaScript/ShoujiDesk/base_init.js"
     },
     "scripts/ShuQiCenterReader/ShuQiCenterReader_remove_ads.js": {
       "sha256": "aae03c4a577abdd6a9a77069ce6d16b327e5821afc6a85c8b689dcddf1b5f976",

@@ -4,7 +4,7 @@
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/Website_icon/120px/TencentAd.png
-#!date=2026-08-22 10:20:51
+#!date=2026-09-21 00:12:18
 
 # Source: https://kelee.one/Tool/Loon/Lpx/BlockAdvertisers.lpx
 # Adapted from Loon LPX to Surge module by SelfSurge.
@@ -327,6 +327,7 @@ DOMAIN-SUFFIX, hzjizhun.cn, REJECT-DROP
 DOMAIN-SUFFIX, hzjizhun.com, REJECT-DROP
 DOMAIN-SUFFIX, sogaha.cn, REJECT-DROP
 DOMAIN, zxid-m.mobileservice.cn, REJECT-DROP
+DOMAIN, xadsmartget.adgain.cn, REJECT-DROP
 DOMAIN-SUFFIX, tradplusad.com, REJECT-DROP
 DOMAIN-SUFFIX, fancyapi.com, REJECT-DROP
 DOMAIN-SUFFIX, medproad.com, REJECT-DROP

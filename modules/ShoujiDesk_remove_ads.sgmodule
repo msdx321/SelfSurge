@@ -1,0 +1,23 @@
+#!name=口袋壁纸去广告
+#!desc=移除悬浮广告，精简我的页面。
+#!category=去广告
+#!openUrl=https://apps.apple.com/app/id1462738233
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!homepage=https://hub.kelee.one
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/ShoujiDesk.png
+#!date=2026-09-15 23:26:38
+#!requirement=CORE_VERSION>=20
+
+# Source: https://kelee.one/Tool/Loon/Lpx/ShoujiDesk_remove_ads.lpx
+# Adapted from Loon LPX to Surge module by SelfSurge.
+# Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+[Map Local]
+(?i)^https:\/\/api\.tdz5\.com\/search\/hotword\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/api\.tdz5\.com\/ring\/hot\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
+
+[Script]
+移除首页广告配置 = type=http-response,pattern=(?i)^https:\/\/api\.tdz5\.com\/base\/init\?,script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/ShoujiDesk/base_init.js,requires-body=true
+
+[MITM]
+hostname = %APPEND% api.tdz5.com
