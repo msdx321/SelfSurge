@@ -227,105 +227,144 @@ def _loon_value(value: str):
         return value.strip('"\'')
 
 
+_JQ_TOKEN = re.compile(
+    r"\s+|\#[^\n]*|(?:[.$]?[A-Za-z_][A-Za-z_0-9]*)(?:::[A-Za-z_][A-Za-z_0-9]*)*"
+    r"|\?//|//=|//|[|+*/%=-]=|!=|<=|>=|\.\.|.",
+    re.DOTALL,
+)
+
+
+def _jq_tokens(value: str) -> list[str]:
+    """Keep fields, variables, operators and quoted strings as distinct tokens."""
+    tokens = []
+    index = 0
+    while index < len(value):
+        if value[index] != '"':
+            match = _JQ_TOKEN.match(value, index)
+            tokens.append(match[0])
+            index = match.end()
+            continue
+
+        start = index
+        index += 1
+        # A string may contain nested strings inside \(jq interpolation).
+        contexts = ['"']
+        while contexts and index < len(value):
+            char = value[index]
+            if contexts[-1] == '"':
+                if value.startswith(r"\(", index):
+                    contexts.append(")")
+                    index += 2
+                    continue
+                if char == "\\":
+                    index += 2
+                    continue
+                if char == '"':
+                    contexts.pop()
+            elif char == "#":
+                newline = value.find("\n", index)
+                index = len(value) if newline == -1 else newline
+                continue
+            elif char == '"':
+                contexts.append('"')
+            elif char == "(":
+                contexts.append(")")
+            elif char == ")":
+                contexts.pop()
+            index += 1
+        if contexts:
+            raise ValueError("unterminated JQ string or interpolation")
+        tokens.append(value[start:index])
+    return tokens
+
+
 def _normalize_jq(value: str) -> str:
     output = []
     conditions = []
-    in_string = False
-    escaped = False
-    index = 0
-
-    while index < len(value):
-        char = value[index]
-        if in_string:
-            output.append(char)
-            if escaped:
-                escaped = False
-            elif char == "\\":
-                escaped = True
-            elif char == '"':
-                in_string = False
-            index += 1
+    tokens = _jq_tokens(value)
+    significant = [
+        token for token in tokens
+        if not token.isspace() and not token.startswith("#")
+    ]
+    position = 0
+    for token in tokens:
+        if token.isspace() or token.startswith("#"):
+            output.append(token)
             continue
-        if char == '"':
-            in_string = True
-            output.append(char)
-            index += 1
-            continue
-        if not (char.isalpha() or char == "_"):
-            output.append(char)
-            index += 1
-            continue
-
-        end = index + 1
-        while end < len(value) and (
-            value[end].isalnum() or value[end] == "_"
+        previous = significant[position - 1] if position else None
+        position += 1
+        following = significant[position] if position < len(significant) else None
+        if (
+            token == ".end" and previous == "else" and conditions
+            and following in {None, ";", ")", "]", "}"}
         ):
-            end += 1
-        word = value[index:end]
+            # Legacy Loon filters use `else .end` at the end of a branch.
+            # Only split it where a real field access would leave if unclosed.
+            output.append(".")
+            token = "end"
+        object_key = following == ":" or (
+            previous in {"{", ","} and following in {"}", ","}
+        )
         keyword = False
-        if word == "if":
-            conditions.append(False)
-            keyword = True
-        elif word == "else" and conditions:
-            conditions[-1] = True
-            keyword = True
-        elif word == "end" and conditions:
-            if not conditions.pop():
-                output.append(" else . ")
-            keyword = True
-        elif word in {"then", "and", "or"} and conditions:
-            keyword = True
-
+        if not object_key:
+            if token == "if":
+                conditions.append(False)
+                keyword = True
+            elif token == "else" and conditions:
+                conditions[-1] = True
+                keyword = True
+            elif token == "end" and conditions:
+                if not conditions.pop():
+                    output.append(" else . ")
+                keyword = True
+            elif token in {"then", "elif", "and", "or"}:
+                keyword = True
         if keyword and output and not output[-1].isspace():
             output.append(" ")
-        output.append(word)
-        if keyword and end < len(value) and not value[end].isspace():
+        output.append(token)
+        if keyword:
             output.append(" ")
-        index = end
     return "".join(output).strip()
+
+
+def _jq_alternative_start(tokens: list[str]) -> int:
+    """Find the left operand of // without crossing lower-precedence syntax."""
+    closing = {")": "(", "]": "[", "}": "{", "end": "if"}
+    boundaries = {
+        "(", "[", "{", "|", ",", ";", ":", "//", "if", "then", "elif", "else"
+    }
+    nested = []
+    for index in range(len(tokens) - 1, -1, -1):
+        token = tokens[index]
+        if token in closing and (
+            token != "end" or not nested or nested[-1] == "if"
+        ):
+            nested.append(closing[token])
+        elif nested:
+            if token == nested[-1]:
+                nested.pop()
+        elif token in boundaries:
+            return index + 1
+    return 0
 
 
 def _surge_safe_jq(value: str) -> str:
     output = []
-    in_string = False
-    escaped = False
-    index = 0
-
-    while index < len(value):
-        char = value[index]
-        if in_string:
-            output.append(char)
-            if escaped:
-                escaped = False
-            elif char == "\\":
-                escaped = True
-            elif char == '"':
-                in_string = False
-            index += 1
-            continue
-        if char == '"':
-            in_string = True
-            output.append(char)
-            index += 1
-            continue
-        if char == "#":
-            index = value.find("\n", index)
-            if index == -1:
-                break
+    for token in _jq_tokens(value):
+        if token.isspace() or token.startswith("#"):
             if output and not output[-1].isspace():
                 output.append(" ")
-            index += 1
             continue
-        if char.isspace():
-            if output and not output[-1].isspace():
-                output.append(" ")
-            index += 1
-            continue
-        if char == ";" or value.startswith("//", index):
+        if token in {";", "//", "//="}:
             while output and output[-1].isspace():
                 output.pop()
-        output.append(char)
-        index += 1
+            if token == "//" and output and output[-1] == "?":
+                # Surge treats whitespace + // as an inline comment, but
+                # removing that whitespace creates jq's distinct ?// operator.
+                # Group the left operand instead, preserving its precedence.
+                output.insert(_jq_alternative_start(output), "(")
+                output.append(")")
+        output.append(token)
     return "".join(output).strip()
 
 
