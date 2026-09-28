@@ -4,7 +4,7 @@
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md], VirgilClyne[https://github.com/VirgilClyne]
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/Other_icon/120px/HTTPDNS.png
-#!date=2026-09-03 16:04:36
+#!date=2026-09-28 14:29:55
 #!requirement=CORE_VERSION>=20
 
 # Source: https://kelee.one/Tool/Loon/Lpx/Block_HTTPDNS.lpx
@@ -87,6 +87,11 @@ IP-CIDR, 203.107.1.0/24, REJECT-DROP, no-resolve
 DOMAIN, amdc.alipay.com, REJECT-DROP
 DOMAIN, ucdc.upaas.quark.cn, REJECT-DROP
 DOMAIN, httpdns.danuoyi.tbcache.com, REJECT-DROP
+URL-REGEX, "^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch", REJECT-DROP
+URL-REGEX, "^http:\/\/47\.246\.103\.9\/amdc\/mobileDispatch", REJECT-DROP
+URL-REGEX, "^http:\/\/47\.246\.103\.10\/amdc\/mobileDispatch", REJECT-DROP
+URL-REGEX, "^http:\/\/59\.82\.113\.10\/amdc\/mobileDispatch", REJECT-DROP
+URL-REGEX, "^http:\/\/59\.82\.113\.219\/amdc\/mobileDispatch", REJECT-DROP
 DOMAIN, httpdns.cctv.com, REJECT-DROP
 DOMAIN, httpdns-browser.platform.dbankcloud.cn, REJECT-DROP
 DOMAIN, httpdns.huaweicloud.com, REJECT-DROP

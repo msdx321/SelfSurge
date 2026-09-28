@@ -4,7 +4,7 @@
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/Website_icon/120px/TencentAd.png
-#!date=2026-09-21 00:12:18
+#!date=2026-09-23 11:35:33
 
 # Source: https://kelee.one/Tool/Loon/Lpx/BlockAdvertisers.lpx
 # Adapted from Loon LPX to Surge module by SelfSurge.
@@ -198,10 +198,10 @@ DOMAIN, df.tanx.com, REJECT-DROP
 DOMAIN, opehs.tanx.com, REJECT-DROP
 DOMAIN, beacon-api.aliyuncs.com, REJECT-DROP
 DOMAIN, adash.man.aliyuncs.com, REJECT-DROP
+DOMAIN, adashx.m.taobao.com, REJECT-DROP
 DOMAIN, applog.uc.cn, REJECT-DROP
 DOMAIN, atoken.m.taobao.com, REJECT-DROP
 AND, ((DOMAIN-KEYWORD, adash), (DOMAIN-SUFFIX, ut.taobao.com)), REJECT-DROP
-URL-REGEX, "^http:\/\/.+\/amdc\/mobileDispatch", REJECT-DROP
 DOMAIN, baichuan-sdk.alicdn.com, REJECT-DROP
 DOMAIN, acs4baichuan.m.taobao.com, REJECT-DROP
 DOMAIN, nbsdk-baichuan.alicdn.com, REJECT-DROP
