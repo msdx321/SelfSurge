@@ -5,20 +5,18 @@
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Wacai.png
-#!date=2026-06-30 22:54:46
+#!date=2026-10-02 13:57:49
 #!requirement=CORE_VERSION>=20
 
 # Source: https://kelee.one/Tool/Loon/Lpx/Wacai_remove_ads.lpx
 # Adapted from Loon LPX to Surge module by SelfSurge.
 # Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
-[URL Rewrite]
-^https:\/\/jz\.wacaijizhang\.com\/activity\/ _ reject
-
 [Map Local]
-^https:\/\/jz\.wacaijizhang\.com\/sensor\/config\/iOS\.conf\? data-type=base64 data="eyJ2IjoidjIiLCJjb25maWdzIjp7ImRpc2FibGVTREsiOnRydWUsImRpc2FibGVEZWJ1Z01vZGUiOnRydWUsInN1cHBvcnRUcmFuc3BvcnRFbmNyeXB0IjpmYWxzZX19" header="Content-Type:application/json" status-code=200
-^https:\/\/jz\.wacaijizhang\.com\/api\/banners\/ data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/jz\.wacaijizhang\.com\/api\/resource\/universal\/fetch$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/jz\.wacaijizhang\.com\/sensor\/config\/iOS\.conf\? data-type=base64 data="eyJ2IjoidjIiLCJjb25maWdzIjp7ImRpc2FibGVTREsiOnRydWUsImRpc2FibGVEZWJ1Z01vZGUiOnRydWUsInN1cHBvcnRUcmFuc3BvcnRFbmNyeXB0IjpmYWxzZX19" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/jz\.wacaijizhang\.com\/api\/banners\/ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/jz\.wacaijizhang\.com\/api\/resource\/universal\/fetch$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/jz\.wacaijizhang\.com\/activity\/ data-type=text data="" status-code=404
 
 [MITM]
 hostname = %APPEND% jz.wacaijizhang.com

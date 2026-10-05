@@ -5,7 +5,7 @@
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/LOL_Bible.png
-#!date=2026-06-01 17:11:35
+#!date=2026-10-02 13:57:49
 #!requirement=CORE_VERSION>=20
 
 # Source: https://kelee.one/Tool/Loon/Lpx/LOL_Bible_remove_ads.lpx
@@ -13,12 +13,12 @@
 # Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Map Local]
-^https:\/\/mlol\.qt\.qq\.com\/go\/recommend\/platstrongshell\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/mlol\.qt\.qq\.com\/go\/club\/match\/get_ai_search_words$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/mlol\.qt\.qq\.com\/go\/mlol_news\/search\/varcache_hotV\d\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/mlol\.qt\.qq\.com\/go\/customize_search\/article_rank_tab\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/mlol\.qt\.qq\.com\/go\/customize_search\/article_rank\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/mlol\.qt\.qq\.com\/go\/zone\/bottomtab_tip\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/mlol\.qt\.qq\.com\/go\/recommend\/platstrongshell\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/mlol\.qt\.qq\.com\/go\/club\/match\/get_ai_search_words$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/mlol\.qt\.qq\.com\/go\/mlol_news\/search\/varcache_hotV\d\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/mlol\.qt\.qq\.com\/go\/customize_search\/article_rank_tab\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/mlol\.qt\.qq\.com\/go\/customize_search\/article_rank\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/mlol\.qt\.qq\.com\/go\/zone\/bottomtab_tip\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
 
 [MITM]
 hostname = %APPEND% mlol.qt.qq.com

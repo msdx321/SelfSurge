@@ -5,7 +5,7 @@
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/PiPiXia.png
-#!date=2026-06-01 17:11:35
+#!date=2026-10-02 13:57:49
 #!requirement=CORE_VERSION>=20
 
 # Source: https://kelee.one/Tool/Loon/Lpx/PiPiXia_remove_ads.lpx
@@ -13,13 +13,13 @@
 # Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Map Local]
-^https:\/\/api(5-lq)?\.pipix\.com\/api\/ad\/ data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/api(5-lq)?\.pipix\.com\/bds\/banner\/ data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/api(5-lq)?\.pipix\.com\/bds\/feed\/follow_feed\/ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/api(5-lq)?\.pipix\.com\/api\/ad\/ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/api(5-lq)?\.pipix\.com\/bds\/banner\/ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/api(5-lq)?\.pipix\.com\/bds\/feed\/follow_feed\/ data-type=text data="{}" header="Content-Type:application/json" status-code=200
 
 [Body Rewrite]
-http-response-jq ^https:\/\/api(5-lq)?\.pipix\.com\/bds\/feed\/stream\/v2\/ '.data.data |= map(select(has("ad_info") | not))'
-http-response-jq ^https:\/\/api(5-lq)?\.pipix\.com\/bds\/user\/check_in\/ '.data.profile_entrances |= map(select(.title != "放心借" and .title != "洋钱罐借款")) | del(.data.pet_interface_message)'
+http-response-jq (?i)^https:\/\/api(5-lq)?\.pipix\.com\/bds\/feed\/stream\/v2\/ '.data.data |= map(select(has("ad_info") | not))'
+http-response-jq (?i)^https:\/\/api(5-lq)?\.pipix\.com\/bds\/user\/check_in\/ '.data.profile_entrances |= map(select(.title != "放心借" and .title != "洋钱罐借款")) | del(.data.pet_interface_message)'
 
 [MITM]
 hostname = %APPEND% api.pipix.com, api5-lq.pipix.com

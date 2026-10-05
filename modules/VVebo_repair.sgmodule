@@ -5,18 +5,18 @@
 #!author=suiyuran[https://github.com/suiyuran], androidcn[https://github.com/androidcn]
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/VVebo.png
-#!date=2026-06-01 17:11:35
+#!date=2026-10-02 13:57:49
 
 # Source: https://kelee.one/Tool/Loon/Lpx/VVebo_repair.lpx
 # Adapted from Loon LPX to Surge module by SelfSurge.
 # Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Script]
-修复时间线 = type=http-request,pattern=^https:\/\/api\.weibo\.cn\/2\/users\/show\?,script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/VVebo/VVebo_repair.js
-修复时间线 2 = type=http-request,pattern=^https:\/\/api\.weibo\.cn\/2\/statuses\/user_timeline\?,script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/VVebo/VVebo_repair.js
-修复时间线 3 = type=http-request,pattern=^https:\/\/api\.weibo\.cn\/2\/remind\/unread_count\?,script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/VVebo/VVebo_repair.js
-修复时间线 4 = type=http-response,pattern=^https:\/\/api\.weibo\.cn\/2\/profile\/statuses\/tab\?,script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/VVebo/VVebo_repair.js,requires-body=true
-修复我的页面 = type=http-response,pattern=^https:\/\/api\.weibo\.cn\/2\/cardlist\?,script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/VVebo/VVebo_repair.js,requires-body=true
+修复时间线 = type=http-request,pattern=(?i)^https:\/\/api\.weibo\.cn\/2\/users\/show\?,script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/VVebo/VVebo_repair.js
+修复时间线 2 = type=http-request,pattern=(?i)^https:\/\/api\.weibo\.cn\/2\/statuses\/user_timeline\?,script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/VVebo/VVebo_repair.js
+修复时间线 3 = type=http-request,pattern=(?i)^https:\/\/api\.weibo\.cn\/2\/remind\/unread_count\?,script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/VVebo/VVebo_repair.js
+修复时间线 4 = type=http-response,pattern=(?i)^https:\/\/api\.weibo\.cn\/2\/profile\/statuses\/tab\?,script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/VVebo/VVebo_repair.js,requires-body=true
+修复我的页面 = type=http-response,pattern=(?i)^https:\/\/api\.weibo\.cn\/2\/cardlist\?,script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/VVebo/VVebo_repair.js,requires-body=true
 
 [MITM]
 hostname = %APPEND% api.weibo.cn

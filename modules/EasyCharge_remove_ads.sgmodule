@@ -5,7 +5,7 @@
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/EasyCharge.png
-#!date=2026-07-02 18:48:17
+#!date=2026-10-02 13:57:49
 #!requirement=CORE_VERSION>=20
 
 # Source: https://kelee.one/Tool/Loon/Lpx/EasyCharge_remove_ads.lpx
@@ -16,12 +16,12 @@
 DOMAIN, adash-evone.echargenet.com, REJECT-DROP
 
 [Map Local]
-^https:\/\/aserver-evone\.echargenet\.com\/orange\/datacenter\/snapshot-meta\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/api-evone\.echargenet\.com\/gw\/evone\.echargeapi\.open\.ad\.getadmaterials\/ data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/api-evone\.echargenet\.com\/gw\/evone\.appsns\.open\.efriend\.topic\.listrecommenttopic\/ data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/api-evone\.echargenet\.com\/gw\/evone\.appsns\.open\.efriend\.post\.listapppost\/ data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/api-evone\.echargenet\.com\/gw\/evone\.appsns\.open\.merchant\.merchant\.list\/ data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/api-evone\.echargenet\.com\/gw\/evone\.appsns\.open\.merchant\.news\.pagelistapp\/ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/aserver-evone\.echargenet\.com\/orange\/datacenter\/snapshot-meta\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/api-evone\.echargenet\.com\/gw\/evone\.echargeapi\.open\.ad\.getadmaterials\/ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/api-evone\.echargenet\.com\/gw\/evone\.appsns\.open\.efriend\.topic\.listrecommenttopic\/ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/api-evone\.echargenet\.com\/gw\/evone\.appsns\.open\.efriend\.post\.listapppost\/ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/api-evone\.echargenet\.com\/gw\/evone\.appsns\.open\.merchant\.merchant\.list\/ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/api-evone\.echargenet\.com\/gw\/evone\.appsns\.open\.merchant\.news\.pagelistapp\/ data-type=text data="{}" header="Content-Type:application/json" status-code=200
 
 [MITM]
 hostname = %APPEND% aserver-evone.echargenet.com, api-evone.echargenet.com

@@ -5,7 +5,7 @@
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Telegram.png
-#!date=2026-08-03 15:27:21
+#!date=2026-10-02 13:57:49
 #!arguments=app:tg
 #!arguments-desc=Loon 选项与策略已转为 Surge 自由输入；脚本参数按同名字段传入，具体格式见模块注释；enable 字段为 false 时脚本需立即退出。
 

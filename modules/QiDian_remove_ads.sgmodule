@@ -5,7 +5,7 @@
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/QiDian.png
-#!date=2026-06-01 17:11:35
+#!date=2026-10-02 13:57:49
 #!requirement=CORE_VERSION>=20
 
 # Source: https://kelee.one/Tool/Loon/Lpx/QiDian_remove_ads.lpx
@@ -13,25 +13,25 @@
 # Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Map Local]
-^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v4\/client\/getsplashscreen\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/adv\/ data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/ywab\.reader\.qq\.com\/user\/experiments\/v2\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/checkin\/simpleinfo\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/push\/getdialog\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/message\/getpushedmessagelist$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/maintain\/playstrip$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/dailyrecommend\/recommendBook\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/freshman\/bookshelfbtn$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/bookshelf\/getTopOperation$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/booksearch\/hotWords\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/followsubscribe\/showChapterEndModule\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/young\/getconf$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v4\/client\/getsplashscreen\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/adv\/ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/ywab\.reader\.qq\.com\/user\/experiments\/v2\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/checkin\/simpleinfo\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/push\/getdialog\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/message\/getpushedmessagelist$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/maintain\/playstrip$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/dailyrecommend\/recommendBook\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/freshman\/bookshelfbtn$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/bookshelf\/getTopOperation$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/booksearch\/hotWords\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/followsubscribe\/showChapterEndModule\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/young\/getconf$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
 
 [Body Rewrite]
-http-response-jq ^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/client\/getconf$ 'reduce [[["Data","WolfEye"],["Data"],"WolfEye",0],[["Data","CloudSetting","TeenShowFreq"],["Data","CloudSetting"],"TeenShowFreq",0]][] as $item (.;. as $before | try (if (getpath($item[1]) | has($item[2])) then setpath($item[0];$item[3]) else . end) catch $before)'
-http-response-jq ^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/client\/getconf$ 'reduce [["Data","ActivityPageBackPushNoticeFrequency"],["Data","ActivityIcon"],["Data","ActivityPopup"],["Data","LuckBag"]][] as $path (.;. as $before | try delpaths([$path]) catch $before)'
-http-response-jq ^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v2\/dailyrecommend\/getdailyrecommend\? 'reduce [[["Data","Items"],["Data"],"Items",[]]][] as $item (.;. as $before | try (if (getpath($item[1]) | has($item[2])) then setpath($item[0];$item[3]) else . end) catch $before)'
-http-response-jq ^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v3\/user\/getaccountpage\? 'reduce [["Data","BenefitButtonList"]][] as $path (.;. as $before | try delpaths([$path]) catch $before)'
+http-response-jq (?i)^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/client\/getconf$ 'reduce [[["Data","WolfEye"],["Data"],"WolfEye",0],[["Data","CloudSetting","TeenShowFreq"],["Data","CloudSetting"],"TeenShowFreq",0]][] as $item (.;. as $before | try (if (getpath($item[1]) | has($item[2])) then setpath($item[0];$item[3]) else . end) catch $before)'
+http-response-jq (?i)^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/client\/getconf$ 'reduce [["Data","ActivityPageBackPushNoticeFrequency"],["Data","ActivityIcon"],["Data","ActivityPopup"],["Data","LuckBag"]][] as $path (.;. as $before | try delpaths([$path]) catch $before)'
+http-response-jq (?i)^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v2\/dailyrecommend\/getdailyrecommend\? 'reduce [[["Data","Items"],["Data"],"Items",[]]][] as $item (.;. as $before | try (if (getpath($item[1]) | has($item[2])) then setpath($item[0];$item[3]) else . end) catch $before)'
+http-response-jq (?i)^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v3\/user\/getaccountpage\? 'reduce [["Data","BenefitButtonList"]][] as $path (.;. as $before | try delpaths([$path]) catch $before)'
 
 [MITM]
 hostname = %APPEND% magev6.if.qidian.com, ywab.reader.qq.com

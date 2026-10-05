@@ -5,7 +5,7 @@
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/KuGou.png
-#!date=2026-06-01 17:11:35
+#!date=2026-10-02 13:57:49
 #!requirement=CORE_VERSION>=20
 
 # Source: https://kelee.one/Tool/Loon/Lpx/KuGou_remove_ads.lpx
@@ -24,24 +24,24 @@ DOMAIN, splashimgretrybssdl.cloud.kugou.com, REJECT-DROP
 URL-REGEX, "^http:\/\/log\.stat\.kugou\.com\/mobile\/ad\.html", REJECT-DROP
 
 [Map Local]
-^https:\/\/fx\.service\.kugou\.com\/mfx-kugoulive\/ad\/ data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/gateway(retry)?\.kugou\.com\/adp\/ad\/ data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/gateway(retry)?\.kugou\.com\/ads\.gateway\/ data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/gateway(retry)?\.kugou\.com\/v\d\/feeds\/follow_feed_fallback data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/gateway(retry)?\.kugou\.com\/mstc\/musicsymbol\/v\d\/system\/profile data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/gateway(retry)?\.kugou\.com\/searchnofocus\/v\d\/search_no_focus_word data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/gateway(retry)?\.kugou\.com\/adp\/bubble\/v\d\/song_play data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/gateway(retry)?\.kugou\.com\/singerdiscuss\/v\d\/entrance\/comment data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/gateway(retry)?\.kugou\.com\/r\/v\d\/general\/putin\/midad data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/gateway(retry)?\.kugou\.com\/ocean\/v\d\/sound\/banner data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/gzacshow\.kugou\.com\/mfanxing-home\/cdn\/room\/index\/list_v2 data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/gzacshow\.kugou\.com\/mfx-rt-show\/cdn\/mo\/show\/headline data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/m1fxgroup\.kugou\.com\/fxsing\/yqc\/alongInfo\/getUserAlongInfo data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/hwstore\.kugou\.com\/v\d\/get_store_data data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/ep\.kugou\.com\/v\d\/album_shop\/get_entrance_info data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/fx\.service\.kugou\.com\/mfx-kugoulive\/ad\/ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/gateway(retry)?\.kugou\.com\/adp\/ad\/ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/gateway(retry)?\.kugou\.com\/ads\.gateway\/ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/gateway(retry)?\.kugou\.com\/v\d\/feeds\/follow_feed_fallback data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/gateway(retry)?\.kugou\.com\/mstc\/musicsymbol\/v\d\/system\/profile data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/gateway(retry)?\.kugou\.com\/searchnofocus\/v\d\/search_no_focus_word data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/gateway(retry)?\.kugou\.com\/adp\/bubble\/v\d\/song_play data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/gateway(retry)?\.kugou\.com\/singerdiscuss\/v\d\/entrance\/comment data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/gateway(retry)?\.kugou\.com\/r\/v\d\/general\/putin\/midad data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/gateway(retry)?\.kugou\.com\/ocean\/v\d\/sound\/banner data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/gzacshow\.kugou\.com\/mfanxing-home\/cdn\/room\/index\/list_v2 data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/gzacshow\.kugou\.com\/mfx-rt-show\/cdn\/mo\/show\/headline data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/m1fxgroup\.kugou\.com\/fxsing\/yqc\/alongInfo\/getUserAlongInfo data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/hwstore\.kugou\.com\/v\d\/get_store_data data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/ep\.kugou\.com\/v\d\/album_shop\/get_entrance_info data-type=text data="{}" header="Content-Type:application/json" status-code=200
 
 [Body Rewrite]
-http-response-jq ^https:\/\/gateway(retry)?\.kugou\.com\/ocean\/v\d\/tab\/list_v\d 'def namesToRemove:["AI帮唱","长相思2","K歌","小说","游戏"];def removeParentIfNameMatches: if type=="object" then with_entries(select(.value|(type=="object" and .name as $name|$name|IN(namesToRemove[])|not)))|map_values(removeParentIfNameMatches) else . end;removeParentIfNameMatches'
+http-response-jq (?i)^https:\/\/gateway(retry)?\.kugou\.com\/ocean\/v\d\/tab\/list_v\d 'def namesToRemove:["AI帮唱","长相思2","K歌","小说","游戏"];def removeParentIfNameMatches: if type=="object" then with_entries(select(.value|(type=="object" and .name as $name|$name|IN(namesToRemove[])|not)))|map_values(removeParentIfNameMatches) else . end;removeParentIfNameMatches'
 
 [MITM]
 hostname = %APPEND% gateway.kugou.com, fx.service.kugou.com, hwstore.kugou.com, ep.kugou.com, gatewayretry.kugou.com, gzacshow.kugou.com, m1fxgroup.kugou.com

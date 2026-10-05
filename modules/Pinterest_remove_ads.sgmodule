@@ -5,7 +5,7 @@
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Pinterest.png
-#!date=2026-06-01 17:11:35
+#!date=2026-10-02 13:57:49
 #!requirement=CORE_VERSION>=20
 
 # Source: https://kelee.one/Tool/Loon/Lpx/Pinterest_remove_ads.lpx
@@ -13,8 +13,8 @@
 # Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Body Rewrite]
-http-response-jq ^https:\/\/api\.pinterest\.com\/v\d\/feeds\/home\/\? '.data |= map(select(.is_promoted == false or .is_promoted == "false"))'
-http-response-jq ^https:\/\/api\.pinterest\.com\/v\d\/pins\/\d+\/related\/modules\/\? '.data |= map(select(.is_promoted == false or .is_promoted == "false"))'
+http-response-jq (?i)^https:\/\/api\.pinterest\.com\/v\d\/feeds\/home\/\? '.data |= map(select(.is_promoted == false or .is_promoted == "false"))'
+http-response-jq (?i)^https:\/\/api\.pinterest\.com\/v\d\/pins\/\d+\/related\/modules\/\? '.data |= map(select(.is_promoted == false or .is_promoted == "false"))'
 
 [MITM]
 hostname = %APPEND% api.pinterest.com

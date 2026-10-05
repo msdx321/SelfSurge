@@ -5,7 +5,7 @@
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/MeituMYXJ.png
-#!date=2026-06-01 17:11:35
+#!date=2026-10-02 13:57:49
 #!requirement=CORE_VERSION>=20
 
 # Source: https://kelee.one/Tool/Loon/Lpx/MeituMYXJ_remove_ads.lpx
@@ -16,15 +16,15 @@
 DOMAIN, adui.tg.meitu.com, REJECT-DROP
 
 [Map Local]
-^https:\/\/api\.meiyan\.com\/operation\/home_banner\.json\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/api\.meiyan\.com\/vip\/permission_update_popup\.json\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/api\.meiyan\.com\/operation\/home_banner\.json\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/api\.meiyan\.com\/vip\/permission_update_popup\.json\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
 
 [Body Rewrite]
-http-response-jq ^https:\/\/api\.meiyan\.com\/operation\/get_config\.json\? 'reduce [["response","time_limit"],["response","bubble"],["response","person_center"]][] as $path (.;. as $before | try delpaths([$path]) catch $before)'
-http-response-jq ^https:\/\/api\.meiyan\.com\/operation\/get_config\.json\? 'reduce [[["response","function_pop","meiyan_style","is_pop"],["response","function_pop","meiyan_style"],"is_pop",false],[["response","onoff","vip_half_window_exit_remain_popup","open"],["response","onoff","vip_half_window_exit_remain_popup"],"open",0],[["response","onoff","vip_home_exit_remain_popup"],["response","onoff"],"vip_home_exit_remain_popup",0]][] as $item (.;. as $before | try (if (getpath($item[1]) | has($item[2])) then setpath($item[0];$item[3]) else . end) catch $before)'
+http-response-jq (?i)^https:\/\/api\.meiyan\.com\/operation\/get_config\.json\? 'reduce [["response","time_limit"],["response","bubble"],["response","person_center"]][] as $path (.;. as $before | try delpaths([$path]) catch $before)'
+http-response-jq (?i)^https:\/\/api\.meiyan\.com\/operation\/get_config\.json\? 'reduce [[["response","function_pop","meiyan_style","is_pop"],["response","function_pop","meiyan_style"],"is_pop",false],[["response","onoff","vip_half_window_exit_remain_popup","open"],["response","onoff","vip_half_window_exit_remain_popup"],"open",0],[["response","onoff","vip_home_exit_remain_popup"],["response","onoff"],"vip_home_exit_remain_popup",0]][] as $item (.;. as $before | try (if (getpath($item[1]) | has($item[2])) then setpath($item[0];$item[3]) else . end) catch $before)'
 
 [Script]
-精简首页功能栏目并移除美颜推荐 = type=http-response,pattern=^https:\/\/api\.meiyan\.com\/operation\/home\.json\?,script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/MeituMYXJ/MeituMYXJ_remove_ads.js,requires-body=true
+精简首页功能栏目并移除美颜推荐 = type=http-response,pattern=(?i)^https:\/\/api\.meiyan\.com\/operation\/home\.json\?,script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/MeituMYXJ/MeituMYXJ_remove_ads.js,requires-body=true
 
 [MITM]
 hostname = %APPEND% api.meiyan.com

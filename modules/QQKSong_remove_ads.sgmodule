@@ -5,7 +5,7 @@
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/QQKSong.png
-#!date=2026-06-01 17:11:35
+#!date=2026-10-02 13:57:49
 #!requirement=CORE_VERSION>=20
 
 # Source: https://kelee.one/Tool/Loon/Lpx/QQKSong_remove_ads.lpx
@@ -48,14 +48,12 @@ DOMAIN-SUFFIX, ugdtimg.com, REJECT-DROP
 IP-CIDR, 47.110.187.87/32, REJECT-DROP, no-resolve
 URL-REGEX, "^http:\/\/y\.gtimg\.cn\/music\/common\/upload\/t_k_main_page_banner\/", REJECT-DROP
 
-[URL Rewrite]
-^https:\/\/tmeadkg\.y\.qq\.com\/maproxy\/getAd$ _ reject
-
 [Map Local]
-^https:\/\/wallpaper-\d+\.file\.myqcloud\.com\/dsl\/ data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https?:\/\/wallpaper-\d+\.file\.myqcloud\.com\/hikari\/ data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/amsweb-cdn-\S+-\d+\.file\.myqcloud\.com\/video\/ad_profile\/ data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/wnsaviator\.kg\.qq\.com\/wnsaviator\/api\/v1\/transMerge\?_webcgikey=get_activity_entry$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/wallpaper-\d+\.file\.myqcloud\.com\/dsl\/ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https?:\/\/wallpaper-\d+\.file\.myqcloud\.com\/hikari\/ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/amsweb-cdn-\S+-\d+\.file\.myqcloud\.com\/video\/ad_profile\/ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/tmeadkg\.y\.qq\.com\/maproxy\/getAd$ data-type=text data="" status-code=404
+(?i)^https:\/\/wnsaviator\.kg\.qq\.com\/wnsaviator\/api\/v1\/transMerge\?_webcgikey=get_activity_entry$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
 
 [MITM]
 hostname = %APPEND% wallpaper-1258344696.file.myqcloud.com, amsweb-cdn-*-1258344696.file.myqcloud.com, wnsaviator.kg.qq.com, tmeadkg.y.qq.com

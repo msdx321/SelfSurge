@@ -5,7 +5,7 @@
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/MeiRiSaiChe.png
-#!date=2026-07-02 20:41:31
+#!date=2026-10-02 13:57:49
 #!requirement=CORE_VERSION>=20
 
 # Source: https://kelee.one/Tool/Loon/Lpx/MeiRiSaiChe_remove_ads.lpx
@@ -13,8 +13,8 @@
 # Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Body Rewrite]
-http-response-jq ^https:\/\/api\.romielf\.com\/index\/indexv\d\? 'reduce [[["data","advertisement"],["data"],"advertisement",[]],[["data","listadvertising"],["data"],"listadvertising",[]]][] as $item (.;. as $before | try (if (getpath($item[1]) | has($item[2])) then setpath($item[0];$item[3]) else . end) catch $before)'
-http-response-jq ^https:\/\/api\.romielf\.com\/index\/indexv\d\? '.data.list |= map(select(.type == 1))'
+http-response-jq (?i)^https:\/\/api\.romielf\.com\/index\/indexv\d\? 'reduce [[["data","advertisement"],["data"],"advertisement",[]],[["data","listadvertising"],["data"],"listadvertising",[]]][] as $item (.;. as $before | try (if (getpath($item[1]) | has($item[2])) then setpath($item[0];$item[3]) else . end) catch $before)'
+http-response-jq (?i)^https:\/\/api\.romielf\.com\/index\/indexv\d\? '.data.list |= map(select(.type == 1))'
 
 [MITM]
 hostname = %APPEND% api.romielf.com

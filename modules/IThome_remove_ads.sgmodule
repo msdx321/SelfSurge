@@ -5,7 +5,8 @@
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/IThome.png
-#!date=2026-06-01 17:11:35
+#!date=2026-10-02 13:57:49
+#!requirement=CORE_VERSION>=20
 #!arguments=removePinnedArticles:false,removeAllBanners:false
 #!arguments-desc=Loon 选项与策略已转为 Surge 自由输入；脚本参数按同名字段传入，具体格式见模块注释；enable 字段为 false 时脚本需立即退出。
 
@@ -16,12 +17,12 @@
 # Surge 参数 removePinnedArticles：默认 false；可选 false | true；移除置顶文章；启用后将移除置顶文章
 # Surge 参数 removeAllBanners：默认 false；可选 false | true；移除全部横幅；启用后将移除全部横幅
 
-[URL Rewrite]
-^https?:\/\/dat\.ruanmei\.com\/ithome\/money\/acd\.json$ _ reject
+[Map Local]
+(?i)^https?:\/\/dat\.ruanmei\.com\/ithome\/money\/acd\.json$ data-type=text data="" status-code=404
 
 [Script]
 # Surge $argument 为字符串；上游脚本需先执行 JSON.parse($argument) 再读取同名字段。
-IT之家去广告 = type=http-response,pattern=^https:\/\/napi\.ithome\.com\/api\/(news\/indexv2\/iphone\/\d+|topmenu\/getfeeds\?),script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/IThome/IThome_remove_ads.js,requires-body=true,argument="{\"removeAllBanners\":{{{removeAllBanners}}},\"removePinnedArticles\":{{{removePinnedArticles}}}}"
+IT之家去广告 = type=http-response,pattern=(?i)^https:\/\/napi\.ithome\.com\/api\/(news\/indexv2\/iphone\/\d+|topmenu\/getfeeds\?),script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/IThome/IThome_remove_ads.js,requires-body=true,argument="{\"removeAllBanners\":{{{removeAllBanners}}},\"removePinnedArticles\":{{{removePinnedArticles}}}}"
 
 [MITM]
 hostname = %APPEND% napi.ithome.com, api.zuihuimai.com, dat.ruanmei.com

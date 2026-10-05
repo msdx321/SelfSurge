@@ -5,7 +5,7 @@
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/BodianMusic.png
-#!date=2026-06-01 17:11:35
+#!date=2026-10-02 13:57:49
 #!requirement=CORE_VERSION>=20
 
 # Source: https://kelee.one/Tool/Loon/Lpx/BodianMusic_remove_ads.lpx
@@ -13,28 +13,28 @@
 # Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Map Local]
-^https:\/\/bd-api\.kuwo\.cn\/api\/(play|service|advert)\/advert\/ data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/bd-api\.kuwo\.cn\/api\/service\/banner\/ data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/bd-api\.kuwo\.cn\/api\/ucenter\/vip\/give\/config\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/bd-api\.kuwo\.cn\/api\/service\/home\/module\?.*&moduleId=6 data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/bd-api\.kuwo\.cn\/api\/pay\/vip\/lowPriceText\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/bd-api\.kuwo\.cn\/api\/service\/global\/config\/vipEnter\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/bd-api\.kuwo\.cn\/api\/popup\/ data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/bd-api\.kuwo\.cn\/api\/pay\/vip\/invitation\/swell\/popup\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/bd-api\.kuwo\.cn\/api\/service\/version\/popup\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/bd-api\.kuwo\.cn\/api\/pay\/vip\/invitation\/assist\/popup\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/bd-api\.kuwo\.cn\/api\/pay\/h5\/common\/popup\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/bd-api\.kuwo\.cn\/api\/(play|service|advert)\/advert\/ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/bd-api\.kuwo\.cn\/api\/service\/banner\/ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/bd-api\.kuwo\.cn\/api\/ucenter\/vip\/give\/config\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/bd-api\.kuwo\.cn\/api\/service\/home\/module\?.*&moduleId=6 data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/bd-api\.kuwo\.cn\/api\/pay\/vip\/lowPriceText\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/bd-api\.kuwo\.cn\/api\/service\/global\/config\/vipEnter\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/bd-api\.kuwo\.cn\/api\/popup\/ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/bd-api\.kuwo\.cn\/api\/pay\/vip\/invitation\/swell\/popup\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/bd-api\.kuwo\.cn\/api\/service\/version\/popup\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/bd-api\.kuwo\.cn\/api\/pay\/vip\/invitation\/assist\/popup\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/bd-api\.kuwo\.cn\/api\/pay\/h5\/common\/popup\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
 
 [Body Rewrite]
-http-response-jq ^https:\/\/bd-api\.kuwo\.cn\/api\/service\/conf\/all\? 'reduce [["data","groupSign","adStartAppDialog"],["data","groupSign","adGuideTest"],["data","groupSign","playTips"],["data","groupSign","adExitChange"],["data","conf","adGuidePopCount"],["data","conf","adDownListOpen"]][] as $path (.;. as $before | try delpaths([$path]) catch $before)'
-http-response-jq ^https:\/\/bd-api\.kuwo\.cn\/api\/service\/conf\/all\? 'reduce [[["data","conf","flowControlConfig","uploadEnable"],["data","conf","flowControlConfig"],"uploadEnable",false],[["data","conf","flowControlConfig","p2pEnable"],["data","conf","flowControlConfig"],"p2pEnable",false]][] as $item (.;. as $before | try (if (getpath($item[1]) | has($item[2])) then setpath($item[0];$item[3]) else . end) catch $before)'
-http-response-jq ^https:\/\/ab-bodian\.kuwo\.cn\/abtest\/ui\/info\? 'reduce [["data","mapTestInfo","CommentADPosition"],["data","mapTestInfo","DiscoverADPosition"],["data","mapTestInfo","DownloadAd"],["data","mapTestInfo","FreeModVoiceReminder"],["data","mapTestInfo","GamesTrans"],["data","mapTestInfo","bodianmvdialog"],["data","mapTestInfo","MvTryShowAds"],["data","mapTestInfo","insert"]][] as $path (.;. as $before | try delpaths([$path]) catch $before)'
-http-response-jq ^https:\/\/bd-api\.kuwo\.cn\/api\/service\/global\/config\/scene\? 'reduce [["data","iosP2PCacheEnable"],["data","warmStartDialog"],["data","adsNotFinishVipPop4DayInterval"]][] as $path (.;. as $before | try delpaths([$path]) catch $before)'
-http-response-jq ^https:\/\/bd-api\.kuwo\.cn\/api\/service\/global\/config\/scene\? 'reduce [[["data","showShopEntry"],["data"],"showShopEntry",false],[["data","iosP2pEnableSendDataLimit"],["data"],"iosP2pEnableSendDataLimit",1]][] as $item (.;. as $before | try (if (getpath($item[1]) | has($item[2])) then setpath($item[0];$item[3]) else . end) catch $before)'
-http-response-jq ^https:\/\/bd-api\.kuwo\.cn\/api\/search\/topic\/word\/list\? 'reduce [["data","hotTopic"],["data","searchFind"],["data","globalJumpInfo"],["data","hotWord"]][] as $path (.;. as $before | try delpaths([$path]) catch $before)'
-http-response-jq ^https:\/\/bd-api\.kuwo\.cn\/api\/service\/home\/index\? '.data.moduleList |= map(select(.type | tostring | (. != "8" and . != "1")))'
-http-response-jq ^https:\/\/bd-api\.kuwo\.cn\/api\/service\/music\/recommendList\? '.data.musicList[] |= del(.showAd)'
-http-response-jq ^https:\/\/bd-api\.kuwo\.cn\/api\/comments\/v3\/topInfo\? 'reduce [["data","putao"],["data","bannerVos"]][] as $path (.;. as $before | try delpaths([$path]) catch $before)'
+http-response-jq (?i)^https:\/\/bd-api\.kuwo\.cn\/api\/service\/conf\/all\? 'reduce [["data","groupSign","adStartAppDialog"],["data","groupSign","adGuideTest"],["data","groupSign","playTips"],["data","groupSign","adExitChange"],["data","conf","adGuidePopCount"],["data","conf","adDownListOpen"]][] as $path (.;. as $before | try delpaths([$path]) catch $before)'
+http-response-jq (?i)^https:\/\/bd-api\.kuwo\.cn\/api\/service\/conf\/all\? 'reduce [[["data","conf","flowControlConfig","uploadEnable"],["data","conf","flowControlConfig"],"uploadEnable",false],[["data","conf","flowControlConfig","p2pEnable"],["data","conf","flowControlConfig"],"p2pEnable",false]][] as $item (.;. as $before | try (if (getpath($item[1]) | has($item[2])) then setpath($item[0];$item[3]) else . end) catch $before)'
+http-response-jq (?i)^https:\/\/ab-bodian\.kuwo\.cn\/abtest\/ui\/info\? 'reduce [["data","mapTestInfo","CommentADPosition"],["data","mapTestInfo","DiscoverADPosition"],["data","mapTestInfo","DownloadAd"],["data","mapTestInfo","FreeModVoiceReminder"],["data","mapTestInfo","GamesTrans"],["data","mapTestInfo","bodianmvdialog"],["data","mapTestInfo","MvTryShowAds"],["data","mapTestInfo","insert"]][] as $path (.;. as $before | try delpaths([$path]) catch $before)'
+http-response-jq (?i)^https:\/\/bd-api\.kuwo\.cn\/api\/service\/global\/config\/scene\? 'reduce [["data","iosP2PCacheEnable"],["data","warmStartDialog"],["data","adsNotFinishVipPop4DayInterval"]][] as $path (.;. as $before | try delpaths([$path]) catch $before)'
+http-response-jq (?i)^https:\/\/bd-api\.kuwo\.cn\/api\/service\/global\/config\/scene\? 'reduce [[["data","showShopEntry"],["data"],"showShopEntry",false],[["data","iosP2pEnableSendDataLimit"],["data"],"iosP2pEnableSendDataLimit",1]][] as $item (.;. as $before | try (if (getpath($item[1]) | has($item[2])) then setpath($item[0];$item[3]) else . end) catch $before)'
+http-response-jq (?i)^https:\/\/bd-api\.kuwo\.cn\/api\/search\/topic\/word\/list\? 'reduce [["data","hotTopic"],["data","searchFind"],["data","globalJumpInfo"],["data","hotWord"]][] as $path (.;. as $before | try delpaths([$path]) catch $before)'
+http-response-jq (?i)^https:\/\/bd-api\.kuwo\.cn\/api\/service\/home\/index\? '.data.moduleList |= map(select(.type | tostring | (. != "8" and . != "1")))'
+http-response-jq (?i)^https:\/\/bd-api\.kuwo\.cn\/api\/service\/music\/recommendList\? '.data.musicList[] |= del(.showAd)'
+http-response-jq (?i)^https:\/\/bd-api\.kuwo\.cn\/api\/comments\/v3\/topInfo\? 'reduce [["data","putao"],["data","bannerVos"]][] as $path (.;. as $before | try delpaths([$path]) catch $before)'
 
 [MITM]
 hostname = %APPEND% bd-api.kuwo.cn

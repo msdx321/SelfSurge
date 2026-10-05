@@ -5,15 +5,15 @@
 #!author=wf021325[https://github.com/wf021325], githubdulong[https://github.com/githubdulong], mw418[https://github.com/mw418]
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/JD.png
-#!date=2026-06-01 17:11:35
+#!date=2026-10-02 13:57:49
 
 # Source: https://kelee.one/Tool/Loon/Lpx/JD_Price.lpx
 # Adapted from Loon LPX to Surge module by SelfSurge.
 # Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Script]
-捕获令牌 = type=http-request,pattern=^https?:\/\/apapia-sqk-weblogic\.manmanbuy\.com\/baoliao\/center\/menu$,script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/JD/JD_Price.js,requires-body=true,timeout=10
-京东比价 = type=http-response,pattern=^https?:\/\/in\.m\.jd\.com\/product\/graphext\/\d+\.html,script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/JD/JD_Price.js,requires-body=true,timeout=10
+捕获令牌 = type=http-request,pattern=(?i)^https?:\/\/apapia-sqk-weblogic\.manmanbuy\.com\/baoliao\/center\/menu$,script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/JD/JD_Price.js,requires-body=true,timeout=10
+京东比价 = type=http-response,pattern=(?i)^https?:\/\/in\.m\.jd\.com\/product\/graphext\/\d+\.html,script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/JD/JD_Price.js,requires-body=true,timeout=10
 
 [MITM]
 hostname = %APPEND% in.m.jd.com, apapia-sqk-weblogic.manmanbuy.com

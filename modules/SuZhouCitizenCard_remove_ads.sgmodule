@@ -5,7 +5,7 @@
 #!author=xream[https://github.com/xream]
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/SuZhouCitizenCard.png
-#!date=2026-06-01 17:11:35
+#!date=2026-10-02 13:57:49
 #!requirement=CORE_VERSION>=20
 
 # Source: https://kelee.one/Tool/Loon/Lpx/SuZhouCitizenCard_remove_ads.lpx
@@ -13,8 +13,8 @@
 # Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Map Local]
-^https?:\/\/newapp2\.szsmk\.com\/app\/config\/queryMainAd data-type=base64 data="eyJtZXNzYWdlIjoi5pON5L2c5oiQ5YqfIiwibWFpbl9hZF9saXN0IjpbXSwiY29kZSI6IjAwMDAwMCJ9" header="Content-Type:application/json" status-code=200
-^https?:\/\/newapp2\.szsmk\.com\/app\/config\/(queryCarousel|queryRecommendation)\/ data-type=base64 data="eyJjb2RlIjoiMDAwMDAwIiwibWVzc2FnZSI6IuaTjeS9nOaIkOWKnyIsImxpc3QiOltdfQ==" header="Content-Type:application/json" status-code=200
+(?i)^https?:\/\/newapp2\.szsmk\.com\/app\/config\/queryMainAd data-type=base64 data="eyJtZXNzYWdlIjoi5pON5L2c5oiQ5YqfIiwibWFpbl9hZF9saXN0IjpbXSwiY29kZSI6IjAwMDAwMCJ9" header="Content-Type:application/json" status-code=200
+(?i)^https?:\/\/newapp2\.szsmk\.com\/app\/config\/(queryCarousel|queryRecommendation)\/ data-type=base64 data="eyJjb2RlIjoiMDAwMDAwIiwibWVzc2FnZSI6IuaTjeS9nOaIkOWKnyIsImxpc3QiOltdfQ==" header="Content-Type:application/json" status-code=200
 
 [MITM]
 hostname = %APPEND% newapp2.szsmk.com

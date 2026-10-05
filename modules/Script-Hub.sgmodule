@@ -5,7 +5,7 @@
 #!author=xream[https://github.com/xream], Keywos[https://github.com/Keywos], CKYB[https://github.com/CKYB], 小白脸
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/Other_icon/120px/Script-Hub.png
-#!date=2026-06-01 17:11:35
+#!date=2026-10-02 13:57:49
 
 # Source: https://kelee.one/Tool/Loon/Lpx/Script-Hub.lpx
 # Adapted from Loon LPX to Surge module by SelfSurge.
@@ -18,10 +18,10 @@
 # Requires main-profile policy selection: DOMAIN, scripthub.vercel.app, PROXY
 
 [Script]
-前端界面 = type=http-request,pattern=^https?:\/\/script\.hub\/($|edit\/|reload),script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/script-hub.js,timeout=300
-Rewrite转换 = type=http-request,pattern=^https?:\/\/script\.hub\/file\/_start_\/.+type=(?:qx-rewrite|surge-module|loon-plugin|all-module),script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/Rewrite-Parser.js,timeout=300
-Rule转换 = type=http-request,pattern=^https?:\/\/script\.hub\/file\/_start_\/.+type=rule-set,script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/rule-parser.js,timeout=300
-JavaScript转换 = type=http-request,pattern=^https?:\/\/script\.hub\/convert\/,script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/script-converter.js,timeout=300
+前端界面 = type=http-request,pattern=(?i)^https?:\/\/script\.hub\/($|edit\/|reload),script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/script-hub.js,timeout=300
+Rewrite转换 = type=http-request,pattern=(?i)^https?:\/\/script\.hub\/file\/_start_\/.+type=(?:qx-rewrite|surge-module|loon-plugin|all-module),script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/Rewrite-Parser.js,timeout=300
+Rule转换 = type=http-request,pattern=(?i)^https?:\/\/script\.hub\/file\/_start_\/.+type=rule-set,script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/rule-parser.js,timeout=300
+JavaScript转换 = type=http-request,pattern=(?i)^https?:\/\/script\.hub\/convert\/,script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/script-converter.js,timeout=300
 
 [MITM]
 hostname = %APPEND% script.hub, *.script.hub

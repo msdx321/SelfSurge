@@ -5,7 +5,7 @@
 #!author=001ProMax[https://github.com/001ProMax]
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Spotify.png
-#!date=2026-06-01 17:11:35
+#!date=2026-10-02 13:57:49
 #!requirement=CORE_VERSION>=20
 #!arguments=tab:false,useractivity:true
 #!arguments-desc=Loon 选项与策略已转为 Surge 自由输入；脚本参数按同名字段传入，具体格式见模块注释；enable 字段为 false 时脚本需立即退出。
@@ -21,13 +21,13 @@
 AND, ((DOMAIN-SUFFIX, spotify.com), (PROTOCOL, QUIC)), REJECT-DROP
 
 [URL Rewrite]
-^https:\/\/(?:\w+-spclient|spclient\.wg)\.spotify\.com(?::443)?\/artistview\/v1\/artist\/(.*)&platform=iphone https://spclient.wg.spotify.com/artistview/v1/artist/$1&platform=ipad header
+(?i)^https:\/\/(?:\w+-spclient|spclient\.wg)\.spotify\.com(?::443)?\/artistview\/v1\/artist\/(.*)&platform=iphone https://spclient.wg.spotify.com/artistview/v1/artist/$1&platform=ipad header
 
 [Map Local]
-^https:\/\/(?:\w+-spclient|spclient\.wg)\.spotify\.com(?::443)?\/pendragon\/ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/(?:\w+-spclient|spclient\.wg)\.spotify\.com(?::443)?\/pendragon\/ data-type=text data="{}" header="Content-Type:application/json" status-code=200
 
 [Script]
-Protobuf处理 = type=http-response,pattern=^https:\/\/(?:\w+-spclient|spclient\.wg)\.spotify\.com(?::443)?\/(?:bootstrap|user-customization-service),script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/Spotify/Spotify_remove_ads.js,requires-body=true,binary-body-mode=true,timeout=5,argument="{\"tab\":{{{tab}}},\"useractivity\":{{{useractivity}}}}"
+Protobuf处理 = type=http-response,pattern=(?i)^https:\/\/(?:\w+-spclient|spclient\.wg)\.spotify\.com(?::443)?\/(?:bootstrap|user-customization-service),script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/Spotify/Spotify_remove_ads.js,requires-body=true,binary-body-mode=true,timeout=5,argument="{\"tab\":{{{tab}}},\"useractivity\":{{{useractivity}}}}"
 
 [MITM]
 hostname = %APPEND% *-spclient.spotify.com, spclient.wg.spotify.com

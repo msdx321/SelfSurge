@@ -5,7 +5,7 @@
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/360SmartCamera.png
-#!date=2026-06-01 17:11:35
+#!date=2026-10-02 13:57:49
 #!requirement=CORE_VERSION>=20
 
 # Source: https://kelee.one/Tool/Loon/Lpx/360SmartCamera_remove_ads.lpx
@@ -17,7 +17,7 @@ DOMAIN, ad.jia.360.cn, REJECT-DROP
 DOMAIN, ad.iot.360.cn, REJECT-DROP
 
 [Body Rewrite]
-http-response-jq ^https:\/\/jia\.360\.cn\/conf\/v1\.json 'reduce [["tab_conf"],["ad_conf"],["activity"]][] as $path (.;. as $before | try delpaths([$path]) catch $before)'
+http-response-jq (?i)^https:\/\/jia\.360\.cn\/conf\/v1\.json 'reduce [["tab_conf"],["ad_conf"],["activity"]][] as $path (.;. as $before | try delpaths([$path]) catch $before)'
 
 [MITM]
 hostname = %APPEND% jia.360.cn

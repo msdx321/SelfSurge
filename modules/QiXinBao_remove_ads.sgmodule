@@ -5,26 +5,24 @@
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/QiXinBao.png
-#!date=2026-06-01 17:11:35
+#!date=2026-10-02 13:57:49
 #!requirement=CORE_VERSION>=20
 
 # Source: https://kelee.one/Tool/Loon/Lpx/QiXinBao_remove_ads.lpx
 # Adapted from Loon LPX to Surge module by SelfSurge.
 # Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
-[URL Rewrite]
-^https:\/\/qxb-minicode-pic-osscache\.qixin\.com\/web\/ _ reject
-
 [Map Local]
-^https:\/\/appc\.qixin\.com\/v4\/general\/getSearchPlaceholderRedirect$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/appc-v6\.qixin\.com\/v4\/general\/getAppFloatAd$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/appc-v6\.qixin\.com\/v4\/general\/getAppBanners$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/appc-v6\.qixin\.com\/v4\/user\/getUserActivitys$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/appc-v6\.qixin\.com\/v4\/enterprise\/homePageRecommend\/recommendCard\d+ data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/appc-v6\.qixin\.com\/v4\/user\/getRecommendPersons$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/appc-v6\.qixin\.com\/v4\/enterprise\/getRecommendEnts$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/appc-v6\.qixin\.com\/v4\/enterprise\/getRecommendation$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/appc-v6\.qixin\.com\/v4\/general\/getAppBottomBanners$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/appc\.qixin\.com\/v4\/general\/getSearchPlaceholderRedirect$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/appc-v6\.qixin\.com\/v4\/general\/getAppFloatAd$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/appc-v6\.qixin\.com\/v4\/general\/getAppBanners$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/appc-v6\.qixin\.com\/v4\/user\/getUserActivitys$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/appc-v6\.qixin\.com\/v4\/enterprise\/homePageRecommend\/recommendCard\d+ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/appc-v6\.qixin\.com\/v4\/user\/getRecommendPersons$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/appc-v6\.qixin\.com\/v4\/enterprise\/getRecommendEnts$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/appc-v6\.qixin\.com\/v4\/enterprise\/getRecommendation$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/appc-v6\.qixin\.com\/v4\/general\/getAppBottomBanners$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/qxb-minicode-pic-osscache\.qixin\.com\/web\/ data-type=text data="" status-code=404
 
 [MITM]
 hostname = %APPEND% appc.qixin.com, appc-v6.qixin.com, qxb-minicode-pic-osscache.qixin.com

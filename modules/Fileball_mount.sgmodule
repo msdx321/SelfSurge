@@ -5,14 +5,14 @@
 #!author=小白脸
 #!homepage=https://github.com/luestr/ProxyResource/blob/main/Resource/Markdown/Fileball/README.md
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Fileball.png
-#!date=2026-06-01 17:11:35
+#!date=2026-10-02 13:57:49
 
 # Source: https://kelee.one/Tool/Loon/Lpx/Fileball_mount.lpx
 # Adapted from Loon LPX to Surge module by SelfSurge.
 # Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Script]
-三合一网盘挂载 = type=http-request,pattern=^http:\/\/(aliyun|quark|pikpak)\.example\.com,script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/Fileball/Fileball_mount.js,requires-body=true
+三合一网盘挂载 = type=http-request,pattern=(?i)^http:\/\/(aliyun|quark|pikpak)\.example\.com,script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/Fileball/Fileball_mount.js,requires-body=true
 
 [MITM]
 hostname = %APPEND% aliyun.example.com, quark.example.com, pikpak.example.com,

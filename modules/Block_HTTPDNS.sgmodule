@@ -4,7 +4,7 @@
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md], VirgilClyne[https://github.com/VirgilClyne]
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/Other_icon/120px/HTTPDNS.png
-#!date=2026-09-03 16:04:36
+#!date=2026-10-02 13:57:49
 #!requirement=CORE_VERSION>=20
 
 # Source: https://kelee.one/Tool/Loon/Lpx/Block_HTTPDNS.lpx
@@ -87,6 +87,15 @@ IP-CIDR, 203.107.1.0/24, REJECT-DROP, no-resolve
 DOMAIN, amdc.alipay.com, REJECT-DROP
 DOMAIN, ucdc.upaas.quark.cn, REJECT-DROP
 DOMAIN, httpdns.danuoyi.tbcache.com, REJECT-DROP
+URL-REGEX, "^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch", REJECT-DROP
+URL-REGEX, "^http:\/\/47\.246\.103\.9\/amdc\/mobileDispatch", REJECT-DROP
+URL-REGEX, "^http:\/\/47\.246\.103\.10\/amdc\/mobileDispatch", REJECT-DROP
+URL-REGEX, "^http:\/\/59\.82\.113\.10\/amdc\/mobileDispatch", REJECT-DROP
+URL-REGEX, "^http:\/\/59\.82\.113\.219\/amdc\/mobileDispatch", REJECT-DROP
+DOMAIN, xpis-xcdn.youku.com, REJECT-DROP
+DOMAIN, pre-xpis-xcdn.youku.com, REJECT-DROP
+DOMAIN, xpis-tel-xcdn.youku.com, REJECT-DROP
+DOMAIN, xpis-mob-xcdn.youku.com, REJECT-DROP
 DOMAIN, httpdns.cctv.com, REJECT-DROP
 DOMAIN, httpdns-browser.platform.dbankcloud.cn, REJECT-DROP
 DOMAIN, httpdns.huaweicloud.com, REJECT-DROP
@@ -166,15 +175,13 @@ URL-REGEX, "^http:\/\/((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-
 URL-REGEX, "^http:\/\/\[[0-9a-fA-F:]+\]:\d+\/httpdns\/", REJECT-DROP
 DOMAIN, httpdns.zybang.com, REJECT-DROP
 
-[URL Rewrite]
-^https?:\/\/cdn\.wup\.huya\.com\/monitor\/monitor\.jsp _ reject
-^https:\/\/gslbali\.ximalaya\.com\/linkeye-cloud\/httpdns\/ _ reject
-
 [Map Local]
-^https?:\/\/appconf\.mail\.163\.com\/mailmaster\/api\/http\/urlConfig\.do$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/msglb\.91160\.com\/msg\/outer\/broker\/get$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/ucdc\d?-upaas\.uc\.cn\/api\/v\d\/dns_query\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/gw-cn\.jiaoliuqu\.com\/taqu-im-broadcast-srv\/v\d\/Comet\/get\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https?:\/\/appconf\.mail\.163\.com\/mailmaster\/api\/http\/urlConfig\.do$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https?:\/\/cdn\.wup\.huya\.com\/monitor\/monitor\.jsp data-type=text data="" status-code=404
+(?i)^https:\/\/msglb\.91160\.com\/msg\/outer\/broker\/get$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/gslbali\.ximalaya\.com\/linkeye-cloud\/httpdns\/ data-type=text data="" status-code=404
+(?i)^https:\/\/ucdc\d?-upaas\.uc\.cn\/api\/v\d\/dns_query\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/gw-cn\.jiaoliuqu\.com\/taqu-im-broadcast-srv\/v\d\/Comet\/get\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
 
 [MITM]
 hostname = %APPEND% appconf.mail.163.com, msglb.91160.com, ucdc2-upaas.uc.cn, gw-cn.jiaoliuqu.com

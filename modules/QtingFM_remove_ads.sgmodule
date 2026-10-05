@@ -5,7 +5,7 @@
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/QtingFM.png
-#!date=2026-06-01 17:11:35
+#!date=2026-10-02 13:57:49
 #!requirement=CORE_VERSION>=20
 
 # Source: https://kelee.one/Tool/Loon/Lpx/QtingFM_remove_ads.lpx
@@ -16,28 +16,26 @@
 DOMAIN, ad.qtfm.cn, REJECT-DROP
 DOMAIN, adlaunch.qtfm.cn, REJECT-DROP
 
-[URL Rewrite]
-^https:\/\/app\.qtfm\.cn\/recommendapi\/v\d\/emotion$ _ reject
-^https:\/\/search\.qtfm\.cn\/v\d\/keyword\/default$ _ reject
-
 [Map Local]
-^https:\/\/app\.qtfm\.cn\/recommendapi\/v8\/ai_assistant_point$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/app\.qtfm\.cn\/m-bff\/v1\/signin\/show_homepage_icon$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/app\.qtfm\.cn\/m-bff\/v1\/user\/task\/play$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/app\.qtfm\.cn\/m-bff\/v\d\/i_listen\/guess_you_like\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/recpage-c\.qtfm\.cn\/v\d\/favorites$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/user\.qtfm\.cn\/u\d\/api\/v\d\/user\/following_podcaster\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/entry\.qtfm\.cn\/api\/v\d\/personal\/\?carrier data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/search\.qtfm\.cn\/v3\/entry$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/woqt2\.qtfm\.cn\/v2\/userConfig\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/app\.qtfm\.cn\/recommendapi\/v8\/ai_assistant_point$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/app\.qtfm\.cn\/m-bff\/v1\/signin\/show_homepage_icon$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/app\.qtfm\.cn\/recommendapi\/v\d\/emotion$ data-type=text data="" status-code=404
+(?i)^https:\/\/search\.qtfm\.cn\/v\d\/keyword\/default$ data-type=text data="" status-code=404
+(?i)^https:\/\/app\.qtfm\.cn\/m-bff\/v1\/user\/task\/play$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/app\.qtfm\.cn\/m-bff\/v\d\/i_listen\/guess_you_like\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/recpage-c\.qtfm\.cn\/v\d\/favorites$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/user\.qtfm\.cn\/u\d\/api\/v\d\/user\/following_podcaster\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/entry\.qtfm\.cn\/api\/v\d\/personal\/\?carrier data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/search\.qtfm\.cn\/v3\/entry$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/woqt2\.qtfm\.cn\/v2\/userConfig\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
 
 [Body Rewrite]
-http-response-jq ^https:\/\/app\.qtfm\.cn\/m-bff\/v\d\/signin\/show_homepage_icon$ 'reduce [[["data","display_icon"],["data"],"display_icon",false]][] as $item (.;. as $before | try (if (getpath($item[1]) | has($item[2])) then setpath($item[0];$item[3]) else . end) catch $before)'
-http-response-jq ^https:\/\/app\.qtfm\.cn\/recommendapi\/v\d\/hotpage\? '.data.head |= map(select(.type == "IconGrid")) | .data.feeds |= map(select(.type == "Channel" or .type == "Radio" or .type == "ListenListChannel"))'
-http-response-jq ^https:\/\/app\.qtfm\.cn\/m-bff\/v\d\/channel\/\d{6}\/playpage\/\d{8} 'reduce [["data","related_recommend"],["data","recommend_bar"]][] as $path (.;. as $before | try delpaths([$path]) catch $before)'
-http-response-jq ^https:\/\/app\.qtfm\.cn\/m-bff\/v\d\/mylistenpage 'reduce [["data","banner"]][] as $path (.;. as $before | try delpaths([$path]) catch $before)'
-http-response-jq ^https:\/\/app\.qtfm\.cn\/m-bff\/v\d\/subscribed_channels\? 'reduce [["data","recommends"]][] as $path (.;. as $before | try delpaths([$path]) catch $before)'
-http-response-jq ^https:\/\/app\.qtfm\.cn\/m-bff\/v1\/channelpage\/\d+$ 'reduce [["data","vip_recommend"],["data","recommend_delivery"]][] as $path (.;. as $before | try delpaths([$path]) catch $before)'
+http-response-jq (?i)^https:\/\/app\.qtfm\.cn\/m-bff\/v\d\/signin\/show_homepage_icon$ 'reduce [[["data","display_icon"],["data"],"display_icon",false]][] as $item (.;. as $before | try (if (getpath($item[1]) | has($item[2])) then setpath($item[0];$item[3]) else . end) catch $before)'
+http-response-jq (?i)^https:\/\/app\.qtfm\.cn\/recommendapi\/v\d\/hotpage\? '.data.head |= map(select(.type == "IconGrid")) | .data.feeds |= map(select(.type == "Channel" or .type == "Radio" or .type == "ListenListChannel"))'
+http-response-jq (?i)^https:\/\/app\.qtfm\.cn\/m-bff\/v\d\/channel\/\d{6}\/playpage\/\d{8} 'reduce [["data","related_recommend"],["data","recommend_bar"]][] as $path (.;. as $before | try delpaths([$path]) catch $before)'
+http-response-jq (?i)^https:\/\/app\.qtfm\.cn\/m-bff\/v\d\/mylistenpage 'reduce [["data","banner"]][] as $path (.;. as $before | try delpaths([$path]) catch $before)'
+http-response-jq (?i)^https:\/\/app\.qtfm\.cn\/m-bff\/v\d\/subscribed_channels\? 'reduce [["data","recommends"]][] as $path (.;. as $before | try delpaths([$path]) catch $before)'
+http-response-jq (?i)^https:\/\/app\.qtfm\.cn\/m-bff\/v1\/channelpage\/\d+$ 'reduce [["data","vip_recommend"],["data","recommend_delivery"]][] as $path (.;. as $before | try delpaths([$path]) catch $before)'
 
 [MITM]
 hostname = %APPEND% app.qtfm.cn, entry.qtfm.cn, recpage-c.qtfm.cn, user.qtfm.cn, search.qtfm.cn, woqt2.qtfm.cn

@@ -5,7 +5,7 @@
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Chelaile.png
-#!date=2026-07-04 19:58:28
+#!date=2026-10-02 13:57:49
 #!requirement=CORE_VERSION>=20
 
 # Source: https://kelee.one/Tool/Loon/Lpx/Chelaile_remove_ads.lpx
@@ -15,20 +15,18 @@
 [Rule]
 DOMAIN, ad.chelaile.net.cn, REJECT-DROP
 
-[URL Rewrite]
-^https:\/\/cdn\.web\.chelaile\.net\.cn\/info-flow\/index\.html\? _ reject
-
 [Map Local]
-^https:\/\/api\.chelaile\.net\.cn\/goocity\/flowPos\/home\? data-type=base64 data="KipZR0tKeyJqc29uciI6eyJzdGF0dXMiOiIwMCIsImRhdGEiOnsiYWR2ZXJ0TGlzdCI6W3siaWQiOjEwNiwidGl0bGUiOiLnq5nngrnlnLDlm74iLCJpY29uVXJsIjoiaHR0cHM6Ly9pbWFnZTMuY2hlbGFpbGUubmV0LmNuLzg5aUlxeGFNLnBuZyIsImxpbmtVcmwiOiIiLCJhZFR5cGUiOjUsInNob3dSZWREb3QiOjAsInVwZGF0ZVRpbWUiOjAsImFwcElkIjoiIiwiYXBwUGF0aCI6IiIsImJ1YmJsZU9yZGVyIjowLCJoNVR5cGUiOjB9LHsiaWQiOjEsInRpdGxlIjoi5Zyw6ZOBIiwiaWNvblVybCI6Imh0dHBzOi8vaW1hZ2UzLmNoZWxhaWxlLm5ldC5jbi9yZXdyTENXWS5wbmciLCJsaW5rVXJsIjoiaHR0cHM6Ly93ZWIuY2hlbGFpbGUubmV0LmNuL21ldHJvL2luZGV4Lmh0bWw/aDVfc3RhdHNfcmVmZXJlcj1pY29uIiwiYWRUeXBlIjoyLCJzaG93UmVkRG90IjowLCJ1cGRhdGVUaW1lIjowLCJhcHBJZCI6IiIsImFwcFBhdGgiOiIiLCJidWJibGVPcmRlciI6MCwiaDVUeXBlIjowfV19fX1ZR0tKIyM=" header="Content-Type:application/json" status-code=200
-^https:\/\/api\.chelaile\.net\.cn\/goocity\/flowPos\/listByPos\? data-type=base64 data="KipZR0tKe31ZR0tKIyM=" header="Content-Type:application/json" status-code=200
-^https:\/\/web\.chelaile\.net\.cn\/api\/operative_position\/infoflow\/getInfo\? data-type=base64 data="KipZR0tKe31ZR0tKIyM=" header="Content-Type:application/json" status-code=200
-^https:\/\/image3\.chelaile\.net\.cn\/hw6u6LYY\.png$ data-type=tiny-gif status-code=200
-^https:\/\/api\.chelaile\.net\.cn\/led-weather\/v\d\/condition_brief\? data-type=base64 data="KipZR0tKe31ZR0tKIyM=" header="Content-Type:application/json" status-code=200
-^https:\/\/api\.chelaile\.net\.cn\/goocity\/config\/notices\? data-type=base64 data="KipZR0tKe31ZR0tKIyM=" header="Content-Type:application/json" status-code=200
-^https:\/\/api\.chelaile\.net\.cn\/encourage\/activity\/control\? data-type=base64 data="KipZR0tKe31ZR0tKIyM=" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/api\.chelaile\.net\.cn\/goocity\/flowPos\/home\? data-type=base64 data="KipZR0tKeyJqc29uciI6eyJzdGF0dXMiOiIwMCIsImRhdGEiOnsiYWR2ZXJ0TGlzdCI6W3siaWQiOjEwNiwidGl0bGUiOiLnq5nngrnlnLDlm74iLCJpY29uVXJsIjoiaHR0cHM6Ly9pbWFnZTMuY2hlbGFpbGUubmV0LmNuLzg5aUlxeGFNLnBuZyIsImxpbmtVcmwiOiIiLCJhZFR5cGUiOjUsInNob3dSZWREb3QiOjAsInVwZGF0ZVRpbWUiOjAsImFwcElkIjoiIiwiYXBwUGF0aCI6IiIsImJ1YmJsZU9yZGVyIjowLCJoNVR5cGUiOjB9LHsiaWQiOjEsInRpdGxlIjoi5Zyw6ZOBIiwiaWNvblVybCI6Imh0dHBzOi8vaW1hZ2UzLmNoZWxhaWxlLm5ldC5jbi9yZXdyTENXWS5wbmciLCJsaW5rVXJsIjoiaHR0cHM6Ly93ZWIuY2hlbGFpbGUubmV0LmNuL21ldHJvL2luZGV4Lmh0bWw/aDVfc3RhdHNfcmVmZXJlcj1pY29uIiwiYWRUeXBlIjoyLCJzaG93UmVkRG90IjowLCJ1cGRhdGVUaW1lIjowLCJhcHBJZCI6IiIsImFwcFBhdGgiOiIiLCJidWJibGVPcmRlciI6MCwiaDVUeXBlIjowfV19fX1ZR0tKIyM=" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/api\.chelaile\.net\.cn\/goocity\/flowPos\/listByPos\? data-type=base64 data="KipZR0tKe31ZR0tKIyM=" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/web\.chelaile\.net\.cn\/api\/operative_position\/infoflow\/getInfo\? data-type=base64 data="KipZR0tKe31ZR0tKIyM=" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/cdn\.web\.chelaile\.net\.cn\/info-flow\/index\.html\? data-type=text data="" status-code=404
+(?i)^https:\/\/image3\.chelaile\.net\.cn\/hw6u6LYY\.png$ data-type=tiny-gif status-code=200
+(?i)^https:\/\/api\.chelaile\.net\.cn\/led-weather\/v\d\/condition_brief\? data-type=base64 data="KipZR0tKe31ZR0tKIyM=" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/api\.chelaile\.net\.cn\/goocity\/config\/notices\? data-type=base64 data="KipZR0tKe31ZR0tKIyM=" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/api\.chelaile\.net\.cn\/encourage\/activity\/control\? data-type=base64 data="KipZR0tKe31ZR0tKIyM=" header="Content-Type:application/json" status-code=200
 
 [Script]
-清洗配置 = type=http-response,pattern=^https:\/\/api\.chelaile\.net\.cn\/bus-side\/appToggle\/getStatus\?,script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/Chelaile/Chelaile_remove_ads.js,requires-body=true
+清洗配置 = type=http-response,pattern=(?i)^https:\/\/api\.chelaile\.net\.cn\/bus-side\/appToggle\/getStatus\?,script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/Chelaile/Chelaile_remove_ads.js,requires-body=true
 
 [MITM]
 hostname = %APPEND% api.chelaile.net.cn, web.chelaile.net.cn, cdn.web.chelaile.net.cn, image3.chelaile.net.cn

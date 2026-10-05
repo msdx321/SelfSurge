@@ -5,7 +5,7 @@
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/UnnooQuan.png
-#!date=2026-06-01 17:11:35
+#!date=2026-10-02 13:57:49
 #!requirement=CORE_VERSION>=20
 
 # Source: https://kelee.one/Tool/Loon/Lpx/UnnooQuan_remove_watermark.lpx
@@ -13,8 +13,8 @@
 # Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Body Rewrite]
-http-response-jq ^https:\/\/api\.zsxq\.com\/v2\/groups\/\d+$ 'reduce [[["resp_data","group","policies","enable_watermark"],["resp_data","group","policies"],"enable_watermark",false]][] as $item (.;. as $before | try (if (getpath($item[1]) | has($item[2])) then setpath($item[0];$item[3]) else . end) catch $before)'
-http-response ^https:\/\/articles\.zsxq\.com\/inline_form\/id_[a-z0-9]+\.html name="group_enable_watermark"\x20value="true" name="group_enable_watermark"\x20value="false"
+http-response-jq (?i)^https:\/\/api\.zsxq\.com\/v2\/groups\/\d+$ 'reduce [[["resp_data","group","policies","enable_watermark"],["resp_data","group","policies"],"enable_watermark",false]][] as $item (.;. as $before | try (if (getpath($item[1]) | has($item[2])) then setpath($item[0];$item[3]) else . end) catch $before)'
+http-response (?i)^https:\/\/articles\.zsxq\.com\/inline_form\/id_[a-z0-9]+\.html name="group_enable_watermark"\x20value="true" name="group_enable_watermark"\x20value="false"
 
 [MITM]
 hostname = %APPEND% api.zsxq.com

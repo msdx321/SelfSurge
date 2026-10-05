@@ -5,7 +5,7 @@
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/ChaoXingStudy.png
-#!date=2026-06-30 19:09:23
+#!date=2026-10-02 13:57:49
 #!requirement=CORE_VERSION>=20
 
 # Source: https://kelee.one/Tool/Loon/Lpx/ChaoXingStudy_remove_ads.lpx
@@ -13,15 +13,15 @@
 # Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Map Local]
-^https:\/\/home-yd\.chaoxing\.com\/apis\/data\/getAdsRecommend\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/home-yd\.chaoxing\.com\/apis\/banner\/getConfigInfoForXsqy\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/groupyd2\.chaoxing\.com\/apis\/activity\/getActivitys_attention\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/appswh\.chaoxing\.com\/apis\/activity\/getNoteTopicList\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/home-yd\.chaoxing\.com\/apis\/data\/getAdsRecommend\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/home-yd\.chaoxing\.com\/apis\/banner\/getConfigInfoForXsqy\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/groupyd2\.chaoxing\.com\/apis\/activity\/getActivitys_attention\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/appswh\.chaoxing\.com\/apis\/activity\/getNoteTopicList\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
 
 [Body Rewrite]
-http-response-jq ^https:\/\/learn\.chaoxing\.com\/apis\/service\/appConfig\? 'reduce [["data","ad"]][] as $path (.;. as $before | try delpaths([$path]) catch $before)'
-http-response-jq ^https:\/\/apps\.chaoxing\.com\/apis\/home\/getHpXsqy\.jspx\? '.data.list |= map(select(.pid == 4 or .pid == 44)) | .data.list_xsqy |= map(select(.pid == 4 or .pid == 44)) | .data.list_xysqbj |= map(select(.pid == 4 or .pid == 44)) | .data.lanmu |= map(select(.id == 4 or .id == 44))'
-http-response-jq ^https:\/\/apps\.chaoxing\.com\/apis\/home\/getHpXsqy\.jspx\? 'reduce [["data","list_timeapp"]][] as $path (.;. as $before | try delpaths([$path]) catch $before)'
+http-response-jq (?i)^https:\/\/learn\.chaoxing\.com\/apis\/service\/appConfig\? 'reduce [["data","ad"]][] as $path (.;. as $before | try delpaths([$path]) catch $before)'
+http-response-jq (?i)^https:\/\/apps\.chaoxing\.com\/apis\/home\/getHpXsqy\.jspx\? '.data.list |= map(select(.pid == 4 or .pid == 44)) | .data.list_xsqy |= map(select(.pid == 4 or .pid == 44)) | .data.list_xysqbj |= map(select(.pid == 4 or .pid == 44)) | .data.lanmu |= map(select(.id == 4 or .id == 44))'
+http-response-jq (?i)^https:\/\/apps\.chaoxing\.com\/apis\/home\/getHpXsqy\.jspx\? 'reduce [["data","list_timeapp"]][] as $path (.;. as $before | try delpaths([$path]) catch $before)'
 
 [MITM]
 hostname = %APPEND% learn.chaoxing.com, home-yd.chaoxing.com, apps.chaoxing.com, groupyd2.chaoxing.com, appswh.chaoxing.com

@@ -5,7 +5,7 @@
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/XiaomiSpeaker.png
-#!date=2026-06-01 17:11:35
+#!date=2026-10-02 13:57:49
 #!requirement=CORE_VERSION>=20
 
 # Source: https://kelee.one/Tool/Loon/Lpx/XiaomiSpeaker_remove_ads.lpx
@@ -13,9 +13,9 @@
 # Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Map Local]
-^https:\/\/marketing-aibox\.v\.mitvos\.com\/advertise\/ data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/marketing-aibox\.v\.mitvos\.com\/payGuide\/halfScreenMulti\/(home|cache)\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/marketing-aibox\.v\.mitvos\.com\/payGuide\/tabPage\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/marketing-aibox\.v\.mitvos\.com\/advertise\/ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/marketing-aibox\.v\.mitvos\.com\/payGuide\/halfScreenMulti\/(home|cache)\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/marketing-aibox\.v\.mitvos\.com\/payGuide\/tabPage\? data-type=text data="{}" header="Content-Type:application/json" status-code=200
 
 [MITM]
 hostname = %APPEND% marketing-aibox.v.mitvos.com

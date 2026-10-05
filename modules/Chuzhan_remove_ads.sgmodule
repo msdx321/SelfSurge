@@ -5,7 +5,7 @@
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Chuzhan.png
-#!date=2026-06-01 17:11:35
+#!date=2026-10-02 13:57:49
 #!requirement=CORE_VERSION>=20
 
 # Source: https://kelee.one/Tool/Loon/Lpx/Chuzhan_remove_ads.lpx
@@ -13,16 +13,16 @@
 # Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Map Local]
-^https:\/\/app\.huashi6\.com\/app\/index\/ad\/ data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/app\.huashi6\.com\/app\/works\/relative$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/app\.huashi6\.com\/app\/index\/follow\/all_random\/list$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/app\.huashi6\.com\/app\/index\/csyxh\/icon$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/app\.huashi6\.com\/app\/index\/ad\/ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/app\.huashi6\.com\/app\/works\/relative$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/app\.huashi6\.com\/app\/index\/follow\/all_random\/list$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/app\.huashi6\.com\/app\/index\/csyxh\/icon$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
 
 [Body Rewrite]
-http-response-jq ^https:\/\/app\.huashi6\.com\/app\/common\/config$ 'reduce [[["data","disableAd"],["data"],"disableAd",true],[["data","showTopFloatAdvanceTips"],["data"],"showTopFloatAdvanceTips",false]][] as $item (.;. as $before | try (if (getpath($item[1]) | has($item[2])) then setpath($item[0];$item[3]) else . end) catch $before)'
-http-response-jq ^https:\/\/app\.huashi6\.com\/app\/common\/config$ 'reduce [["data","adsConfigIOS"],["data","adsConfigAndroid"],["data","url","tabMarket"]][] as $path (.;. as $before | try delpaths([$path]) catch $before)'
-http-response-jq ^https:\/\/app\.huashi6\.com\/app\/common\/layouts$ '.data |= {CZ_MINE_MENUS: .CZ_MINE_MENUS}'
-http-response-jq ^https:\/\/app\.huashi6\.com\/app\/common\/themeConfig$ '.data.tabbars |= map(select(.title != "商城"))'
+http-response-jq (?i)^https:\/\/app\.huashi6\.com\/app\/common\/config$ 'reduce [[["data","disableAd"],["data"],"disableAd",true],[["data","showTopFloatAdvanceTips"],["data"],"showTopFloatAdvanceTips",false]][] as $item (.;. as $before | try (if (getpath($item[1]) | has($item[2])) then setpath($item[0];$item[3]) else . end) catch $before)'
+http-response-jq (?i)^https:\/\/app\.huashi6\.com\/app\/common\/config$ 'reduce [["data","adsConfigIOS"],["data","adsConfigAndroid"],["data","url","tabMarket"]][] as $path (.;. as $before | try delpaths([$path]) catch $before)'
+http-response-jq (?i)^https:\/\/app\.huashi6\.com\/app\/common\/layouts$ '.data |= {CZ_MINE_MENUS: .CZ_MINE_MENUS}'
+http-response-jq (?i)^https:\/\/app\.huashi6\.com\/app\/common\/themeConfig$ '.data.tabbars |= map(select(.title != "商城"))'
 
 [MITM]
 hostname = %APPEND% app.huashi6.com

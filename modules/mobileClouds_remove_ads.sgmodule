@@ -5,15 +5,15 @@
 #!author=RuCu6[https://github.com/RuCu6]
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/mobileClouds.png
-#!date=2026-06-01 17:11:35
+#!date=2026-10-02 13:57:49
 
 # Source: https://kelee.one/Tool/Loon/Lpx/mobileClouds_remove_ads.lpx
 # Adapted from Loon LPX to Surge module by SelfSurge.
 # Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Script]
-移除开屏广告 = type=http-response,pattern=^https:\/\/jzts\.cmpassport\.com\/personalized\/getPushContent,script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/mobileClouds/mobileClouds_remove_ads.js,requires-body=true
-移除应用内广告 = type=http-response,pattern=^https:\/\/ad\.mcloud\.139\.com\/advertapi\/adv-filter\/,script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/mobileClouds/mobileClouds_remove_ads.js,requires-body=true
+移除开屏广告 = type=http-response,pattern=(?i)^https:\/\/jzts\.cmpassport\.com\/personalized\/getPushContent,script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/mobileClouds/mobileClouds_remove_ads.js,requires-body=true
+移除应用内广告 = type=http-response,pattern=(?i)^https:\/\/ad\.mcloud\.139\.com\/advertapi\/adv-filter\/,script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/mobileClouds/mobileClouds_remove_ads.js,requires-body=true
 
 [MITM]
 hostname = %APPEND% jzts.cmpassport.com, ad.mcloud.139.com

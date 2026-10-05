@@ -5,7 +5,7 @@
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Qbb.png
-#!date=2026-08-26 11:08:19
+#!date=2026-10-02 13:57:49
 #!requirement=CORE_VERSION>=20
 
 # Source: https://kelee.one/Tool/Loon/Lpx/Qbb_remove_ads.lpx
@@ -26,8 +26,8 @@ DOMAIN, apimall.qbb6.com, REJECT-DROP
 (?i)^https:\/\/apimall\.qbb6\.com\/mall\/homepage\/data\/get\/v\d$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
 
 [Script]
-精简我的页面 = type=http-response,pattern=^https:\/\/api\.qbb6\.com\/commons\/self\/button\/group\/get\/v\d\?,script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/Qbb/my.js,requires-body=true
-精简育儿页面 = type=http-response,pattern=^https:\/\/apipt\.qbb6\.com\/parenting\/pt\/homepage\/get\/v\d\?,script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/Qbb/homepage.js,requires-body=true
+精简我的页面 = type=http-response,pattern=(?i)^https:\/\/api\.qbb6\.com\/commons\/self\/button\/group\/get\/v\d\?,script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/Qbb/my.js,requires-body=true
+精简育儿页面 = type=http-response,pattern=(?i)^https:\/\/apipt\.qbb6\.com\/parenting\/pt\/homepage\/get\/v\d\?,script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/Qbb/homepage.js,requires-body=true
 
 [MITM]
 hostname = %APPEND% api.qbb6.com, apicommunity.qbb6.com, apipt.qbb6.com, apiuser.qbb6.com, apimall.qbb6.com

@@ -5,7 +5,7 @@
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/HantingHotels.png
-#!date=2026-06-12 16:06:38
+#!date=2026-10-02 13:57:49
 #!requirement=CORE_VERSION>=20
 
 # Source: https://kelee.one/Tool/Loon/Lpx/HantingHotels_remove_ads.lpx
@@ -13,15 +13,15 @@
 # Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Map Local]
-^https:\/\/hweb-manager\.huazhu\.com\/notice\/getAppPopupNotifyAlert$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/hweb-hotel\.huazhu\.com\/home\/getHomeLoinBanner$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/hweb-hotel\.huazhu\.com\/\/home\/querySelectHotel$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/hweb-hotel\.huazhu\.com\/home\/queryHotelBrand$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
-^https:\/\/hweb-manager\.huazhu\.com\/hotels\/ad\/getHotelListNoticeMerge$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/hweb-manager\.huazhu\.com\/notice\/getAppPopupNotifyAlert$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/hweb-hotel\.huazhu\.com\/home\/getHomeLoinBanner$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/hweb-hotel\.huazhu\.com\/\/home\/querySelectHotel$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/hweb-hotel\.huazhu\.com\/home\/queryHotelBrand$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
+(?i)^https:\/\/hweb-manager\.huazhu\.com\/hotels\/ad\/getHotelListNoticeMerge$ data-type=text data="{}" header="Content-Type:application/json" status-code=200
 
 [Body Rewrite]
-http-response-jq ^https:\/\/res-pub\.huazhu\.com\/frontconf\/homeconfig_45\/\w+\.json$ 'if has("content") and (.content | type) == "object" then .content |= with_entries(select(.key == "topBanner" or .key == "topBannerImages")) else . end'
-http-response-jq ^https:\/\/res-pub\.huazhu\.com\/frontconf\/tabbarconfig_45\/\w+\.json$ '.content.tabbar |= map(select(.attributes.tabName == "首页" or .attributes.tabName == "服务" or .attributes.tabName == "我的"))'
+http-response-jq (?i)^https:\/\/res-pub\.huazhu\.com\/frontconf\/homeconfig_45\/\w+\.json$ 'if has("content") and (.content | type) == "object" then .content |= with_entries(select(.key == "topBanner" or .key == "topBannerImages")) else . end'
+http-response-jq (?i)^https:\/\/res-pub\.huazhu\.com\/frontconf\/tabbarconfig_45\/\w+\.json$ '.content.tabbar |= map(select(.attributes.tabName == "首页" or .attributes.tabName == "服务" or .attributes.tabName == "我的"))'
 
 [MITM]
 hostname = %APPEND% hweb-manager.huazhu.com, hweb-hotel.huazhu.com, res-pub.huazhu.com
