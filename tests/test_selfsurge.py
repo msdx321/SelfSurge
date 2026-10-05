@@ -101,7 +101,8 @@ class CatalogConversionTest(unittest.TestCase):
                     re.findall(
                         r"\b(?:(?:request|response)-body-json-"
                         r"(?:jq|add|del|replace)|"
-                        r"(?:request|response)\.json\.(?:delete|jq))\b",
+                        r"(?:request|response)\.json\."
+                        r"(?:delete|jq|jq_file|replace|add)\()",
                         source,
                     )
                 )

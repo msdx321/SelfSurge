@@ -3,6 +3,7 @@ import base64
 import json
 import re
 import sys
+from typing import NamedTuple
 from urllib.error import HTTPError
 from urllib.parse import parse_qs, quote, urlsplit
 from urllib.request import Request, urlopen
@@ -227,6 +228,161 @@ def _loon_value(value: str):
         return value.strip('"\'')
 
 
+class _Regex(NamedTuple):
+    pattern: str
+    flags: str
+
+
+class _Variable(NamedTuple):
+    name: str
+
+
+class _ArgumentSet(NamedTuple):
+    names: tuple[str, ...]
+
+
+_V2_REGEX = re.compile(r"/((?:\\.|\[(?:\\.|[^\]\\])*\]|[^/\\\[])*)/([A-Za-z]*)")
+_V2_LITERAL = re.compile(r"-?\d+(?:\.\d+)?(?![\w.])|(?:true|false|null)\b")
+_V2_CALL = re.compile(r"\s*([A-Za-z_][\w.]*)\s*\(")
+_V2_OPTION = re.compile(r"\s*([A-Za-z_]\w*)\s*=")
+
+
+def _v2_skip(text: str, index: int) -> int:
+    while index < len(text) and text[index].isspace():
+        index += 1
+    return index
+
+
+def _v2_value(text: str, index: int) -> tuple[object, int]:
+    """Parse one Loon v2 literal, regex, variable, array or argument set."""
+    index = _v2_skip(text, index)
+    char = text[index:index + 1]
+    if char == '"':
+        end = index + 1
+        while end < len(text) and text[end] != '"':
+            end += 2 if text[end] == "\\" else 1
+        if end >= len(text):
+            raise ValueError("unterminated string")
+        return json.loads(text[index:end + 1]), end + 1
+    if char == "`":
+        end = text.find("`", index + 1)
+        if end == -1:
+            raise ValueError("unterminated raw string")
+        return text[index + 1:end], end + 1
+    if char == "/":
+        match = _V2_REGEX.match(text, index)
+        if not match:
+            raise ValueError("unterminated regex literal")
+        return _Regex(match[1], match[2]), match.end()
+    if text.startswith("${", index):
+        end = text.find("}", index)
+        if end == -1:
+            raise ValueError("unterminated variable")
+        return _Variable(text[index + 2:end]), end + 1
+    if char in {"[", "{"}:
+        items, index = _v2_list(text, index + 1, "]" if char == "[" else "}")
+        if char == "[":
+            return items, index
+        if not items or not all(isinstance(item, _Variable) for item in items):
+            raise ValueError("argument object must list plugin arguments")
+        return _ArgumentSet(tuple(item.name for item in items)), index
+    match = _V2_LITERAL.match(text, index)
+    if not match:
+        raise ValueError(f"unsupported value: {text[index:index + 40]}")
+    return json.loads(match[0]), match.end()
+
+
+def _v2_list(text: str, index: int, closing: str) -> tuple[list, int]:
+    items = []
+    index = _v2_skip(text, index)
+    if text.startswith(closing, index):
+        return items, index + 1
+    while True:
+        value, index = _v2_value(text, index)
+        items.append(value)
+        index = _v2_skip(text, index)
+        if text.startswith(closing, index):
+            return items, index + 1
+        if not text.startswith(",", index):
+            raise ValueError(f"expected ',' or '{closing}': {text[index:index + 40]}")
+        index += 1
+
+
+def _v2_actions(text: str) -> tuple[list[tuple[str, list]], dict[str, object]]:
+    """Parse `action(args) | action(args) [with key=value, ...]`."""
+    actions = []
+    index = 0
+    while True:
+        match = _V2_CALL.match(text, index)
+        if not match:
+            raise ValueError(f"expected an action: {text[index:index + 40]}")
+        values, index = _v2_list(text, match.end(), ")")
+        actions.append((match[1], values))
+        index = _v2_skip(text, index)
+        if not text.startswith("|", index):
+            break
+        index += 1
+
+    options = {}
+    if match := re.compile(r"with\s").match(text, index):
+        index = match.end()
+        while True:
+            option = _V2_OPTION.match(text, index)
+            if not option:
+                raise ValueError(f"invalid with option: {text[index:index + 40]}")
+            options[option[1]], index = _v2_value(text, option.end())
+            index = _v2_skip(text, index)
+            if not text.startswith(",", index):
+                break
+            index += 1
+    if index != len(text):
+        raise ValueError(f"unexpected text: {text[index:index + 40]}")
+    return actions, options
+
+
+def _dynamic(value) -> bool:
+    if isinstance(value, (_Variable, _ArgumentSet)):
+        return True
+    if isinstance(value, list):
+        return any(map(_dynamic, value))
+    return isinstance(value, str) and "${" in value
+
+
+def _surge_regex(pattern: str, flags: str) -> str:
+    if set(flags) - set("ims") or len(set(flags)) != len(flags):
+        raise ValueError(f"unsupported regex flags: {flags}")
+    # Surge uses whitespace to separate rewrite fields.
+    pattern = re.sub(r"\s", lambda match: rf"\x{ord(match[0]):02x}", pattern)
+    return f"(?{flags}){pattern}" if flags else pattern
+
+
+def _batch(values: list, count: int, operation: str) -> list[tuple]:
+    """Expand Loon's scalar or equal-length array argument forms."""
+    if len(values) != count:
+        raise ValueError(f"{operation} expects {count} argument(s)")
+    if not isinstance(values[0], list):
+        return [tuple(values)]
+    if not values[0] or not all(
+        isinstance(value, list) and len(value) == len(values[0])
+        for value in values
+    ):
+        raise ValueError(f"{operation} batch arrays must be non-empty and equal length")
+    return list(zip(*values))
+
+
+def _field(value) -> str:
+    """Return a whitespace-free Surge rewrite field."""
+    if isinstance(value, _Regex):
+        return _surge_regex(*value)
+    if isinstance(value, bool) or value is None:
+        value = json.dumps(value)
+    elif isinstance(value, (int, float)):
+        value = str(value)
+    if not isinstance(value, str) or not value or re.search(r"\s", value):
+        raise ValueError(f"value cannot be a Surge rewrite field: {value!r}")
+    return value
+
+
 _JQ_TOKEN = re.compile(
     r"\s+|\#[^\n]*|(?:[.$]?[A-Za-z_][A-Za-z_0-9]*)(?:::[A-Za-z_][A-Za-z_0-9]*)*"
     r"|\?//|//=|//|[|+*/%=-]=|!=|<=|>=|\.\.|.",
@@ -430,13 +586,42 @@ def _conditional_parts(line: str) -> tuple[str, str, str | None, str] | None:
     if not match:
         raise ValueError("only a single URL regex condition can be converted")
     direction, pattern, flags, capture, action = match.groups()
-    if set(flags) - set("ims") or len(set(flags)) != len(flags):
-        raise ValueError(f"unsupported regex flags: {flags}")
-    # Surge uses whitespace to separate rewrite fields.
-    pattern = re.sub(r"\s", lambda match: rf"\x{ord(match[0]):02x}", pattern)
-    if flags:
-        pattern = f"(?{flags}){pattern}"
-    return direction, pattern, capture, action
+    return direction, _surge_regex(pattern, flags), capture, action
+
+
+def _json_rewrite(
+    direction: str, pattern: str, operation: str, entries: list
+) -> tuple[str, str]:
+    """Build a jq rewrite that skips paths missing from the actual body."""
+    if operation == "del":
+        paths_json = json.dumps(entries, ensure_ascii=False, separators=(",", ":"))
+        expression = (
+            f"reduce {paths_json}[] as $path (. ;"
+            ". as $before | try delpaths([$path]) catch $before)"
+        )
+    elif operation == "add":
+        items_json = json.dumps(
+            [[path, value] for path, value in entries],
+            ensure_ascii=False, separators=(",", ":"),
+        )
+        expression = (
+            f"reduce {items_json}[] as $item (. ;"
+            ". as $before | try setpath($item[0];$item[1]) "
+            "catch $before)"
+        )
+    else:
+        items_json = json.dumps(
+            [[path, path[:-1], path[-1], value] for path, value in entries],
+            ensure_ascii=False, separators=(",", ":"),
+        )
+        expression = (
+            f"reduce {items_json}[] as $item (. ;"
+            ". as $before | try (if (getpath($item[1]) | "
+            "has($item[2])) then setpath($item[0];$item[3]) "
+            "else . end) catch $before)"
+        )
+    expression = _surge_safe_jq(expression)
+    return "[Body Rewrite]", f"http-{direction}-jq {pattern} '{expression}'"
 
 
 def _conditional_status(value) -> int:
@@ -446,25 +631,32 @@ def _conditional_status(value) -> int:
     return value
 
 
+_CONTENT_TYPES = {
+    "json": "application/json",
+    "text": "text/plain",
+    "plain": "text/plain",
+    "css": "text/css",
+    "html": "text/html",
+    "javascript": "application/javascript",
+    "png": "image/png",
+    "gif": "image/gif",
+    "jpeg": "image/jpeg",
+    "tiff": "image/tiff",
+    "svg": "image/svg+xml",
+    "mp4": "video/mp4",
+}
+
+
+def _content_type(kind) -> str:
+    if kind not in _CONTENT_TYPES:
+        raise ValueError(f"unsupported mock content type: {kind}")
+    return _CONTENT_TYPES[kind]
+
+
 def _conditional_response(
     pattern: str, kind: str, data: str, status: int, encoded: bool = False
 ) -> tuple[str, str]:
-    content_types = {
-        "json": "application/json",
-        "text": "text/plain",
-        "plain": "text/plain",
-        "css": "text/css",
-        "html": "text/html",
-        "javascript": "application/javascript",
-        "png": "image/png",
-        "gif": "image/gif",
-        "jpeg": "image/jpeg",
-        "tiff": "image/tiff",
-        "svg": "image/svg+xml",
-        "mp4": "video/mp4",
-    }
-    if kind not in content_types:
-        raise ValueError(f"unsupported mock content type: {kind}")
+    content_type = _content_type(kind)
     if encoded:
         base64.b64decode(data, validate=True)
     else:
@@ -472,23 +664,48 @@ def _conditional_response(
     return (
         "[Map Local]",
         f'{pattern} data-type=base64 data="{data}" '
-        f'header="Content-Type:{content_types[kind]}" status-code={status}',
+        f'header="Content-Type:{content_type}" status-code={status}',
     )
+
+
+def _json_value(value):
+    # Hub migrated legacy `replace data {}` rules to string values such as
+    # "{}"; keep the container semantics the legacy syntax had.
+    if isinstance(value, str) and value.strip()[:1] in {"{", "["}:
+        try:
+            return json.loads(value)
+        except json.JSONDecodeError:
+            pass
+    return value
 
 
 def _conditional_rewrite(
     line: str, arguments: dict[str, str]
-) -> tuple[str, str] | None:
+) -> list[tuple[str, str]] | None:
     conditional = _conditional_parts(line)
     if conditional is None:
         return None
     direction, pattern, capture, action = conditional
-    match = re.fullmatch(r"([\w.]+)\s*\((.*)\)", action)
-    if not match:
-        raise ValueError(f"unsupported conditional action: {action}")
-    operation, raw = match.groups()
-    values = json.loads(f"[{raw}]")
+    actions, options = _v2_actions(action)
+    if options:
+        raise ValueError("rewrite actions do not accept with options")
+    return [
+        converted
+        for operation, values in actions
+        for converted in _rewrite_action(
+            direction, pattern, capture, operation, values, arguments
+        )
+    ]
 
+
+def _rewrite_action(
+    direction: str,
+    pattern: str,
+    capture: str | None,
+    operation: str,
+    values: list,
+    arguments: dict[str, str],
+) -> list[tuple[str, str]]:
     if direction == "request" and operation in {"redirect", "url.replace"}:
         status = "header"
         if operation == "redirect":
@@ -497,10 +714,10 @@ def _conditional_rewrite(
                 or type(values[0]) is not int
                 or values[0] not in {302, 307}
             ):
-                raise ValueError(f"invalid redirect arguments: {raw}")
+                raise ValueError(f"invalid redirect arguments: {values}")
             status, values = values[0], values[1:]
         if len(values) != 1 or not isinstance(values[0], str):
-            raise ValueError(f"invalid URL replacement: {raw}")
+            raise ValueError(f"invalid URL replacement: {values}")
 
         def replace_variable(match: re.Match) -> str:
             name = match[1]
@@ -515,76 +732,119 @@ def _conditional_rewrite(
             raise ValueError(
                 f"URL replacement must not be empty or contain whitespace: {target}"
             )
-        return "[URL Rewrite]", f"{pattern} {target} {status}"
+        return [("[URL Rewrite]", f"{pattern} {target} {status}")]
 
-    if "${" in raw:
+    if _dynamic(values):
         raise ValueError(f"dynamic arguments are unsupported for {operation}")
 
     if direction == "request" and operation in {
         "reject", "reject_dict", "reject_array", "reject_img"
     }:
         if len(values) not in ({1, 2} if operation == "reject" else {1}):
-            raise ValueError(f"invalid {operation} arguments: {raw}")
+            raise ValueError(f"invalid {operation} arguments: {values}")
         status = _conditional_status(values[0])
         if operation == "reject_img":
-            return "[Map Local]", f"{pattern} data-type=tiny-gif status-code={status}"
+            return [("[Map Local]", f"{pattern} data-type=tiny-gif status-code={status}")]
         if operation == "reject":
             data = values[1] if len(values) == 2 else ""
             if not isinstance(data, str):
-                raise ValueError(f"reject body must be a string: {raw}")
+                raise ValueError(f"reject body must be a string: {values}")
             if data:
-                return _conditional_response(pattern, "text", data, status)
+                return [_conditional_response(pattern, "text", data, status)]
         else:
             data = "{}" if operation == "reject_dict" else "[]"
         header = (
             ' header="Content-Type:application/json"'
             if operation != "reject" else ""
         )
-        return (
+        return [(
             "[Map Local]",
             f'{pattern} data-type=text data="{data}"{header} status-code={status}',
-        )
+        )]
 
-    if direction == "response" and operation == "response.body.mock":
+    target, _, method = operation.partition(".")
+    if target != direction:
+        raise ValueError(f"unsupported {direction} action: {operation}")
+
+    if method in {"body.mock", "body.mock_file"} and direction == "response":
         if not 2 <= len(values) <= 4 or not all(
             isinstance(value, str) for value in values[:2]
         ):
-            raise ValueError(f"invalid response mock arguments: {raw}")
+            raise ValueError(f"invalid {operation} arguments: {values}")
         kind, data = values[:2]
         status = _conditional_status(values[2] if len(values) >= 3 else 200)
         encoded = values[3] if len(values) == 4 else False
         if not isinstance(encoded, bool):
-            raise ValueError(f"mock base64 flag must be a boolean: {raw}")
-        return _conditional_response(pattern, kind, data, status, encoded)
+            raise ValueError(f"mock base64 flag must be a boolean: {values}")
+        if method == "body.mock":
+            return [_conditional_response(pattern, kind, data, status, encoded)]
+        if encoded or urlsplit(data).scheme not in {"http", "https"}:
+            raise ValueError(f"mock file must be a plain HTTP(S) resource: {data}")
+        return [(
+            "[Map Local]",
+            f'{pattern} data-type=file data="{data}" '
+            f'header="Content-Type:{_content_type(kind)}" status-code={status}',
+        )]
 
-    if (
-        operation in {f"{direction}.json.jq", f"{direction}.json.delete"}
-        and len(values) == 1
-    ):
-        value = values[0]
-        if operation.endswith(".jq") and isinstance(value, str):
-            return "[Body Rewrite]", f"http-{direction}-jq {pattern} {_jq(value)}"
-        if operation.endswith(".delete"):
-            paths = [value] if isinstance(value, str) else value
-            if isinstance(paths, list) and paths and all(
-                isinstance(path, str) and path for path in paths
-            ):
-                encoded_paths = " ".join(
-                    path.replace(" ", r"\x20") for path in paths
-                )
-                return _convert_rewrite(
-                    f"{pattern} {direction}-body-json-del {encoded_paths}",
-                    arguments,
-                )[0]
-    raise ValueError(f"unsupported conditional action or arguments: {action}")
+    if method == "json.jq" and len(values) == 1 and isinstance(values[0], str):
+        return [("[Body Rewrite]", f"http-{direction}-jq {pattern} {_jq(values[0])}")]
+    if method == "json.jq_file" and len(values) == 1 and isinstance(values[0], str):
+        jq = _jq(f'jq-path="{values[0]}"')
+        return [("[Body Rewrite]", f"http-{direction}-jq {pattern} {jq}")]
+    if method == "json.delete":
+        paths = [path for path, in _batch(values, 1, operation)]
+        if not all(isinstance(path, str) and path for path in paths):
+            raise ValueError(f"invalid {operation} key paths: {values}")
+        return [_json_rewrite(
+            direction, pattern, "del", [_json_path(path) for path in paths]
+        )]
+    if method in {"json.add", "json.replace"}:
+        pairs = _batch(values, 2, operation)
+        if not all(isinstance(path, str) and path for path, _ in pairs):
+            raise ValueError(f"invalid {operation} key paths: {values}")
+        return [_json_rewrite(
+            direction, pattern, method.removeprefix("json."),
+            [(_json_path(path), _json_value(value)) for path, value in pairs],
+        )]
+
+    if method == "body.replace":
+        rewrites = []
+        for regex, replacement in _batch(values, 2, operation):
+            if isinstance(regex, str):
+                regex = _Regex(re.escape(regex), "")
+            if isinstance(replacement, str):
+                # Spaces are written as \x20, as in legacy Loon replacements.
+                replacement = replacement.replace(" ", r"\x20")
+            rewrites.append((
+                "[Body Rewrite]",
+                f"http-{direction} {pattern} {_field(regex)} {_field(replacement)}",
+            ))
+        return rewrites
+
+    header_counts = {"add": 2, "set": 2, "del": 1, "replace": 3}
+    header_method = method.removeprefix("header.")
+    if method.startswith("header.") and header_method in header_counts:
+        rewrites = []
+        for fields in _batch(values, header_counts[header_method], operation):
+            name, *rest = map(_field, fields)
+            prefix = f"http-{direction} {pattern}"
+            if header_method in {"del", "set"}:
+                rewrites.append(f"{prefix} header-del {name}")
+            if header_method in {"add", "set"}:
+                rewrites.append(f"{prefix} header-add {name} {rest[0]}")
+            if header_method == "replace":
+                rewrites.append(f"{prefix} header-replace-regex {name} {' '.join(rest)}")
+        return [("[Header Rewrite]", rewrite) for rewrite in rewrites]
+
+    raise ValueError(f"unsupported conditional action or arguments: {operation}{values}")
 
 
 def _convert_rewrite(
     line: str, arguments: dict[str, str]
 ) -> list[tuple[str, str]]:
     conditional = _conditional_rewrite(line, arguments)
-    if conditional:
-        return [conditional]
+    if conditional is not None:
+        return conditional
 
     parts = line.split(maxsplit=2)
     if len(parts) < 2:
@@ -649,43 +909,15 @@ def _convert_rewrite(
 
         words = value.split()
         if operation == "del":
-            paths = [_json_path(word.replace(r"\x20", " ")) for word in words]
-            paths_json = json.dumps(
-                paths, ensure_ascii=False, separators=(",", ":")
-            )
-            expression = (
-                f"reduce {paths_json}[] as $path (. ;"
-                ". as $before | try delpaths([$path]) catch $before)"
-            )
+            entries = [_json_path(word.replace(r"\x20", " ")) for word in words]
         else:
             if len(words) % 2:
                 raise ValueError(f"invalid JSON rewrite pairs: {line}")
-            items = []
-            for key, raw_value in zip(words[::2], words[1::2]):
-                path = _json_path(key.replace(r"\x20", " "))
-                converted_value = _loon_value(raw_value)
-                if operation == "add":
-                    items.append([path, converted_value])
-                    continue
-                items.append([path, path[:-1], path[-1], converted_value])
-            items_json = json.dumps(
-                items, ensure_ascii=False, separators=(",", ":")
-            )
-            if operation == "add":
-                expression = (
-                    f"reduce {items_json}[] as $item (. ;"
-                    ". as $before | try setpath($item[0];$item[1]) "
-                    "catch $before)"
-                )
-            else:
-                expression = (
-                    f"reduce {items_json}[] as $item (. ;"
-                    ". as $before | try (if (getpath($item[1]) | "
-                    "has($item[2])) then setpath($item[0];$item[3]) "
-                    "else . end) catch $before)"
-                )
-        expression = _surge_safe_jq(expression)
-        return [("[Body Rewrite]", f"{surge_type} {pattern} '{expression}'")]
+            entries = [
+                (_json_path(key.replace(r"\x20", " ")), _loon_value(raw_value))
+                for key, raw_value in zip(words[::2], words[1::2])
+            ]
+        return [_json_rewrite(http_type, pattern, operation, entries)]
 
     body_action = re.fullmatch(r"(request|response)-body-replace-regex", action)
     if body_action and value:
@@ -750,38 +982,86 @@ def _convert_rule(
     return f"# Unsupported Loon policy {policy}: {line}"
 
 
-def _convert_script(
-    line: str,
-    arguments: dict[str, str],
-    argument_kinds: dict[str, str],
-    used_names: dict[str, int],
-    script_sources: dict[str, bytes | None],
-) -> tuple[list[str], str, str | None]:
+def _v2_script(
+    line: str, arguments: dict[str, str]
+) -> tuple[str, str | None, str | None, dict[str, str]] | None:
+    """Parse a Loon v2 script entry into the legacy parameter form."""
+    pattern = cron = None
     conditional = _conditional_parts(line)
     if conditional:
         direction, pattern, _, action = conditional
+        script_type = f"http-{direction}"
+    else:
         match = re.fullmatch(
-            r'script\(\s*("(?:\\.|[^"\\])*")\s*\)(?:\s+with\s+(.+))?',
-            action,
+            r"(cron|generic|network-changed)\s+(?:(.+?)\s+)?then\s+(.+)", line
         )
         if not match:
-            raise ValueError(f"unsupported conditional script: {action}")
-        script_path = json.loads(match[1])
-        parameters = match[2] or ""
-        parameters = parameters.replace(
-            "requires_body=", "requires-body="
-        ).replace("binary_body_mode=", "binary-body-mode=")
-        line = (
-            f"http-{direction} {pattern} script-path={script_path}, "
-            f"{parameters}"
-        )
+            return None
+        script_type, trigger, action = match.groups()
+        if (script_type == "cron") != (trigger is not None):
+            raise ValueError(f"invalid {script_type} trigger: {line}")
+        if trigger:
+            value, end = _v2_value(trigger, 0)
+            if end != len(trigger):
+                raise ValueError(f"invalid cron expression: {trigger}")
+            if isinstance(value, _Variable):
+                if value.name not in arguments:
+                    raise ValueError(f"undefined cron argument: {value.name}")
+                cron = "{" + value.name + "}"
+            elif isinstance(value, str):
+                cron = value
+            else:
+                raise ValueError(f"invalid cron expression: {trigger}")
 
+    actions, options = _v2_actions(action)
+    if len(actions) != 1 or actions[0][0] != "script":
+        raise ValueError(f"expected a single script action: {action}")
+    values = actions[0][1]
+    if not 1 <= len(values) <= 2 or not isinstance(values[0], str) or not values[0]:
+        raise ValueError(f"invalid script arguments: {values}")
+    parameters = {"script-path": values[0]}
+    if len(values) == 2:
+        argument = values[1]
+        if isinstance(argument, _ArgumentSet):
+            if undefined := set(argument.names) - set(arguments):
+                raise ValueError(f"undefined script arguments: {sorted(undefined)}")
+            parameters["argument"] = (
+                "[" + ",".join("{" + name + "}" for name in argument.names) + "]"
+            )
+        elif isinstance(argument, str):
+            parameters["argument"] = '"' + argument.replace('"', r'\"') + '"'
+        else:
+            raise ValueError(f"invalid script argument: {argument}")
+
+    for key, value in options.items():
+        if key == "enable":
+            if isinstance(value, _Variable):
+                parameters["enable"] = "{" + value.name + "}"
+            elif value is not True:
+                raise ValueError(f"unsupported script enable value: {value}")
+        elif key in {"tag", "img_url"} and isinstance(value, str):
+            parameters[key.replace("_", "-")] = value
+        elif key == "timeout" and type(value) in {int, float} and value > 0:
+            parameters[key] = str(value)
+        elif key in {"requires_body", "binary_body_mode", "debug"} and isinstance(
+            value, bool
+        ):
+            parameters[key.replace("_", "-")] = json.dumps(value)
+        else:
+            raise ValueError(f"unsupported script option: {key}={value!r}")
+    return script_type, pattern, cron, parameters
+
+
+def _legacy_script(
+    line: str,
+) -> tuple[str, str | None, str | None, dict[str, str]]:
     script_type, separator, remainder = line.partition(" ")
     if not separator or script_type not in {
         "http-request",
         "http-response",
         "cron",
         "generic",
+        "network-changed",
     }:
         raise ValueError(f"unsupported script rule: {line}")
 
@@ -807,18 +1087,35 @@ def _convert_script(
             raise ValueError(f"invalid script parameter: {parameter}")
         parameters[key.strip()] = value.strip()
 
+    return script_type, pattern, cron, parameters
+
+
+def _convert_script(
+    line: str,
+    arguments: dict[str, str],
+    argument_kinds: dict[str, str],
+    used_names: dict[str, int],
+    script_sources: dict[str, bytes | None],
+) -> tuple[list[str], str, str | None]:
+    v2 = _v2_script(line, arguments)
+    if v2:
+        script_type, pattern, cron, parameters = v2
+    else:
+        script_type, pattern, cron, parameters = _legacy_script(line)
+
     script_path = parameters.get("script-path")
     if not script_path:
         raise ValueError(f"script-path is required: {line}")
     name = parameters.get("tag") or urlsplit(script_path).path.rsplit("/", 1)[-1]
-    if conditional:
-        name = name.strip('"')
     name = name.removesuffix(".js")
     used_names[name] = used_names.get(name, 0) + 1
     if used_names[name] > 1:
         name = f"{name} {used_names[name]}"
 
-    options = [f"type={script_type}"]
+    options = (
+        ["type=event", "event-name=network-changed"]
+        if script_type == "network-changed" else [f"type={script_type}"]
+    )
     if pattern:
         pattern = f'"{pattern}"' if "," in pattern else pattern
         options.append(f"pattern={pattern}")
@@ -826,7 +1123,7 @@ def _convert_script(
         cron = _replace_placeholders(cron.strip('"'), arguments)
         options.append(f'cronexp="{cron}"')
     options.append(f"script-path={script_path}")
-    for key in ("requires-body", "binary-body-mode", "timeout"):
+    for key in ("requires-body", "binary-body-mode", "timeout", "debug"):
         if key in parameters:
             options.append(f"{key}={parameters[key]}")
 
