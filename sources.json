@@ -279,6 +279,10 @@
     "modules/smzdm_remove_ads.sgmodule": "https://kelee.one/Tool/Loon/Lpx/smzdm_remove_ads.lpx"
   },
   "resources": {
+    "resources/JQLang/Amap/updatable.jq": {
+      "sha256": "1e809daa11507fdb06c2bd41b748ad9950c35c4d8a08fef5714af7ac2021d217",
+      "url": "https://kelee.one/Resource/JQLang/Amap/updatable.jq"
+    },
     "resources/JQLang/Bilibili/mine_Bilibili_remove_ads.jq": {
       "sha256": "e99d5ea7038cb973996a04fde3cd9a2840dbba6dcfbfb437c00cb383f53fda2f",
       "url": "https://kelee.one/Resource/JQLang/Bilibili/mine_Bilibili_remove_ads.jq"
@@ -310,10 +314,6 @@
     "scripts/AliYunDrive/AliYunDrive_remove_ads.js": {
       "sha256": "4909ecde19541ad5e83be296e87eab83e62ede4e710fceee3d59dc4cf11f3e38",
       "url": "https://kelee.one/Resource/JavaScript/AliYunDrive/AliYunDrive_remove_ads.js"
-    },
-    "scripts/Amap/Amap_remove_ads.js": {
-      "sha256": "b351ddf6e353c85e58a7a98fc1fe66e07542d370154d486ed4efbc9660e6d7a2",
-      "url": "https://kelee.one/Resource/JavaScript/Amap/Amap_remove_ads.js"
     },
     "scripts/AutoHome/AutoHome_remove_ads.js": {
       "sha256": "9ef33d57454935592032fe7d204a9fee555883b49f86d938942719d95a2035dd",
