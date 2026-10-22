@@ -279,8 +279,12 @@
     "modules/smzdm_remove_ads.sgmodule": "https://kelee.one/Tool/Loon/Lpx/smzdm_remove_ads.lpx"
   },
   "resources": {
+    "resources/JQLang/Amap/search_poi_detail.jq": {
+      "sha256": "7def102b752835f8cbe63167b75dbe19997cb532f7e35d8283de4eeb5f2d4eb6",
+      "url": "https://kelee.one/Resource/JQLang/Amap/search_poi_detail.jq"
+    },
     "resources/JQLang/Amap/updatable.jq": {
-      "sha256": "1e809daa11507fdb06c2bd41b748ad9950c35c4d8a08fef5714af7ac2021d217",
+      "sha256": "dba0888e3e4491e282ce58e547e3a4125f6fd96057d0d5eaf878450fa40bd647",
       "url": "https://kelee.one/Resource/JQLang/Amap/updatable.jq"
     },
     "resources/JQLang/Bilibili/mine_Bilibili_remove_ads.jq": {
@@ -570,10 +574,6 @@
     "scripts/StartUpAds/e698ff0e64bf0dc6.js": {
       "sha256": "645e358b4f666d5e10678041d873a7e69e0b4e93ae491223af19f549eee03f08",
       "url": "https://raw.githubusercontent.com/ddgksf2013/Scripts/master/pinganads.js"
-    },
-    "scripts/StartUpAds/e96cc9631bed175e.js": {
-      "sha256": "8d6b94ed0ac8a06ed42c8d52c5ec998d47e604bbd3d6f466aacb53fef7f98ab3",
-      "url": "https://raw.githubusercontent.com/ddgksf2013/Scripts/master/dongqiudi.js"
     },
     "scripts/TV_Assistant/TV_Assistant_remove_ads.js": {
       "sha256": "a957df12593369f6ce111a79619ba88cdad4870aa18b639ff1942a92d441bb18",
