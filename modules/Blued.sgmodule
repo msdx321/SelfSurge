@@ -1,0 +1,27 @@
+#!name=Blued
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!category=去广告
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Blued.sgmodule
+#!tg-channel=https://t.me/inaisi
+#!arguments=blued_enable:true
+#!requirement=CORE_VERSION>=20
+
+# Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partB/Blued.sgmodule
+# Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.
+# License: GPL-3.0; see resources/licenses/fmz200-wool_scripts-LICENSE.
+
+[Map Local]
+# 主页推荐直播 
+^https?:\/\/social\.blued\.cn\/users\/recommend data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+# 未登录时个人界面广告
+^https?:\/\/social\.blued\.cn\/users\/no_auth\/benefit data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[Script]
+# 登录后个人界面广告
+Blued-19 = type=http-response, pattern=^https?:\/\/social\.blued\.cn\/users\/.+\/more\/ios\?v=2, script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/upstream/e118fec1aaae6a11.js, requires-body=true, timeout=60
+
+[MITM]
+hostname = %APPEND% social.blued.cn

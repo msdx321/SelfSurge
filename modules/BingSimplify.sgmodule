@@ -1,0 +1,37 @@
+#!name=Bing首页简化[墨鱼版]
+#!desc=如果有需要的去除广告的APP，可自行在共享表格中添加需求
+#!category=去广告
+#!author=@ddgksf2013
+#!date=2023-12-18
+#!requirement=CORE_VERSION>=20
+
+# Source: https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/AdBlock/BingSimplify.conf
+# Adapted from Quantumult X by SelfSurge; upstream attribution:
+# @ScriptName        Bing首页简化[墨鱼版]
+# @Author            @ddgksf2013
+# @Function          如果有需要的去除广告的APP，可自行在共享表格中添加需求
+# @AddRequest        https://bit.ly/addRequestforAdBlock
+# @WechatID          墨鱼手记
+# @TgChannel         https://t.me/ddgksf2021
+# @Contribute        https://t.me/ddgksf2013_bot
+# @UpdateTime        2023-12-18
+# @Suitable          自行观看“# > ”注释内容[请卸载重装]
+# @Attention         如需引用请注明出处，谢谢合作！
+# @Version           V1.0.4
+# @ScriptURL         https://raw.githubusercontent.com/ddgksf2013/Rewrite/refs/heads/master/AdBlock/BingSimplify.conf
+
+[Script]
+# bing_首页优化@ddgksf2013
+# QX action: script-response-body
+qx-e4592d7a-21 = type=http-response, pattern=^https?:\/\/sapphire\.api\.microsoftapp\.net\/config\/api\/v1\/get, script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/adapted/e0b47401213bfeb1.js, requires-body=true, max-size=-1, timeout=60
+
+[Map Local]
+# bing_位置请求@ddgksf2013
+^https?:\/\/assets\.msn\.com\/service\/weather\/locations\/search data-type=text data="{}" header="Content-Type:application/json" status-code=200
+# bing_信息流@LE
+^https:\/\/assets\.msn\.com\/service\/news\/feed\/pages\/startmhp data-type=text data="{}" header="Content-Type:application/json" status-code=200
+# bing_天气请求@ddgksf2013
+^https?:\/\/api\.msn\.com\/weather data-type=text data="{}" header="Content-Type:application/json" status-code=200
+
+[MITM]
+hostname = %APPEND% sapphire.api.microsoftapp.net, assets.msn.com, api.msn.com

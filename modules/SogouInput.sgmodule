@@ -1,0 +1,27 @@
+#!name=搜狗输入法
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!category=去广告
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/SogouInput.sgmodule
+#!tg-channel=https://t.me/inaisi
+#!requirement=CORE_VERSION>=20
+
+# Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partS/SogouInput.sgmodule
+# Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.
+# License: GPL-3.0; see resources/licenses/fmz200-wool_scripts-LICENSE.
+
+[Rule]
+# DOMAIN-SUFFIX, business-cdn.shouji.sogou.com, REJECT
+DOMAIN-SUFFIX,push-service-ios.sginput.qq.com,REJECT
+
+[URL Rewrite]
+# 开屏广告
+^https?://(ios|android)\.sogou\.com/[^/]+/sogou_input_[^/]+/[^/]+/index\.html - reject
+
+[Map Local]
+# 屏蔽游戏中心
+^https?:\/\/h5api\.sginput\.qq\.com\/v1\/gcenter\/ios\/homepage data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[MITM]
+hostname = %APPEND% business-cdn.shouji.sogou.com, ios.sogou.com, android.sogou.com, h5api.sginput.qq.com

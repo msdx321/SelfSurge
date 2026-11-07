@@ -1,0 +1,18 @@
+#!name=台铃智能
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!category=去广告
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/TaiLingIntelligent.sgmodule
+#!tg-channel=https://t.me/inaisi
+#!requirement=CORE_VERSION>=20
+
+# Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partT/TaiLingIntelligent.sgmodule
+# Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.
+# License: GPL-3.0; see resources/licenses/fmz200-wool_scripts-LICENSE.
+
+[Body Rewrite]
+http-response-jq ^https://www\.tailgdd\.com/v8/smart/app/config/get$ 'if (getpath([]) | has("data")) then (setpath(["data"]; {})) else . end'
+
+[MITM]
+hostname = %APPEND% www.tailgdd.com

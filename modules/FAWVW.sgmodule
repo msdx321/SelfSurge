@@ -1,0 +1,24 @@
+#!name=一汽大众
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!category=去广告
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/FAWVW.sgmodule
+#!tg-channel=https://t.me/inaisi
+#!requirement=CORE_VERSION>=20
+
+# Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partY/FAWVW.sgmodule
+# Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.
+# License: GPL-3.0; see resources/licenses/fmz200-wool_scripts-LICENSE.
+
+[Body Rewrite]
+http-response-jq ^https?:\/\/oneapp-api\.faw-vw\.com\/search\/firstPage\/getPromptList\/v1\?.* '. = { returnStatus: "SUCCEED", hasMore: false, data: [] }'
+http-response-jq ^https?:\/\/oneapp-api\.faw-vw\.com\/benefits\/benefitsCard\/getInfo\/v1\?.* '. = { returnStatus: "SUCCEED", hasMore: false, data: [] }'
+http-response-jq ^https?:\/\/oneapp-api\.faw-vw\.com\/content\/booth\/getBoothList\/v1\?.*showPositionCode=VWAPP_HOME_BUOY '. = { returnStatus: "SUCCEED", hasMore: false, data: [] }'
+http-response-jq ^https?:\/\/oneapp-api\.faw-vw\.com\/content\/booth\/getBoothList\/v1\?.*showPositionCode=VWAPP_(ICE|MEB)_(OPEN_SCREEN_ADS|CAR_ZHIHU_COLLEGE) '. = { returnStatus: "SUCCEED", hasMore: false, data: [] }'
+http-response-jq ^https?:\/\/oneapp-api\.faw-vw\.com\/content\/booth\/getBoothList\/v1\?.*showPositionCode=VWAPP_(ICE|MEB)_HOME_(OWNER_BANNER|PROSPECTS_BANNER|CUSTOM_BANNER|KONGO|CUSTOM_KONGO) '. = { returnStatus: "SUCCEED", hasMore: false, data: [] }'
+http-response-jq ^https?:\/\/oneapp-api\.faw-vw\.com\/content\/(customize\/getCustomizePageName|recommend\/getRecommendInfoFlows|activity\/getSquareActivityList|theme\/getThemeList|post\/getPostsByTags|evaluate\/getEvaluateCards)\/v1\?.* '. = { returnStatus: "SUCCEED", hasMore: false, data: [] }'
+http-response-jq ^https?:\/\/oneapp-api\.faw-vw\.com\/content\/(collection\/getCollectionList)\/v1\?.* '. = { returnStatus: "SUCCEED", hasMore: false, data: {} }'
+
+[MITM]
+hostname = %APPEND% oneapp-api.faw-vw.com

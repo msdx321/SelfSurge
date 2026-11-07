@@ -18,10 +18,10 @@
 # Requires main-profile policy selection: DOMAIN, scripthub.vercel.app, PROXY
 
 [Script]
-前端界面 = type=http-request,pattern=(?i)^https?:\/\/script\.hub\/($|edit\/|reload),script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/script-hub.js,timeout=300
-Rewrite转换 = type=http-request,pattern=(?i)^https?:\/\/script\.hub\/file\/_start_\/.+type=(?:qx-rewrite|surge-module|loon-plugin|all-module),script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/Rewrite-Parser.js,timeout=300
-Rule转换 = type=http-request,pattern=(?i)^https?:\/\/script\.hub\/file\/_start_\/.+type=rule-set,script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/rule-parser.js,timeout=300
-JavaScript转换 = type=http-request,pattern=(?i)^https?:\/\/script\.hub\/convert\/,script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/script-converter.js,timeout=300
+前端界面 = type=http-request,pattern=(?i)^https?:\/\/script\.hub\/($|edit\/|reload),script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/upstream/71d45f38fd72e70b.js,timeout=300
+Rewrite转换 = type=http-request,pattern=(?i)^https?:\/\/script\.hub\/file\/_start_\/.+type=(?:qx-rewrite|surge-module|loon-plugin|all-module),script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/upstream/d1171e6520deae64.js,timeout=300
+Rule转换 = type=http-request,pattern=(?i)^https?:\/\/script\.hub\/file\/_start_\/.+type=rule-set,script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/upstream/5f575b117bdf0130.js,timeout=300
+JavaScript转换 = type=http-request,pattern=(?i)^https?:\/\/script\.hub\/convert\/,script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/upstream/884e36ed7bfefa03.js,timeout=300
 
 [MITM]
 hostname = %APPEND% script.hub, *.script.hub

@@ -74,7 +74,7 @@ jobs:
           else
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git commit -m "chore: update Hub catalog"
+            git commit -m "chore: update upstream plugin catalog"
             git push
           fi
 

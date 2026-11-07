@@ -1,0 +1,29 @@
+#!name=中国电信
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!category=去广告
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/ChinaTelecom.sgmodule
+#!tg-channel=https://t.me/inaisi
+#!requirement=CORE_VERSION>=20
+
+# Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partZ/ChinaTelecom.sgmodule
+# Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.
+# License: GPL-3.0; see resources/licenses/fmz200-wool_scripts-LICENSE.
+
+[Rule]
+DOMAIN,ad.21cn.com,REJECT
+DOMAIN,ad.k.21cn.com,REJECT
+DOMAIN,admarket.21cn.com,REJECT
+DOMAIN,adshows.21cn.com,REJECT
+IP-CIDR,122.229.8.47/32,REJECT,no-resolve
+IP-CIDR,122.229.29.89/32,REJECT,no-resolve
+
+[URL Rewrite]
+^https?:\/\/cloud\.189\.cn\/include\/splash\/ - reject
+
+[Map Local]
+^https?:\/\/zt-app\.go189\.cn\/zt-app\/welcome\/.*?Animation data-type=tiny-gif status-code=200
+
+[MITM]
+hostname = %APPEND% cloud.189.cn, zt-app.go189.cn

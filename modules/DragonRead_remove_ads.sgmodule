@@ -1,48 +1,56 @@
-#!name=番茄小说去广告
-#!desc=移除番茄小说开屏广告、移除文章底部和章末广告、移除听书页面广告、移除悬浮部件和底栏多余的福利标签。
+#!name=番茄小说
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
 #!category=去广告
-#!openUrl=https://apps.apple.com/app/id1468454200
-#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
-#!homepage=https://hub.kelee.one
-#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/DragonRead.png
-#!date=2026-10-02 13:57:49
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/DragonRead_remove_ads.sgmodule
+#!tg-channel=https://t.me/inaisi
 
-# Source: https://kelee.one/Tool/Loon/Lpx/DragonRead_remove_ads.lpx
-# Adapted from Loon LPX to Surge module by SelfSurge.
-# Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+# Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partF/FanQieNovel.sgmodule
+# Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.
+# License: GPL-3.0; see resources/licenses/fmz200-wool_scripts-LICENSE.
 
 [Rule]
-DOMAIN, zlink.ugsdk.cn, REJECT-DROP
-DOMAIN, mon.toutiaocloud.net, REJECT-DROP
-DOMAIN, lf-normal-gr-sourcecdn.bytegecko.com, REJECT-DROP
-DOMAIN, lf-webcast-gr-sourcecdn.bytegecko.com, REJECT-DROP
-DOMAIN, p3-developer.bytemaimg.com, REJECT-DROP
-DOMAIN, webcast-open.douyin.com, REJECT-DROP
-DOMAIN, p11-webcast-sign.douyinpic.com, REJECT-DROP
-DOMAIN, p3-webcast-sign.douyinpic.com, REJECT-DROP
-DOMAIN, log3-applog.fqnovel.com, REJECT-DROP
-DOMAIN, log5-applog.fqnovel.com, REJECT-DROP
-DOMAIN, mon11-misc-lq.fqnovel.com, REJECT-DROP
-DOMAIN, mon11-misc.fqnovel.com, REJECT-DROP
-DOMAIN, mon3-misc.fqnovel.com, REJECT-DROP
-DOMAIN, rtlog3-applog.fqnovel.com, REJECT-DROP
-DOMAIN, rtlog5-applog.fqnovel.com, REJECT-DROP
-DOMAIN, effect.snssdk.com, REJECT-DROP
-DOMAIN, i.snssdk.com, REJECT-DROP
-DOMAIN, is-lq.snssdk.com, REJECT-DROP
-DOMAIN, is.snssdk.com, REJECT-DROP
-DOMAIN, security.snssdk.com, REJECT-DROP
-DOMAIN, vas.snssdk.com, REJECT-DROP
-DOMAIN, mon.toutiaocloud.com, REJECT-DROP
-DOMAIN, abtest3-misc.zijieapi.com, REJECT-DROP
-DOMAIN, ads3-normal.zijieapi.com, REJECT-DROP
-DOMAIN, ads5-normal.zijieapi.com, REJECT-DROP
-DOMAIN, feedback-c.zijieapi.com, REJECT-DROP
-DOMAIN, gecko3.zijieapi.com, REJECT-DROP
-DOMAIN, gecko5.zijieapi.com, REJECT-DROP
-DOMAIN, ma.zijieapi.com, REJECT-DROP
-DOMAIN, minigame3-normal.zijieapi.com, REJECT-DROP
-DOMAIN, minigame5-normal.zijieapi.com, REJECT-DROP
-DOMAIN, mssdk.zijieapi.com, REJECT-DROP
-DOMAIN, timon.zijieapi.com, REJECT-DROP
-DOMAIN, vcs.zijieapi.com, REJECT-DROP
+DOMAIN,i-lq.snssdk.com,REJECT
+DOMAIN,is-lq.snssdk.com,REJECT
+DOMAIN,ug-sinfonlinea.bytedance.com,REJECT
+DOMAIN,dig.bdurl.net,REJECT
+DOMAIN,activity-ag.awemeughun.com,REJECT
+DOMAIN,mcs.snssdk.com,REJECT
+DOMAIN,tnc3-alisc1.snssdk.com,REJECT
+DOMAIN,security-lq.snssdk.com,REJECT
+DOMAIN,tnc3-aliec2.snssdk.com,REJECT
+#DOMAIN, i.snssdk.com, REJECT
+DOMAIN,v6-novelapp.ixigua.com,REJECT
+DOMAIN,msync-im1-vip6-std.easemob.com,REJECT
+DOMAIN,apd-pcdnwxlogin.teg.tencent-cloud.net,REJECT
+DOMAIN,api.iegadp.qq.com,REJECT
+DOMAIN-SUFFIX,novelapp.ixigua.com,REJECT
+DOMAIN-SUFFIX,default.ixigua.com,REJECT
+DOMAIN-SUFFIX,byteorge.com,REJECT
+#DOMAIN-SUFFIX, bytedance.com, REJECT
+IP-CIDR,49.71.37.101/32,REJECT,no-resolve
+IP-CIDR,117.71.105.23/32,REJECT,no-resolve
+IP-CIDR,218.94.207.205/32,REJECT,no-resolve
+IP-CIDR,117.92.229.188/32,REJECT,no-resolve
+IP-CIDR,101.36.166.16/32,REJECT,no-resolve
+IP-CIDR,180.96.2.114/32,REJECT,no-resolve
+
+[URL Rewrite]
+# 去章末广告
+^https?:\/\/.+\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk\/(get_ads|stats|settings)\/ - reject
+^https?:\/\/.+\.pglstatp-toutiao\.com\/.+\/toutiao\.mp4 - reject
+^https?:\/\/.+\.(pglstatp-toutiao|pstatp)\.com\/(obj|img)\/(ad-app-package|ad)\/.+ - reject
+^https?:\/\/.+\.(pglstatp-toutiao|pstatp)\.com\/(obj|img)\/web\.business\.image\/.+ - reject
+^https?:\/\/.+\.(pglstatp-toutiao|pstatp)\.com\/obj\/ad-pattern\/renderer - reject
+^https?:\/\/gurd\.snssdk\.com\/src\/server\/v3\/package - reject
+^https?:\/\/.+\.byteimg.com/tos-cn-i-1yzifmftcy\/(.+)-jpeg\.jpeg - reject
+^https?:\/\/.+\.pstatp\.com\/obj\/mosaic-legacy\/.+\?from\=ad - reject
+^https?:\/\/.+\.pstatp\.com\/bytecom\/resource\/track_log\/src\/.+ - reject
+^https?:\/\/.+\.snssdk\.com\/video\/play\/1\/toutiao\/.+\/mp4 - reject
+^https?:\/\/.+\.snssdk.com\/api\/ad\/.+ - reject
+^https?:\/\/.+\.byteimg\.com\/ad-app-package - reject
+^https?:\/\/.+\.byteimg\.com\/web\.business\.image - reject
+
+[MITM]
+hostname = %APPEND% *.pangolin-sdk-toutiao.com, *.pangolin-sdk-toutiao.*, *.pstatp.com, *.pstatp.com.*, *.pglstatp-toutiao.com.*, *.pglstatp-toutiao.com, gurd.snssdk.com, gurd.snssdk.com.*, i-lq.snssdk.com, i-lq.snssdk.com.*, *default.ixigua.com

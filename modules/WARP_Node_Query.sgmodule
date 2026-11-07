@@ -13,7 +13,7 @@
 # Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [Script]
-WARP · INFO = type=generic,script-path=https://raw.githubusercontent.com/VirgilClyne/Cloudflare/main/js/1.1.1.1.panel.js,timeout=10
+WARP · INFO = type=generic,script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/upstream/5abe4e8c27948331.js,timeout=10
 
 [Panel]
 WARP · INFO = title="WARP · INFO",content="点击刷新",script-name=WARP · INFO,icon=icloud.circle.system,icon-color=#5d84f8

@@ -1,0 +1,15 @@
+#!name=小米商城
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!category=去广告
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/XiaomiMall.sgmodule
+#!tg-channel=https://t.me/inaisi
+#!arguments=xnmiuhig_enable:true
+
+# Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partX/XiaomiMall.sgmodule
+# Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.
+# License: GPL-3.0; see resources/licenses/fmz200-wool_scripts-LICENSE.
+
+[Script]
+XiaomiMall-11 = type=http-response, pattern=^https?:\/\/api\.m\.mi\.com\/v1\/app\/start, script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/upstream/99c1f7a94b665bd1.js, requires-body=true, timeout=60

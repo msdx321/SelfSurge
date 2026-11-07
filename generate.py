@@ -4,21 +4,20 @@ import json
 import re
 from pathlib import Path, PurePosixPath
 from urllib.error import HTTPError
-from urllib.parse import urlsplit
+from urllib.parse import quote, urlsplit
 
 from selfsurge import (
     convert_lpx,
     fetch_bytes,
-    fetch_lpx,
     fetch_text,
-    plugin_url,
     resource_urls,
 )
-from startupads import STARTUP_MODULE_NAME, STARTUP_MODULE_URL, startup_module
+from quantumult import adapt_script, convert_qx
+from upstreams import CATALOG_URL, TREES, discover, select, surge_module
+from startupads import STARTUP_MODULE_NAME, STARTUP_MODULE_URL, configure_fallback, startup_module
 
 
 ROOT = Path(__file__).parent
-CATALOG_URL = "https://hub.kelee.one/list.json"
 GENERATED_DIRECTORIES = (Path("modules"), Path("scripts"), Path("resources"))
 PUBLISHED_PREFIX = "https://raw.githubusercontent.com/msdx321/SelfSurge/main/"
 PUBLISHED_MODULE_PREFIX = PUBLISHED_PREFIX + "modules/"
@@ -49,28 +48,6 @@ YOUTUBE_RESOURCE_PATHS = {
     ),
     YOUTUBE_LICENSE_URL: Path("resources/licenses/Maasea-sgmodule-LICENSE"),
 }
-
-
-def catalog_entries() -> list[tuple[str, str]]:
-    payload = json.loads(fetch_text(CATALOG_URL))
-    entries = []
-    names = set()
-    for item in payload.get("lists", []):
-        source_url = plugin_url(item["url"])
-        source_path = PurePosixPath(urlsplit(source_url).path)
-        if source_path.suffix.lower() != ".lpx":
-            raise ValueError(f"catalog entry is not an LPX plugin: {source_url}")
-        name = source_path.stem + ".sgmodule"
-        if name in names:
-            raise ValueError(f"duplicate module filename: {name}")
-        names.add(name)
-        entries.append((name, source_url))
-    if not entries:
-        raise ValueError("Hub catalog contains no LPX plugins")
-    if STARTUP_MODULE_NAME in names:
-        raise ValueError(f"duplicate module filename: {STARTUP_MODULE_NAME}")
-    entries.append((STARTUP_MODULE_NAME, STARTUP_MODULE_URL))
-    return entries
 
 
 def resource_path(url: str) -> Path:
@@ -119,7 +96,7 @@ def module_warnings(module: str) -> list[str]:
         "# Loon enable 参数":
             "开关是否生效取决于上游脚本，请确认脚本支持关闭选项。",
     }
-    lines = module.splitlines()
+    lines = [re.sub(r'^#!REQUIREMENT "[^"]*" ', "", line) for line in module.splitlines()]
     warnings = [
         message for prefix, message in messages.items()
         if any(line.startswith(prefix) for line in lines)
@@ -127,7 +104,9 @@ def module_warnings(module: str) -> list[str]:
     if "[Panel]" in lines:
         warnings.append("面板不支持 Loon 的长按节点功能。")
     if any(
-        resource_urls(line) for line in lines
+        re.search(r'(?:script-path\s*=\s*|data=")https://', line)
+        and not re.search(r'(?:script-path\s*=\s*|data=")' + re.escape(PUBLISHED_PREFIX), line)
+        for line in lines
         if line.strip() and not line.lstrip().startswith("#")
     ):
         warnings.append("部分资源无法镜像，仍使用上游链接，可能无法加载。")
@@ -197,125 +176,163 @@ def _write_generated(files: dict[Path, bytes]) -> None:
                         pass
 
 
-def main() -> None:
-    entries = catalog_entries()
-    lpx_entries = [
-        entry for entry in entries
-        if entry[0] not in {YOUTUBE_MODULE_NAME, STARTUP_MODULE_NAME}
-    ]
-    with concurrent.futures.ThreadPoolExecutor(max_workers=8) as executor:
-        sources = dict(
-            zip(
-                (url for _, url in lpx_entries),
-                executor.map(fetch_lpx, (url for _, url in lpx_entries)),
-            )
-        )
-    youtube_source = fetch_text(YOUTUBE_MODULE_URL)
-
-    resource_sources = set().union(
-        *(resource_urls(source) for source in sources.values())
-    )
+def build() -> tuple[dict[Path, bytes], dict, list[dict]]:
+    selected, decisions, excluded = select(discover())
+    resource_sources = set().union(*(
+        resource_urls(candidate.text) for candidate in selected
+        if candidate.format == "loon" and candidate.name != YOUTUBE_MODULE_NAME
+    ))
     with concurrent.futures.ThreadPoolExecutor(max_workers=8) as executor:
         resources = dict(executor.map(_download_resource, sorted(resource_sources)))
     unavailable = {url for url, content in resources.items() if content is None}
     script_sources = resources.copy()
-
     files = {}
-    web_catalog = []
     module_sources = {}
     errors = []
-    startup_resources = {}
-    for name, source_url in entries:
-        relative = Path("modules", name)
+    for candidate in selected:
+        name, source_url = candidate.name, candidate.url
         try:
-            if name == STARTUP_MODULE_NAME:
-                if errors:
-                    continue
-                module_sources[relative.as_posix()] = STARTUP_MODULE_URL
-                module = startup_module(
-                    fetch_bytes(STARTUP_MODULE_URL, user_agent="surge").decode("utf-8-sig"),
-                    [content.decode() for path, content in files.items() if path.suffix == ".sgmodule"],
-                )
-                for url in sorted(set(re.findall(r'(?:script-path=|data=")(https://[^",\s]+)', module))):
-                    dependency = Path("scripts/StartUpAds", hashlib.sha256(url.encode()).hexdigest()[:16] + ".js")
-                    startup_resources[url] = dependency
-                    module = module.replace(url, PUBLISHED_PREFIX + dependency.as_posix())
-            elif name == YOUTUBE_MODULE_NAME:
-                module_sources[relative.as_posix()] = YOUTUBE_MODULE_URL
-                module = youtube_module(youtube_source)
+            if name == YOUTUBE_MODULE_NAME:
+                source_url = YOUTUBE_MODULE_URL
+                source = fetch_text(source_url)
+                module = youtube_module(source)
+                decisions[name].update(upstream="Maasea / ddgksf2013", format="surge",
+                                       source_sha256=hashlib.sha256(source.encode()).hexdigest(),
+                                       reason="ddgksf2013 recommends Maasea's native Surge YouTube module")
+                decisions[name]["alternatives"].append({"upstream": "Kelee", "url": candidate.url})
+            elif candidate.format == "loon":
+                module = convert_lpx(candidate.text, source_url=source_url,
+                                     unavailable_resources=unavailable, script_sources=script_sources)
+            elif candidate.format == "surge":
+                module = surge_module(candidate)
             else:
-                module_sources[relative.as_posix()] = source_url
-                module = convert_lpx(
-                    sources[source_url],
-                    source_url=source_url,
-                    unavailable_resources=unavailable,
-                    script_sources=script_sources,
-                )
+                module = convert_qx(candidate.text, source_url)
         except ValueError as error:
             errors.append(f"{name}: {error}")
             continue
+        relative = Path("modules", name)
         files[relative] = module.encode()
-        metadata = _module_metadata(module)
-        icon = metadata.get("icon", "")
-        if urlsplit(icon).scheme != "https":
-            icon = ""
-        web_catalog.append(
-            {
-                "category": metadata.get("category", ""),
-                "date": metadata.get("date", ""),
-                "description": metadata.get("desc", ""),
-                "file": name,
-                "icon": icon,
-                "name": metadata.get("name", Path(name).stem),
-                "url": PUBLISHED_MODULE_PREFIX + name,
-                "warnings": module_warnings(module),
-            }
-        )
-
+        module_sources[relative.as_posix()] = source_url
+    general_source = fetch_bytes(STARTUP_MODULE_URL, user_agent="surge").decode("utf-8-sig")
+    general = startup_module(general_source)
+    files[Path("modules", STARTUP_MODULE_NAME)] = general.encode()
+    module_sources[f"modules/{STARTUP_MODULE_NAME}"] = STARTUP_MODULE_URL
+    decisions[STARTUP_MODULE_NAME] = {
+        "upstream": "ddgksf2013", "format": "quantumult", "coverage": "general",
+        "source_sha256": hashlib.sha256(general_source.encode()).hexdigest(),
+        "reason": "full general coverage by default; exclude_apps disables rules for the app modules the user enables",
+        "alternatives": [],
+    }
     if errors:
-        raise ValueError(
-            f"{len(errors)} module(s) failed conversion; generated files unchanged:\n"
-            + "\n".join(errors)
-        )
+        raise ValueError(f"{len(errors)} module(s) failed conversion; generated files unchanged:\n" + "\n".join(errors))
 
+    # Mirror dependencies across all sources. Existing Kelee/YouTube paths stay
+    # stable, while other resources use their URL hash to avoid name collisions.
+    paths = {url: resource_path(url) for url in resources if url not in unavailable}
+    paths.update(YOUTUBE_RESOURCE_PATHS)
+    license_url = "https://raw.githubusercontent.com/fmz200/wool_scripts/main/LICENSE"
+    paths[license_url] = Path("resources/licenses/fmz200-wool_scripts-LICENSE")
+    dependency_pattern = r'(?:script-path\s*=\s*|data=")(https://[^",\s]+)'
+    for content in files.values():
+        active = "\n".join(line for line in content.decode().splitlines() if not line.lstrip().startswith("#"))
+        for url in re.findall(dependency_pattern, active):
+            if url.startswith(PUBLISHED_PREFIX) or url in paths or url in unavailable:
+                continue
+            suffix = PurePosixPath(urlsplit(url).path).suffix
+            directory = "scripts/upstream" if suffix == ".js" else "resources/upstream"
+            paths[url] = Path(directory, hashlib.sha256(url.encode()).hexdigest()[:16] + (suffix or ".txt"))
+    with concurrent.futures.ThreadPoolExecutor(max_workers=8) as executor:
+        resources.update(executor.map(_download_resource, sorted(set(paths) - set(resources))))
+    unavailable.update(url for url, content in resources.items() if content is None)
     mirrored_sources = {}
-    for url, content in resources.items():
+    for url, relative in paths.items():
+        content = resources[url]
         if content is None:
             continue
-        relative = resource_path(url)
         files[relative] = content
-        mirrored_sources[relative.as_posix()] = {
-            "url": url,
-            "sha256": hashlib.sha256(content).hexdigest(),
-        }
-
-    for url, relative in (YOUTUBE_RESOURCE_PATHS | startup_resources).items():
-        content = fetch_bytes(url, user_agent="surge")
-        files[relative] = content
-        mirrored_sources[relative.as_posix()] = {
-            "url": url,
-            "sha256": hashlib.sha256(content).hexdigest(),
-        }
-
-    _write_generated(files)
+        mirrored_sources[relative.as_posix()] = {"url": url, "sha256": hashlib.sha256(content).hexdigest()}
+    web_catalog = []
+    exclusions = {}
+    for relative in list(files):
+        if relative.parent != Path("modules"):
+            continue
+        module = files[relative].decode()
+        action = ""
+        lines = []
+        for line in module.splitlines():
+            if line.startswith("# QX action: "):
+                action = line.removeprefix("# QX action: ")
+            elif action and "script-path=" in line:
+                url = re.search(dependency_pattern, line).group(1)
+                if url not in unavailable:
+                    key = hashlib.sha256((url + action).encode()).hexdigest()[:16]
+                    adapted = Path("scripts/adapted", key + ".js")
+                    content = adapt_script(resources[url].decode("utf-8-sig"), action).encode()
+                    files[adapted] = content
+                    mirrored_sources[adapted.as_posix()] = {
+                        "url": url, "sha256": hashlib.sha256(content).hexdigest(),
+                        "upstream_sha256": hashlib.sha256(resources[url]).hexdigest(),
+                        "transformation": "quantumult-done:" + action,
+                    }
+                    line = line.replace(url, PUBLISHED_PREFIX + adapted.as_posix())
+                action = ""
+            if line.startswith("#!raw-url="):
+                line = "#!raw-url=" + PUBLISHED_MODULE_PREFIX + relative.name
+            lines.append(line)
+        module = "\n".join(lines) + "\n"
+        for url, path in paths.items():
+            if url not in unavailable:
+                module = module.replace(url, PUBLISHED_PREFIX + quote(path.as_posix(), safe="/"))
+        if relative.name == STARTUP_MODULE_NAME:
+            app_modules = {path.name: files[path].decode() for path in files
+                           if path.parent == Path("modules") and path.name != STARTUP_MODULE_NAME}
+            module, exclusions = configure_fallback(module, app_modules, decisions)
+        files[relative] = module.encode()
+        metadata = _module_metadata(module)
+        if "alias_of" in decisions[relative.name]:
+            continue
+        icon = metadata.get("icon", "")
+        web_catalog.append({
+            "category": metadata.get("category", ""),
+            "date": metadata.get("date", ""),
+            "description": metadata.get("desc", ""),
+            "file": relative.name,
+            "icon": icon if urlsplit(icon).scheme == "https" else "",
+            "name": metadata.get("name", relative.stem),
+            "url": PUBLISHED_MODULE_PREFIX + relative.name,
+            "upstream": decisions[relative.name]["upstream"],
+            "kind": "general" if relative.name == STARTUP_MODULE_NAME else "individual",
+            "warnings": module_warnings(module),
+        })
+    web_catalog.sort(key=lambda item: (item["kind"] != "general", item["file"].lower()))
+    for item in web_catalog:
+        if item["file"] in exclusions:
+            item["general_exclusion_key"] = Path(item["file"]).stem
+            item["general_exclusion_rules"] = exclusions[item["file"]]
+    decisions[STARTUP_MODULE_NAME]["app_exclusions"] = exclusions
     manifest = {
         "catalog": CATALOG_URL,
+        "upstreams": {"Kelee": CATALOG_URL, **TREES},
         "modules": module_sources,
+        "selection": decisions,
+        "excluded": excluded,
         "resources": mirrored_sources,
         "unavailable_resources": sorted(unavailable),
     }
+    return files, manifest, web_catalog
+
+
+def main() -> None:
+    files, manifest, web_catalog = build()
+    _write_generated(files)
     (ROOT / "sources.json").write_text(
-        json.dumps(manifest, ensure_ascii=False, indent=2, sort_keys=True) + "\n",
-        encoding="utf-8",
+        json.dumps(manifest, ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8",
     )
     (ROOT / "web" / "catalog.json").write_text(
-        json.dumps(web_catalog, ensure_ascii=False, indent=2) + "\n",
-        encoding="utf-8",
+        json.dumps(web_catalog, ensure_ascii=False, indent=2) + "\n", encoding="utf-8",
     )
-    print(
-        f"generated {len(module_sources)} modules and "
-        f"{len(mirrored_sources)} resources; {len(unavailable)} unavailable"
-    )
+    print(f"generated {len(manifest['modules'])} modules and "
+          f"{len(manifest['resources'])} resources; {len(manifest['unavailable_resources'])} unavailable")
 
 
 if __name__ == "__main__":

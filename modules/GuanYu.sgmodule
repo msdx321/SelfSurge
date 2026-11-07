@@ -1,0 +1,18 @@
+#!name=冠寓
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!category=去广告
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/GuanYu.sgmodule
+#!tg-channel=https://t.me/inaisi
+
+# Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partG/GuanYu.sgmodule
+# Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.
+# License: GPL-3.0; see resources/licenses/fmz200-wool_scripts-LICENSE.
+
+[URL Rewrite]
+# 开屏广告
+^https?:\/\/guanyu\.longfor\.com\/app-server\/api\/v1\/main\/start - reject
+
+[MITM]
+hostname = %APPEND% guanyu.longfor.com

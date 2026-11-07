@@ -1,0 +1,19 @@
+#!name=小桔科技
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!category=去广告
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/XiaoJuTechnology.sgmodule
+#!tg-channel=https://t.me/inaisi
+
+# Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partX/XiaoJuTechnology.sgmodule
+# Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.
+# License: GPL-3.0; see resources/licenses/fmz200-wool_scripts-LICENSE.
+
+[URL Rewrite]
+^https?:\/\/ct\.xiaojukeji\.com\/agent\/v3\/feeds - reject
+^https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNotices) - reject
+^https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/mget - reject
+
+[MITM]
+hostname = %APPEND% ct.xiaojukeji.com, res.xiaojukeji.com

@@ -1,0 +1,22 @@
+#!name=蓝基因
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!category=去广告
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/LanJiYin.sgmodule
+#!tg-channel=https://t.me/inaisi
+
+# Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partL/LanJiYin.sgmodule
+# Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.
+# License: GPL-3.0; see resources/licenses/fmz200-wool_scripts-LICENSE.
+
+[Rule]
+# 弹窗还在，需要手动关闭, REJECT
+DOMAIN-KEYWORD,medicine.lanjiyin.com.cn,REJECT
+
+[URL Rewrite]
+# 首页弹窗广告 OCc分享
+^https?:\/\/tk\.lanjiyin\.com\.cn\/ad\/getAdList - reject
+
+[MITM]
+hostname = %APPEND% tk.lanjiyin.com.cn

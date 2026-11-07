@@ -1,25 +1,61 @@
-#!name=QQ音乐去广告
-#!desc=过滤QQ音乐广告
+#!name=QQ音乐
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
 #!category=去广告
-#!openUrl=https://apps.apple.com/app/id414603431
-#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
-#!homepage=https://hub.kelee.one
-#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/QQMusic.png
-#!date=2026-10-02 13:57:49
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/QQMusic_remove_ads.sgmodule
+#!tg-channel=https://t.me/inaisi
+#!requirement=CORE_VERSION>=20
 
-# Source: https://kelee.one/Tool/Loon/Lpx/QQMusic_remove_ads.lpx
-# Adapted from Loon LPX to Surge module by SelfSurge.
-# Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+# Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partQ/QQMusic.sgmodule
+# Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.
+# License: GPL-3.0; see resources/licenses/fmz200-wool_scripts-LICENSE.
 
 [Rule]
-DOMAIN, adstats.tencentmusic.com, REJECT-DROP
-DOMAIN, ad.tencentmusic.com, REJECT-DROP
-DOMAIN, adcdn.tencentmusic.com, REJECT-DROP
-DOMAIN, adcdn6.tencentmusic.com, REJECT-DROP
-DOMAIN, adexpo.tencentmusic.com, REJECT-DROP
-DOMAIN, adclick.tencentmusic.com, REJECT-DROP
-DOMAIN, mc.tencentmusic.com, REJECT-DROP
-DOMAIN, monitor.music.qq.com, REJECT-DROP
-DOMAIN, tmead.y.qq.com, REJECT-DROP
-DOMAIN, tmeadbak.y.qq.com, REJECT-DROP
-DOMAIN, tmeadquic.y.qq.com, REJECT-DROP
+DOMAIN,adstats.tencentmusic.com,REJECT
+DOMAIN,ad.tencentmusic.com,REJECT
+DOMAIN,adcdn.tencentmusic.com,REJECT
+DOMAIN,adcdn6.tencentmusic.com,REJECT
+DOMAIN,adexpo.tencentmusic.com,REJECT
+DOMAIN,adclick.tencentmusic.com,REJECT
+DOMAIN,otheve.beacon.qq.com,REJECT
+DOMAIN,monitor.music.qq.com,REJECT
+DOMAIN,stat.y.qq.com,REJECT
+DOMAIN,tmead.y.qq.com-NO-DROP,REJECT
+DOMAIN,oth.str.mdt.qq.com,REJECT
+DOMAIN,h.trace.qq.com,REJECT
+DOMAIN,sdk.e.qq.com,REJECT
+DOMAIN,p.l.qq.com,REJECT
+DOMAIN,us.l.qq.com,REJECT
+DOMAIN,tangram.e.qq.com,REJECT
+DOMAIN,tmeadbak.y.qq.com-NO-DROP,REJECT
+DOMAIN-SUFFIX,imtmp.net,REJECT
+DOMAIN,tmeadcomm.y.qq.com,REJECT
+DOMAIN,ad.tencentmusic.com,REJECT
+DOMAIN,adstats.tencentmusic.com,REJECT
+DOMAIN,tmead.y.qq.com,REJECT
+DOMAIN-SUFFIX,rqd.qq.com,REJECT
+DOMAIN-SUFFIX,wup.imtt.qq.com,REJECT
+DOMAIN-SUFFIX,gdt.qq.com,REJECT
+DOMAIN-SUFFIX,android.rqd.qq.com,REJECT
+DOMAIN-SUFFIX,e.qq.com,REJECT
+DOMAIN-SUFFIX,v.gdt.qq.com,REJECT
+DOMAIN,amsweb-cdn-gz-1258344696.file.myqcloud.com,REJECT
+DOMAIN,wallpaper-1258344696.file.myqcloud.com,REJECT
+DOMAIN,xs.gdt.qq.com,REJECT
+IP-CIDR,120.222.240.171/32,REJECT,no-resolve
+
+[URL Rewrite]
+^https?:\/\/us\.l\.qq\.com\/exapp - reject
+^https?:\/\/y\.gtimg\.cn\/music\/common\/upload\/t_splash_info\/ - reject
+^https?:\/\/.+?\/music\/common\/upload\/t_splash_info\/ - reject
+^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/music\/common\/upload\/t_splash_info\/ - reject
+^https:\/\/music\.y\.qq\.com\/maproxy\/getPbCompressAd - reject
+
+[Map Local]
+^https?:\/\/y\.gtimg\.cn\/music\/common\/\/upload\/kg_ad/.*?\d{4}\.jpg data-type=tiny-gif status-code=200
+
+^https?:\/\/y\.gtimg\.cn\/music\/common\/upload\/targeted_ads data-type=tiny-gif status-code=200
+
+[MITM]
+hostname = %APPEND% us.l.qq.com, y.gtimg.cn, music.y.qq.com

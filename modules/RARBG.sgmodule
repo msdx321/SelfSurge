@@ -1,0 +1,22 @@
+#!name=RARBG
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!category=去广告
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/RARBG.sgmodule
+#!tg-channel=https://t.me/inaisi
+#!requirement=CORE_VERSION>=20
+
+# Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partR/RARBG.sgmodule
+# Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.
+# License: GPL-3.0; see resources/licenses/fmz200-wool_scripts-LICENSE.
+
+[Body Rewrite]
+http-response ^https?:\/\/dyncdn\.me\/static\/\d{0,2}\/js\/showads\.js$ 'true' 'false'
+
+[Map Local]
+# https://rarbgmirror.org/torrents.php
+^https?:\/\/dyncdn\.me\/static\/\d{0,2}\/js\/expla\d{0,4}\.js$ data-type=text data=" " status-code=200
+
+[MITM]
+hostname = %APPEND% dyncdn.me

@@ -1,190 +1,150 @@
-"""Convert StartUpAds into a supplement to the generated app modules."""
+"""Full-coverage general adblock with exclusions for enabled app modules."""
 
-from collections import Counter
-from fnmatch import fnmatchcase
 import re
+from collections import defaultdict
+from pathlib import PurePosixPath
 
-from selfsurge import _convert_rewrite
+from quantumult import convert_qx
+from upstreams import _identity
 
 
 STARTUP_MODULE_NAME = "StartUpAds.sgmodule"
 STARTUP_MODULE_URL = "https://ddgksf2013.top/rewrite/StartUpAds.conf"
 
+# StartUpAds uses pinyin labels where the app catalogs use English filenames.
+LABEL_ALIASES = {
+    "jingdong": "jd", "baiduwangpan": "baidunetdisk",
+    "huazhu": "huazhuclub", "qichezhijia": "autohome",
+    "jiaxiaoediantong": "jiaxiaoyidiantong", "kuake": "quark",
+    "qidianyuedu": "qidian", "qidiandushu": "qidian",
+    "shenmezhidemai": "smzdm", "shunfeng": "sfexpress",
+    "wangyiyouxiang": "mailmaster", "xiangrikui": "oraysunlogin",
+    "xiaomishangcheng": "xiaomimall", "xiaoaiyinxiang": "小爱音箱",
+    "yingshiyun": "ezviz", "zhongguoliantong": "chinaunicom",
+    "zhangyue": "ireader",
+}
+
+
+def startup_module(source: str) -> str:
+    module = convert_qx(source, STARTUP_MODULE_URL, general=True)
+    lines = module.splitlines()
+    lines[0] = "#!name=通用去广告兜底 · 墨鱼去开屏"
+    lines[1] = (
+        "#!desc=默认保留完整通用规则，可与单独应用模块搭配。"
+        "请将已启用应用的排除参数填入 exclude_apps，通用模块继续覆盖其余规则。"
+    )
+    return "\n".join(lines) + "\n"
+
+
+def _pattern(section: str, line: str) -> str:
+    if section in {"[URL Rewrite]", "[Map Local]"}:
+        return line.split()[0]
+    if section in {"[Body Rewrite]", "[Header Rewrite]"}:
+        return line.split()[1]
+    if section == "[Script]":
+        match = re.search(r"\bpattern=(.*?)(?=,\s*[\w-]+=)", line)
+        if match:
+            return match[1].strip('"')
+    return ""
+
 
 def _authority(pattern: str) -> str:
-    pattern = pattern.replace(r"\/", "/").removeprefix("^")
-    match = re.match(r"https?\??://([^/]+)", pattern)
-    if not match:
-        return ""
-    try:
-        re.compile(match[1])
-    except re.error:
-        # A group spanning the host and path cannot be treated as a host regex.
-        return ""
-    return match[1]
+    pattern = re.sub(r"^\(\?[a-z-]+\)", "", pattern.replace(r"\/", "/"))
+    match = re.match(r"\^?https?\??://([^/]+)", pattern)
+    return match[1].replace(r"\.", ".").lower().split(":", 1)[0] if match else ""
 
 
-def _literal_host(authority: str) -> str:
-    host = authority.replace(r"\.", ".")
-    return host.lower() if re.fullmatch(r"[\w.-]+(?::\d+)?", host) else ""
-
-
-def startup_module(source: str, modules: list[str]) -> str:
-    if "// @ScriptName" not in source or "hostname =" not in source:
-        raise ValueError("StartUpAds response is not a Quantumult X rewrite file")
-
-    patterns = set()
-    authorities = set()
-    owned_hosts = set()
-    blocked_hosts = set()
-    for module in modules:
-        ad_module = "remove_ads" in module or "Remove_ads_by_keli" in module
+def configure_fallback(module: str, app_modules: dict[str, str], decisions: dict) -> tuple[str, dict[str, int]]:
+    """Gate app-owned rules; leaving exclude_apps empty preserves full coverage."""
+    aliases = defaultdict(set)
+    patterns = defaultdict(set)
+    authorities = defaultdict(set)
+    domains = defaultdict(set)
+    keys = {}
+    for name, source in app_modules.items():
+        decision = decisions[name]
+        if not decision.get("adblock") or "alias_of" in decision:
+            continue
+        key = PurePosixPath(name).stem
+        keys[name] = key
+        for alias in decision["app_aliases"]:
+            aliases[alias].add(name)
         section = ""
-        for line in module.splitlines():
+        for line in source.splitlines():
             if line.startswith("["):
                 section = line
             if not line or line.startswith(("#", "[")):
                 continue
-            pattern = ""
-            if section in {"[URL Rewrite]", "[Map Local]"}:
-                pattern = line.split()[0]
-            elif section in {"[Body Rewrite]", "[Header Rewrite]"}:
-                pattern = line.split()[1]
-            elif section == "[Script]":
-                match = re.search(r"\bpattern=(.*?),\s*\w[\w-]*=", line)
-                if match:
-                    pattern = match[1]
-            elif section == "[Rule]":
-                fields = [field.strip().strip('"') for field in line.split(",")]
-                if len(fields) >= 3 and fields[2].startswith("REJECT"):
-                    if fields[0] == "DOMAIN":
-                        blocked_hosts.add(fields[1].lower())
-                    elif fields[0] == "DOMAIN-SUFFIX":
-                        blocked_hosts.update((fields[1].lower(), "*." + fields[1].lower()))
-                    elif fields[0] == "URL-REGEX":
-                        pattern = fields[1]
-            elif section == "[MITM]" and ad_module and line.startswith("hostname"):
-                owned_hosts.update(
-                    host.strip().lower() for host in line.split("=", 1)[1].replace("%APPEND%", "").split(",")
-                    if host.strip() and not host.strip().startswith("-")
-                )
+            pattern = _pattern(section, line)
             if pattern:
-                patterns.add(pattern.replace(r"\/", "/"))
+                patterns[pattern.replace(r"\/", "/")].add(name)
                 authority = _authority(pattern)
-                # Only ad modules claim app hosts; utility scripts do not.
-                if authority and ad_module:
-                    authorities.add(authority)
+                if authority:
+                    authorities[authority].add(name)
+            elif section == "[Rule]":
+                fields = [field.strip() for field in line.split(",")]
+                if len(fields) >= 3 and fields[0] in {"DOMAIN", "DOMAIN-SUFFIX"} and fields[2].startswith("REJECT"):
+                    domains[(fields[0], fields[1])].add(name)
 
-    sections = {}
-    retained_authorities = set()
-    skipped = Counter()
-    hosts = []
-    label = ""
-    seen = set()
-    date = re.search(r"// @UpdateTime\s+(\S+)", source)
-    for number, raw in enumerate(source.splitlines(), 1):
-        line = raw.strip()
-        if line.startswith("# >"):
-            label = line[3:].strip()
-        if not line or line.startswith(("#", "//", ";")):
+    counts = defaultdict(int)
+    output = []
+    section = label = ""
+    for line in module.splitlines():
+        if line.startswith("#!requirement="):
+            line = "#!requirement=CORE_VERSION>=22"
+            output.extend([
+                "#!arguments=exclude_apps:",
+                "#!arguments-desc=在目录页勾选已启用的应用，复制排除参数到此处。多个模块标识以 | 分隔；留空保留全部规则。此参数不会自动读取 Surge 的模块启用状态。",
+            ])
+        if line.startswith("["):
+            section = line
+        if line.startswith("# ") and not line.startswith("# QX action:"):
+            label = line[2:]
+        if not line or line.startswith(("#", "[")) or section == "[MITM]":
+            output.append(line)
             continue
-        if line.startswith("hostname"):
-            hosts.extend(host.strip() for host in line.split("=", 1)[1].split(","))
-            continue
-        if line.startswith(("host,", "host-suffix,")):
-            kind, host, policy = [part.strip() for part in line.split(",")]
-            if policy != "reject":
-                skipped["non-ad routing override"] += 1
-                continue
-            candidates = (host, "*." + host) if kind == "host-suffix" else (host,)
-            if all(any(fnmatchcase(h, old) for old in blocked_hosts) for h in candidates):
-                skipped["existing domain rule"] += 1
-                continue
-            rule = f"{'DOMAIN-SUFFIX' if kind == 'host-suffix' else 'DOMAIN'}, {host}, REJECT"
-            sections.setdefault("[Rule]", []).append(rule)
-            blocked_hosts.update(candidates)
-            continue
-        pattern, separator, operation = line.partition(" url ")
-        if not separator:
-            raise ValueError(f"StartUpAds:{number}: unsupported rule: {line}")
-        authority = _authority(pattern)
-        host = _literal_host(authority).split(":", 1)[0]
-        if label.lower() == "version" or host in {"testflight.apple.com", "gw.xiaocantech.com"}:
-            skipped["version marker or non-ad tweak"] += 1
-            continue
-        normalized = pattern.replace(r"\/", "/")
-        if normalized in patterns or authority in authorities or (
-            host and any(fnmatchcase(host, old) for old in blocked_hosts | owned_hosts)
-        ) or (
-            authority and any(
-                re.fullmatch(authority, old)
-                for old in owned_hosts | blocked_hosts if "*" not in old
-            )
-        ):
-            skipped["existing module coverage"] += 1
-            continue
-        if normalized in seen:
-            skipped["duplicate upstream pattern"] += 1
-            continue
-        seen.add(normalized)
-        action, _, value = operation.partition(" ")
-        if action.startswith("script-"):
-            if action not in {"script-response-body", "script-response-header", "script-analyze-echo-response"}:
-                raise ValueError(f"StartUpAds:{number}: unsupported action: {action}")
-            direction = "request" if action == "script-analyze-echo-response" else "response"
-            body = ", requires-body=true, max-size=0" if action == "script-response-body" else ""
-            converted = [("[Script]", f"startup-{number} = type=http-{direction}, pattern={pattern}, script-path={value}{body}, timeout=60")]
-        elif action in {"response-body", "request-body"}:
-            search, separator, replacement = value.partition(f" {action} ")
-            if not separator:
-                raise ValueError(f"StartUpAds:{number}: invalid body replacement")
-            converted = _convert_rewrite(f"{pattern} {action}-replace-regex {search} {replacement}", {})
-        elif action == "jsonjq-response-body":
-            converted = _convert_rewrite(f"{pattern} response-body-json-jq {value}", {})
-        elif action == "echo-response":
-            content_type, separator, url = value.partition(" echo-response ")
-            if not separator or not url.startswith("https://"):
-                raise ValueError(f"StartUpAds:{number}: invalid echo response")
-            converted = [("[Map Local]", f'{pattern} data="{url}" header="Content-Type:{content_type}" status-code=200')]
-        else:
-            converted = _convert_rewrite(f"{pattern} {operation}", {})
-        for section, rule in converted:
-            sections.setdefault(section, []).extend((f"# {label}", rule))
-        if authority and not pattern.startswith("^http:"):
-            retained_authorities.add(authority)
-
-    # Keep wildcard declarations conservatively; prune unused concrete hosts.
-    hosts = list(dict.fromkeys(
-        host for host in hosts
-        if not any(fnmatchcase(host, old) for old in owned_hosts | blocked_hosts)
-        and ("*" in host or any(
-            re.fullmatch(authority, host) or re.fullmatch(authority, host + ":443")
-            or re.fullmatch(re.sub(r"\\?:\d+$", "", authority), host)
-            for authority in retained_authorities
-        ))
-    ))
-    if not seen:
-        raise ValueError("StartUpAds contains no supplemental rewrites")
-    header = [
-        "#!name=墨鱼去开屏 2.0 · 补充规则",
-        "#!desc=补充现有去广告模块未覆盖的主机；请配合现有模块使用。",
-        "#!category=去广告",
-        "#!author=ddgksf2013",
-        f"#!date={date[1] if date else ''}",
-        "#!requirement=CORE_VERSION>=20",
-        "",
-        f"# Source: {STARTUP_MODULE_URL}",
-        "# Adapted by SelfSurge from Quantumult X; processed after all other modules.",
-        "# Existing ad modules own their URL authorities; their rules take precedence.",
-        "# Broad rules matching an existing app host are excluded to avoid conflicts.",
-        "# Upstream attribution:",
-        *["# " + line.removeprefix("// ") for line in source.splitlines() if line.startswith("// @")],
-        "",
-        *[f"# Removed {count}: {reason}" for reason, count in sorted(skipped.items())],
-        f"# Retained {len(seen)} supplemental rewrites.",
-    ]
-    for section, rules in sections.items():
-        header.extend(("", section, *rules))
-    if hosts:
-        header.extend(("", "[MITM]", "hostname = %APPEND% " + ", ".join(hosts)))
-    return "\n".join(header) + "\n"
+        identity = _identity(re.sub(r"\[[^]]*\]", "", label))
+        label_owners = aliases.get(LABEL_ALIASES.get(identity, identity), set())
+        pattern = _pattern(section, line)
+        variants = [(line, None)]
+        if pattern:
+            # Split literal host alternatives when they belong to different
+            # apps, e.g. UC / Quark. Excluding Quark must keep UC's rule active.
+            group = re.search(r"\(([A-Za-z0-9_-]+(?:\|[A-Za-z0-9_-]+)+)\)", _authority(pattern))
+            if group:
+                branches = []
+                for index, host in enumerate(group[1].split("|")):
+                    branch_pattern = pattern.replace(group[0], host, 1)
+                    owners = authorities.get(_authority(branch_pattern), set())
+                    owners = owners if len(owners) == 1 else set()
+                    branch = line.replace(pattern, branch_pattern, 1)
+                    if section == "[Script]":
+                        name, value = branch.split("=", 1)
+                        branch = f"{name.strip()}-host{index} ={value}"
+                    branches.append((branch, owners))
+                if any(owners for _, owners in branches) and len({frozenset(owners) for _, owners in branches}) > 1:
+                    variants = branches
+        for variant, forced_owners in variants:
+            owners = set() if forced_owners is None else set(forced_owners)
+            if forced_owners is None:
+                owners.update(patterns.get(pattern.replace(r"\/", "/"), ()))
+                host_owners = authorities.get(_authority(pattern), set())
+                if not owners and len(host_owners) == 1:
+                    owners.update(host_owners)
+                if section == "[Rule]":
+                    fields = [field.strip() for field in variant.split(",")]
+                    owners.update(domains.get(tuple(fields[:2]), ()))
+                if not owners:
+                    owners.update(label_owners)
+            if owners:
+                conditions = []
+                for name in sorted(owners):
+                    counts[name] += 1
+                    accepted = [keys[name], *[
+                        PurePosixPath(alias).stem for alias, decision in decisions.items()
+                        if decision.get("alias_of") == name
+                    ]]
+                    conditions.extend(f"NOT ('|{{{{{{exclude_apps}}}}}}|' CONTAINS '|{key}|')" for key in accepted)
+                variant = '#!REQUIREMENT "' + " AND ".join(conditions) + '" ' + variant
+            output.append(variant)
+    return "\n".join(output) + "\n", dict(counts)

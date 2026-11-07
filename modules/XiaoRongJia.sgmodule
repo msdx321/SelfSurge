@@ -1,0 +1,32 @@
+#!name=笑容加
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!category=去广告
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/XiaoRongJia.sgmodule
+#!tg-channel=https://t.me/inaisi
+#!requirement=CORE_VERSION>=20
+
+# Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partX/XiaoRongJia.sgmodule
+# Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.
+# License: GPL-3.0; see resources/licenses/fmz200-wool_scripts-LICENSE.
+
+[URL Rewrite]
+# 屏蔽固件更新
+^https?:\/\/myusmile\.online\/user\/version\/requestFirmwareUpdate\/ - reject
+# 首页弹窗
+^https?:\/\/www\.myusmile\.online\/user\/userTagRecord\/popup - reject
+
+[Map Local]
+# 屏蔽更新提示
+^https?:\/\/myusmile\.online\/user\/version\/requestAppUpdate data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+# 商城页弹窗
+^https?:\/\/wemallh5\.usmile\.com\/api\/sp-portal\/store\/usmile\/activity\/dayCheck\?pop data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[Script]
+# 我的页推广
+XiaoRongJia-24 = type=http-response, pattern=^https?:\/\/www\.myusmile\.online\/user\/plaqueTopic\/selectByType, script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/upstream/39b651a656f6ea84.js
+
+[MITM]
+hostname = %APPEND% myusmile.online, wemallh5.usmile.com, www.myusmile.online

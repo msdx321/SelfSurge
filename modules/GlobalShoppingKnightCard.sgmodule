@@ -1,0 +1,25 @@
+#!name=全球购骑士卡
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!category=去广告
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/GlobalShoppingKnightCard.sgmodule
+#!tg-channel=https://t.me/inaisi
+#!requirement=CORE_VERSION>=20
+
+# Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partQ/GlobalShoppingKnightCard.sgmodule
+# Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.
+# License: GPL-3.0; see resources/licenses/fmz200-wool_scripts-LICENSE.
+
+[Map Local]
+# 开屏广告 感谢【Kook】分享
+^https?:\/\/facade-api\.black-unique\.com\/app\/v1\/startScreen\?cityId=102923&channelId=0&width=1170&height=2532 data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https?:\/\/facade-api\.black-unique\.com\/app\/v1\/startScreen\?.* data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https?:\/\/facade-api\.black-unique\.com\/advertise\/v1\/get\?cityId=102923&positions=mine_popup data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https?:\/\/facade-api\.black-unique\.com\/advertise\/v1\/get\?.* data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[MITM]
+hostname = %APPEND% facade-api.black-unique.com

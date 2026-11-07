@@ -1,0 +1,25 @@
+#!name=懒人听书
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!category=去广告
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/LanRenTingShu.sgmodule
+#!tg-channel=https://t.me/inaisi
+#!requirement=CORE_VERSION>=20
+
+# Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partL/LanRenTingShu.sgmodule
+# Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.
+# License: GPL-3.0; see resources/licenses/fmz200-wool_scripts-LICENSE.
+
+[URL Rewrite]
+^https?:\/\/.*\/yyting\/advertclient\/ClientAdvertList.action - reject
+
+[Map Local]
+^https?:\/\/118\.178\.214\.118\/yyting\/advertclient\/ClientAdvertList\.action data-type=tiny-gif status-code=200
+
+^https?:\/\/dapis\.mting\.info\/yyting\/advertclient\/ClientAdvertList\.action data-type=tiny-gif status-code=200
+
+^https?:\/\/display\.wting\.info\/.*.jpeg data-type=text data=" " status-code=200
+
+[MITM]
+hostname = %APPEND% 118.178.214.118, dapis.mting.info, display.wting.info

@@ -1,0 +1,52 @@
+#!name=中国联通净化[墨鱼版]
+#!desc=如果有需要的去除开屏广告的APP，可自行在共享表格中添加需求
+#!category=去广告
+#!author=@ddgksf2013
+#!date=2025-12-11
+#!requirement=CORE_VERSION>=20
+
+# Source: https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/AdBlock/ChinaUnicomAds.conf
+# Adapted from Quantumult X by SelfSurge; upstream attribution:
+# @ScriptName        中国联通净化[墨鱼版]
+# @Author            @ddgksf2013
+# @Function          如果有需要的去除开屏广告的APP，可自行在共享表格中添加需求
+# @AddRequest        https://bit.ly/addRequestforAdBlock
+# @WechatID          墨鱼手记
+# @TgChannel         https://t.me/ddgksf2021
+# @Contribute        https://t.me/ddgksf2013_bot
+# @UpdateTime        2025-12-11
+# @Suitable          自行观看“# > ”注释内容
+# @Attention         使用前请卸载中国联通，挂载脚本然后使用
+# @Attention         如需引用请注明出处，谢谢合作！
+# @Version           V1.0.4
+# @ScriptURL         https://raw.githubusercontent.com/ddgksf2013/Rewrite/refs/heads/master/AdBlock/ChinaUnicomAds.conf
+
+[Rule]
+DOMAIN-SUFFIX, ad.10010.com, REJECT
+
+[Body Rewrite]
+# 热搜词@ddgksf2013
+http-response-jq ^https?:\/\/m\.client\.10010\.com\/search_service\/search\/searchScrollWord '.["113000004"]=[]'
+# 首页底部ICON@ddgksf2013
+http-response-jq ^https?:\/\/m\.client\.10010\.com\/clientIndex\/homefusion\/fuInter 'del(.["HomeFusion.backGroundQuery"], .["HomeFusion.bottomLabel"].bottomMallKey)'
+# 借钱@ddgksf2013
+http-response-jq ^https?:\/\/m\.client\.10010\.com\/clientMyPage\/v\d\/api\/myWallet '.data={}'
+# 积分@ddgksf2013
+http-response-jq ^https?:\/\/m\.client\.10010\.com\/clientMyPage\/v\d\/api\/myPoints '.data={}'
+# 彩铃@ddgksf2013
+http-response-jq ^https?:\/\/m\.client\.10010\.com\/clientMyPage\/v\d\/api\/myColorfulRingtone '.data={}'
+# 横幅@ddgksf2013
+http-response-jq ^https?:\/\/m\.client\.10010\.com\/clientMyPage\/v\d\/api\/newUserInfo '.data={}'
+# 本地图片推广@ddgksf2013
+http-response-jq ^https?:\/\/m\.client\.10010\.com\/clientMyPage\/v\d\/api\/getDeviceInfo '.data={}'
+
+[URL Rewrite]
+# 广告推送@ddgksf2013
+^https?:\/\/m\.client\.10010\.com\/mobileserviceimportant\/customer\/querySmartServicekhd.htm _ reject
+# 新人专享@ddgksf2013
+^https?:\/\/m\.client\.10010\.com\/clientIndex\/api\/v1\/index\/queryIndexExclusiveOffers _ reject
+# 首页瀑布流@ddgksf2013
+^https?:\/\/img\.client\.10010\.com\/homejingxuan12\/js\/(pubuliu|1homeView) _ reject
+
+[MITM]
+hostname = %APPEND% m.client.10010.com, img.client.10010.com

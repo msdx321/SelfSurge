@@ -1,15 +1,18 @@
-#!name=蜗牛睡眠去广告
-#!desc=移除音乐页面横幅、日报告解决方案商品推广，移除我的页面服务推广。
+#!name=蜗牛睡眠
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
 #!category=去广告
-#!openUrl=https://apps.apple.com/app/id1025313530
-#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
-#!homepage=https://hub.kelee.one
-#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/SnailSleep.png
-#!date=2026-10-02 13:57:49
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/SnailSleep_remove_ads.sgmodule
+#!tg-channel=https://t.me/inaisi
 
-# Source: https://kelee.one/Tool/Loon/Lpx/SnailSleep_remove_ads.lpx
-# Adapted from Loon LPX to Surge module by SelfSurge.
-# Upstream LPX license: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+# Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partW/SnailSleep.sgmodule
+# Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.
+# License: GPL-3.0; see resources/licenses/fmz200-wool_scripts-LICENSE.
 
-[Rule]
-DOMAIN, ad.snailsleep.net, REJECT-DROP
+[URL Rewrite]
+^https?:\/\/snailsleep\.net\/snail\/v\d\/adTask\/ - reject
+^https?:\/\/snailsleep\.net\/snail\/v\d\/screen\/qn\/get\? - reject
+
+[MITM]
+hostname = %APPEND% snailsleep.net

@@ -15,14 +15,13 @@ from generate import (
     YOUTUBE_MODULE_URL,
     YOUTUBE_REFERENCE_URL,
     YOUTUBE_RESOURCE_PATHS,
-    catalog_entries,
+    build,
     module_warnings,
     youtube_module,
 )
 from selfsurge import (
     _convert_rewrite,
     _surge_safe_jq,
-    convert_lpx,
     fetch_bytes,
     fetch_lpx,
     fetch_text,
@@ -45,42 +44,42 @@ SECTIONS = {
 
 
 class CatalogConversionTest(unittest.TestCase):
-    def test_every_hub_plugin_converts(self) -> None:
+    def test_every_selected_plugin_converts(self) -> None:
         if not LIVE_UPSTREAM:
             self.enterContext(patch(
                 "selfsurge.urlopen",
                 side_effect=AssertionError("offline validation attempted network access"),
             ))
         manifest = json.loads((ROOT / "sources.json").read_text(encoding="utf-8"))
-        entries = (
-            catalog_entries() if LIVE_UPSTREAM else [
-                (relative.removeprefix("modules/"), url)
-                for relative, url in manifest["modules"].items()
-            ]
-        )
+        if LIVE_UPSTREAM:
+            live_files, live_manifest, live_catalog = build()
+            self.assertEqual(manifest, live_manifest)
+            for relative, content in live_files.items():
+                self.assertEqual((ROOT / relative).read_bytes(), content, relative)
+            self.assertEqual(json.loads((ROOT / "web/catalog.json").read_text()), live_catalog)
+        entries = [
+            (relative.removeprefix("modules/"), url)
+            for relative, url in manifest["modules"].items()
+        ]
         self.assertEqual(len(entries), len({name for name, _ in entries}))
-        lpx_entries = [
+        module_entries = [
             entry for entry in entries
             if entry[0] != YOUTUBE_MODULE_NAME
-            and (not LIVE_UPSTREAM or entry[0] != "StartUpAds.sgmodule")
         ]
         source_jq_count = 0
         converted_jq_count = 0
         sources = {}
         if LIVE_UPSTREAM:
+            lpx_entries = [entry for entry in module_entries
+                           if manifest["selection"][entry[0]]["format"] == "loon"]
             with concurrent.futures.ThreadPoolExecutor(max_workers=8) as executor:
                 sources = dict(zip(
                     (url for _, url in lpx_entries),
                     executor.map(fetch_lpx, (url for _, url in lpx_entries)),
                 ))
-        script_sources = {}
-        for name, source_url in lpx_entries:
+        for name, source_url in module_entries:
             source = sources.get(source_url)
-            module = (
-                convert_lpx(source, source_url=source_url, script_sources=script_sources)
-                if source is not None else
-                (ROOT / "modules" / name).read_text(encoding="utf-8")
-            )
+            module = (ROOT / "modules" / name).read_text(encoding="utf-8")
             self.assertIn(f"# Source: {source_url}", module)
             self.assertNotIn("[Rewrite]", module)
             self.assertNotIn("[Argument]", module)
@@ -162,10 +161,12 @@ class CatalogConversionTest(unittest.TestCase):
                 )
             if "[Map Local]" in module or "[Body Rewrite]" in module:
                 self.assertEqual(
-                    metadata.get("requirement"), "CORE_VERSION>=20", name
+                    metadata.get("requirement"),
+                    "CORE_VERSION>=22" if name == "StartUpAds.sgmodule" else "CORE_VERSION>=20",
+                    name,
                 )
             self.assertFalse(
-                any(line.startswith("#!") for line in lines[len(header) :]),
+                any(re.match(r"^#![\w-]+=", line) for line in lines[len(header) :]),
                 name,
             )
 
@@ -200,6 +201,7 @@ class CatalogConversionTest(unittest.TestCase):
         jq_failures = []
         for path in (ROOT / "modules").glob("*.sgmodule"):
             for line in path.read_text(encoding="utf-8").splitlines():
+                line = re.sub(r'^#!REQUIREMENT "[^"]*" ', "", line)
                 match = re.fullmatch(
                     r"http-(?:request|response)-jq .* '(.*)'", line
                 )
@@ -243,7 +245,7 @@ class CatalogConversionTest(unittest.TestCase):
         )
         self.assertEqual(
             {item["file"] for item in web_catalog},
-            {name for name, _ in entries},
+            {name for name, _ in entries if "alias_of" not in manifest["selection"][name]},
         )
         self.assertTrue(
             all(

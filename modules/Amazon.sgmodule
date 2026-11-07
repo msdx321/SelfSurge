@@ -1,0 +1,32 @@
+#!name=Amazon
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!category=去广告
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Amazon.sgmodule
+#!tg-channel=https://t.me/inaisi
+#!requirement=CORE_VERSION>=20
+
+# Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partA/Amazon.sgmodule
+# Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.
+# License: GPL-3.0; see resources/licenses/fmz200-wool_scripts-LICENSE.
+
+[Rule]
+DOMAIN-SUFFIX,amazon-adsystem.com,REJECT
+DOMAIN-SUFFIX,mads.amazon.com,REJECT
+DOMAIN-SUFFIX,sdb.amazonaws.com,REJECT
+DOMAIN-SUFFIX,airpushmarketing.s3.amazonaws.com,REJECT
+DOMAIN-SUFFIX,epowernetworktrackerimages.s3.amazonaws.com,REJECT
+DOMAIN-SUFFIX,gateways.s3.amazonaws.com,REJECT
+DOMAIN-SUFFIX,kbnetworkz.s3.amazonaws.com,REJECT
+DOMAIN-SUFFIX,secretmedia.s3.amazonaws.com,REJECT
+DOMAIN-SUFFIX,smblock.s3.amazonaws.com,REJECT
+DOMAIN-SUFFIX,whistleout.s3.amazonaws.com,REJECT
+
+[Map Local]
+^https?:\/\/api-cslp-emt\.amazon\.cn\/gateway\/content\/widget\/popup data-type=text data=" " status-code=200
+
+^https?:\/\/api-cslp-emt\.amazon\.cn\/gateway\/recommend data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[MITM]
+hostname = %APPEND% api-cslp-emt.amazon.cn

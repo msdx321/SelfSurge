@@ -1,0 +1,23 @@
+#!name=叮嗒出行
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!category=去广告
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Dida.sgmodule
+#!tg-channel=https://t.me/inaisi
+#!requirement=CORE_VERSION>=20
+
+# Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partD/Dida.sgmodule
+# Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.
+# License: GPL-3.0; see resources/licenses/fmz200-wool_scripts-LICENSE.
+
+[Rule]
+DOMAIN-KEYWORD,image.bianxianmao.com,REJECT
+
+[Map Local]
+^https?:\/\/img\.admobile\.top\/admobile-adRequest\/.*.(jpg|png) data-type=text data=" " status-code=200
+
+^https?:\/\/webcdn\.m\.qq\.com\/qiantu\/upload\/202[0-9]{5}\/.*.(jpg|png) data-type=text data=" " status-code=200
+
+[MITM]
+hostname = %APPEND% img.admobile.top, webcdn.m.qq.com

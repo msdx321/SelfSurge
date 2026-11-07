@@ -1,0 +1,25 @@
+#!name=涨乐财富通
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!category=去广告
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/ZhangLeCaiFuTong.sgmodule
+#!tg-channel=https://t.me/inaisi
+#!requirement=CORE_VERSION>=20
+
+# Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partZ/ZhangLeCaiFuTong.sgmodule
+# Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.
+# License: GPL-3.0; see resources/licenses/fmz200-wool_scripts-LICENSE.
+
+[Map Local]
+# 开屏广告 弹窗广告
+^https?:\/\/c\.zhangle\.com\/pic\/mktg\/diversity\/.+\.jpg$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https?:\/\/live\.inst-service\.htsc\.com\/live data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https?:\/\/geetest\.htsc\.com:8888\/pre_get_token data-type=text data=" " status-code=200
+
+^https?:\/\/119\.29\.29\.\d+\/d data-type=text data=" " status-code=200
+
+[MITM]
+hostname = %APPEND% c.zhangle.com, live.inst-service.htsc.com, geetest.htsc.com, 119.29.29.*

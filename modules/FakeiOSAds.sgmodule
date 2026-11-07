@@ -1,0 +1,32 @@
+#!name=IOS伪装影视APP净化[墨鱼版]
+#!desc=去广告配置（自用，持续更新...）
+#!category=去广告
+#!author=@ddgksf2013
+#!date=2025-10-26
+#!requirement=CORE_VERSION>=20
+
+# Source: https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/AdBlock/FakeiOSAds.conf
+# Adapted from Quantumult X by SelfSurge; upstream attribution:
+# @ScriptName        IOS伪装影视APP净化[墨鱼版]
+# @Author            @ddgksf2013
+# @WechatID          墨鱼手记
+# @TgChannel         https://t.me/ddgksf2021
+# @Contribute        https://t.me/ddgksf2013_bot
+# @UpdateTime        2025-10-26
+# @Attention         如果广告仍然存在，请清除缓存或卸载应用重新安装
+# @Function          去广告配置（自用，持续更新...）
+# @Suitable          自行观看"# > "注释内容
+# @Attention         如需引用请注明出处，谢谢合作！
+# @Version           V1.0.6
+# @ScriptURL         https://raw.githubusercontent.com/ddgksf2013/Rewrite/refs/heads/master/AdBlock/FakeiOSAds.conf
+
+[Body Rewrite]
+# juzhi
+http-response-jq ^http:\/\/[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+){1,4}(:\d+)?\/api\/v\d\/config\/getConfigList\.do '.data |= map(select(.keyName | test("config\\.(ad|search|recommend)") | not))'
+
+[Map Local]
+# common
+^http:\/\/[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+){1,4}(:\d+)?\/.*?\/v\d\/(version|notice\?|top_notice\?|advert\?position=[^2]+) data-type=text data="" status-code=200
+
+[MITM]
+hostname = %APPEND% app.dsx.ac

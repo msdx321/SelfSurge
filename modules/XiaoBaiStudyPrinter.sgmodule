@@ -1,0 +1,18 @@
+#!name=小白学习打印机
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!category=去广告
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/XiaoBaiStudyPrinter.sgmodule
+#!tg-channel=https://t.me/inaisi
+
+# Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partX/XiaoBaiStudyPrinter.sgmodule
+# Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.
+# License: GPL-3.0; see resources/licenses/fmz200-wool_scripts-LICENSE.
+
+[URL Rewrite]
+# 捕获试卷脚本：https://raw.githubusercontent.com/Yu9191/Script/main/shijuan.js
+^https?:\/\/api\.xbxxhz\.com\/big_data\/v1\/home_pages - reject
+
+[MITM]
+hostname = %APPEND% api.xbxxhz.com

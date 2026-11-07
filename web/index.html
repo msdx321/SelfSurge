@@ -17,6 +17,12 @@
       main { width: min(1040px, calc(100% - 32px)); margin: 48px auto; }
       h1 { margin: 0; font-size: clamp(2rem, 6vw, 3.5rem); letter-spacing: -.04em; }
       .intro { margin: 10px 0 28px; color: #667085; }
+      .exclusions { margin: 16px 0; padding: 14px; border: 1px solid #98a2b3; border-radius: 10px; }
+      .exclusions p { margin: 0 0 10px; font-size: .85rem; }
+      .exclusions input { width: 100%; margin-bottom: 8px; }
+      .exclude-app { display: flex; align-items: center; gap: 6px; margin: 0 0 12px; font-size: .8rem; }
+      .exclude-app[hidden] { display: none; }
+      .exclude-app input { width: auto; margin: 0; padding: 0; flex: none; }
       .toolbar { position: sticky; top: 0; z-index: 1; padding: 12px 0; background: #f5f7fbe8; backdrop-filter: blur(10px); }
       label { display: block; font-size: .875rem; font-weight: 650; }
       input {
@@ -42,19 +48,19 @@
       .warnings { margin: 0 0 13px; padding: 10px 10px 10px 26px; border-radius: 9px; background: #fffaeb; color: #93370d; font-size: .8rem; line-height: 1.5; }
       .warnings li + li { margin-top: 6px; }
       .actions { display: flex; flex-wrap: wrap; gap: 8px; }
-      .actions a, .actions button {
+      .actions a, .actions button, .exclusions button {
         padding: 8px 10px; border: 1px solid #d0d5dd; border-radius: 9px;
         background: #fff; color: #344054; font: inherit; font-size: .8rem;
         line-height: 1; text-decoration: none; cursor: pointer;
       }
       .actions .install { border-color: #175cd3; background: #175cd3; color: #fff; }
-      .actions a:hover, .actions button:hover { filter: brightness(.96); }
+      .actions a:hover, .actions button:hover, .exclusions button:hover { filter: brightness(.96); }
       .empty { grid-column: 1 / -1; padding: 50px 0; text-align: center; color: #667085; }
 
       @media (prefers-color-scheme: dark) {
         :root { color: #f2f4f7; background: #101828; }
         .toolbar { background: #101828e8; }
-        input, article, .actions a, .actions button { border-color: #344054; background: #1d2939; color: #f2f4f7; }
+        input, article, .actions a, .actions button, .exclusions button { border-color: #344054; background: #1d2939; color: #f2f4f7; }
         .intro, #status, .description, .empty { color: #98a2b3; }
         .actions .install { border-color: #528bff; background: #2970ff; }
         .warnings { background: #432b14; color: #fedf89; }
@@ -69,10 +75,16 @@
   <body>
     <main>
       <h1>SelfSurge</h1>
-      <p class="intro">查找模块，然后导入 Surge。模块和脚本均从本仓库加载。</p>
+      <p class="intro">通用去广告提供完整基础覆盖，可与单独应用模块搭配使用。勾选你已启用的应用，并将排除参数填入通用模块，保留其他应用的兜底规则。来源：Kelee、fmz200、ddgksf2013。</p>
+      <div class="exclusions">
+        <p>在下方应用卡片勾选「已启用此应用模块」，然后复制参数，填入通用模块的 <code>exclude_apps</code>。网页不会自动读取 Surge 的启用状态；留空保留全部通用规则。</p>
+        <label for="exclude-apps">已启用应用的排除参数</label>
+        <input id="exclude-apps" type="text" readonly placeholder="未设置排除，保留完整通用覆盖">
+        <button id="copy-exclusions" type="button">复制排除参数</button>
+      </div>
       <div class="toolbar">
         <label for="search">搜索模块</label>
-        <input id="search" type="search" placeholder="名称、分类或说明" autocomplete="off">
+        <input id="search" type="search" placeholder="名称、分类、来源或说明" autocomplete="off">
       </div>
       <p id="status" role="status">正在加载模块…</p>
       <section id="modules" aria-label="模块列表"></section>
@@ -85,6 +97,7 @@
           <h2></h2>
           <p class="description"></p>
           <p class="meta"></p>
+          <label class="exclude-app" hidden><input type="checkbox">已启用此应用模块：从通用规则中排除</label>
           <ul class="warnings" aria-label="使用注意事项" hidden></ul>
           <div class="actions">
             <a class="install">导入 Surge</a>
@@ -100,12 +113,24 @@
       const status = document.querySelector("#status");
       const modules = document.querySelector("#modules");
       const template = document.querySelector("#module-card");
+      const excludeApps = document.querySelector("#exclude-apps");
+      const copyExclusions = document.querySelector("#copy-exclusions");
+      const excluded = new Set();
       let catalog = [];
+
+      copyExclusions.addEventListener("click", async () => {
+        try {
+          await navigator.clipboard.writeText(excludeApps.value);
+          copyExclusions.textContent = "已复制，请填入通用模块的 exclude_apps";
+        } catch {
+          copyExclusions.textContent = "复制失败，请手动复制参数";
+        }
+      });
 
       function render() {
         const query = search.value.trim().toLocaleLowerCase();
         const visible = catalog.filter((item) =>
-          [item.name, item.category, item.description, item.file]
+          [item.name, item.category, item.description, item.file, item.upstream]
             .join(" ").toLocaleLowerCase().includes(query)
         );
         const fragment = document.createDocumentFragment();
@@ -116,7 +141,17 @@
           image.src = item.icon || "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E";
           card.querySelector("h2").textContent = item.name;
           card.querySelector(".description").textContent = item.description || "暂无说明";
-          card.querySelector(".meta").textContent = [item.category, item.date].filter(Boolean).join(" · ");
+          card.querySelector(".meta").textContent = [item.kind === "general" ? "通用模块" : item.category, item.upstream, item.date].filter(Boolean).join(" · ");
+          const exclusion = card.querySelector(".exclude-app");
+          exclusion.hidden = !item.general_exclusion_key;
+          const checkbox = exclusion.querySelector("input");
+          checkbox.checked = excluded.has(item.general_exclusion_key);
+          checkbox.addEventListener("change", () => {
+            if (checkbox.checked) excluded.add(item.general_exclusion_key);
+            else excluded.delete(item.general_exclusion_key);
+            excludeApps.value = [...excluded].sort().join("|");
+            copyExclusions.textContent = "复制排除参数";
+          });
           const warnings = card.querySelector(".warnings");
           for (const message of item.warnings || []) {
             const warning = document.createElement("li");
@@ -127,7 +162,7 @@
           const install = card.querySelector(".install");
           install.href = `surge:///install-module?url=${encodeURIComponent(item.url)}`;
           card.querySelector(".view").href = item.url;
-          card.querySelector("button").addEventListener("click", async (event) => {
+          card.querySelector(".actions button").addEventListener("click", async (event) => {
             const button = event.currentTarget;
             try {
               await navigator.clipboard.writeText(item.url);

@@ -1,0 +1,27 @@
+#!name=嘀嗒出行
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!category=去广告
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/DiDaChuxing.sgmodule
+#!tg-channel=https://t.me/inaisi
+#!requirement=CORE_VERSION>=20
+
+# Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partD/DiDaChuxing.sgmodule
+# Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.
+# License: GPL-3.0; see resources/licenses/fmz200-wool_scripts-LICENSE.
+
+[URL Rewrite]
+# 小程序净化
+^https?:\/\/capis(-\d)?\.didapinche\.com\/adbase - reject
+^https?:\/\/capis(-\d)?\.didapinche\.com\/ad\/ - reject
+
+[Map Local]
+^https?:\/\/adx-cn\.anythinktech\.com\/bid data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https?:\/\/capis(-?\w*)?\.didapinche\.com\/publish\/api\/upgrade data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https?:\/\/www\.didapinche\.com\/app\/adstat\/ data-type=text data=" " status-code=200
+
+[MITM]
+hostname = %APPEND% capis*.didapinche.com, adx-cn.anythinktech.com, www.didapinche.com

@@ -1,25 +1,49 @@
-Generated Surge modules, except YouTube_remove_ads.sgmodule and StartUpAds.sgmodule, are adaptations of
-Loon configuration templates from https://hub.kelee.one/ and retain the
-supplied author metadata and source URL. They are distributed for
+SelfSurge discovers plugins from Kelee's catalog, fmz200's split Surge modules,
+and ddgksf2013's AdBlock rewrites. sources.json records selected sources,
+source checksums, alternatives, exclusions, and resource provenance.
+
+Selection groups app names and filename aliases, preferring body/script
+cleanup, then URL rewrites, then domain rules. Ties prefer Kelee, fmz200,
+then ddgksf2013. This is a deterministic coverage heuristic, not a guarantee
+of runtime effectiveness. Domain-only fmz200 fragments and explicitly retired
+plugins are omitted from the individual catalog. Existing module filenames
+are retained; duplicate legacy URLs remain as aliases outside the web catalog.
+
+Kelee modules are adaptations of Loon templates from https://hub.kelee.one/
+and retain supplied author metadata and source URLs. They are distributed for
 non-commercial use under CC BY-NC-SA 4.0:
 https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+fmz200 modules come from https://github.com/fmz200/wool_scripts. SelfSurge
+normalizes metadata, script identifiers, jq syntax, and dependency URLs.
+The upstream GPL-3.0 license is included at
+resources/licenses/fmz200-wool_scripts-LICENSE.
 
 YouTube_remove_ads.sgmodule and its mirrored scripts come from Maasea's
 Apache-2.0-licensed native Surge module. SelfSurge adds category metadata and
 replaces its script URLs with local mirrors. The upstream license is mirrored
 at resources/licenses/Maasea-sgmodule-LICENSE.
 
-StartUpAds.sgmodule is adapted from ddgksf2013's Quantumult X rewrite at
+ddgksf2013 app modules are adapted from
+https://github.com/ddgksf2013/Rewrite/tree/master/AdBlock.
+StartUpAds.sgmodule is adapted from the standalone Quantumult X rewrite at
 https://ddgksf2013.top/rewrite/StartUpAds.conf (fetched with User-Agent: surge).
-It retains upstream attribution and supplements the existing modules, which
-take precedence for duplicate patterns and app hosts. Non-ad routing and
-TestFlight/membership tweaks are excluded. Upstream terms remain applicable;
-SelfSurge does not relicense this source.
+It retains full general coverage by default and can be used alongside app
+modules. Select enabled apps in the web catalog and paste the resulting value
+into the general module's exclude_apps parameter. Matching app rules are then
+disabled by Surge line requirements; other general rules remain enabled.
+Exclusions use app aliases, exact patterns, and unambiguous service hosts.
+Shared service hosts alone do not establish app ownership. The parameter is
+manual: it does not read Surge's enabled-module state. This feature requires
+Core 22 (Surge iOS 5.11 / Mac 5.7) or later. Non-ad routing and
+TestFlight/membership tweaks are excluded. Upstream terms and attribution
+remain applicable; SelfSurge does not relicense these sources.
 
-Files under scripts/ and resources/ are unmodified mirrors. Copyright and
-license terms remain with their respective upstream authors. sources.json
-records each upstream URL and SHA-256 checksum; SelfSurge does not relicense
-those files.
+Files under scripts/ and resources/ are unmodified mirrors except for
+scripts/adapted/: these retain upstream scripts inside a small adapter for
+Quantumult X status strings and mock responses. sources.json records the
+transformation and both original and adapted checksums. Copyright and license
+terms remain with the respective upstream authors.
 
 Script-Hub was studied as a behavioral reference. Its GPL-3.0 source code was
 not copied into SelfSurge.

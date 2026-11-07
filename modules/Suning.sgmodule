@@ -1,0 +1,31 @@
+#!name=苏宁易购
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!category=去广告
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Suning.sgmodule
+#!tg-channel=https://t.me/inaisi
+#!requirement=CORE_VERSION>=20
+
+# Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partS/Suning.sgmodule
+# Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.
+# License: GPL-3.0; see resources/licenses/fmz200-wool_scripts-LICENSE.
+
+[Rule]
+DOMAIN-SUFFIX,show.suning.beer,REJECT
+DOMAIN-SUFFIX,apm.suning.cn,REJECT
+DOMAIN-SUFFIX,mads.suning.com,REJECT
+DOMAIN-SUFFIX,ssac.suning.com,REJECT
+DOMAIN-SUFFIX,tad.suning.com,REJECT
+
+[URL Rewrite]
+^https?:\/\/mpcs\.suning\.com\/mpcs\/dm\/getDmInfo - reject
+
+[Map Local]
+^https?:\/\/image\.suning\.cn\/uimg\/ma\/ad\/ data-type=text data=" " status-code=200
+
+# 新人专享弹窗
+^https?:\/\/luckman\.suning\.com\/luck-web\/policy\/v\d\/msf\/index\.do data-type=text data=" " status-code=200
+
+[MITM]
+hostname = %APPEND% mpcs.suning.com, image.suning.com, luckman.suning.com
