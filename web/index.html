@@ -77,9 +77,9 @@
       <h1>SelfSurge</h1>
       <p class="intro">通用去广告提供完整基础覆盖，可与单独应用模块搭配使用。勾选你已启用的应用，并将排除参数填入通用模块，保留其他应用的兜底规则。来源：Kelee、fmz200、ddgksf2013。</p>
       <div class="exclusions">
-        <p>在下方应用卡片勾选「已启用此应用模块」，然后复制参数，填入通用模块的 <code>exclude_apps</code>。网页不会自动读取 Surge 的启用状态；留空保留全部通用规则。</p>
+        <p>在下方应用卡片勾选「已启用此应用模块」，然后复制参数，填入通用模块的 <code>exclude_apps</code>。网页不会自动读取 Surge 的启用状态；<code>none</code> 表示不排除，保留全部通用规则。</p>
         <label for="exclude-apps">已启用应用的排除参数</label>
-        <input id="exclude-apps" type="text" readonly placeholder="未设置排除，保留完整通用覆盖">
+        <input id="exclude-apps" type="text" readonly value="none">
         <button id="copy-exclusions" type="button">复制排除参数</button>
       </div>
       <div class="toolbar">
@@ -149,7 +149,7 @@
           checkbox.addEventListener("change", () => {
             if (checkbox.checked) excluded.add(item.general_exclusion_key);
             else excluded.delete(item.general_exclusion_key);
-            excludeApps.value = [...excluded].sort().join("|");
+            excludeApps.value = [...excluded].sort().join("|") || "none";
             copyExclusions.textContent = "复制排除参数";
           });
           const warnings = card.querySelector(".warnings");

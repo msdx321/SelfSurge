@@ -3,8 +3,8 @@
 #!category=去广告
 #!author=@ddgksf2013
 #!date=2026-08-29
-#!arguments=exclude_apps:
-#!arguments-desc=在目录页勾选已启用的应用，复制排除参数到此处。多个模块标识以 | 分隔；留空保留全部规则。此参数不会自动读取 Surge 的模块启用状态。
+#!arguments=exclude_apps:none
+#!arguments-desc=在目录页勾选已启用的应用，复制排除参数到此处。多个模块标识以 | 分隔；none 表示不排除，保留全部规则。此参数不会自动读取 Surge 的模块启用状态。
 #!requirement=CORE_VERSION>=22
 
 # Source: https://ddgksf2013.top/rewrite/StartUpAds.conf

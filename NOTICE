@@ -30,7 +30,8 @@ StartUpAds.sgmodule is adapted from the standalone Quantumult X rewrite at
 https://ddgksf2013.top/rewrite/StartUpAds.conf (fetched with User-Agent: surge).
 It retains full general coverage by default and can be used alongside app
 modules. Select enabled apps in the web catalog and paste the resulting value
-into the general module's exclude_apps parameter. Matching app rules are then
+into the general module's exclude_apps parameter. The default value none
+means no exclusions and retains full coverage. Matching app rules are then
 disabled by Surge line requirements; other general rules remain enabled.
 Exclusions use app aliases, exact patterns, and unambiguous service hosts.
 Shared service hosts alone do not establish app ownership. The parameter is

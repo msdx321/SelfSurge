@@ -55,7 +55,7 @@ def _authority(pattern: str) -> str:
 
 
 def configure_fallback(module: str, app_modules: dict[str, str], decisions: dict) -> tuple[str, dict[str, int]]:
-    """Gate app-owned rules; leaving exclude_apps empty preserves full coverage."""
+    """Gate app-owned rules; the default none preserves full coverage."""
     aliases = defaultdict(set)
     patterns = defaultdict(set)
     authorities = defaultdict(set)
@@ -93,8 +93,8 @@ def configure_fallback(module: str, app_modules: dict[str, str], decisions: dict
         if line.startswith("#!requirement="):
             line = "#!requirement=CORE_VERSION>=22"
             output.extend([
-                "#!arguments=exclude_apps:",
-                "#!arguments-desc=在目录页勾选已启用的应用，复制排除参数到此处。多个模块标识以 | 分隔；留空保留全部规则。此参数不会自动读取 Surge 的模块启用状态。",
+                "#!arguments=exclude_apps:none",
+                "#!arguments-desc=在目录页勾选已启用的应用，复制排除参数到此处。多个模块标识以 | 分隔；none 表示不排除，保留全部规则。此参数不会自动读取 Surge 的模块启用状态。",
             ])
         if line.startswith("["):
             section = line
