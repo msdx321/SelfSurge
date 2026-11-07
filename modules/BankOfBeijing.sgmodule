@@ -6,6 +6,7 @@
 #!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/BankOfBeijing.sgmodule
 #!tg-channel=https://t.me/inaisi
 #!requirement=CORE_VERSION>=20
+#!icon=https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/04/1a/f5/041af59e-dfbc-e4cc-3f15-2b047929b8d7/Placeholder.mill/120x120Icon.ApSiOS01.png
 
 # Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partB/BankOfBeijing.sgmodule
 # Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.

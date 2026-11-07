@@ -5,6 +5,7 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/SPDBank.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/1024px/%E6%B5%A6%E5%8F%91%E9%93%B6%E8%A1%8C.png
 
 # Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partP/SPDBank.sgmodule
 # Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.

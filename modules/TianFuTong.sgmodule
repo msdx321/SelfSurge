@@ -6,6 +6,7 @@
 #!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/TianFuTong.sgmodule
 #!tg-channel=https://t.me/inaisi
 #!requirement=CORE_VERSION>=20
+#!icon=https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/aa/32/18/aa32183d-2922-4f6e-2fea-7a3ec51c7475/AppIcon-0-0-1x_U007emarketing-0-6-0-85-220.png/100x100bb.jpg
 
 # Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partT/TianFuTong.sgmodule
 # Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.

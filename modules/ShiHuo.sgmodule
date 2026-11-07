@@ -6,6 +6,7 @@
 #!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/ShiHuo.sgmodule
 #!tg-channel=https://t.me/inaisi
 #!requirement=CORE_VERSION>=20
+#!icon=https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/10/ef/6c/10ef6cf9-515c-61c9-a220-45e15d4cf982/AppIcon-0-0-1x_U007epad-0-11-0-85-220.png/100x100bb.jpg
 
 # Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partS/ShiHuo.sgmodule
 # Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.

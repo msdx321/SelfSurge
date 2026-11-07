@@ -6,6 +6,7 @@
 #!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/2345WeatherKing.sgmodule
 #!tg-channel=https://t.me/inaisi
 #!requirement=CORE_VERSION>=20
+#!icon=https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/49/f3/dc/49f3dc8b-56c6-02ab-b6ae-bb464317d344/Placeholder.mill/120x120Icon.ApSiOS01.png
 
 # Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/part2/2345WeatherKing.sgmodule
 # Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.

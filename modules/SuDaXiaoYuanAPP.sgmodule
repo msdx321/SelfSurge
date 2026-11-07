@@ -7,6 +7,7 @@
 #!tg-channel=https://t.me/inaisi
 #!arguments=sudaxnyr_enable:true
 #!requirement=CORE_VERSION>=20
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Lifestyle.png
 
 # Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partS/SuDaXiaoYuanAPP.sgmodule
 # Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.

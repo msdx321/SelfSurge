@@ -5,6 +5,7 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/YiTao.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!icon=https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/a9/c0/3f/a9c03f73-3dcb-c9bc-9d71-fa9cc7d16dc3/AppIcon-0-1x_U007emarketing-0-8-0-sRGB-85-220-0.png/100x100bb.jpg
 
 # Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partY/YiTao.sgmodule
 # Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.

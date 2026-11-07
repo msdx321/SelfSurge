@@ -4,6 +4,7 @@
 #!author=@ddgksf2013
 #!date=2025-12-11
 #!requirement=CORE_VERSION>=20
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/ChinaUnicom.png
 
 # Source: https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/AdBlock/ChinaUnicomAds.conf
 # Adapted from Quantumult X by SelfSurge; upstream attribution:

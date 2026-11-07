@@ -7,6 +7,7 @@
 #!tg-channel=https://t.me/inaisi
 #!arguments=jhsh_enable:true
 #!requirement=CORE_VERSION>=20
+#!icon=https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/a8/c1/03/a8c10358-e1b1-84c3-fee9-824e46661aa3/AppIcon-0-1x_U007ephone-0-11-0-sRGB-85-220-0.png/100x100bb.jpg
 
 # Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partJ/CCBLife.sgmodule
 # Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.

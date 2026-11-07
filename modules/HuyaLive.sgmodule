@@ -6,6 +6,7 @@
 #!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/HuyaLive.sgmodule
 #!tg-channel=https://t.me/inaisi
 #!requirement=CORE_VERSION>=20
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/1024px/%E8%99%8E%E7%89%99%E7%9B%B4%E6%92%AD.png
 
 # Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partH/HuyaLive.sgmodule
 # Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.

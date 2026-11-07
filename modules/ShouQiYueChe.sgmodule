@@ -6,6 +6,7 @@
 #!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/ShouQiYueChe.sgmodule
 #!tg-channel=https://t.me/inaisi
 #!requirement=CORE_VERSION>=20
+#!icon=https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e4/25/67/e425673b-9cef-4cd6-9807-fc77902b564e/AppIcon-0-0-1x_U007emarketing-0-6-0-85-220.png/100x100bb.jpg
 
 # Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partS/ShouQiYueChe.sgmodule
 # Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.

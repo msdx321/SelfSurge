@@ -6,6 +6,7 @@
 #!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/BOC-CrossBorderGO.sgmodule
 #!tg-channel=https://t.me/inaisi
 #!requirement=CORE_VERSION>=20
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Pig.png
 
 # Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partZ/BOC-CrossBorderGO.sgmodule
 # Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.

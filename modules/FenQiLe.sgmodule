@@ -6,6 +6,7 @@
 #!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/FenQiLe.sgmodule
 #!tg-channel=https://t.me/inaisi
 #!requirement=CORE_VERSION>=20
+#!icon=https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/0d/69/fe/0d69fefa-0090-8866-385e-0769861a9140/AppIcon-1x_U007emarketing-0-6-0-85-220-0.png/100x100bb.jpg
 
 # Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partF/FenQiLe.sgmodule
 # Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.

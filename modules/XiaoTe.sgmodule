@@ -6,6 +6,7 @@
 #!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/XiaoTe.sgmodule
 #!tg-channel=https://t.me/inaisi
 #!requirement=CORE_VERSION>=20
+#!icon=https://pp.myapp.com/ma_icon/0/icon_52738309_1788423311/256
 
 # Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partX/XiaoTe.sgmodule
 # Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.

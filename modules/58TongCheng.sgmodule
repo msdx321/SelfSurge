@@ -6,6 +6,7 @@
 #!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/58TongCheng.sgmodule
 #!tg-channel=https://t.me/inaisi
 #!requirement=CORE_VERSION>=20
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/1024px/58%E5%90%8C%E5%9F%8E.png
 
 # Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/part5/58TongCheng.sgmodule
 # Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.

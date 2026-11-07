@@ -6,6 +6,7 @@
 #!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/ZhangShangJingCai.sgmodule
 #!tg-channel=https://t.me/inaisi
 #!requirement=CORE_VERSION>=20
+#!icon=https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/1a/ef/ee/1aefeee1-91b8-3cc1-0092-7af795e684d6/Placeholder.mill/120x120Icon.ApSiOS01.png
 
 # Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partB/ZhangShangJingCai.sgmodule
 # Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.

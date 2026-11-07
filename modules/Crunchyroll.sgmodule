@@ -6,6 +6,7 @@
 #!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Crunchyroll.sgmodule
 #!tg-channel=https://t.me/inaisi
 #!requirement=CORE_VERSION>=20
+#!icon=https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/51/e2/8f/51e28f69-7bc1-d9e1-5c7e-d636f53ed0d2/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/100x100bb.jpg
 
 # Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partC/Crunchyroll.sgmodule
 # Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.

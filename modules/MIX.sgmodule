@@ -5,6 +5,7 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/MIX.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!icon=https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/90/74/0a/90740a07-40ed-26c6-d10c-ab42da6bfe90/AppIcon-0-0-1x_U007emarketing-0-6-0-85-220.png/100x100bb.jpg
 
 # Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partM/MIX.sgmodule
 # Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.

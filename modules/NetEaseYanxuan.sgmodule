@@ -5,6 +5,7 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/NetEaseYanxuan.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!icon=https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/ca/29/84/ca2984d9-bd3b-8def-c7b3-e09185a73006/AppIcon-1x_U007emarketing-0-8-0-85-220-0.png/100x100bb.jpg
 
 # Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partW/NetEaseYanxuan.sgmodule
 # Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.

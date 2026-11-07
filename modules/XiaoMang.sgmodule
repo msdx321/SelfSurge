@@ -7,6 +7,7 @@
 #!tg-channel=https://t.me/inaisi
 #!arguments=xnmh_enable:true
 #!requirement=CORE_VERSION>=20
+#!icon=https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/c6/7a/f2/c67af213-6280-209f-65a9-f428a69b1ac4/AppIcon-0-0-1x_U007emarketing-0-6-0-sRGB-0-0-85-220.png/100x100bb.jpg
 
 # Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partX/XiaoMang.sgmodule
 # Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.

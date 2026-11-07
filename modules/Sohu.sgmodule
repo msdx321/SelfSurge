@@ -6,6 +6,7 @@
 #!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Sohu.sgmodule
 #!tg-channel=https://t.me/inaisi
 #!requirement=CORE_VERSION>=20
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/1024px/%E6%90%9C%E7%8B%90%E7%BD%91.png
 
 # Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partS/Sohu.sgmodule
 # Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.

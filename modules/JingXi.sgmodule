@@ -7,6 +7,7 @@
 #!tg-channel=https://t.me/inaisi
 #!arguments=jkxi_enable:true
 #!requirement=CORE_VERSION>=20
+#!icon=https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/dd/c4/28/ddc4286b-bb07-d593-d159-2467665ae104/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/100x100bb.jpg
 
 # Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partJ/JingXi.sgmodule
 # Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.

@@ -1,0 +1,1828 @@
+{
+  "12123.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/2e/35/4e/2e354ea6-54e7-e812-a0a0-101a7f67822f/Placeholder.mill/120x120Icon.ApSiOS01.png",
+    "source": "https://apps.apple.com/cn/app/id1039727169"
+  },
+  "21EconomicNet.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/76/4f/9e/764f9e46-8b4d-c94f-669b-0c87444f31d8/Placeholder.mill/120x120Icon.ApSiOS01.png",
+    "source": "https://apps.apple.com/cn/app/id1001058738"
+  },
+  "2345WeatherKing.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/49/f3/dc/49f3dc8b-56c6-02ab-b6ae-bb464317d344/Placeholder.mill/120x120Icon.ApSiOS01.png",
+    "source": "https://apps.apple.com/cn/app/id965693108"
+  },
+  "360ChildGuard.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/21/51/de/2151de01-09b2-4546-597d-2576772de64c/Placeholder.mill/120x120Icon.ApSiOS01.png",
+    "source": "https://apps.apple.com/cn/app/id863969708"
+  },
+  "500.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/2d/eb/99/2deb99c8-c855-9c7a-03c3-b10b50545ede/Placeholder.mill/120x120Icon.ApSiOS01.png",
+    "source": "https://apps.apple.com/cn/app/id432486451"
+  },
+  "51CreditCardManager.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_154188_1770304327/256",
+    "source": "https://sj.qq.com/appdetail/com.zhangdan.app"
+  },
+  "555YingShi.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/555DY.png",
+    "source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/555DY.png"
+  },
+  "58TongCheng.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/1024px/58%E5%90%8C%E5%9F%8E.png",
+    "source": "https://github.com/luestr/IconResource/blob/main/App_icon/1024px/58%E5%90%8C%E5%9F%8E.png"
+  },
+  "ABC.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/bank/ABC.png",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/bank/ABC.png"
+  },
+  "AIA.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/7f/bc/be/7fbcbe74-8dff-770a-8e24-93636e51ead1/Placeholder.mill/120x120Icon.ApSiOS01.png",
+    "source": "https://apps.apple.com/cn/app/id1207516706"
+  },
+  "AcFun.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/1024px/AcFun.png",
+    "source": "https://github.com/luestr/IconResource/blob/main/App_icon/1024px/AcFun.png"
+  },
+  "AiHuiShou.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/47/ac/db/47acdbab-054c-9cbe-3846-86195b2253e8/Placeholder.mill/120x120Icon.ApSiOS01.png",
+    "source": "https://apps.apple.com/cn/app/id1059930957"
+  },
+  "AiMeiJu.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Popcorn.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Popcorn.png"
+  },
+  "AiQianGua.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/e9/20/39/e92039c0-5a88-bffc-cfef-e5090c0a327d/Placeholder.mill/120x120Icon.ApSiOS01.png",
+    "source": "https://apps.apple.com/cn/app/id1025615485"
+  },
+  "AiSiAssistant.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/i4Assistant.png",
+    "source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/i4Assistant.png"
+  },
+  "AiTongXiang.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/08/90/f4/0890f471-5809-fd63-bdb4-c9450f1fd5da/AppIcon-0-0-1x_U007emarketing-0-6-0-0-85-220.png/120x120Icon.ApSiOS01.png",
+    "source": "https://apps.apple.com/cn/app/id1489685820"
+  },
+  "AiYueShuXiang.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Book.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Book.png"
+  },
+  "AirChina.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/1024px/%E4%B8%AD%E5%9B%BD%E5%9B%BD%E8%88%AA.png",
+    "source": "https://github.com/luestr/IconResource/blob/main/App_icon/1024px/%E4%B8%AD%E5%9B%BD%E5%9B%BD%E8%88%AA.png"
+  },
+  "AllFootball.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/be/38/44/be3844e3-d353-8131-3c86-d4c4b2ee53e6/Placeholder.mill/120x120Icon.ApSiOS01.png",
+    "source": "https://apps.apple.com/cn/app/id6740233629"
+  },
+  "Amazon.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Amazon.png",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Amazon.png"
+  },
+  "AnhuiZhangShang10000.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Globe.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Globe.png"
+  },
+  "AoMi.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/51/cb/57/51cb57cb-7c80-4fca-ab9f-63b532ea1781/Placeholder.mill/120x120Icon.ApSiOS01.png",
+    "source": "https://apps.apple.com/cn/app/id1104177940"
+  },
+  "AppSo.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Magazine.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Magazine.png"
+  },
+  "AtourSplash.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/0e/89/04/0e890457-490f-c525-3674-7c7c44ca515c/Placeholder.mill/120x120Icon.ApSiOS01.png",
+    "source": "https://apps.apple.com/cn/app/id1113883381"
+  },
+  "BOC-BinFenShengHuo.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Pig.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Pig.png"
+  },
+  "BOC-CrossBorderGO.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Pig.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Pig.png"
+  },
+  "BTGHomeinns.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/96/fe/30/96fe30fc-ca5b-291e-d1d3-c0fded2b3011/Placeholder.mill/120x120Icon.ApSiOS01.png",
+    "source": "https://apps.apple.com/cn/app/id435921465"
+  },
+  "BYDDynasty.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/12/75/a4/1275a4b5-27dd-0c7c-4fce-d4c0ba6b4277/Placeholder.mill/120x120Icon.ApSiOS01.png",
+    "source": "https://apps.apple.com/cn/app/id493482713"
+  },
+  "Baidu.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Baidu.png",
+    "source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/Baidu.png"
+  },
+  "BaixinBank.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/4e/1a/72/4e1a722d-244b-e73b-3b4f-9e9a985a4375/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id1324387551"
+  },
+  "BanYueTan.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/55/9c/df/559cdf5e-d098-35f5-c834-ebad89af29a6/Placeholder.mill/120x120Icon.ApSiOS01.png",
+    "source": "https://apps.apple.com/cn/app/id1192174860"
+  },
+  "BananaIsAFruit.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Globe.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Globe.png"
+  },
+  "BankOfBeijing.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/04/1a/f5/041af59e-dfbc-e4cc-3f15-2b047929b8d7/Placeholder.mill/120x120Icon.ApSiOS01.png",
+    "source": "https://apps.apple.com/cn/app/id434831001"
+  },
+  "BankOfJiangsu.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/c4/a1/53/c4a153c2-242f-464e-5f6d-fdc5a8d99e7c/Placeholder.mill/120x120Icon.ApSiOS01.png",
+    "source": "https://apps.apple.com/cn/app/id518566498"
+  },
+  "BankOfJilin.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/ce/75/33/ce75338f-e74f-35a6-d018-08e8d826ae4c/Placeholder.mill/120x120Icon.ApSiOS01.png",
+    "source": "https://apps.apple.com/cn/app/id1296768462"
+  },
+  "BeijingShouQi.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Navigation.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Navigation.png"
+  },
+  "BenLaiShengHuo.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/a0/bc/e3/a0bce35d-4dd6-7447-7b2c-f0c3475dd2d4/Placeholder.mill/120x120Icon.ApSiOS01.png",
+    "source": "https://apps.apple.com/cn/app/id640076621"
+  },
+  "BettyKitchen.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Food.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Food.png"
+  },
+  "BiShiJie.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Pig.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Pig.png"
+  },
+  "Binance.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/76/2d/be/762dbedd-02f7-d889-4d96-9c910a7889c0/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/de/app/id1436799971"
+  },
+  "BingSimplify.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Bing.png",
+    "source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/Bing.png"
+  },
+  "Blued.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/9d/30/79/9d307934-8dff-0cd2-7217-00f03d20db41/Placeholder.mill/120x120Icon.ApSiOS01.png",
+    "source": "https://apps.apple.com/cn/app/id1451025748"
+  },
+  "BoLuoBaoLightNovel.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/d7/93/88/d793884d-1df6-e47c-ef5d-55d5dd213223/Placeholder.mill/120x120Icon.ApSiOS01.png",
+    "source": "https://apps.apple.com/cn/app/id928785539"
+  },
+  "ByteDance.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Globe.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Globe.png"
+  },
+  "CCBLife.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/a8/c1/03/a8c10358-e1b1-84c3-fee9-824e46661aa3/AppIcon-0-1x_U007ephone-0-11-0-sRGB-85-220-0.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id1472477795"
+  },
+  "CCTV.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/a7/b3/a5/a7b3a524-679c-fb83-b0c8-7e245d76893c/AppIcon-0-0-1x_U007emarketing-0-8-0-sRGB-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id331259725"
+  },
+  "CCTVVideo.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/YangShiPin.png",
+    "source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/YangShiPin.png"
+  },
+  "CEB.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/bank/CEB.png",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/bank/CEB.png"
+  },
+  "CEB_SunshineHuiLife.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e8/6d/48/e86d48ba-b985-3105-f2bc-9d3fffa1e987/AppIcon-0-0-1x_U007emarketing-0-7-0-sRGB-85-220.jpeg/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id794862904"
+  },
+  "CNKI.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_1202253_1793858806/256",
+    "source": "https://sj.qq.com/appdetail/com.cnki.client"
+  },
+  "CaiJingZaZhi.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/14/94/0b/14940be9-d7b4-1c38-1a74-b22a2f14e001/Placeholder.mill/120x120Icon.ApSiOS01.png",
+    "source": "https://apps.apple.com/cn/app/id391076447"
+  },
+  "CaiLianShe.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/CaiLianShe.png",
+    "source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/CaiLianShe.png"
+  },
+  "CaiXin.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/CaixinMedia.png",
+    "source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/CaixinMedia.png"
+  },
+  "CaoCaoZhuanChe.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/83/91/3c/83913c27-a920-0e28-f911-19c8a7b45779/AppIcon-0-0-1x_U007emarketing-0-6-0-sRGB-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id1034208598"
+  },
+  "ChangChengLianJinShu.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/09/f7/45/09f745e2-7b56-0813-ebed-87dd6ca4b230/AppIcon-0-0-1x_U007emarketing-0-6-0-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id1449663267"
+  },
+  "ChaoWanYuZhou.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Balloon.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Balloon.png"
+  },
+  "ChaoXingXueXiTong.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/ChaoXingStudy.png",
+    "source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/ChaoXingStudy.png"
+  },
+  "CheryAuto.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/chery.png",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/chery.png"
+  },
+  "ChinaBroadcastingNetwork.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_54262849_1793728936/256",
+    "source": "https://sj.qq.com/appdetail/com.ai.obc.cbn.app"
+  },
+  "ChinaCITICBank.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/1024px/%E4%B8%AD%E4%BF%A1%E9%93%B6%E8%A1%8C.png",
+    "source": "https://github.com/luestr/IconResource/blob/main/App_icon/1024px/%E4%B8%AD%E4%BF%A1%E9%93%B6%E8%A1%8C.png"
+  },
+  "ChinaGuangfaBank.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/1024px/%E5%B9%BF%E5%8F%91%E9%93%B6%E8%A1%8C.png",
+    "source": "https://github.com/luestr/IconResource/blob/main/App_icon/1024px/%E5%B9%BF%E5%8F%91%E9%93%B6%E8%A1%8C.png"
+  },
+  "ChinaLifeInsurance.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_11301850_1793189336/256",
+    "source": "https://sj.qq.com/appdetail/com.chinalife.ebz"
+  },
+  "ChinaMerchantsBank.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/1024px/%E6%8B%9B%E5%95%86%E9%93%B6%E8%A1%8C.png",
+    "source": "https://github.com/luestr/IconResource/blob/main/App_icon/1024px/%E6%8B%9B%E5%95%86%E9%93%B6%E8%A1%8C.png"
+  },
+  "ChinaMerchantsSecurities.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/d9/46/e8/d946e822-1c0f-4bc0-70e1-170de269fa7d/AppIcon-1x_U007emarketing-0-9-0-85-220-0.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id1042567321"
+  },
+  "ChinaMinshengBank.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/1024px/%E6%B0%91%E7%94%9F%E9%93%B6%E8%A1%8C.png",
+    "source": "https://github.com/luestr/IconResource/blob/main/App_icon/1024px/%E6%B0%91%E7%94%9F%E9%93%B6%E8%A1%8C.png"
+  },
+  "ChinaMobile.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/ChinaMobile.png",
+    "source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/ChinaMobile.png"
+  },
+  "ChinaSouthernAirlines.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/1024px/%E5%8D%97%E6%96%B9%E8%88%AA%E7%A9%BA.png",
+    "source": "https://github.com/luestr/IconResource/blob/main/App_icon/1024px/%E5%8D%97%E6%96%B9%E8%88%AA%E7%A9%BA.png"
+  },
+  "ChinaTelecom.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/1024px/%E4%B8%AD%E5%9B%BD%E7%94%B5%E4%BF%A1.png",
+    "source": "https://github.com/luestr/IconResource/blob/main/App_icon/1024px/%E4%B8%AD%E5%9B%BD%E7%94%B5%E4%BF%A1.png"
+  },
+  "ChinaUnicomAds.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/ChinaUnicom.png",
+    "source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/ChinaUnicom.png"
+  },
+  "ChinaWeatherNetwork.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/WeatherChina.png",
+    "source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/WeatherChina.png"
+  },
+  "ChuangKeTieDesign.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_52791731_1776997361/256",
+    "source": "https://sj.qq.com/appdetail/com.chuangkit"
+  },
+  "CiWeiMaoYueDu.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/55/7d/ae/557dae9a-1052-00c6-cf13-9bef223fb767/AppIcon-0-0-1x_U007emarketing-0-9-0-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id993993763"
+  },
+  "Crunchyroll.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/51/e2/8f/51e28f69-7bc1-d9e1-5c7e-d636f53ed0d2/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/us/app/id329913454"
+  },
+  "Ctrip.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Ctrip.png",
+    "source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/Ctrip.png"
+  },
+  "DJIStore.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_12143478_1793843226/256",
+    "source": "https://sj.qq.com/appdetail/com.dji.store"
+  },
+  "DaDaRiderVersion.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_10703724_1794045726/256",
+    "source": "https://sj.qq.com/appdetail/com.dada.mobile.android"
+  },
+  "DaShiXiong.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Popcorn.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Popcorn.png"
+  },
+  "DaZhiHui.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/e4/bd/69/e4bd6938-d9be-cef3-8add-f5f0f3ac275d/AppIcon-0-0-1x_U007emarketing-0-7-0-sRGB-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id666606316"
+  },
+  "DangDangReading.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_8695_1792725816/256",
+    "source": "https://sj.qq.com/appdetail/com.dangdang.reader"
+  },
+  "DaoMengKongJian.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_42276607_1792155826/256",
+    "source": "https://sj.qq.com/appdetail/com.jingcai.apps.qualitydev"
+  },
+  "DiDaChuxing.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/DidaPincheTaxi.png",
+    "source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/DidaPincheTaxi.png"
+  },
+  "DiDiBike.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Bike.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Bike.png"
+  },
+  "DiDiChuxing.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/DiDi.png",
+    "source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/DiDi.png"
+  },
+  "DiDiDaiJia.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_42397748_1793872946/256",
+    "source": "https://sj.qq.com/appdetail/com.kuaidi.daijia.driver"
+  },
+  "DiDuanYingShi.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Popcorn.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Popcorn.png"
+  },
+  "DianEBao.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_42240478_1793676636/256",
+    "source": "https://sj.qq.com/appdetail/cn.com.htjc.pay"
+  },
+  "DianPing.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/ea/4d/80/ea4d80d0-44a0-82f9-cfbc-47e99ae00e02/AppIcon-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id351091731"
+  },
+  "DianShiJia.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Popcorn.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Popcorn.png"
+  },
+  "DianYingLieShou.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Popcorn.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Popcorn.png"
+  },
+  "Dida.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Bike.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Bike.png"
+  },
+  "DingDingPai.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_10336666_1793846896/256",
+    "source": "https://sj.qq.com/appdetail/com.vyou.vcameraclient"
+  },
+  "DingTalk.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/1024px/%E9%92%89%E9%92%89.png",
+    "source": "https://github.com/luestr/IconResource/blob/main/App_icon/1024px/%E9%92%89%E9%92%89.png"
+  },
+  "DingXiangDoctor.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/0b/d3/09/0bd30911-31fc-a194-0b14-6a3d717c93ad/AppIcon-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id911261462"
+  },
+  "DingXiangYuan.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_85267_1793325866/256",
+    "source": "https://sj.qq.com/appdetail/cn.dxy.idxyer"
+  },
+  "DongFangCaiFu.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/9a/f2/10/9af21057-23de-5a07-8a15-af7d9fb1574e/AppIcon-0-0-1x_U007ephone-0-11-0-sRGB-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id423525686"
+  },
+  "DongHuaFeng.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/40/c8/c0/40c8c02f-de0a-2619-5978-43b439d509a5/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/tw/app/id1102650114"
+  },
+  "DongKaKongJian.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/8b/61/e2/8b61e2e5-7810-fdf5-9d66-ea6585050e02/AppIcon-0-0-1x_U007emarketing-0-9-0-sRGB-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id487967179"
+  },
+  "DouyuLive.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Douyu.png",
+    "source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/Douyu.png"
+  },
+  "DragonRead_remove_ads.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/DragonRead.png",
+    "source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/DragonRead.png"
+  },
+  "Eleme.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/eleme.png",
+    "source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/eleme.png"
+  },
+  "ElongTravel.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/1024px/%E8%89%BA%E9%BE%99%E6%97%85%E8%A1%8C.png",
+    "source": "https://github.com/luestr/IconResource/blob/main/App_icon/1024px/%E8%89%BA%E9%BE%99%E6%97%85%E8%A1%8C.png"
+  },
+  "Evernote.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/d6/96/6e/d6966ee4-17d5-14c3-1d15-5f2fde02f2b5/AppIcon-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id1356054761"
+  },
+  "FAWVW.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_42361451_1793440976/256",
+    "source": "https://sj.qq.com/appdetail/com.timanetworks.android.faw.vw.aftermarket.release"
+  },
+  "FaXianJingCai.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/59/93/87/59938753-a514-8727-af58-91ec8c414f14/AppIcon-1x_U007emarketing-0-7-0-85-220-0.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id1121886234"
+  },
+  "FakeiOSAds.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/AppStore.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/AppStore.png"
+  },
+  "FamilyMart.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_54068626_1789736617/256",
+    "source": "https://sj.qq.com/appdetail/com.x2era.xcloud.app"
+  },
+  "FanDengReading.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/6f/03/17/6f0317c0-d5da-2537-13d7-e62cdf4b63c9/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id963152777"
+  },
+  "FanLiWang.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/45/06/13/45061313-e8ef-d560-acf4-6cde82b642d3/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id591584458"
+  },
+  "FeiKeChaGuan.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/FlyerTea.png",
+    "source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/FlyerTea.png"
+  },
+  "FeiMaoGuanJia.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_54177364_1793670216/256",
+    "source": "https://sj.qq.com/appdetail/com.zy.flt_yishang"
+  },
+  "FenQiLe.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/0d/69/fe/0d69fefa-0090-8866-385e-0769861a9140/AppIcon-1x_U007emarketing-0-6-0-85-220-0.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id906611031"
+  },
+  "FengHuangXiu.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Popcorn.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Popcorn.png"
+  },
+  "Fliggy.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/TaobaoTravel.png",
+    "source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/TaobaoTravel.png"
+  },
+  "FuXiangTaiPing.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_54286618_1791615266/256",
+    "source": "https://sj.qq.com/appdetail/fxtp.tpp.cntaiping"
+  },
+  "FuYouHui.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_52561412_1793496036/256",
+    "source": "https://sj.qq.com/appdetail/com.mirum.fx"
+  },
+  "FutuNiuNiu.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/06/54/5a/06545aae-3b3c-fc0e-cd94-101952b0db84/AppIcon-NiuNiu-0-0-1x_U007epad-0-1-sRGB-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/hk/app/id592031984"
+  },
+  "GACTrumpchi.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_53801895_1792743326/256",
+    "source": "https://sj.qq.com/appdetail/com.cloudy.component"
+  },
+  "GameTime.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png",
+    "kind": "category",
+    "source": "https://github.com/Koolson/Qure/blob/master/IconSet/Color/Game.png"
+  },
+  "Gamersky.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/8d/40/1e/8d401e45-5630-eba6-a129-809210dc17e2/AppIcon-0-0-1x_U007epad-0-9-0-sRGB-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id886118205"
+  },
+  "GaoTieGuanJia.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_1268114_1793930026/256",
+    "source": "https://sj.qq.com/appdetail/com.gtgj.view"
+  },
+  "GlobalShoppingKnightCard.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Shopping.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Shopping.png"
+  },
+  "GomeAppliances.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_243325_1791450826/256",
+    "source": "https://sj.qq.com/appdetail/com.gome.eshopnew"
+  },
+  "GongKaoLeiDa.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/66/24/09/66240915-3b58-0f95-1ad9-edac9cbccdf1/Placeholder.mill/120x120Icon.ApSiOS01.png",
+    "source": "https://apps.apple.com/cn/app/id1337474440"
+  },
+  "GongShiJiLu.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_52803111_1793884176/256",
+    "source": "https://sj.qq.com/appdetail/io.dcloud.H5D4EC138"
+  },
+  "Google_remove_ads.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Google.png",
+    "source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/Google.png"
+  },
+  "GuahaoWangWeiyi.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_1152567_1789695366/256",
+    "source": "https://sj.qq.com/appdetail/com.greenline.guahao"
+  },
+  "GuaiShouChongDian.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/lightning.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/lightning.png"
+  },
+  "GuanYu.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Lifestyle.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Lifestyle.png"
+  },
+  "GuangzhouRuralCommercialBank.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Pig.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Pig.png"
+  },
+  "GuotaiJunan.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/f2/2f/98/f22f98c1-6f4f-ab5b-56c4-5d7c9f60e560/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id952047557"
+  },
+  "HSBCSelect.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/10/8f/60/108f60e4-0aed-d187-1ac7-062165859a88/AppIcon-0-0-1x_U007emarketing-0-6-0-sRGB-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id1564618830"
+  },
+  "HaFuSecurities.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Pig.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Pig.png"
+  },
+  "HaiMaBaBi.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_54196194_1789452776/256",
+    "source": "https://sj.qq.com/appdetail/com.simshine.cn.aiothd"
+  },
+  "HaiTunYouHui.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Shopping.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Shopping.png"
+  },
+  "HaiXue.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_12262256_1793019936/256",
+    "source": "https://sj.qq.com/appdetail/com.haixue.app.android.HaixueAcademy.h4"
+  },
+  "HaierService.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Lifestyle.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Lifestyle.png"
+  },
+  "HanJuTV.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Popcorn.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Popcorn.png"
+  },
+  "HangZhouBus.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/0a/24/a1/0a24a1c9-cc1e-3641-e683-47c7332d287e/AppIcon-0-0-1x_U007epad-0-0-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id6502860166"
+  },
+  "HangZhouCitizen.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_42288020_1792551636/256",
+    "source": "https://sj.qq.com/appdetail/com.smk"
+  },
+  "HaoHaoZhu.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Lifestyle.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Lifestyle.png"
+  },
+  "HaoQiXinDaily.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Magazine.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Magazine.png"
+  },
+  "HaoXingTiZhongCheng.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_52636080_1759371708/256",
+    "source": "https://sj.qq.com/appdetail/aicare.net.cn.goodtype"
+  },
+  "HeFengWeather.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_53948271_1793333256/256",
+    "source": "https://sj.qq.com/appdetail/com.heweather.weatherapp"
+  },
+  "HeLiBaoZhanYeTong.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Pig.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Pig.png"
+  },
+  "HengDianCinema.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_12118632_1792564466/256",
+    "source": "https://sj.qq.com/appdetail/com.kokozu.hengdian"
+  },
+  "Hilton.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/31/03/a4/3103a4f4-f9cb-d670-2d55-85bfb96e92c8/AppIcon-0-0-1x_U007emarketing-0-6-0-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id1429222550"
+  },
+  "HongBanBao.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/4b/1f/f2/4b1ff253-2f45-7eb8-6399-11a9189a00ae/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id483323919"
+  },
+  "HuaBaoZhiTou.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/7d/71/e8/7d71e8cc-09f8-e718-66ea-287e6407a2df/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id993077954"
+  },
+  "HuaCaiShengHuo.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/64/d5/28/64d528b9-9254-574a-3cc8-de2ba0a44c5b/AppIcon-1x_U007ephone-0-11-0-sRGB-85-220-0.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id1152954857"
+  },
+  "HuaShengDiTie.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Navigation.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Navigation.png"
+  },
+  "HuaShengTong.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/76/75/3d/76753dae-2a67-4a9e-4e9d-2a4a9080474e/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/hk/app/id1151370929"
+  },
+  "HuaXiaoZhu.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/7b/0f/60/7b0f6063-b6d9-d349-adf3-d33566a7afc3/AppIcon-0-0-1x_U007emarketing-0-6-0-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id1496121983"
+  },
+  "HuangYouXiangJi.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/7f/5b/39/7f5b39a8-4f0e-639b-23a9-9427121e12b1/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id587176822"
+  },
+  "HuifuWorld.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Pig.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Pig.png"
+  },
+  "HuoMao.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Popcorn.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Popcorn.png"
+  },
+  "HuyaLive.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/1024px/%E8%99%8E%E7%89%99%E7%9B%B4%E6%92%AD.png",
+    "source": "https://github.com/luestr/IconResource/blob/main/App_icon/1024px/%E8%99%8E%E7%89%99%E7%9B%B4%E6%92%AD.png"
+  },
+  "ICBC.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/bank/ICBC.png",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/bank/ICBC.png"
+  },
+  "ICBCELife.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/9f/01/54/9f0154b4-3732-e383-2d31-88de9726bab0/AppIcon-3-0-0-1x_U007emarketing-0-11-0-sRGB-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id1044166783"
+  },
+  "ICBCELifeMiniProgram.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/9f/01/54/9f0154b4-3732-e383-2d31-88de9726bab0/AppIcon-3-0-0-1x_U007emarketing-0-11-0-sRGB-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id1044166783"
+  },
+  "IndustrialBank.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/bank/CIB.png",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/bank/CIB.png"
+  },
+  "InkeLive.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_12071517_1793931366/256",
+    "source": "https://sj.qq.com/appdetail/com.meelive.ingkee"
+  },
+  "JDCloudWiFiDevice.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_53962605_1768921532/256",
+    "source": "https://sj.qq.com/appdetail/com.jdcloud.mt.smartrouter"
+  },
+  "JDFinance.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/JDJinRong.png",
+    "source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/JDJinRong.png"
+  },
+  "JDHealth.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/08/38/19/083819e9-2d89-0412-f94e-96c32ba1e156/AppIcon-0-0-1x_U007ephone-0-1-0-sRGB-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id1498018017"
+  },
+  "JDReading.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_52680523_1791525706/256",
+    "source": "https://sj.qq.com/appdetail/com.jd.app.reader"
+  },
+  "JiHeWang.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_42313804_1794025166/256",
+    "source": "https://sj.qq.com/appdetail/me.tangke.gamecores"
+  },
+  "JiJianHuiLv.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/1024px/%E6%9E%81%E7%AE%80%E6%B1%87%E7%8E%87.png",
+    "source": "https://github.com/luestr/IconResource/blob/main/App_icon/1024px/%E6%9E%81%E7%AE%80%E6%B1%87%E7%8E%87.png"
+  },
+  "JiaYouGuangDong.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/lightning.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/lightning.png"
+  },
+  "JianXun.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/54/a4/90/54a49051-25b6-11d1-f9be-7d0f685c49d4/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id1160249028"
+  },
+  "JieDian.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/lightning.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/lightning.png"
+  },
+  "JieMianNews.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/c1/bc/99/c1bc99ea-48b5-1172-8d14-d55c6b1ba100/normal-0-0-1x_U007emarketing-0-8-0-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id930342070"
+  },
+  "JinRiShuiYinCamera.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/19/90/1f/19901f56-cb78-a7ff-e18e-9283ea92ae47/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id1319071502"
+  },
+  "JinRongToutiao.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e2/95/13/e29513ad-7991-97dc-33ed-532f87ad2754/AppIcon-News-0-0-1x_U007emarketing-0-8-0-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id529092160"
+  },
+  "JingXi.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/dd/c4/28/ddc4286b-bb07-d593-d159-2467665ae104/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id1500875111"
+  },
+  "KFC.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_10045746_1792983656/256",
+    "source": "https://sj.qq.com/appdetail/com.yek.android.kfc.activitys"
+  },
+  "KanDongFang.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_12086081_1793858606/256",
+    "source": "https://sj.qq.com/appdetail/com.bestv.app"
+  },
+  "KanLiXiang.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_52756012_1793866356/256",
+    "source": "https://sj.qq.com/appdetail/com.kanlixiang.android"
+  },
+  "KanTianXia.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/02/93/cf/0293cfc1-8e7e-034b-b23a-ea40aba2e937/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id1060011393"
+  },
+  "KingsoftPowerWord.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_7363_1793038206/256",
+    "source": "https://sj.qq.com/appdetail/com.kingsoft"
+  },
+  "KouDaiXiaoYuan.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_54424062_1740328468/256",
+    "source": "https://sj.qq.com/appdetail/com.quizlet.kouaid"
+  },
+  "KuaiKan.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/KuaiKanComic.png",
+    "source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/KuaiKanComic.png"
+  },
+  "LINGClub.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_12126348_1792460836/256",
+    "source": "https://sj.qq.com/appdetail/com.cloudy.linglingbang"
+  },
+  "LaiChong.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/lightning.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/lightning.png"
+  },
+  "LaiDian.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/lightning.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/lightning.png"
+  },
+  "LaiFeng.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/4f/2d/b0/4f2db0d9-0fa2-6c66-ea49-8845ba86948a/AppIcon-0-0-1x_U007emarketing-0-11-0-sRGB-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id904198248"
+  },
+  "Lakala.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_54233276_1793970296/256",
+    "source": "https://sj.qq.com/appdetail/com.lakala.shqb"
+  },
+  "LanJiYin.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_54082136_1793687576/256",
+    "source": "https://sj.qq.com/appdetail/com.lanjiyin.lanjiyin"
+  },
+  "LanJie100.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/fb/66/16/fb6616af-720e-584b-ee35-ebc9cf565611/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id1576858756"
+  },
+  "LanRenTingShu.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/LazyAudio.png",
+    "source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/LazyAudio.png"
+  },
+  "LanTouZi.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Pig.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Pig.png"
+  },
+  "LeBaoChaoWanGuan.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Balloon.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Balloon.png"
+  },
+  "LeCheng.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/f2/0f/02/f20f02ed-dd57-d7c5-9e19-d0d9717d5830/AppIcon-0-0-1x_U007emarketing-0-8-0-0-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id881803365"
+  },
+  "LeKe.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_42296006_1791943476/256",
+    "source": "https://sj.qq.com/appdetail/com.leoao.fitness"
+  },
+  "Lenovo.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/14/23/fa/1423fa91-60ed-a349-7242-55b88857baec/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id1080533388"
+  },
+  "LenovoPrint.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_53952649_1789526546/256",
+    "source": "https://sj.qq.com/appdetail/com.lenovoimage.LenovoPrint"
+  },
+  "LiangBuLu.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/2bulu.png",
+    "source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/2bulu.png"
+  },
+  "LiePin.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/LiePin.png",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/LiePin.png"
+  },
+  "LocSim.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Navigation.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Navigation.png"
+  },
+  "Lofter.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_84781_1793722576/256",
+    "source": "https://sj.qq.com/appdetail/com.lofter.android"
+  },
+  "LuBanDaoJia.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_54135608_1793326806/256",
+    "source": "https://sj.qq.com/appdetail/com.lbdjorder"
+  },
+  "LuckinCoffee_remove_ads.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/LuckinCoffee.png",
+    "source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/LuckinCoffee.png"
+  },
+  "LuoSenDianDian.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Food.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Food.png"
+  },
+  "LvFaShiYingDi.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_10292902_1788832950/256",
+    "source": "https://sj.qq.com/appdetail/com.gonlan.iplaymtg"
+  },
+  "LvTuSuiShenTing.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_54245360_1793238366/256",
+    "source": "https://sj.qq.com/appdetail/com.chisheng.walkman"
+  },
+  "MIX.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/90/74/0a/90740a07-40ed-26c6-d10c-ab42da6bfe90/AppIcon-0-0-1x_U007emarketing-0-6-0-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id913947918"
+  },
+  "MaDaChuXing.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_54323624_1788489311/256",
+    "source": "https://sj.qq.com/appdetail/com.tc.travel.mada"
+  },
+  "MaKaLongWanTu.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Photo.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Photo.png"
+  },
+  "MaMaWangYunYu.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_10608649_1792458606/256",
+    "source": "https://sj.qq.com/appdetail/cn.mama.pregnant"
+  },
+  "MaiDanBa.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/bank/maidanba.png",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/bank/maidanba.png"
+  },
+  "MaiDuiDui.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/e7/55/90/e755904c-1b3b-4878-a71c-a35ce95c3b84/Placeholder.mill/120x120Icon.ApSiOS01.png",
+    "source": "https://apps.apple.com/cn/app/id1314769817"
+  },
+  "ManHuaRen.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_53916686_1789909346/256",
+    "source": "https://sj.qq.com/appdetail/com.manga.manhuaren"
+  },
+  "MaoYan.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/1024px/Maoyan.png",
+    "source": "https://github.com/luestr/IconResource/blob/main/App_icon/1024px/Maoyan.png"
+  },
+  "McDonalds.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_12264193_1794020466/256",
+    "source": "https://sj.qq.com/appdetail/com.mcdonalds.gma.cn"
+  },
+  "MeiRiJingXuan.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b2/4c/62/b24c62c2-f175-3c70-c332-c01dcc44a638/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id807317212"
+  },
+  "MeiRiYouXian.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Shopping.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Shopping.png"
+  },
+  "MeiWeiBuYongDeng.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/c9/d1/67/c9d167ec-6354-72b4-f068-920eb264b664/AppIcon-0-1x_U007ephone-0-1-0-85-220-0.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id979857479"
+  },
+  "Meituan-MeituanWaimai.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/1024px/%E7%BE%8E%E5%9B%A2.png",
+    "source": "https://github.com/luestr/IconResource/blob/main/App_icon/1024px/%E7%BE%8E%E5%9B%A2.png"
+  },
+  "MeituanPowerBank.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/1024px/%E7%BE%8E%E5%9B%A2.png",
+    "source": "https://github.com/luestr/IconResource/blob/main/App_icon/1024px/%E7%BE%8E%E5%9B%A2.png"
+  },
+  "MeituanZhongBao.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_12181057_1793369036/256",
+    "source": "https://sj.qq.com/appdetail/com.sankuai.meituan.dispatch.crowdsource"
+  },
+  "MiDu.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_53595073_1793864216/256",
+    "source": "https://sj.qq.com/appdetail/com.lechuan.mdwz"
+  },
+  "MiaoPai.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_37414_1719994046/256",
+    "source": "https://sj.qq.com/appdetail/com.yixia.videoeditor"
+  },
+  "MiguVideo.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/63/11/42/63114263-d920-2ee7-90de-0b5c882645fc/AppIcon-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id787130974"
+  },
+  "Mijia.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/MiHome.png",
+    "source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/MiHome.png"
+  },
+  "MoGuZuFang.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Lifestyle.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Lifestyle.png"
+  },
+  "MyFriday_remove_ads.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/MyFriday.png",
+    "source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/MyFriday.png"
+  },
+  "NMIServicePlatform.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_53950057_1789448721/256",
+    "source": "https://sj.qq.com/appdetail/cn.hsa.app"
+  },
+  "NTPlay.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Popcorn.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Popcorn.png"
+  },
+  "NaiFeiYingShi.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Popcorn.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Popcorn.png"
+  },
+  "NetEaseKaola.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Shopping.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Shopping.png"
+  },
+  "NetEaseMoney.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Pig.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Pig.png"
+  },
+  "NetEaseSnailReading.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/f1/6c/82/f16c82a7-ee13-7da2-d7f2-9656b5b7414e/AppIcon-1x_U007emarketing-0-8-0-0-85-220-0.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id1127249355"
+  },
+  "NetEaseYanxuan.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/ca/29/84/ca2984d9-bd3b-8def-c7b3-e09185a73006/AppIcon-1x_U007emarketing-0-8-0-85-220-0.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id1065178761"
+  },
+  "NingJu.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_12182103_1793617616/256",
+    "source": "https://sj.qq.com/appdetail/com.cutv.ningbo"
+  },
+  "NissanIntelligentConnect.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_52690677_1793833236/256",
+    "source": "https://sj.qq.com/appdetail/com.szlanyou.nissaniov"
+  },
+  "NiuTingTing.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_12261862_1792220196/256",
+    "source": "https://sj.qq.com/appdetail/com.benew.ntt"
+  },
+  "ONE.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/3b/67/5e/3b675e74-11db-fe77-fb8e-89d30eeaf8df/AppIcon-0-1x_U007epad-0-11-0-85-220-0.jpeg/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id539190656"
+  },
+  "OSChina.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/1024px/%E5%BC%80%E6%BA%90%E4%B8%AD%E5%9B%BD.png",
+    "source": "https://github.com/luestr/IconResource/blob/main/App_icon/1024px/%E5%BC%80%E6%BA%90%E4%B8%AD%E5%9B%BD.png"
+  },
+  "OnStar.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_2833_1793415866/256",
+    "source": "https://sj.qq.com/appdetail/com.shanghaionstar"
+  },
+  "Oray.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/OraySunlogin.png",
+    "source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/OraySunlogin.png"
+  },
+  "OxfordALD10th.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_54304739_1734404653/256",
+    "source": "https://sj.qq.com/appdetail/com.CommercialPress.OxfordDictionary.android"
+  },
+  "PConline.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_10614_1784102758/256",
+    "source": "https://sj.qq.com/appdetail/cn.com.pconline.android.browser"
+  },
+  "PConlineTech.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_10614_1784102758/256",
+    "source": "https://sj.qq.com/appdetail/cn.com.pconline.android.browser"
+  },
+  "PSBC.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/bank/PSBC.png",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/bank/PSBC.png"
+  },
+  "PeoplesDaily.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/27/32/4b/27324b91-7296-3c47-9320-34cab9270da0/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id625077646"
+  },
+  "PiPiGaoXiao.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_52673529_1793608517/256",
+    "source": "https://sj.qq.com/appdetail/cn.xiaochuankeji.zuiyouLite"
+  },
+  "PiaoGen.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_52608535_1780022799/256",
+    "source": "https://sj.qq.com/appdetail/com.uroad.piaogen"
+  },
+  "PiaoXingQiu.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_54025716_1793179796/256",
+    "source": "https://sj.qq.com/appdetail/com.piaoyou.piaoxingqiu"
+  },
+  "PingAnHaoCheZhu.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/ad/ac/18/adac18c9-e52d-6e7f-e050-e1f50d606009/AppIcon-1x_U007ephone-0-1-0-sRGB-85-220-0.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id796339836"
+  },
+  "PingAnPocketBank.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/1024px/%E5%B9%B3%E5%AE%89%E5%8F%A3%E8%A2%8B%E9%93%B6%E8%A1%8C.png",
+    "source": "https://github.com/luestr/IconResource/blob/main/App_icon/1024px/%E5%B9%B3%E5%AE%89%E5%8F%A3%E8%A2%8B%E9%93%B6%E8%A1%8C.png"
+  },
+  "PingAnSecurities.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/d8/fc/49/d8fc4917-2e62-742e-1cc6-2c4ec15ac187/AppIcon-0-0-1x_U007emarketing-0-6-0-sRGB-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id636344719"
+  },
+  "PingAnYiQianBao.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_10401325_1793189196/256",
+    "source": "https://sj.qq.com/appdetail/com.paic.zhifu.wallet.activity"
+  },
+  "PizzaHut.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_52502242_1793793636/256",
+    "source": "https://sj.qq.com/appdetail/com.yumc.phsuperapp"
+  },
+  "PuDaXiBen.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/18/62/ea/1862ea3e-18ab-6602-b93b-4e7d9c2091bc/AppIcon-0-1x_U007emarketing-0-8-0-sRGB-85-220-0.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id974428942"
+  },
+  "QQBrowser.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_11384_1793714746/256",
+    "source": "https://sj.qq.com/appdetail/com.tencent.mtt"
+  },
+  "QQMusic_remove_ads.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/QQMusic.png",
+    "source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/QQMusic.png"
+  },
+  "QQWallet.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/QQ.png",
+    "source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/QQ.png"
+  },
+  "QiMai.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Food.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Food.png"
+  },
+  "Qiongyou.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/b4/7b/33/b47b330c-0b2a-d5a0-1074-4d12319af62c/AppIcon-0-0-1x_U007emarketing-0-8-0-0-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id563467866"
+  },
+  "QiuMiBao.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Sports.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Sports.png"
+  },
+  "QuDa.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_52438763_1789541006/256",
+    "source": "https://sj.qq.com/appdetail/com.yd.circle"
+  },
+  "QuanMinShengHuo.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/73/bc/fe/73bcfe83-e8f5-7052-b68f-6b3c510e967b/AppIcon-0904-0-0-1x_U007emarketing-0-11-0-sRGB-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id415854096"
+  },
+  "QuanNengBrowser.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Globe.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Globe.png"
+  },
+  "Qunar.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/9f/f0/31/9ff031e8-d92c-5b54-fb26-f7bddf3924b4/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id395096736"
+  },
+  "RARBG.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Popcorn.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Popcorn.png"
+  },
+  "RenRenVideo.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/EveryoneVideo.png",
+    "source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/EveryoneVideo.png"
+  },
+  "RiRiZhu.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Food.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Food.png"
+  },
+  "RiTaoRenYiMen.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_54206672_1793686736/256",
+    "source": "https://sj.qq.com/appdetail/com.rym.door"
+  },
+  "SFBest.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Shopping.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Shopping.png"
+  },
+  "SFExpressMiniProgram.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/SF-Express.png",
+    "source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/SF-Express.png"
+  },
+  "SPDBank.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/1024px/%E6%B5%A6%E5%8F%91%E9%93%B6%E8%A1%8C.png",
+    "source": "https://github.com/luestr/IconResource/blob/main/App_icon/1024px/%E6%B5%A6%E5%8F%91%E9%93%B6%E8%A1%8C.png"
+  },
+  "SamClub.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/98/b3/91/98b3912c-93a5-b2e4-4c48-db3e77301e15/AppIcon-1x_U007emarketing-0-5-0-85-220-0.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id818237113"
+  },
+  "SanLianZhongDu.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/6c/1f/b0/6c1fb08e-9fa1-50bc-572c-9eeaa1266d7c/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id509436231"
+  },
+  "SeewoWhiteboard5.sgmodule": {
+    "icon": "https://shp.qpic.cn/ma_icon/0/icon_200498131_1793350576/0",
+    "source": "https://sj.qq.com/appdetail/com.tencent.pcgame.seexiwobaiban5"
+  },
+  "ShanXianYiXia.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_54036620_1763019747/256",
+    "source": "https://sj.qq.com/appdetail/com.tencent.gamecommunity"
+  },
+  "ShaoShuPai.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/1024px/%E5%B0%91%E6%95%B0%E6%B4%BE.png",
+    "source": "https://github.com/luestr/IconResource/blob/main/App_icon/1024px/%E5%B0%91%E6%95%B0%E6%B4%BE.png"
+  },
+  "ShenMa.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Globe.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Globe.png"
+  },
+  "ShenZhouAuto.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_125412_1793402837/256",
+    "source": "https://sj.qq.com/appdetail/com.szzc"
+  },
+  "ShengQuGames.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png",
+    "kind": "category",
+    "source": "https://github.com/Koolson/Qure/blob/master/IconSet/Color/Game.png"
+  },
+  "ShengShengHuiTouChe.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_11349764_1793930226/256",
+    "source": "https://sj.qq.com/appdetail/com.huitouche.android.app"
+  },
+  "ShenzhenTong.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_52893243_1790252036/256",
+    "source": "https://sj.qq.com/appdetail/com.szt.pay"
+  },
+  "ShiHuo.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/10/ef/6c/10ef6cf9-515c-61c9-a220-45e15d4cf982/AppIcon-0-0-1x_U007epad-0-11-0-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id875177200"
+  },
+  "ShouQiYueChe.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e4/25/67/e425673b-9cef-4cd6-9807-fc77902b564e/AppIcon-0-0-1x_U007emarketing-0-6-0-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id997586276"
+  },
+  "SiJiXianShangYingShi.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Popcorn.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Popcorn.png"
+  },
+  "SinaNews.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/1024px/%E6%96%B0%E6%B5%AA.png",
+    "source": "https://github.com/luestr/IconResource/blob/main/App_icon/1024px/%E6%96%B0%E6%B5%AA.png"
+  },
+  "SnailSleep_remove_ads.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/SnailSleep.png",
+    "source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/SnailSleep.png"
+  },
+  "SogouInput.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/1024px/%E6%90%9C%E7%8B%97.png",
+    "source": "https://github.com/luestr/IconResource/blob/main/App_icon/1024px/%E6%90%9C%E7%8B%97.png"
+  },
+  "Sohu.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/1024px/%E6%90%9C%E7%8B%90%E7%BD%91.png",
+    "source": "https://github.com/luestr/IconResource/blob/main/App_icon/1024px/%E6%90%9C%E7%8B%90%E7%BD%91.png"
+  },
+  "SouDianChongDian.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/lightning.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/lightning.png"
+  },
+  "StartUpAds.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/AdGuard.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/AdGuard.png"
+  },
+  "Starway.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Navigation.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Navigation.png"
+  },
+  "SuDaXiaoYuanAPP.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Lifestyle.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Lifestyle.png"
+  },
+  "SuEHang.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_52771515_1793965496/256",
+    "source": "https://sj.qq.com/appdetail/com.bwton.szfreego"
+  },
+  "SuZhouDao.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/76/35/69/763569c1-ce3c-84a9-9638-8ead7de57fb2/AppIcon-1x_U007emarketing-0-11-0-85-220-0.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id1517550837"
+  },
+  "Suning.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/8a/f3/2f/8af32f35-6a41-8940-813f-f1d9259d5824/AppIcon-1-0-0-1x_U007emarketing-0-8-0-sRGB-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id424598114"
+  },
+  "TTVoice.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_11519509_1793693627/256",
+    "source": "https://sj.qq.com/appdetail/com.yiyou.ga"
+  },
+  "TaiLingIntelligent.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Navigation.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Navigation.png"
+  },
+  "Talkatone.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Talkatone.png",
+    "source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/Talkatone.png"
+  },
+  "TaoTaoReading.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Book.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Book.png"
+  },
+  "TapTap.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/TapTap.png",
+    "source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/TapTap.png"
+  },
+  "TencentGames.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/tencent.png",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/tencent.png"
+  },
+  "TencentGamesCommunity.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_54036620_1763019747/256",
+    "source": "https://sj.qq.com/appdetail/com.tencent.gamecommunity"
+  },
+  "TencentMaps.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/7f/93/45/7f93450b-c301-57d8-9e49-6f9dc85fd4bc/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id481623196"
+  },
+  "TencentNews.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/f9/23/e4/f923e456-9789-ebf6-7c18-caaacd244133/AppIconNew-0-0-1x_U007epad-0-9-0-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id399363156"
+  },
+  "TencentRideCode.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Navigation.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Navigation.png"
+  },
+  "TencentSports.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/TencentSport.png",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/TencentSport.png"
+  },
+  "ThePalaceMuseum.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Travel.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Travel.png"
+  },
+  "ThePaperNews.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/12/ec/7c/12ec7ce7-9e2c-6b34-1d7c-e63934f85a84/AppIcon-0-0-1x_U007ephone-0-1-0-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id878962716"
+  },
+  "TianFuBankMiniProgram.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/c6/9b/b0/c69bb0c5-cbdc-726c-ff1f-2b79903bc66e/AppIcon-0-0-1x_U007emarketing-0-11-0-sRGB-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id1109333848"
+  },
+  "TianFuMobileBank.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/c6/9b/b0/c69bb0c5-cbdc-726c-ff1f-2b79903bc66e/AppIcon-0-0-1x_U007emarketing-0-11-0-sRGB-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id1109333848"
+  },
+  "TianFuShiMinYun.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_52685642_1788746439/256",
+    "source": "https://sj.qq.com/appdetail/com.tfsmy.apps.android.tfsmy"
+  },
+  "TianFuTong.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/aa/32/18/aa32183d-2922-4f6e-2fea-7a3ec51c7475/AppIcon-0-0-1x_U007emarketing-0-6-0-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id1358566958"
+  },
+  "TianShanYunTV.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Popcorn.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Popcorn.png"
+  },
+  "TianTianFund.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_1016177_1794021026/256",
+    "source": "https://sj.qq.com/appdetail/com.eastmoney.android.fund"
+  },
+  "TianXingFinance.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Pig.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Pig.png"
+  },
+  "TianYiCloudDrive.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_99115_1792055367/256",
+    "source": "https://sj.qq.com/appdetail/com.cn21.ecloud"
+  },
+  "TmallAutoCare.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_54072583_1793979456/256",
+    "source": "https://sj.qq.com/appdetail/com.ncarzone.tmyc"
+  },
+  "TmallGenie.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_52499725_1793965776/256",
+    "source": "https://sj.qq.com/appdetail/com.alibaba.ailabs.tg"
+  },
+  "TongChengTravel.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/da/9a/08/da9a082a-2ce7-14b8-369f-0f43bb47b1f4/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id475966832"
+  },
+  "TruthSocial.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/f9/b8/8f/f9b88f9f-42de-7c0a-fd3e-449f7acedfc6/AppIcon-0-0-1x_U007epad-0-5-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/us/app/id1586018825"
+  },
+  "TuhuAutoCare.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Tuhu.png",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Tuhu.png"
+  },
+  "TujiaHomestay.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/ac/3b/03/ac3b03b0-4c21-4480-35ab-2a07bcfde50d/AppIcon-0-0-1x_U007emarketing-0-6-0-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id582934943"
+  },
+  "Tuniu.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_7328_1793428606/256",
+    "source": "https://sj.qq.com/appdetail/com.tuniu.app.ui"
+  },
+  "UJing.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_52469813_1793673966/256",
+    "source": "https://sj.qq.com/appdetail/com.midea.vm.washer"
+  },
+  "VariFlight.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/1024px/%E9%A3%9E%E5%B8%B8%E5%87%86.png",
+    "source": "https://github.com/luestr/IconResource/blob/main/App_icon/1024px/%E9%A3%9E%E5%B8%B8%E5%87%86.png"
+  },
+  "Vipshop.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/fa/c1/51/fac15172-122a-707a-f465-77bd3e9da340/AppIcon-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id417200582"
+  },
+  "VistaKanTianXia.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_12269510_1776409345/256",
+    "source": "https://sj.qq.com/appdetail/com.vistastory.news"
+  },
+  "WIFIwannengyuechi.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_93301_1793783756/256",
+    "source": "https://sj.qq.com/appdetail/com.snda.wifilocating"
+  },
+  "WPS.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/WPS.png",
+    "source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/WPS.png"
+  },
+  "WanCiWang.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/b3/b5/9a/b3b59a02-314e-9987-98f6-0a8ed33ef5a0/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id1464643633"
+  },
+  "WandaCinema.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_1247823_1793693226/256",
+    "source": "https://sj.qq.com/appdetail/com.wandafilm.app"
+  },
+  "WangShangGuoWang.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/b4/cc/83/b4cc831c-622e-3ece-cca7-d95997b863e4/AppIcon-0-0-1x_U007ephone-0-6-0-0-sRGB-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id1438998315"
+  },
+  "Weico.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Networking.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Networking.png"
+  },
+  "Weixin_Official_Accounts_remove_ads.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/1024px/%E5%BE%AE%E4%BF%A1.png",
+    "source": "https://github.com/luestr/IconResource/blob/main/App_icon/1024px/%E5%BE%AE%E4%BF%A1.png"
+  },
+  "WinnipegStation.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Magazine.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Magazine.png"
+  },
+  "WoAiKaCommunityManager.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e2/bb/c4/e2bbc427-370c-c1e5-2b4d-806b3e78ca33/AppIcon-0-0-1x_U007emarketing-0-8-0-0-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id1459840448"
+  },
+  "WuKongRemoteControl.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_54300642_1787279239/256",
+    "source": "https://sj.qq.com/appdetail/com.shsuoqingning.control"
+  },
+  "XiChuangZhu.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_42299984_1793700106/256",
+    "source": "https://sj.qq.com/appdetail/com.hustzp.com.xichuangzhu"
+  },
+  "XiFanAnime.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Popcorn.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Popcorn.png"
+  },
+  "XiShiYan.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_54037681_1787897263/256",
+    "source": "https://sj.qq.com/appdetail/com.zjonline.zhuji"
+  },
+  "XiamenAirlines.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_52445837_1793262507/256",
+    "source": "https://sj.qq.com/appdetail/com.ecommerce.xmnair"
+  },
+  "XiamiMusic.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Music.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Music.png"
+  },
+  "XiaoBaiStudyPrinter.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/XiaobaiPrint.png",
+    "source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/XiaobaiPrint.png"
+  },
+  "XiaoBiuSmartHome.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Lifestyle.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Lifestyle.png"
+  },
+  "XiaoDianChongDian.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/lightning.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/lightning.png"
+  },
+  "XiaoHeTuoZhan.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Pig.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Pig.png"
+  },
+  "XiaoJuTechnology.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/dc/07/74/dc0774ba-b016-e550-9c72-10987d3c22c5/AppIcon-0-0-1x_U007ephone-0-1-0-sRGB-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id1670782986"
+  },
+  "XiaoLiShengHuo.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/ad/03/9f/ad039fcd-3720-327d-4a10-c22a14ce5f2e/AppIcon-0-0-1x_U007emarketing-0-6-0-0-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id1503642371"
+  },
+  "XiaoMang.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/c6/7a/f2/c67af213-6280-209f-65a9-f428a69b1ac4/AppIcon-0-0-1x_U007emarketing-0-6-0-sRGB-0-0-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id1540247980"
+  },
+  "XiaoNiu.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_12123892_1793757316/256",
+    "source": "https://sj.qq.com/appdetail/com.niu.cloud"
+  },
+  "XiaoPeiPet.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_11796017_1793594316/256",
+    "source": "https://sj.qq.com/appdetail/com.petkit.android"
+  },
+  "XiaoRongJia.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/f0/d0/ca/f0d0caaf-9364-6225-5881-ea0db08cd9ee/AppIcon-0-0-1x_U007ephone-0-11-0-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id1598312530"
+  },
+  "XiaoTe.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_52738309_1788423311/256",
+    "source": "https://sj.qq.com/appdetail/com.xiaote"
+  },
+  "XiaoTuChongChong.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/lightning.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/lightning.png"
+  },
+  "XiaoXiaoYouXuan.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_54261641_1793948786/256",
+    "source": "https://sj.qq.com/appdetail/moc.nauxuoyoaixoaix.www"
+  },
+  "XiaoXiongArt.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Research.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Research.png"
+  },
+  "XiaoXiongIntercept.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/d4/0c/39/d40c3968-a6b9-a01e-ca0b-f38787cd0c18/AppIcon-0-0-1x_U007ephone-0-1-0-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id6692612586"
+  },
+  "XiaoYi.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/b1/d1/ec/b1d1ec4c-06fd-8e47-eb73-f45a7e237608/AppIcon-0-0-1x_U007ephone-0-1-0-sRGB-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id931168730"
+  },
+  "XiaomiFinance.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Pig.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Pig.png"
+  },
+  "XiaomiMall.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/1024px/%E5%B0%8F%E7%B1%B3.png",
+    "source": "https://github.com/luestr/IconResource/blob/main/App_icon/1024px/%E5%B0%8F%E7%B1%B3.png"
+  },
+  "XiaomiPrint.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_54037665_1778072646/256",
+    "source": "https://sj.qq.com/appdetail/com.mi.print"
+  },
+  "XiaomiSports.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/fa/49/8d/fa498dba-e9d9-8a78-3b0c-4626585a110e/AppIcon-0-0-1x_U007emarketing-0-6-0-0-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id938688461"
+  },
+  "XiaomiYoupin.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/48/f4/9b/48f49b76-4e24-40a2-5dfb-8c618e4863a8/AppIcon-1x_U007emarketing-0-6-0-0-85-220-0.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id1212182562"
+  },
+  "XinPianChang.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/34/2b/fb/342bfbc6-cff2-75e7-5df9-c595f2c1a74f/AppIconOld-0-0-1x_U007epad-0-1-0-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id1383153382"
+  },
+  "XinYueClub.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_52445834_1791795346/256",
+    "source": "https://sj.qq.com/appdetail/com.tencent.tgclub"
+  },
+  "XingCaiFu.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Pig.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Pig.png"
+  },
+  "XingHuoEnglish.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_42298248_1793080886/256",
+    "source": "https://sj.qq.com/appdetail/tuoyan.com.xinghuo_daying"
+  },
+  "XingYeSecurities.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/5b/cf/7f/5bcf7f19-3b25-9a0d-0e64-d23f90b275d3/AppIcon-0929-0-0-1x_U007emarketing-0-8-0-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id645811920"
+  },
+  "XiongMaoLive.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Popcorn.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Popcorn.png"
+  },
+  "XunYouAccelerator.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/1024px/%E8%BF%85%E6%B8%B8%E6%89%8B%E6%B8%B8%E5%8A%A0%E9%80%9F%E5%99%A8.png",
+    "source": "https://github.com/luestr/IconResource/blob/main/App_icon/1024px/%E8%BF%85%E6%B8%B8%E6%89%8B%E6%B8%B8%E5%8A%A0%E9%80%9F%E5%99%A8.png"
+  },
+  "YaNaiFei.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Popcorn.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Popcorn.png"
+  },
+  "Yahoo.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Globe.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Globe.png"
+  },
+  "YaoyingMedical.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_54032150_1793069586/256",
+    "source": "https://sj.qq.com/appdetail/com.ashermed.sino"
+  },
+  "YiHaoDian.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_9797_1792998976/256",
+    "source": "https://sj.qq.com/appdetail/com.thestore.main"
+  },
+  "YiJieJiaYou.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/ad/10/41/ad1041a4-89b7-c991-cb11-a0d31e167f30/AppIcon-1x_U007emarketing-0-6-0-85-220-0.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id806114204"
+  },
+  "YiQiKaoJiaoShi.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_12065369_1737108634/256",
+    "source": "https://sj.qq.com/appdetail/com.tsingzone.questionbank"
+  },
+  "YiTao.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/a9/c0/3f/a9c03f73-3dcb-c9bc-9d71-fa9cc7d16dc3/AppIcon-0-1x_U007emarketing-0-8-0-sRGB-85-220-0.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id451400917"
+  },
+  "YiZhiFu.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_5261_1793614086/256",
+    "source": "https://sj.qq.com/appdetail/com.chinatelecom.bestpayclient"
+  },
+  "Yiche.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/9a/da/fd/9adafd9c-2a27-9112-eaf7-39d7b184351f/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id384399758"
+  },
+  "YinShengTong.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_11240198_1787823161/256",
+    "source": "https://sj.qq.com/appdetail/com.ysepay.mobileportal.activity"
+  },
+  "YinShengXiaoYManager.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_53936234_1793600406/256",
+    "source": "https://sj.qq.com/appdetail/com.ysepay.merchant"
+  },
+  "YingBaoSecurities.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Pig.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Pig.png"
+  },
+  "YingLiZhiTou.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Pig.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Pig.png"
+  },
+  "YongAnXing.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_12181554_1792031756/256",
+    "source": "https://sj.qq.com/appdetail/com.ibike.publicbicycle.activity"
+  },
+  "YongHui.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_12228393_1793696796/256",
+    "source": "https://sj.qq.com/appdetail/cn.yonghui.hyd"
+  },
+  "YouLinYouKe.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/a0/bb/f6/a0bbf6e5-97c0-46fc-1267-fd80def8f9a5/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id1195496596"
+  },
+  "YouShu.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Book.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Book.png"
+  },
+  "YouTuReading.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Book.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Book.png"
+  },
+  "YouTube_remove_ads.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/YouTube.png",
+    "source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/YouTube.png"
+  },
+  "YouXiAPP.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_12191491_1788876386/256",
+    "source": "https://sj.qq.com/appdetail/com.zhishan.washer"
+  },
+  "YuXueYuan.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_12054994_1734606485/256",
+    "source": "https://sj.qq.com/appdetail/com.drcuiyutao.babyhealth"
+  },
+  "YuanFuDao.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/77/b1/72/77b1721d-f8ef-fc17-d54f-817b5bf3c990/TutoriPhoneAppIcon-0-0-1x_U007emarketing-0-5-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id974568444"
+  },
+  "YunBaoBaoBigData.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Globe.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Globe.png"
+  },
+  "YunKuaiChong.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/38/29/0e/38290e91-ffcc-88b7-1677-33d8789e84e4/AppIcon-0-0-1x_U007ephone-0-1-0-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id1064300704"
+  },
+  "YunMai.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/YunmaiScale.png",
+    "source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/YunmaiScale.png"
+  },
+  "ZOL.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/1024px/%E4%B8%AD%E5%85%B3%E6%9D%91%E5%9C%A8%E7%BA%BF.png",
+    "source": "https://github.com/luestr/IconResource/blob/main/App_icon/1024px/%E4%B8%AD%E5%85%B3%E6%9D%91%E5%9C%A8%E7%BA%BF.png"
+  },
+  "ZhangLeCaiFuTong.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/3e/05/62/3e0562f5-cd3a-c844-4bca-eb0dbe86c12f/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id379594830"
+  },
+  "ZhangShangDaoJuCheng.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_10898430_1788868606/256",
+    "source": "https://sj.qq.com/appdetail/com.tencent.djcity"
+  },
+  "ZhangShangGongJiao.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/9e/0d/0b/9e0d0bb1-042c-9b22-7fcd-bb8b22b031f9/AppIcon-0-0-1x_U007emarketing-0-8-0-sRGB-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id461317017"
+  },
+  "ZhangShangJingCai.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/1a/ef/ee/1aefeee1-91b8-3cc1-0092-7af795e684d6/Placeholder.mill/120x120Icon.ApSiOS01.png",
+    "source": "https://apps.apple.com/cn/app/id1048525810"
+  },
+  "ZhangShangLuCheng.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_53933786_1768443566/256",
+    "source": "https://sj.qq.com/appdetail/com.zjonline.lucheng"
+  },
+  "ZhangShangShengHuo.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/9c/8d/97/9c8d9794-17db-3f4d-4463-67e2b193fb31/AppIcon-0-0-1x_U007emarketing-0-7-0-sRGB-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id398453262"
+  },
+  "ZhaoCaiMaoZhiPin.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Briefcase.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Briefcase.png"
+  },
+  "ZheLiBan.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_11087658_1793694606/256",
+    "source": "https://sj.qq.com/appdetail/com.hanweb.android.zhejiang.activity"
+  },
+  "ZhengHaoBan.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_54018364_1793775826/256",
+    "source": "https://sj.qq.com/appdetail/com.hanweb.izhengzhou.android"
+  },
+  "ZhengQiZhuShou.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_12104797_1793004886/256",
+    "source": "https://sj.qq.com/appdetail/com.zhengnengliang.precepts"
+  },
+  "ZhiDianTianXia.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Briefcase.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Briefcase.png"
+  },
+  "ZhiGongPuHui.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_52612738_1793688396/256",
+    "source": "https://sj.qq.com/appdetail/com.cdsg.zgph"
+  },
+  "ZhiXingAPP.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/ZhixingHC.png",
+    "source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/ZhixingHC.png"
+  },
+  "ZhongBangBank.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/64/70/43/647043db-91ee-9284-e67f-65634fa6c97f/Placeholder.mill/120x120Icon.ApSiOS01.png",
+    "source": "https://apps.apple.com/cn/app/id1267221318"
+  },
+  "ZhongTongExpress.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_10537332_1793584996/256",
+    "source": "https://sj.qq.com/appdetail/cn.beekee.zhongtong"
+  },
+  "ZhongYouHaoKeEStation.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_10201984_1792663416/256",
+    "source": "https://sj.qq.com/appdetail/com.sunboxsoft.charge.institute"
+  },
+  "ZhongYouYouTu.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/lightning.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/lightning.png"
+  },
+  "ZhongYuOnline.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_12142559_1757056576/256",
+    "source": "https://sj.qq.com/appdetail/com.badmintoncn.bbs"
+  },
+  "ZhuBaJie.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_1194441_1791529476/256",
+    "source": "https://sj.qq.com/appdetail/com.zhubajie.client"
+  },
+  "ZhuZheEr.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_10268216_1792989516/256",
+    "source": "https://sj.qq.com/appdetail/com.vanke.activity"
+  },
+  "ZhuiJuDaRen.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Popcorn.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Popcorn.png"
+  },
+  "ZhuiShuShenQi.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/0c/6d/f4/0c6df481-c20f-a373-ef7c-72c7147d6791/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id575826903"
+  },
+  "ZiRu.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_10947013_1793674127/256",
+    "source": "https://sj.qq.com/appdetail/com.ziroom.ziroomcustomer"
+  },
+  "ZuoYeBang.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/4a/80/69/4a8069b1-62ab-0c5b-c539-da04cde577d1/AppIcon-0-0-1x_U007epad-0-1-0-0-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id803781859"
+  },
+  "clicli.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Popcorn.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Popcorn.png"
+  },
+  "csdn.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_11998967_1792998206/256",
+    "source": "https://sj.qq.com/appdetail/net.csdn.csdnplus"
+  },
+  "eDaiJia.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_286781_1791526096/256",
+    "source": "https://sj.qq.com/appdetail/cn.edaijia.android.client"
+  },
+  "i3.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Globe.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Globe.png"
+  },
+  "iFinD.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/19/98/28/1998281f-0a90-7e8e-78e8-19704e51d253/AppIcon-0-0-1x_U007emarketing-0-6-0-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id303191318"
+  },
+  "iFlytek.sgmodule": {
+    "icon": "https://pp.myapp.com/ma_icon/0/icon_5177_1793927866/256",
+    "source": "https://sj.qq.com/appdetail/com.iflytek.inputmethod"
+  },
+  "linxi.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Globe.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Globe.png"
+  },
+  "ofoBicycle.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Bike.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Bike.png"
+  },
+  "omofun.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Popcorn.png",
+    "kind": "category",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Popcorn.png"
+  },
+  "pikpak.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/PikPak.png",
+    "source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/PikPak.png"
+  },
+  "top-widget.sgmodule": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/3d/54/f4/3d54f444-3b1d-2ced-24f5-7bbf4bd83386/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/100x100bb.jpg",
+    "source": "https://apps.apple.com/cn/app/id6446477593"
+  },
+  "udnNews.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Udn.png",
+    "source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Udn.png"
+  },
+  "vgTime.sgmodule": {
+    "icon": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png",
+    "kind": "category",
+    "source": "https://github.com/Koolson/Qure/blob/master/IconSet/Color/Game.png"
+  }
+}

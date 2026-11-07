@@ -2352,6 +2352,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id1039727169",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "a9ccb2730d64ad45c16c6eda89db3683103d06d6745a18661f60266162c2348f",
       "upstream": "fmz200"
@@ -2395,6 +2396,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id1001058738",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "33a570c54425f042f544f673e7d6c809c5bfab935457918fd56dc525e0c46a93",
       "upstream": "fmz200"
@@ -2408,6 +2410,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id965693108",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "11e95e67380984bb50cfb4497a5daf2d5196b345a3445129d47bdc0dc31b5e46",
       "upstream": "fmz200"
@@ -2434,6 +2437,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id863969708",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "61817129635d0e7766c13391bae1e67403e59eb96b75a0055ad5ed00c92f41d3",
       "upstream": "fmz200"
@@ -2472,6 +2476,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id432486451",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "f39925c41f7f844318ca0093a5280514525831f7523287935ab3a0eb1651c81e",
       "upstream": "fmz200"
@@ -2485,6 +2490,7 @@
       ],
       "coverage": "body-or-script",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.zhangdan.app",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "77049e0abf10ffac2ff8d1ca524efa784c23909292f52ac9aaa4059917b15875",
       "upstream": "fmz200"
@@ -2530,6 +2536,7 @@
       ],
       "coverage": "body-or-script",
       "format": "surge",
+      "icon_source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/555DY.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "e31ac48adb47eb71eda1960c3f4a9791f190d9cd7d0d0691573fd3cdb70f69a7",
       "upstream": "fmz200"
@@ -2543,6 +2550,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/luestr/IconResource/blob/main/App_icon/1024px/58%E5%90%8C%E5%9F%8E.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "6a79cb3986b26469cfd1b1c248a38a841ed3239bd87fe01b77a1f0286b39a676",
       "upstream": "fmz200"
@@ -2581,6 +2589,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/bank/ABC.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "fd6688964e40f7683323d6ef151224ebb2d86b3a9d458bbbd1d6fd8338a26f76",
       "upstream": "fmz200"
@@ -2594,6 +2603,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id1207516706",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "0e6cc053a40cf2aefa7058b9b3d76c74741804f71bb1b808ece9d31dd457a73f",
       "upstream": "fmz200"
@@ -2606,6 +2616,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/luestr/IconResource/blob/main/App_icon/1024px/AcFun.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "c2b2de20b1f9eed77875a846a8276ddc7277754798298c9d29d8ab83cdc009aa",
       "upstream": "fmz200"
@@ -2619,6 +2630,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id1059930957",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "1f8f8b540cadb4dbdc666a56fa563c9c3444d57b23d2ccdcf5acea7a4fff7f40",
       "upstream": "fmz200"
@@ -2632,6 +2644,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Popcorn.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "8b23b9d5bfdcbe7af7637a21031d3d1d50c6bb66304d6a36591db23d80118c87",
       "upstream": "fmz200"
@@ -2645,6 +2658,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id1025615485",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "f1e95b8642ed636ee2847c71699d2ffa433fa9a80945888a6e545aac21f57533",
       "upstream": "fmz200"
@@ -2658,6 +2672,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/i4Assistant.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "3308ed8d82273357fdb3548dba0cfa5beafa8a42ff7658309637442a576676bd",
       "upstream": "fmz200"
@@ -2671,6 +2686,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id1489685820",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "5004e386fb8962bf94ed64f2d7080500039cb5617dcfd1a90117b8b8a59a791a",
       "upstream": "fmz200"
@@ -2684,6 +2700,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Book.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "18353f6d168bc6455916dc8a72994efcaf088d8e48278d9bd26e9b1315bc512e",
       "upstream": "fmz200"
@@ -2716,6 +2733,7 @@
       ],
       "coverage": "body-or-script",
       "format": "surge",
+      "icon_source": "https://github.com/luestr/IconResource/blob/main/App_icon/1024px/%E4%B8%AD%E5%9B%BD%E5%9B%BD%E8%88%AA.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "8e0d7bcf21fda4e6c9ff634410dd9049cabbd064febf74a15481525ce892953d",
       "upstream": "fmz200"
@@ -2761,6 +2779,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id6740233629",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "67b061cee863b8393f0431eda37b54b8e544d5a7613c95bedc90e844da43d29a",
       "upstream": "fmz200"
@@ -2796,6 +2815,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Amazon.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "2bf281d11fef14ef9546c239c99a7a3a18bb4f856ae3eaabd940c9c14daae3c4",
       "upstream": "fmz200"
@@ -2809,6 +2829,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Globe.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "3cb4ac7b4e4f06182d22bc82090dd6adee181f455c985ebb3333bd5042fbcb82",
       "upstream": "fmz200"
@@ -2822,6 +2843,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id1104177940",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "21fd9ad88826f7df8f1c4225bfa12a3be0e5b0bd7fd1ff6632a71a0e802a95f1",
       "upstream": "fmz200"
@@ -2834,6 +2856,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Magazine.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "c427544805bfdc3109e60e9825ffa86d1f76f57a727e1bf1c93cac091a99586d",
       "upstream": "fmz200"
@@ -2860,6 +2883,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id1113883381",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "3be6679d5fdb2d7a50d9641038049cc362fcbf710e43a050372fe4193711dfef",
       "upstream": "fmz200"
@@ -2917,6 +2941,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Pig.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "56f6ece78535ce39e4e6bb25a43e497139abbf58a7cceefe140647e1e3f83da3",
       "upstream": "fmz200"
@@ -2930,6 +2955,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Pig.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "f3166ab88a483f3b26682b77b6668bd72a21557af696f4ccc38700f2dd3a7d9c",
       "upstream": "fmz200"
@@ -2943,6 +2969,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id435921465",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "acb8395c69ca03ab903299866a63d9cb57133adc209872162b894922d8998861",
       "upstream": "fmz200"
@@ -2956,6 +2983,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id493482713",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "320707e1550e4c3fd9a4b615a5918621d4d36437e39305ccb4171825a4ddfeb9",
       "upstream": "fmz200"
@@ -2988,6 +3016,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/Baidu.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "7cc56acecc4ee2a11205e74804203f8a99778312ab7c76f712e57e48d9d53d76",
       "upstream": "fmz200"
@@ -3125,6 +3154,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id1324387551",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "5480398313c45bf02aca94f152d480e068d50992d12c0dfadb0dea36de5ce7bc",
       "upstream": "fmz200"
@@ -3138,6 +3168,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id1192174860",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "061f636aec38aaf026826db272aaf372aff8f167742ee3823e83133f85c7cd2e",
       "upstream": "fmz200"
@@ -3151,6 +3182,7 @@
       ],
       "coverage": "body-or-script",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Globe.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "95f99900ab161f219901010cc278be15a401b4d9389499a79537ad8a51b3c7b0",
       "upstream": "fmz200"
@@ -3164,6 +3196,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id434831001",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "f0339a5d02bcc5644d2b5e3100874259d4fdac5405af9ccb37da88bc8bc49bf2",
       "upstream": "fmz200"
@@ -3177,6 +3210,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id518566498",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "55cb1dd2021e499e9a852d4bfb5a59120ab52bbc30d61438b5f520775e2faeee",
       "upstream": "fmz200"
@@ -3190,6 +3224,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id1296768462",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "90d681e039cf3640c28f67027d7a592818a5183801e328f1b5eb06999a973ad2",
       "upstream": "fmz200"
@@ -3203,6 +3238,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Navigation.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "a7f1fb26c9d75fa34c0633ffa9eb9a111a60756a1da1e6b3bfc969225a37c738",
       "upstream": "fmz200"
@@ -3235,6 +3271,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id640076621",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "06a33ae12e306012e9624100777bfd2c5b37fc427e7d5712cbeb2f7fc3899e5d",
       "upstream": "fmz200"
@@ -3248,6 +3285,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Food.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "ec4bc545b9953f4835198ac1f3415a785fbfe6e8ad22a1b466f4b737a9be13f4",
       "upstream": "fmz200"
@@ -3261,6 +3299,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Pig.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "a28f0b66fdb2dc500dff54c024901f27ebdde8929b92dff530df4e91eaaa71f4",
       "upstream": "fmz200"
@@ -3315,6 +3354,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/de/app/id1436799971",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "392c729931868e39ecce22055fa5f81a948434faa101e0b4b5d5d39b7128f7b6",
       "upstream": "fmz200"
@@ -3327,6 +3367,7 @@
       ],
       "coverage": "body-or-script",
       "format": "quantumult",
+      "icon_source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/Bing.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "fc03c2292ed012b4bfe7dbc14199b4bfbe22a5906955984d09573b8d5abe17b3",
       "upstream": "ddgksf2013"
@@ -3397,6 +3438,7 @@
       ],
       "coverage": "body-or-script",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id1451025748",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "a9f45473df989a79570c53e4b222325b1879ad7670cb6232ed02f8c6c7047cef",
       "upstream": "fmz200"
@@ -3410,6 +3452,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id928785539",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "307e1e14b3d6155886b273c35b18d0ac890112c4880484ebd18a0030a28f4106",
       "upstream": "fmz200"
@@ -3472,6 +3515,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Globe.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "aa927f3df40369746d305b0b19633edced33fdbd2ba70edca43edf88fddfdb9e",
       "upstream": "fmz200"
@@ -3485,6 +3529,7 @@
       ],
       "coverage": "body-or-script",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id1472477795",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "4c17bd46a04aa074891d12c7b2db0faa5c9c08cc3352902860f9275fe2afb7c0",
       "upstream": "fmz200"
@@ -3511,6 +3556,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id331259725",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "28b3d4744ce77eeb026841966d9a20829b87c5419b268429147b6a3d767b3777",
       "upstream": "fmz200"
@@ -3524,6 +3570,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/YangShiPin.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "772fa5566f9046c84020184cec0ea6d75200ddc301b1ab61da4fcf5646279bc7",
       "upstream": "fmz200"
@@ -3537,6 +3584,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/bank/CEB.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "6779ed3907710e85fa52744f017b62283161b940c71bac999fe76bf2d5800c0f",
       "upstream": "fmz200"
@@ -3550,6 +3598,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id794862904",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "d21c33998e4e215f4d97ea6869088d6187a2590eca74da317a9aaad831e2c1c9",
       "upstream": "fmz200"
@@ -3563,6 +3612,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.cnki.client",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "e35298393a6d47dacd491a7285bbc10889ae6add667e84987f728676cd6f66be",
       "upstream": "fmz200"
@@ -3589,6 +3639,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id391076447",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "7aaf95624bc693e54e67cbbaaf62a1908a30a26a71f0ef845bb5622404d9a75d",
       "upstream": "fmz200"
@@ -3602,6 +3653,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/CaiLianShe.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "a70e45941e677819100600c5bc59e0dce364b3c637202977ffe7669b606ab5de",
       "upstream": "fmz200"
@@ -3615,6 +3667,7 @@
       ],
       "coverage": "body-or-script",
       "format": "surge",
+      "icon_source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/CaixinMedia.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "583ee98516cd37b2375d6dcc4d6daf9a18473149de92a6a04f4a90431f178d20",
       "upstream": "fmz200"
@@ -3663,6 +3716,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id1034208598",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "bbdc19385d26556c95941a63d33db8dc7b30305c2f9b00e8f0d3d52599aeb8eb",
       "upstream": "fmz200"
@@ -3708,6 +3762,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id1449663267",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "28c10f7c5b0c82d56d078876e7a271947a449883d0b3a7810271a461acf1b302",
       "upstream": "fmz200"
@@ -3721,6 +3776,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Balloon.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "c23b22c11058ebd7806d9bf03d3240b5da0dcbe5a11f226c565d7300aa2b0b6d",
       "upstream": "fmz200"
@@ -3747,6 +3803,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/ChaoXingStudy.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "dd59fb80a164d959498f59e55c5aaa0b7107f35732a099eeb8b425ba99b5fd10",
       "upstream": "fmz200"
@@ -3809,6 +3866,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/chery.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "7538a56061805794a4ddb2afb1b59d2e1830d8981c25a8bccdab6188495d6fab",
       "upstream": "fmz200"
@@ -3822,6 +3880,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.ai.obc.cbn.app",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "7df9b1e2b746b50af1cd17a0b78cbc6dfab1313d0ed81d706614b90bb4530a98",
       "upstream": "fmz200"
@@ -3835,6 +3894,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/luestr/IconResource/blob/main/App_icon/1024px/%E4%B8%AD%E4%BF%A1%E9%93%B6%E8%A1%8C.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "883471812d933adbefd054323e9947c1c3adf85e4a6f1e3dd31d862adeb7c106",
       "upstream": "fmz200"
@@ -3848,6 +3908,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/luestr/IconResource/blob/main/App_icon/1024px/%E5%B9%BF%E5%8F%91%E9%93%B6%E8%A1%8C.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "c744493d731b6450702656db7c95f96d63a4c39167543d59918f07fa29839123",
       "upstream": "fmz200"
@@ -3861,6 +3922,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.chinalife.ebz",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "c0bddd064aa1b87582d085b17ec355e3b6983a82a29cf87f96c2bb2ef0e37b80",
       "upstream": "fmz200"
@@ -3874,6 +3936,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/luestr/IconResource/blob/main/App_icon/1024px/%E6%8B%9B%E5%95%86%E9%93%B6%E8%A1%8C.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "e4579f8222e8ac9f9fe26be738d2772e88e0f0afff0a308bdb1e664b2d49806f",
       "upstream": "fmz200"
@@ -3887,6 +3950,7 @@
       ],
       "coverage": "body-or-script",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id1042567321",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "423e3d16aa1d1edc5670f80af47752f060d2fde6679dfd60e7c9a478f7137279",
       "upstream": "fmz200"
@@ -3900,6 +3964,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/luestr/IconResource/blob/main/App_icon/1024px/%E6%B0%91%E7%94%9F%E9%93%B6%E8%A1%8C.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "c1c56516b8bbf5852d72164288117547f096704becc760172ce10536d13c69c9",
       "upstream": "fmz200"
@@ -3913,6 +3978,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/ChinaMobile.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "a7956b3653fa9c3c6d0b3dfb3a3c14dfdb8ed2916a36165ad1a670c321c08933",
       "upstream": "fmz200"
@@ -3926,6 +3992,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/luestr/IconResource/blob/main/App_icon/1024px/%E5%8D%97%E6%96%B9%E8%88%AA%E7%A9%BA.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "bdff0c30a6ce2ef29f9a0c91e24d85b7e3966e24b4f82e146bda2b145d7f5093",
       "upstream": "fmz200"
@@ -3939,6 +4006,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/luestr/IconResource/blob/main/App_icon/1024px/%E4%B8%AD%E5%9B%BD%E7%94%B5%E4%BF%A1.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "c4d85e82774aa0c21699051559e4adde2e0159190de220965a881da347921c31",
       "upstream": "fmz200"
@@ -3957,6 +4025,7 @@
       ],
       "coverage": "body-or-script",
       "format": "quantumult",
+      "icon_source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/ChinaUnicom.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "a751613faf1902f5f2a09f5a91d1359adcc270d5faaef22b433c2d89d47e26bc",
       "upstream": "ddgksf2013"
@@ -3970,6 +4039,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/WeatherChina.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "17923584fa8f209f6dbd5fa2e36558b9205839d1dc2ba628300d894576b28da2",
       "upstream": "fmz200"
@@ -3983,6 +4053,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.chuangkit",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "0cd4216b2ffec392bdbd8649fa7ee4ec9c16edeaebb5708541e8a541bb629713",
       "upstream": "fmz200"
@@ -4009,6 +4080,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id993993763",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "7de6751b005f5db2bcaffe21611993b05029783ca48fc56ef8a610a817f2dd17",
       "upstream": "fmz200"
@@ -4099,6 +4171,7 @@
       ],
       "coverage": "body-or-script",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/us/app/id329913454",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "435a3178ec62e790dd26c438154c2c7b27308b4c4c6fd47b2d8ca0628c499ad4",
       "upstream": "fmz200"
@@ -4112,6 +4185,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/Ctrip.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "48413d721260c4532f37dd2032c11ffa5fbc9483318d25ca33ce2416a2849aa1",
       "upstream": "fmz200"
@@ -4125,6 +4199,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.dji.store",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "3c2449b07f29f059fc1b3989d47410e3b874360bc102fa0c55d4e5653ba096ff",
       "upstream": "fmz200"
@@ -4150,6 +4225,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.dada.mobile.android",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "d7a05751b173ff32a9eabd125a41af5d7096a82cd069ed6c0ef03a8684a684fa",
       "upstream": "fmz200"
@@ -4163,6 +4239,7 @@
       ],
       "coverage": "body-or-script",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Popcorn.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "6cce0d870cca25c28738c6a68f2d36ba040b7cbe0e9366a17a8bfbd5b301ceed",
       "upstream": "fmz200"
@@ -4176,6 +4253,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id666606316",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "e6b1b646185d578a3d81d4b22bc9b272dc9a98f0b2609f65b88f57a53f580ba8",
       "upstream": "fmz200"
@@ -4226,6 +4304,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.dangdang.reader",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "c2ff39e31492fc21d7ff0cca28c3bb559126023155312f02657ab6693a3fb778",
       "upstream": "fmz200"
@@ -4239,6 +4318,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.jingcai.apps.qualitydev",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "ef108daa4c4340b06ebd84113246f80114a9cec4e8fbf8ddcb207700a892996a",
       "upstream": "fmz200"
@@ -4283,6 +4363,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/DidaPincheTaxi.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "4275f49bf3849d864965459e6e160333cacc588d533476f965deb29e8117fbcf",
       "upstream": "fmz200"
@@ -4296,6 +4377,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Bike.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "887f8f16002ea50e62f084f41535c03e8c15e927089feee624fc496c3e145322",
       "upstream": "fmz200"
@@ -4309,6 +4391,7 @@
       ],
       "coverage": "body-or-script",
       "format": "surge",
+      "icon_source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/DiDi.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "5d0a483fa1f1d480713da81eb476609cbdfd7c51480edbace7a61024d7d92e40",
       "upstream": "fmz200"
@@ -4322,6 +4405,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.kuaidi.daijia.driver",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "b1366f6f75fcdcba1fca445fb866b88dda8d93a34da618ab5ab0035cec504cdc",
       "upstream": "fmz200"
@@ -4348,6 +4432,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Popcorn.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "84cb66faf5188cba14366d64de6631e32474aa3114ce705046bb5f01da0a8680",
       "upstream": "fmz200"
@@ -4361,6 +4446,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/cn.com.htjc.pay",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "2ffa58aa1e629074615b89c85521874638a49d8c0cb5839eff538890f031252a",
       "upstream": "fmz200"
@@ -4374,6 +4460,7 @@
       ],
       "coverage": "body-or-script",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id351091731",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "c2e74e7c7c973ffa551628b337c288dfe9f0412ea9dc9ae1504ac525ec3cc9cd",
       "upstream": "fmz200"
@@ -4387,6 +4474,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Popcorn.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "6001d9f25d635322c47d2c7c93e51c897ba1a15fff6471c1df94129c692214ce",
       "upstream": "fmz200"
@@ -4400,6 +4488,7 @@
       ],
       "coverage": "body-or-script",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Popcorn.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "25e89946f98bfae47a5a803de3ee6550a9f94a7cd09dde76ce9dd3033c4dbdf4",
       "upstream": "fmz200"
@@ -4413,6 +4502,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Bike.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "e315e280a5ad205da5ee123922ae4ec829786a40400d039d057c5228fc18744b",
       "upstream": "fmz200"
@@ -4452,6 +4542,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.vyou.vcameraclient",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "a21dedba0380c36bc4d8645d534076becebb324c157ea6096700986226f85e04",
       "upstream": "fmz200"
@@ -4465,6 +4556,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/luestr/IconResource/blob/main/App_icon/1024px/%E9%92%89%E9%92%89.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "a6d82476d7a3d6a15cd7939b69eaa6f73237682a6960210af4387d0e764ee616",
       "upstream": "fmz200"
@@ -4478,6 +4570,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id911261462",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "ce744ba4c58615cd98aa29a1e62ecdfbc7e1d4752b955a25a81fff5aefd40775",
       "upstream": "fmz200"
@@ -4491,6 +4584,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/cn.dxy.idxyer",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "540ea350d40d4a9bef316338cfaec52ebdf8732c460eb7bda164e5dbe6d5a90a",
       "upstream": "fmz200"
@@ -4554,6 +4648,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id423525686",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "1d08ad31ca2ee5438a868ca50eaf3ba7c2456e72fde852286d1469aea33a9108",
       "upstream": "fmz200"
@@ -4567,6 +4662,7 @@
       ],
       "coverage": "body-or-script",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/tw/app/id1102650114",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "3ea45aa60ab3c20af869a4935d218abba6bb164c48cf9144606a676a6f2ff911",
       "upstream": "fmz200"
@@ -4580,6 +4676,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id487967179",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "ca0de945dc77b8bfc6fd9c82887ccb453d9aa7a6a327572f77caa99a4726a7f3",
       "upstream": "fmz200"
@@ -4624,6 +4721,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/Douyu.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "9101507e85f7f4cc5c75d0f009b93ae0b35d36bb257b3948bc628bb638e642b8",
       "upstream": "fmz200"
@@ -4656,6 +4754,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/DragonRead.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "129d92fd687247e1b76c978a47d09b1bcdf5cb15b230a60ab4f66b02e5ae483a",
       "upstream": "fmz200"
@@ -4739,6 +4838,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/eleme.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "ce153d0f5c1e72608a4ad500ab32ded5364b204fb49b5ea4fec9bf9f2dfb16fb",
       "upstream": "fmz200"
@@ -4752,6 +4852,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/luestr/IconResource/blob/main/App_icon/1024px/%E8%89%BA%E9%BE%99%E6%97%85%E8%A1%8C.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "5b9d1e0fa3f9f68166e5b44e4e1c27431b43ee7f546f32e4447d7615a7f02303",
       "upstream": "fmz200"
@@ -4778,6 +4879,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id1356054761",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "2e51c66da3bb07d401b2dedafaa619aba242b5bdc65a3686b8fb07789b165f0d",
       "upstream": "fmz200"
@@ -4791,6 +4893,7 @@
       ],
       "coverage": "body-or-script",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.timanetworks.android.faw.vw.aftermarket.release",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "71154fed2f991195b3f8bc1bf4f0e7d6238bba4c3c4625367b4e02f588a098b4",
       "upstream": "fmz200"
@@ -4823,6 +4926,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id1121886234",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "09319e3a702c83a300d9536736112222548abfa8075fd7da00eec1700daf125f",
       "upstream": "fmz200"
@@ -4836,6 +4940,7 @@
       ],
       "coverage": "body-or-script",
       "format": "quantumult",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/AppStore.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "d729d6e6d3bdce404fa12b1f7b1d1c9042c060e29407de12fcb338c32604383f",
       "upstream": "ddgksf2013"
@@ -4849,6 +4954,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.x2era.xcloud.app",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "74cd88c250546b701d0e4565ed5dc0147469cd4e315ef3a61fe1677ff209c97c",
       "upstream": "fmz200"
@@ -4862,6 +4968,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id963152777",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "bbc0382623d1d2b90ef337c359052a8ee882e1ad0650ea00c0f339ba042958a9",
       "upstream": "fmz200"
@@ -4875,6 +4982,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id591584458",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "39a4d3f35e00606919888f0951bbcc1de46821523d317e2ce2251ba437895ba8",
       "upstream": "fmz200"
@@ -4888,6 +4996,7 @@
       ],
       "coverage": "body-or-script",
       "format": "surge",
+      "icon_source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/FlyerTea.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "be7e91324e4fc34e354ddd4452264e9c935b9893ee8e32e22eb9abacc2861f24",
       "upstream": "fmz200"
@@ -4901,6 +5010,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.zy.flt_yishang",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "99983a7922f5b75ca80aca76f01ac91cfc8acacce141722d7af2c2c21929bd13",
       "upstream": "fmz200"
@@ -4932,6 +5042,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id906611031",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "2e36e3bb56e028181a4b3b1c4edcd7b3c80628f52fbcd6c97cbec9712aa6ab6c",
       "upstream": "fmz200"
@@ -4945,6 +5056,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Popcorn.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "223054afa15ddb300782e6a57c70b8cd9a1537d094a8cca8e982d21ba873331e",
       "upstream": "fmz200"
@@ -5025,6 +5137,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/TaobaoTravel.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "e8f822ad33d379c997f812e6da47c4966379e2f724ab6719ef80ae44b35bfd18",
       "upstream": "fmz200"
@@ -5076,6 +5189,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/fxtp.tpp.cntaiping",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "b098b8e6d393dc1140b65f31a6473c9c9801753a1e1a78360409d61be8c2cbfc",
       "upstream": "fmz200"
@@ -5089,6 +5203,7 @@
       ],
       "coverage": "body-or-script",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.mirum.fx",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "43132fb00e1da8f1e5daaf564e2ae137d29f127264d204bd5e6ec7e8bf5ec457",
       "upstream": "fmz200"
@@ -5102,6 +5217,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/hk/app/id592031984",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "ac096e6f6cb766fb8b452f1050dfd685b45d2ff91457e5f31a6c8e06e59c13f6",
       "upstream": "fmz200"
@@ -5115,6 +5231,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.cloudy.component",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "002f55cd89403aa4d719189656e7432efce9820c424153c64103851a01f967fc",
       "upstream": "fmz200"
@@ -5128,6 +5245,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/Koolson/Qure/blob/master/IconSet/Color/Game.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "9f0e898788464b2716daa5cfdc41803709eea0c8432786819fb6409fed7d6954",
       "upstream": "fmz200"
@@ -5141,6 +5259,7 @@
       ],
       "coverage": "body-or-script",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id886118205",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "b53d6db55d941f24f1a386fbef985253566a79fa70b39e61a29ada2c71719414",
       "upstream": "fmz200"
@@ -5173,6 +5292,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.gtgj.view",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "8ffc82e8590e2fc945ade8a5c47c644cea09a7fbcae306ae93dc1be6ebb797bd",
       "upstream": "fmz200"
@@ -5186,6 +5306,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Shopping.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "63119d57fe1a4d397541648d7de1a63079b4a64bbe79c7c186660c3d4e57c7e6",
       "upstream": "fmz200"
@@ -5199,6 +5320,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.gome.eshopnew",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "84433d1f2895374ef473587ddfa3c06c8adc09b509d1c0a1e2a583309ae5be4c",
       "upstream": "fmz200"
@@ -5212,6 +5334,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id1337474440",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "3a6f9984b169553cb778374882db54478ba70aedb647566ede6866151bee2441",
       "upstream": "fmz200"
@@ -5225,6 +5348,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/io.dcloud.H5D4EC138",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "81d9dfa4bbe0e03d03e225a28c7717072a4aa537748e69b1306ad0f055a7f482",
       "upstream": "fmz200"
@@ -5250,6 +5374,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/Google.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "eca91e966193f752718bdab1aa7cacdaa0d5ae095e025e45bd67ce48b9d3f4bb",
       "upstream": "fmz200"
@@ -5263,6 +5388,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.greenline.guahao",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "94a90f401991b8dbca186c35c385ff035605dbe00f70642e30e5a5fac3a07873",
       "upstream": "fmz200"
@@ -5276,6 +5402,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/lightning.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "cb33c09d07176d75431c1963fafbe097ba755f772d5377c20cd0699aa251e4f7",
       "upstream": "fmz200"
@@ -5289,6 +5416,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Lifestyle.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "85c98e6c17ac6d888984b2d30829c726f5d18587c19ca05f4a41b64ee7a0cb03",
       "upstream": "fmz200"
@@ -5302,6 +5430,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Pig.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "9be6615fc600bfd731a21c2f9ac7fc8af9a7c08f560e9a1d376ab744d42e59d3",
       "upstream": "fmz200"
@@ -5334,6 +5463,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id952047557",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "c216dd6787e0e302cec33af59d4c59bd8e7b593f16a203f1cf38532288b69539",
       "upstream": "fmz200"
@@ -5360,6 +5490,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id1564618830",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "420e6e3155359402b83706e2bcb0df5d4cbda8e7b58530630d58965b6d33bb02",
       "upstream": "fmz200"
@@ -5391,6 +5522,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Pig.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "3c17a92374e05b0e0f83974e54468036de8daae81c67c6dd0b1aa68edf53f8d2",
       "upstream": "fmz200"
@@ -5404,6 +5536,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.simshine.cn.aiothd",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "ed6f9c34f18e2ead96813c00d1254ad4dd6a7abe8ab2d4df4d87fecb7b11a9fd",
       "upstream": "fmz200"
@@ -5417,6 +5550,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Shopping.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "c8a5dd183f0c2dded5ad968869106096f1a74ec009ff5ddc24bcf82cdc13945e",
       "upstream": "fmz200"
@@ -5430,6 +5564,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.haixue.app.android.HaixueAcademy.h4",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "081360d09b4ece3957dece0770a9f6ff6c18d50de8da5a1da15a4856bda19e0d",
       "upstream": "fmz200"
@@ -5443,6 +5578,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Lifestyle.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "a7accfcc41c7e7b2f4145b89f587ce465fd180b192a0536793444f81466c6a5b",
       "upstream": "fmz200"
@@ -5456,6 +5592,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Popcorn.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "cd23644483b448007e621b15bbb4e9b3ac0a6b92f9b6c2e4f943a33f2d061b97",
       "upstream": "fmz200"
@@ -5469,6 +5606,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id6502860166",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "a6e6dc58c0c17bc9df5cd3c0e6f0c5f7b68e73ae50d35bf53f4673b7d1fdfd5d",
       "upstream": "fmz200"
@@ -5482,6 +5620,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.smk",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "97aad4fb88db8f5663b6985673716af88aa0f32c1185762611cb818cf51452f2",
       "upstream": "fmz200"
@@ -5514,6 +5653,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Lifestyle.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "f6ca8cdf24f2b64278b433310a9e2312fb637672771d70a78492fe60c02bf896",
       "upstream": "fmz200"
@@ -5527,6 +5667,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Magazine.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "07765f8d422685a2c568d1d6a71c079ff0950080ce0ad3ca5af4af7be262a21f",
       "upstream": "fmz200"
@@ -5540,6 +5681,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/aicare.net.cn.goodtype",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "c8dec1648d514cf7ed6bdd9a71cc32a1187ee5e2034d262871565be4e45eb5d9",
       "upstream": "fmz200"
@@ -5553,6 +5695,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.heweather.weatherapp",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "60324c7d88b3274fdb9532ed638ce614c417487008420ff971b6a54fcdce6c7f",
       "upstream": "fmz200"
@@ -5566,6 +5709,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Pig.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "a539bb5828797e5703b28eef4a03ec500a4b3fae503ad25549702b78ef4e3a07",
       "upstream": "fmz200"
@@ -5598,6 +5742,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.kokozu.hengdian",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "1b2f2748a4effce8035e690f20d6db816661899d93d10e38a382357c8f08dd94",
       "upstream": "fmz200"
@@ -5611,6 +5756,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id1429222550",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "02b8574a4267cef4225fe0cad754ec8aeb87f50272e1234ce5b7726a703766c4",
       "upstream": "fmz200"
@@ -5647,6 +5793,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id483323919",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "079edd619119ea36d3cde94f8dae705595b01a4bde2f20b1a5a99ae89c178e2c",
       "upstream": "fmz200"
@@ -5672,6 +5819,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id993077954",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "5fef064759063e21748524337a152108690f367ce218b4c1a2ebbba151e84a09",
       "upstream": "fmz200"
@@ -5685,6 +5833,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id1152954857",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "ab7bbf5f760f9e67615b1c86064785ca4427aa66b1c9d6de0a043248b46f88c5",
       "upstream": "fmz200"
@@ -5698,6 +5847,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Navigation.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "60fa8191f8d81914e99e8ce534e0f66350b5e0532d091f4a6c2af2876043c784",
       "upstream": "fmz200"
@@ -5711,6 +5861,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/hk/app/id1151370929",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "abdf63effc377f0f8b85b6e59d49115c540ea3e0ab71d546e77c62b4a44fd9d8",
       "upstream": "fmz200"
@@ -5724,6 +5875,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id1496121983",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "9e31e6949c0034c881e837608c6acaaad6c412861b9b6506a409d69863b25c80",
       "upstream": "fmz200"
@@ -5737,6 +5889,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id587176822",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "5c7f312c67b3c82a6a65552a4837cfc7e4fdad05a298e74e31b17f84be22951b",
       "upstream": "fmz200"
@@ -5750,6 +5903,7 @@
       ],
       "coverage": "body-or-script",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Pig.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "1039ef0442863559a4bc97d0b5995e0182678487888dededdd3b60a8a382ab14",
       "upstream": "fmz200"
@@ -5763,6 +5917,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Popcorn.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "a75af67f01d25cfe305fbb9b43be6f05883b83e4f05d45478bd757e2ff957cc1",
       "upstream": "fmz200"
@@ -5794,6 +5949,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/luestr/IconResource/blob/main/App_icon/1024px/%E8%99%8E%E7%89%99%E7%9B%B4%E6%92%AD.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "ab317c86bc2de739f28d12f54f0ed4897eebdd89124fd19adfc416b3260884a7",
       "upstream": "fmz200"
@@ -5807,6 +5963,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/bank/ICBC.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "779f19183d02a095642b95a57d897e0d92151d12ba2ecfbdf3ea463bd5c2a88f",
       "upstream": "fmz200"
@@ -5820,6 +5977,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id1044166783",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "cd8bd304088661bbcbaba64f2edc439ff19fe7c51126dc49518242bcacf7cc1e",
       "upstream": "fmz200"
@@ -5833,6 +5991,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id1044166783",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "bb29b2377a7655b9a820bacadb6e79063535fa9d662508724233d0c1fdf14b7b",
       "upstream": "fmz200"
@@ -5877,6 +6036,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/bank/CIB.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "06ca4b2f115b5e8a14fa1a1c82e3604e073be6cae188a3b5212ec1cbcfe330e4",
       "upstream": "fmz200"
@@ -5890,6 +6050,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.meelive.ingkee",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "602ad5fba35c7fa7aedfdfb1de8fb0a506dd9cb7850d61b2d4b904a7b7304246",
       "upstream": "fmz200"
@@ -5903,6 +6064,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.jdcloud.mt.smartrouter",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "dfc89eefe188a83817607191939c61c08d87c36ff5ce7d42bfb434c4a221551c",
       "upstream": "fmz200"
@@ -5916,6 +6078,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/JDJinRong.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "f1b75dc6246c9d3421fef31fe8a99240d2604674b9fa1ab9910f5d30d7838ac7",
       "upstream": "fmz200"
@@ -5929,6 +6092,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id1498018017",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "3be7a23aa864515b2985a5bfe33b678cb6b0322034f8b02c38024d110fadb10f",
       "upstream": "fmz200"
@@ -5942,6 +6106,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.jd.app.reader",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "e0dd592f8d3047d2c9e8c6280fc21c7cb7ad5c8a71ddccd64669d96930b71a6d",
       "upstream": "fmz200"
@@ -6000,6 +6165,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/me.tangke.gamecores",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "7290f7c86c589caa1323ad96f15c174bd10411374c4a50d8cc4ce71ddc7aca4a",
       "upstream": "fmz200"
@@ -6013,6 +6179,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/luestr/IconResource/blob/main/App_icon/1024px/%E6%9E%81%E7%AE%80%E6%B1%87%E7%8E%87.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "4f54e86699654c6a88e0f96488b6192b6d715599135714a3cd388a999dbe0235",
       "upstream": "fmz200"
@@ -6063,6 +6230,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/lightning.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "589979268a1e52935de740c54197a93478ec18e6e4ae9074cdea7188c40bdb7b",
       "upstream": "fmz200"
@@ -6076,6 +6244,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id1160249028",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "4a228ff0c505e91b2d56ea6f90190af4d6d5df34a0509c85ada27a5c6aff3951",
       "upstream": "fmz200"
@@ -6089,6 +6258,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/lightning.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "3f1f162ec3fc446bb2142b122a49097380856ab8b315d8f52ec43a759553e5e6",
       "upstream": "fmz200"
@@ -6102,6 +6272,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id930342070",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "6cdb66f2ba87071021b3d96cc54d2ae12aa97f86af09a4863b365e35f11f70c7",
       "upstream": "fmz200"
@@ -6134,6 +6305,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id1319071502",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "ca808181bcdeafa35baf877a9cdaa96a7c1b6935903fd716500c9848defbba24",
       "upstream": "fmz200"
@@ -6147,6 +6319,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id529092160",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "6b3c2e629f50fc984bd5ca93769d5b39b96f2c2b39d7bf9836e735679db0ef30",
       "upstream": "fmz200"
@@ -6160,6 +6333,7 @@
       ],
       "coverage": "body-or-script",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id1500875111",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "da838cb40f3312e277e751fb219763f8ffb1f68f6d17ae8bf6c009d8c6b7e58f",
       "upstream": "fmz200"
@@ -6185,6 +6359,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.yek.android.kfc.activitys",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "a33b6de03564ffa14a1e70e2346aab0db688e59a5818db18309f276c03297703",
       "upstream": "fmz200"
@@ -6223,6 +6398,7 @@
       ],
       "coverage": "body-or-script",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.bestv.app",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "96553f66e9319a2920e604d2743c4669d0c27a996e6a07dab25c367ce050f28e",
       "upstream": "fmz200"
@@ -6236,6 +6412,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.kanlixiang.android",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "b895752c52813a65b7de6fb33887aefa0d65b0c5c911cb756b95f2f07d2f55f5",
       "upstream": "fmz200"
@@ -6249,6 +6426,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id1060011393",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "e97cc3a2111515b4f8c2dd92a176e1e78fad441c35c6421aa7ea2ccb523260c6",
       "upstream": "fmz200"
@@ -6309,6 +6487,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.kingsoft",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "f5a52653a67bc0025cc622b960914cea6ae7c471ea2dcb9f8769178c56102ba8",
       "upstream": "fmz200"
@@ -6322,6 +6501,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.quizlet.kouaid",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "dee3ef445dd915f42f172ecc2ad869e7c3ca9c9e04aad681de574c3c4472fab5",
       "upstream": "fmz200"
@@ -6392,6 +6572,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/KuaiKanComic.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "fd130d9c69ec2219f9781098963106d4e7f10b0e0d38dce652a806111db32602",
       "upstream": "fmz200"
@@ -6481,6 +6662,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.cloudy.linglingbang",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "7981e06a12ccb722c482c50f5bd0bd1ccee6737c5cd46de2175ff56a9177bd9a",
       "upstream": "fmz200"
@@ -6532,6 +6714,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/lightning.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "dcc0c934c2eab5a330022aa52b8f0d633e069414e62db1db1bb0498cfdddaae7",
       "upstream": "fmz200"
@@ -6545,6 +6728,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/lightning.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "f10b14966d004d61a3b3566e146f6062fa085443cc05aa28de93580d95f08450",
       "upstream": "fmz200"
@@ -6558,6 +6742,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id904198248",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "3576ce72e6b7c67da2aeab4c52a22fbace286d02aa46ab20f3f37f7ab5d3f8fe",
       "upstream": "fmz200"
@@ -6571,6 +6756,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.lakala.shqb",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "783c2015dd7a86f89f11ff340fbc4dab22550afb46b24f02bdf03fd91a4b743d",
       "upstream": "fmz200"
@@ -6584,6 +6770,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.lanjiyin.lanjiyin",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "8aae94fd276c2bfed51f2ced04eca787cff29fd2e78e735891f312894ec27d83",
       "upstream": "fmz200"
@@ -6597,6 +6784,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id1576858756",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "454e7bed260362771e56b123c0469d217d37e72b8c6d0d7fd161150cbf6bbe2c",
       "upstream": "fmz200"
@@ -6610,6 +6798,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/LazyAudio.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "9def89bb5aa5edc0080a757f48215247617e144b257d2fced0d7244faaa20b7d",
       "upstream": "fmz200"
@@ -6623,6 +6812,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Pig.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "6da5b31e6041d223d038235bbfa345687b4fe77237325e0a80d7fc55a99eea5c",
       "upstream": "fmz200"
@@ -6636,6 +6826,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Balloon.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "a5f8525e3251e8c823556115e878ad5c06342ab0ae7352e476fc8185943a361e",
       "upstream": "fmz200"
@@ -6649,6 +6840,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id881803365",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "d0ea339e262b5d50dbb0194ecc6b6aaa426cd4b77143e1407134cb4013e0c1d5",
       "upstream": "fmz200"
@@ -6662,6 +6854,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.leoao.fitness",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "de941a9dd566ddb7a9dce28e56953cc7de3a2c9d490b80b68dc6f20140897bc1",
       "upstream": "fmz200"
@@ -6675,6 +6868,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id1080533388",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "4a3d2503a76a18e9a8ef473e5726f50743a13b548a731714a1624e09d5568e40",
       "upstream": "fmz200"
@@ -6688,6 +6882,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.lenovoimage.LenovoPrint",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "cc44ea14683afdb337bc6c6017fb3b4d9a85c9a999716dd77e7cb297f39cd50b",
       "upstream": "fmz200"
@@ -6701,6 +6896,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/2bulu.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "7653f3d816f0f4b2c928576bda76925b6a3c153bae65706927bc2093d7bc9c31",
       "upstream": "fmz200"
@@ -6714,6 +6910,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/LiePin.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "c926b09491c42cd01f62f569b16dfecc1e1d6ae7e7be4d879435e54364ac0244",
       "upstream": "fmz200"
@@ -6756,6 +6953,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Navigation.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "592a5c369d92eef89c3b657ad131c59753767bc6da92564934b949c245432466",
       "upstream": "fmz200"
@@ -6768,6 +6966,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.lofter.android",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "6f11ec23add88278f817d1e1e4e75dabdbd48d904baefa0129e330b3c08d2d30",
       "upstream": "fmz200"
@@ -6781,6 +6980,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.lbdjorder",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "887f06fd04f39357b39228e2a897e651a7ee727ede58f9a316b891fbaf700e2a",
       "upstream": "fmz200"
@@ -6799,6 +6999,7 @@
       ],
       "coverage": "body-or-script",
       "format": "surge",
+      "icon_source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/LuckinCoffee.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "b33067971e029d073e81d12b75b22dde5087fb2d377522300fbd4c9d8bf8099a",
       "upstream": "fmz200"
@@ -6812,6 +7013,7 @@
       ],
       "coverage": "body-or-script",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Food.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "322539ea562125f74870a0ebcffc213afeab8bce1ee8a54ee687a90c6380bb16",
       "upstream": "fmz200"
@@ -6825,6 +7027,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.gonlan.iplaymtg",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "6ec36f9aa43008bd78d9be073d25d28ed1febea32959e69cd28b507cca624c94",
       "upstream": "fmz200"
@@ -6838,6 +7041,7 @@
       ],
       "coverage": "body-or-script",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.chisheng.walkman",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "8b2683343f53a9b78b103347c9fe100cd7fa06b29562963e02d4762c7175f057",
       "upstream": "fmz200"
@@ -6850,6 +7054,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id913947918",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "b39f2bc7e373fd5c513e04d921885fafcd0c831ba890209a1aec3d9c477b9831",
       "upstream": "fmz200"
@@ -6876,6 +7081,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.tc.travel.mada",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "1e9b91b135371aeabec8bcdf1786b4c819c816dff1a904c0607ba3155c9e43d1",
       "upstream": "fmz200"
@@ -6907,6 +7113,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Photo.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "ad0ba9f7b4f93d6c83ed2848173e954a5b102cf3e621ca64a1aa9556cb036b8f",
       "upstream": "fmz200"
@@ -6920,6 +7127,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/cn.mama.pregnant",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "3849e604a0029c979e8f7f10663c526f6ea1220fefb0f451f12328ff4bc14ce5",
       "upstream": "fmz200"
@@ -6933,6 +7141,7 @@
       ],
       "coverage": "body-or-script",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/bank/maidanba.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "6c21fe2ca25ab8225c73410f50596a469d45f498df6845d0dfa51dda0565c6bc",
       "upstream": "fmz200"
@@ -6946,6 +7155,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id1314769817",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "186d834f34b29c90b4bc45055b37d7d66340a4beadc03b54bd13d1c0b00b3fea",
       "upstream": "fmz200"
@@ -7001,6 +7211,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.manga.manhuaren",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "ae51138050717ae2cc8581be41b2f6b284af1e1e36876e3cc053479aa9bc32f2",
       "upstream": "fmz200"
@@ -7032,6 +7243,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/luestr/IconResource/blob/main/App_icon/1024px/Maoyan.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "ad581c7dacfa19a52497b2d40af57156c6bc8db4b24917d50697c13a780a1b14",
       "upstream": "fmz200"
@@ -7045,6 +7257,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.mcdonalds.gma.cn",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "2615e123bb16a83fa01c6eff2e786c5da5288813c3666717ab57645d5c63582a",
       "upstream": "fmz200"
@@ -7077,6 +7290,7 @@
       ],
       "coverage": "body-or-script",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id807317212",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "fa8dfd92ec2275236bd48be4a4bdde8b1d50f2b8b580f1b0d5b28b618cbbe5c6",
       "upstream": "fmz200"
@@ -7103,6 +7317,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Shopping.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "9664e92c93d24c5bd6b2ccbbc9f5f29d2bdc37368ff89361e49d969307e354e3",
       "upstream": "fmz200"
@@ -7148,6 +7363,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id979857479",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "8d8bbc67802ec4b20b4f41c316bd7ab111e36d54219cf8f9a3e8978264b67d2f",
       "upstream": "fmz200"
@@ -7174,6 +7390,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/luestr/IconResource/blob/main/App_icon/1024px/%E7%BE%8E%E5%9B%A2.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "dafef6d577651c2e9639cdf2f863bada9572b41a0bd30f0b892c26c84fa20857",
       "upstream": "fmz200"
@@ -7187,6 +7404,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/luestr/IconResource/blob/main/App_icon/1024px/%E7%BE%8E%E5%9B%A2.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "a102631873ee2138ed91095787701dd6fa43027121acdfb1af008fc4586d94ca",
       "upstream": "fmz200"
@@ -7200,6 +7418,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.sankuai.meituan.dispatch.crowdsource",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "f2ed83ab3954fa57107a725caabb86bbc66e51f91d933c7a2eac2dbb5b78462a",
       "upstream": "fmz200"
@@ -7232,6 +7451,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.lechuan.mdwz",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "3d0c6b20d667630d422b09d91a4f59e9416e0700049e8fe6d86d4d9e19fe9971",
       "upstream": "fmz200"
@@ -7245,6 +7465,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.yixia.videoeditor",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "177921e9bb316a5f73905e5b443c7491e929a9b4b97db0d59a42b2acd827a845",
       "upstream": "fmz200"
@@ -7271,6 +7492,7 @@
       ],
       "coverage": "body-or-script",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id787130974",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "8d9dc7a74f30b800b7d06253c3b5c0fc758d91d2d68edc077396dcce05baffc1",
       "upstream": "fmz200"
@@ -7284,6 +7506,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/MiHome.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "a84c5036b1089007377ceed27b4a95a9d24e486bffa423f3312acc71c9b1ee5f",
       "upstream": "fmz200"
@@ -7297,6 +7520,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Lifestyle.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "53eb82c12a8aef69de3122ad6b260f5482bb317b69fb0fa2cf3e915f3a182bc9",
       "upstream": "fmz200"
@@ -7379,6 +7603,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/MyFriday.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "ee890fcf906f0c860ed0e046663de8d481522756bbd1da4c490f6e4b40a41c89",
       "upstream": "fmz200"
@@ -7392,6 +7617,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/cn.hsa.app",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "bbfbdb3c4fa256ad65490ba4bfff88792634aa5a519a9307b0d0756ce7d5b2a5",
       "upstream": "fmz200"
@@ -7404,6 +7630,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Popcorn.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "a33fbd190fe280e54b6d9a5669eccb70b2693867ca87960b01bd0be48ce5df95",
       "upstream": "fmz200"
@@ -7417,6 +7644,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Popcorn.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "91aa01cd1ed8c7a704d1bfbb012e100e5d88ecb08861d8ceb96e3767a1d20516",
       "upstream": "fmz200"
@@ -7461,6 +7689,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Shopping.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "ec59d13dc271876401beda5228fc6d602d213fe52f2476c91e513526447bc86f",
       "upstream": "fmz200"
@@ -7474,6 +7703,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Pig.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "9751ba9c07b5501bbd94af2dbd1abdf22a400273d799704512ea89d590f16afc",
       "upstream": "fmz200"
@@ -7487,6 +7717,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id1127249355",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "4b1bf282f893754ffcdb34349101e51012cacc391392a8343f457d69c9bac83f",
       "upstream": "fmz200"
@@ -7500,6 +7731,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id1065178761",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "e83f708bf7164fd9bdeff1b3114f2aa04462d5a31ba3a966e897911f16887c7f",
       "upstream": "fmz200"
@@ -7554,6 +7786,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.cutv.ningbo",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "cbf6f1c73c1ab4a4caa3eb1a24e26f7f452c12fb979a3b2b45629a38cc0a7223",
       "upstream": "fmz200"
@@ -7567,6 +7800,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.szlanyou.nissaniov",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "8383399679c9c1ceba945fe52b0f85f8b63b40c41827209ff1454321aa79fbfe",
       "upstream": "fmz200"
@@ -7580,6 +7814,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.benew.ntt",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "1fd982be9f73bf91651136c8db191170b2d3f4270ba8ef762f83a68802b0b76c",
       "upstream": "fmz200"
@@ -7630,6 +7865,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id539190656",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "b35ce55d7b26e6dc65e2fa824c32b216fba6fad1e8285c504afaf90d06fb17d7",
       "upstream": "fmz200"
@@ -7643,6 +7879,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/luestr/IconResource/blob/main/App_icon/1024px/%E5%BC%80%E6%BA%90%E4%B8%AD%E5%9B%BD.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "1e086e4b34b4ec129956ca6b9daadef40a7a39aba640277c2d23aa7fd992f019",
       "upstream": "fmz200"
@@ -7656,6 +7893,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.shanghaionstar",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "f15713aa04a518d88b2e558915cf13e3f429515fe6e22418be481f41746f2646",
       "upstream": "fmz200"
@@ -7681,6 +7919,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/OraySunlogin.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "c0ca9a2e09149c99e73be2334f626e0cbc1ffd48ad863388a7e17d614991ccee",
       "upstream": "fmz200"
@@ -7713,6 +7952,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.CommercialPress.OxfordDictionary.android",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "e64316a00558084280a5cd41f1769cdb46a9711aa7d1baff9a39c74f29ddebc1",
       "upstream": "fmz200"
@@ -7726,6 +7966,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/cn.com.pconline.android.browser",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "e2d10f191393e8715df3868c5c2d877b69f83b6e0f2695180960ff5814754996",
       "upstream": "fmz200"
@@ -7739,6 +7980,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/cn.com.pconline.android.browser",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "02513ecbfcd1a2bd922266422da584798fad9f59b69843ae6073038ad0a8e146",
       "upstream": "fmz200"
@@ -7783,6 +8025,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/bank/PSBC.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "b355b0b356978d125bd7b2fcc1cdda2e9ef9a8d7a7eeee2ccf3e986cded5c35b",
       "upstream": "fmz200"
@@ -7809,6 +8052,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id625077646",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "2f3197119a89dc9db183b45262fd8108790d10132fc3dd4c22fe6675ce771746",
       "upstream": "fmz200"
@@ -7841,6 +8085,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/cn.xiaochuankeji.zuiyouLite",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "55ca6b0488c36b697ea3250dd339ced4fe249d04f392815ea36d6e64d458b4ce",
       "upstream": "fmz200"
@@ -7867,6 +8112,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.uroad.piaogen",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "501d435c85ed70584294e69a1bcd6fb47116ae42072a9f41de08b9cfc311138f",
       "upstream": "fmz200"
@@ -7880,6 +8126,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.piaoyou.piaoxingqiu",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "c19b92af4e46ced7b4bc6896a1ae4d3a0a428510bfcdf3b8750aae60314bf539",
       "upstream": "fmz200"
@@ -7911,6 +8158,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id796339836",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "9f8145e09cb647c7b76b61fda42df5d5dd08629eefbd8b7ba9e2258dc2a4ed62",
       "upstream": "fmz200"
@@ -7924,6 +8172,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/luestr/IconResource/blob/main/App_icon/1024px/%E5%B9%B3%E5%AE%89%E5%8F%A3%E8%A2%8B%E9%93%B6%E8%A1%8C.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "d897552a06ac29231158abc2a51c158f01a19b3b7026a87756c535c5fced4a10",
       "upstream": "fmz200"
@@ -7937,6 +8186,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id636344719",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "5997300431f82ede58324de2f8aa81c70e2b7c8f8c6c037012379bcd2a03834d",
       "upstream": "fmz200"
@@ -7950,6 +8200,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.paic.zhifu.wallet.activity",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "daf9b4a94a87fa1747796ad4cfde8042a0b6b0525c63cb24ecd7b7022d8b9c73",
       "upstream": "fmz200"
@@ -7975,6 +8226,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.yumc.phsuperapp",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "dbf4842a43016f5fa4eefc5a4aa87997f9828a901b777d2a96cd5a2e4e30518c",
       "upstream": "fmz200"
@@ -8001,6 +8253,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id974428942",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "45150845226b4628eae822073ae641bb3874b214ccf6c0db57e405bd2039ab3c",
       "upstream": "fmz200"
@@ -8033,6 +8286,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.tencent.mtt",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "5a52778b3c909dec403023cab62fabd56ee03a5fcf6559da030a6abe88c8006e",
       "upstream": "fmz200"
@@ -8070,6 +8324,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/QQMusic.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "22d9ae859892ace66b99b3f5e5f5f214db60f9657adc5158e1a15dbaf7297d3f",
       "upstream": "fmz200"
@@ -8083,6 +8338,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/QQ.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "0dd8a98dc6cd9ca435c21da7a3ec44ce37a892971b78380e79c6e4d2f2f6c554",
       "upstream": "fmz200"
@@ -8147,6 +8403,7 @@
       ],
       "coverage": "body-or-script",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Food.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "ae026ff62b753ab181ff0502e33085afe504793b94b1a83618d3cbbacf77b527",
       "upstream": "fmz200"
@@ -8173,6 +8430,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id563467866",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "94bc24bc2efecee2c0205af92539baad13c89bfd8df9661a43ce5d86db1aba23",
       "upstream": "fmz200"
@@ -8186,6 +8444,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Sports.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "bb77bc107c35a395a242103861942e6d7a999c6bb53e624a60e4825cce1b1edd",
       "upstream": "fmz200"
@@ -8212,6 +8471,7 @@
       ],
       "coverage": "body-or-script",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.yd.circle",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "582e37fee4a9c858937d4ea782acd665337e9a92bb1982c62bf9f35512369034",
       "upstream": "fmz200"
@@ -8225,6 +8485,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id415854096",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "f1cc02ed8de05dcbbb8b0c5f8462ce9ccbc2151a43ef1da3968dff26a9481842",
       "upstream": "fmz200"
@@ -8238,6 +8499,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Globe.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "834bfe0ed8d8b18ff1993d14031a35a796e7884c8f2ec89041e1ad67817eee22",
       "upstream": "fmz200"
@@ -8296,6 +8558,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id395096736",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "34e66b8f84d15edf39ce71a7c93c1958b64ccbbbc90389789c2b89ca1ebe6b76",
       "upstream": "fmz200"
@@ -8308,6 +8571,7 @@
       ],
       "coverage": "body-or-script",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Popcorn.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "d9c67864cfe1faaa4a66b3b9d97e114a24f6ab7ef7c7d66344af3b562d0c981b",
       "upstream": "fmz200"
@@ -8398,6 +8662,7 @@
       ],
       "coverage": "body-or-script",
       "format": "surge",
+      "icon_source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/EveryoneVideo.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "4f8dd5338e29b284abd8295051b376d95a365562e188bd44e3f24a02fee24868",
       "upstream": "fmz200"
@@ -8411,6 +8676,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Food.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "f3d4be53af80fc579d5fe691c202776af5eceee2967bfda8fc4d0633738d70c1",
       "upstream": "fmz200"
@@ -8424,6 +8690,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.rym.door",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "edf954f33ce2b38f808e2dc51977d6a2e98ca8faee0f4b3595ded37fb27e6737",
       "upstream": "fmz200"
@@ -8494,6 +8761,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Shopping.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "01ab7c2b9873e73bd85cecbaa3eb9686d23a17033dccb6d92f41a35162960b55",
       "upstream": "fmz200"
@@ -8507,6 +8775,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/SF-Express.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "1f07717aeff66027024599d1c060ef1dc685acc69116fe6fd1813187f88765f8",
       "upstream": "fmz200"
@@ -8520,6 +8789,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/luestr/IconResource/blob/main/App_icon/1024px/%E6%B5%A6%E5%8F%91%E9%93%B6%E8%A1%8C.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "dfda676777e0167c706df38bcb61585eb3d56af2832142c216e7df9677aadc3d",
       "upstream": "fmz200"
@@ -8546,6 +8816,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id818237113",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "b5cc82cd62af0e2bf3ce71ceac6ea6a34ef6de12b878f38258ea6196b227be2e",
       "upstream": "fmz200"
@@ -8559,6 +8830,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id509436231",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "b327525a1290fe9ace2ba09501bce9154a7d7e5bf3923205612a1eb6191f446a",
       "upstream": "fmz200"
@@ -8597,6 +8869,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.tencent.pcgame.seexiwobaiban5",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "2c6727bc45ece78b0463bd0db22b5ec224109699642b494080ba3b250eef13ea",
       "upstream": "fmz200"
@@ -8629,6 +8902,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.tencent.gamecommunity",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "3b965f3f2a1f364c7d3f47db47f3fbf2562abadf645bdc529688ebdc51d6c7cd",
       "upstream": "fmz200"
@@ -8661,6 +8935,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/luestr/IconResource/blob/main/App_icon/1024px/%E5%B0%91%E6%95%B0%E6%B4%BE.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "aa9c698c5496e9c7b41adeb1ebeb95f5d32fd88a0702a2e5a316fedd2facc212",
       "upstream": "fmz200"
@@ -8674,6 +8949,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Globe.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "653fdf8f08c48566501b909c69a64930179ddea419edea167f8febc684f59d90",
       "upstream": "fmz200"
@@ -8687,6 +8963,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.szzc",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "f21d4fb09fb2c73220f4d01fa0e659f5ce3f99045eeae028f78e0484bbf4cc1d",
       "upstream": "fmz200"
@@ -8700,6 +8977,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/Koolson/Qure/blob/master/IconSet/Color/Game.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "a447620a960378f0a2b515b085d26e039c12b3b4d9eb362b7b1d70b5d4f15bb5",
       "upstream": "fmz200"
@@ -8713,6 +8991,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.huitouche.android.app",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "c6ad39e0a48178c89c9113c480c57f1542e2c56d98f754cf46d51f22ae939e96",
       "upstream": "fmz200"
@@ -8726,6 +9005,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.szt.pay",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "f2c9497685647b3239c431377e36931fac8f513d687519b20959dd89a866cfe8",
       "upstream": "fmz200"
@@ -8739,6 +9019,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id875177200",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "00456018c1448d9d4ee7b939ec45b49d722b6f3fa998529774c882478d8bbfb1",
       "upstream": "fmz200"
@@ -8765,6 +9046,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id997586276",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "0583026f7764bf44f596c7bc689a189717f8db6e3041244b320629cac09c81f9",
       "upstream": "fmz200"
@@ -8823,6 +9105,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Popcorn.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "93909869ae0c0932b49cfd629c8cea2a32331f2939685ba54602e027bc832738",
       "upstream": "fmz200"
@@ -8836,6 +9119,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/luestr/IconResource/blob/main/App_icon/1024px/%E6%96%B0%E6%B5%AA.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "ee051f71af47aee018414b4d15e2123755004017b1b50f3f56afa96dbe7e92ad",
       "upstream": "fmz200"
@@ -8893,6 +9177,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/SnailSleep.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "bb2fa165faeb184250df928cb84a61c88c0f08b431ae806c405ba1527cd248bb",
       "upstream": "fmz200"
@@ -8973,6 +9258,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/luestr/IconResource/blob/main/App_icon/1024px/%E6%90%9C%E7%8B%97.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "3da1fc18fa1a1544019b31119f259f4278150166a11c4491e7b20a8e69ccafd2",
       "upstream": "fmz200"
@@ -8986,6 +9272,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/luestr/IconResource/blob/main/App_icon/1024px/%E6%90%9C%E7%8B%90%E7%BD%91.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "71d1c7fa09d3d301984f2ee20e3356d8e4ec06e085fcc675cef83101ff152964",
       "upstream": "fmz200"
@@ -8999,6 +9286,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/lightning.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "82752dcda202e4bc2e6413b1b056409d5ab40aab8755efe247b375683df7877d",
       "upstream": "fmz200"
@@ -9295,6 +9583,7 @@
       },
       "coverage": "general",
       "format": "quantumult",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/AdGuard.png",
       "reason": "full general coverage by default; exclude_apps disables rules for the app modules the user enables",
       "source_sha256": "9a3443554fe38d94c1b65d648c89f408c87574c674d4a7f4550c758d5d75639b",
       "upstream": "ddgksf2013"
@@ -9308,6 +9597,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Navigation.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "e7d933e2802fc7c6c3052c300cbae9cc02fac9c978f4a02bfbe51c08938a7711",
       "upstream": "fmz200"
@@ -9321,6 +9611,7 @@
       ],
       "coverage": "body-or-script",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Lifestyle.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "acad1425af88a0b5794f1f70da8d991e2baef0617334414385a876b2d10b15d3",
       "upstream": "fmz200"
@@ -9334,6 +9625,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.bwton.szfreego",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "546d122e400301ac07f88a56971f5e9d221cf82ff1c7d45e8c75d7980cad889c",
       "upstream": "fmz200"
@@ -9360,6 +9652,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id1517550837",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "fee3dbc2ea24ec26b5f0dd2469d299b79cbd310f843a11a8d6fc03ce30a2e6fc",
       "upstream": "fmz200"
@@ -9385,6 +9678,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id424598114",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "ad807eda5f60acb2ff8b26e0aa5ba1cc5e5d6c3408eca5102ac68c37167a61bd",
       "upstream": "fmz200"
@@ -9411,6 +9705,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.yiyou.ga",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "237e2acd674e56eb45ae282eafa8d272561b270f5a01fd5b2fb063fedfca2f0f",
       "upstream": "fmz200"
@@ -9450,6 +9745,7 @@
       ],
       "coverage": "body-or-script",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Navigation.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "9a07ebd4f15383c11be2587232a3f058c1aa1036776bece4ec222e2f17b76139",
       "upstream": "fmz200"
@@ -9462,6 +9758,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/Talkatone.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "18b618ac7455b4863c2b8c6a5e00475999c0ef35606a32e1f103215963e9277a",
       "upstream": "fmz200"
@@ -9475,6 +9772,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Book.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "088aedfe47ea5965a1721a97945f1b6ce47823e85a69e2434fccd2dfded46135",
       "upstream": "fmz200"
@@ -9540,6 +9838,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/TapTap.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "8d6e346fb92f34fbf8bc309cf9356316be90e1b074a1fede56a366a36eb4db1f",
       "upstream": "fmz200"
@@ -9579,6 +9878,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/tencent.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "0ba93a5c22c90a4d92db1eb146e46b8f9b572d61255ed2e33d74166b64a1cdfa",
       "upstream": "fmz200"
@@ -9592,6 +9892,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.tencent.gamecommunity",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "550ece150a12c2d7382d655500bdfc085d0bb0a1fddac0b0a51c19979f1d81af",
       "upstream": "fmz200"
@@ -9605,6 +9906,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id481623196",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "31a5eae3ce523cc8f0e7db14bbee85f3fd26c3cafe11e9843dbc08f4e7869a8a",
       "upstream": "fmz200"
@@ -9618,6 +9920,7 @@
       ],
       "coverage": "body-or-script",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id399363156",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "ab9d4a31f50536b30c297d9bd0b41e615cb65ebd4402ad818baf3b5a270122a0",
       "upstream": "fmz200"
@@ -9631,6 +9934,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Navigation.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "eda8f9f81af94928e9f8bda81c52cf7d235128d78e19461d1af3693bb86c3d4e",
       "upstream": "fmz200"
@@ -9644,6 +9948,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/TencentSport.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "8bd896e4f071c949161341bf8e0895ae5afc3fbad88a2f6a0171b3dc455b130a",
       "upstream": "fmz200"
@@ -9695,6 +10000,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Travel.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "3729f0fdaafd7a67895fddbe1977ff9a0b9906afb4e202488989ee75d303a6c5",
       "upstream": "fmz200"
@@ -9708,6 +10014,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id878962716",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "788020f8bd3ca22bc4245b6a9c5afff4f23d5e328ab9b837aa8c12554176f3c3",
       "upstream": "fmz200"
@@ -9721,6 +10028,7 @@
       ],
       "coverage": "body-or-script",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id1109333848",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "928e7b10bf2b7253dc2d669eb1bc7bc46f6395612c1bec90af811fa55520c1d2",
       "upstream": "fmz200"
@@ -9734,6 +10042,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id1109333848",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "c744cec73832abe356be3b3348206710e9c410e410a582c6c670d617b7a78d43",
       "upstream": "fmz200"
@@ -9747,6 +10056,7 @@
       ],
       "coverage": "body-or-script",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.tfsmy.apps.android.tfsmy",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "c70d1e9cf6af5eb6ae918e803a33bc59b51530675def93a379384cd2ce9a3846",
       "upstream": "fmz200"
@@ -9760,6 +10070,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id1358566958",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "7e86b4846f0d640c005de562a0090c06390062ad17de663f8314f4bbcf3de93a",
       "upstream": "fmz200"
@@ -9786,6 +10097,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Popcorn.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "a82fc9308356aaa4ef2cc9ddbec6800adcc8b58a8734c53e3205b2e3965a1158",
       "upstream": "fmz200"
@@ -9799,6 +10111,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.eastmoney.android.fund",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "f9d31563fbff5b6b571ba6973c13a301f6cedb3c96d396813891e861e0eb0658",
       "upstream": "fmz200"
@@ -9812,6 +10125,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Pig.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "bdec8031eb880335ad24f053f75921b7aaa32e9162e283726c7eac539559bcf9",
       "upstream": "fmz200"
@@ -9825,6 +10139,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.cn21.ecloud",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "9de631f80e09785d92d1562467f6711eaffd5742b104ce4134f32b06a33a39a9",
       "upstream": "fmz200"
@@ -9861,6 +10176,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.ncarzone.tmyc",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "7141e668acc4022ac261d29d51919ca35893c160f6d80f02da6a640019d0ae4d",
       "upstream": "fmz200"
@@ -9887,6 +10203,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.alibaba.ailabs.tg",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "e88533dd5710689fcf7dabfb7b23296b82cfc027d5d1fe966c010e975e8bf81d",
       "upstream": "fmz200"
@@ -9900,6 +10217,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id475966832",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "0be89e7cbbe11e0bcb3740810cf9cb4728aa61ec9d9ffa00f94a94fd2bbf7fe0",
       "upstream": "fmz200"
@@ -9912,6 +10230,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/us/app/id1586018825",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "4e34437e45d874c0cad89975521edc8554b2804adb6d82e04826137e16dde92a",
       "upstream": "fmz200"
@@ -9955,6 +10274,7 @@
       ],
       "coverage": "body-or-script",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Tuhu.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "0b96024441afa7e128e0c94a4b5e271060124e8a16ca80148006adb2749bbf3f",
       "upstream": "fmz200"
@@ -9968,6 +10288,7 @@
       ],
       "coverage": "body-or-script",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id582934943",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "e3d5dd672f7aa8a9341acd348b4b353baa29d02be2c234f008d0cab59a1b2b0b",
       "upstream": "fmz200"
@@ -9993,6 +10314,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.tuniu.app.ui",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "d21398a527ccacdb3519e797b6af03ce17956696d7eb4ac02098e660a079de15",
       "upstream": "fmz200"
@@ -10006,6 +10328,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.midea.vm.washer",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "ae076e45968c9eff26b2748f101b1719e7cb8d21a3c3f3cb6c797665d0edc24c",
       "upstream": "fmz200"
@@ -10089,6 +10412,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/luestr/IconResource/blob/main/App_icon/1024px/%E9%A3%9E%E5%B8%B8%E5%87%86.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "cb55fc18b12bdb515bc3b1b4b0104adbc4c1e4c62417adf83dc52ccb02a67f4b",
       "upstream": "fmz200"
@@ -10120,6 +10444,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id417200582",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "809dbf7053240920573b859f1922b91815028fdc62913d9058431eaac4357092",
       "upstream": "fmz200"
@@ -10133,6 +10458,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.vistastory.news",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "bfd70fdef68f9f5dc52c6eccb66b0bdfba1248970a5caa1ed1d87fee2bf63250",
       "upstream": "fmz200"
@@ -10165,6 +10491,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.snda.wifilocating",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "09060467ea9a91c59af7d81fc4816f6394cd13c060b8e797973094c8f0c52b5e",
       "upstream": "fmz200"
@@ -10196,6 +10523,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/WPS.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "881ef7488ed4ab5e2a08e90f78610092c1bdb9f5f7cb9f7215658553c473c738",
       "upstream": "fmz200"
@@ -10300,6 +10628,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id1464643633",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "3a18bf4ed1c2c127cdafa0ac3eef1892cc3f877650fde148a34184222752c18d",
       "upstream": "fmz200"
@@ -10313,6 +10642,7 @@
       ],
       "coverage": "body-or-script",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.wandafilm.app",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "100cf29ec01804db55c514f0226fee186c53993a18453cc96f695dfb7caa62ee",
       "upstream": "fmz200"
@@ -10326,6 +10656,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id1438998315",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "b0a2cecf3ba147b63662ff104c51ed074d1d4693856d218d9458e4abcb0c129b",
       "upstream": "fmz200"
@@ -10378,6 +10709,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Networking.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "e837846ca6e4881fd1b52ec26d03fd9dff2dce0f84996eeb9bb6c9049b3d84ec",
       "upstream": "fmz200"
@@ -10427,6 +10759,7 @@
       ],
       "coverage": "body-or-script",
       "format": "surge",
+      "icon_source": "https://github.com/luestr/IconResource/blob/main/App_icon/1024px/%E5%BE%AE%E4%BF%A1.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "6c02ea57ab21760e7f744de6ade7caf8e8c92d26c48e40740157a0200154a54d",
       "upstream": "fmz200"
@@ -10470,6 +10803,7 @@
       ],
       "coverage": "body-or-script",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Magazine.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "a78153b02059614836b290d98dadd97e64c07688aa30f205a668ee61ca6480c9",
       "upstream": "fmz200"
@@ -10483,6 +10817,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id1459840448",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "ee4a54cf59003525ace65c44159b52182948e84030d3358acf200873691f916a",
       "upstream": "fmz200"
@@ -10496,6 +10831,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.shsuoqingning.control",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "186136512556d59a3210544c355d7d68ba59f93bdb81414e67490def6791a773",
       "upstream": "fmz200"
@@ -10540,6 +10876,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.hustzp.com.xichuangzhu",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "7a38672cf4c8167dafc509d898985edfde2bdab07f1881a37c092eb4abd11e55",
       "upstream": "fmz200"
@@ -10553,6 +10890,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Popcorn.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "9467d2879915fb2834410b76154edc4a894166fa8944c370e5c996fa8cbcbc95",
       "upstream": "fmz200"
@@ -10566,6 +10904,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.zjonline.zhuji",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "2ad6baf204adb4d68aa28643acc31c97db780c5f495dd2d58aeff3bb397a0061",
       "upstream": "fmz200"
@@ -10597,6 +10936,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.ecommerce.xmnair",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "7193cae07ebdf30f51f5308204b7b31a053233daf48d98e229fad23910a64796",
       "upstream": "fmz200"
@@ -10610,6 +10950,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Music.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "ba4119d77b38b68e539745c51e202cbb9552d491f7001fec9a99b5b4541a76e5",
       "upstream": "fmz200"
@@ -10623,6 +10964,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/XiaobaiPrint.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "bc3208df568ae2f6cf6e339ba176c5ac67ff936bf226eec54c16e3be100e6ad2",
       "upstream": "fmz200"
@@ -10636,6 +10978,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Lifestyle.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "28dd1961806fe7b812cfb69b5f8128266476db0bf0ed8e15364f64501833c752",
       "upstream": "fmz200"
@@ -10668,6 +11011,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/lightning.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "5e640595c05b5ae62ecadfa93bc9204eb75878d01491d8697200f5a4cff3c17f",
       "upstream": "fmz200"
@@ -10681,6 +11025,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Pig.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "e6319aa25459978ac1ea882a08711c582f1ae877fcbc1abb188a1aeb89e59af8",
       "upstream": "fmz200"
@@ -10707,6 +11052,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id1670782986",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "a4b5799eff47bb5bf9f7f8155a0a2b812145d0363695ce0d2cb41a68eae1721d",
       "upstream": "fmz200"
@@ -10720,6 +11066,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id1503642371",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "a0cd18e6b8208ce81f2d7dabf6e1256baabdcd2d0e2aaf9bc5ed702fef481784",
       "upstream": "fmz200"
@@ -10733,6 +11080,7 @@
       ],
       "coverage": "body-or-script",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id1540247980",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "e663e68b1940b7d8af8db4f8857217b5a72d79480085631d5f6369fbe99f58be",
       "upstream": "fmz200"
@@ -10746,6 +11094,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.niu.cloud",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "ccbd17acb968d408af0f86e8af9a1a42041c3a55954007e06f5275b72baafbce",
       "upstream": "fmz200"
@@ -10759,6 +11108,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.petkit.android",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "209775f7d3e9d980f0dac5ac83449688f07720961b1a6529e49eaa0d64a8e27b",
       "upstream": "fmz200"
@@ -10772,6 +11122,7 @@
       ],
       "coverage": "body-or-script",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id1598312530",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "a282381c71be60b98af3c7cf44d11fb1c40853085d8f43e7df8ca7a5f0307e36",
       "upstream": "fmz200"
@@ -10785,6 +11136,7 @@
       ],
       "coverage": "body-or-script",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.xiaote",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "7608dc7a4f5c658ab64ce193b314eafb292e3102817503ac76267d4254042580",
       "upstream": "fmz200"
@@ -10798,6 +11150,7 @@
       ],
       "coverage": "body-or-script",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/lightning.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "1d99579cedacf2d40c442f95e209a501db5b5adf7bcd9f19a786470c2220ad6c",
       "upstream": "fmz200"
@@ -10811,6 +11164,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/moc.nauxuoyoaixoaix.www",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "9c238debb5a7e1331f69c2e9f63c1471e0bbe775b14b2ce299e102b0ea174dbe",
       "upstream": "fmz200"
@@ -10824,6 +11178,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Research.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "e2f5aa086b80d8b77f078a35e0f14b14225b3c526f3f73670d3ba7392654c672",
       "upstream": "fmz200"
@@ -10837,6 +11192,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id6692612586",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "2fe6f31d52a16dafaaef6297360b9a42b4f5c167f14535c39416e458d1ae0e09",
       "upstream": "fmz200"
@@ -10850,6 +11206,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id931168730",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "628f7577c255530132a81922d37e0a6e9fba99f2f8fd97acd7eeac169def6314",
       "upstream": "fmz200"
@@ -10889,6 +11246,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Pig.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "7287790dfab8041272113fea092deb100396452d24b18f20e15a600e03cc226b",
       "upstream": "fmz200"
@@ -10902,6 +11260,7 @@
       ],
       "coverage": "body-or-script",
       "format": "surge",
+      "icon_source": "https://github.com/luestr/IconResource/blob/main/App_icon/1024px/%E5%B0%8F%E7%B1%B3.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "88761d248a72d576b27a76242eb3846c4ad5ec315589b2616bbcf44f8c42d720",
       "upstream": "fmz200"
@@ -10915,6 +11274,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.mi.print",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "cea46c3ac18c277c21de9671a8f4493c09e81e368894f715292ad2ca7e1462ab",
       "upstream": "fmz200"
@@ -10946,6 +11306,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id938688461",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "3e5cd23ad34832058e4d210bbca2aa31ce13bf3ff99bac4ae138c59710b70b53",
       "upstream": "fmz200"
@@ -10959,6 +11320,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id1212182562",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "f1f9323cfe496f91b7e1e496fd24da01a47bc08ec5e628966c8c3c046e78825d",
       "upstream": "fmz200"
@@ -10972,6 +11334,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id1383153382",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "b84919ab880dde2a75b48146f7779871a45bd7bfa77031bc12e4e324d7655899",
       "upstream": "fmz200"
@@ -10985,6 +11348,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.tencent.tgclub",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "eafcace68d51ec78f74b94830f1ec4438d8dc2237ef39e0c8bea80d6c6abcd4e",
       "upstream": "fmz200"
@@ -10998,6 +11362,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Pig.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "ba8719e702a6f478b531fedc27d6d75a63001cf7c4c63bce676875a21d872600",
       "upstream": "fmz200"
@@ -11011,6 +11376,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/tuoyan.com.xinghuo_daying",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "ee2c64087c1567c4c3a20b099d48db6e114af50a645b429f5781f00db6e3b2f1",
       "upstream": "fmz200"
@@ -11024,6 +11390,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id645811920",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "79376dfc6aa9efd703fab3fa0eb23033fc85913d8828af79617904c83471b550",
       "upstream": "fmz200"
@@ -11037,6 +11404,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Popcorn.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "80b931ba1c049b87d6ab8cefda9e0db9b9c75a00e3664311afc5d6a3be3755f4",
       "upstream": "fmz200"
@@ -11069,6 +11437,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/luestr/IconResource/blob/main/App_icon/1024px/%E8%BF%85%E6%B8%B8%E6%89%8B%E6%B8%B8%E5%8A%A0%E9%80%9F%E5%99%A8.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "c71c0c330b1e12991470eb97f0739a57b80b953d47371de5fc8f1de86197d135",
       "upstream": "fmz200"
@@ -11108,6 +11477,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Popcorn.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "42d777754469ac5b506c99e6bcc7bf80fc5376f462140c43dcd425e1d9e52157",
       "upstream": "fmz200"
@@ -11120,6 +11490,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Globe.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "46c7117790c23b665d30681ee58c3ff50f370e799ac006cbd43be2a3bd78f6b3",
       "upstream": "fmz200"
@@ -11133,6 +11504,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.ashermed.sino",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "541581cd3ba5169db0ba7a699d6e53da858129969af4ca40f830ff87b0d2efb3",
       "upstream": "fmz200"
@@ -11146,6 +11518,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.thestore.main",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "92a2739bedd94dbb94e8eeba78694bc19c4e7118fdc4ca318aaf2b4142e89acc",
       "upstream": "fmz200"
@@ -11159,6 +11532,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id806114204",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "a134018f4ec1708613b8d76fc0cdd3714e0fb1f7e04e81010cdd9535651088c7",
       "upstream": "fmz200"
@@ -11190,6 +11564,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.tsingzone.questionbank",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "8a3118576f856126f898b47264b57ebdfe4cda9677d71c52a6b1c5ea04ede949",
       "upstream": "fmz200"
@@ -11222,6 +11597,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id451400917",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "76e0f68435e25432b1ac1a9825493ce94f90ba50eb7d167d25d1a91b2b8bb9d1",
       "upstream": "fmz200"
@@ -11235,6 +11611,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.chinatelecom.bestpayclient",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "0a89223145b0d806df794f088149e3a14668a633b8a3734cf2058fbce9db3f86",
       "upstream": "fmz200"
@@ -11248,6 +11625,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id384399758",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "98dec85c714fa3730b8f791e834aa658706ae3fe9e37907f37cdcf45a03d63d2",
       "upstream": "fmz200"
@@ -11261,6 +11639,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.ysepay.mobileportal.activity",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "11c7627d5ef61064ca574d656e2c97e5befa748cc21e48904155cbdb3fad65f7",
       "upstream": "fmz200"
@@ -11274,6 +11653,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.ysepay.merchant",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "d69257b939ce235d234d870e014fc7bc1558d1ce34906c3068a538aeeac1644a",
       "upstream": "fmz200"
@@ -11287,6 +11667,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Pig.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "03b95e48999d06b0394c104c11539d062e0e0d13029f29064b748def2ab06866",
       "upstream": "fmz200"
@@ -11300,6 +11681,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Pig.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "ebb949d39acb58e04d0e3e9c5c631b5a771305bf02ad78c19230b42e04e09eb0",
       "upstream": "fmz200"
@@ -11326,6 +11708,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.ibike.publicbicycle.activity",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "7897cb34d8e0151d4db0ffbe9cf96be8bae0ff38d77b5cb482d631c837823fdf",
       "upstream": "fmz200"
@@ -11339,6 +11722,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/cn.yonghui.hyd",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "b09e3694f11dab768620c253e210e2416f7e4e0aff3f36dc7ca6d7abffbab604",
       "upstream": "fmz200"
@@ -11370,6 +11754,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id1195496596",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "278573ec5f273932dba98a8e7475684a450da335515f34300230d599fc545bc6",
       "upstream": "fmz200"
@@ -11383,6 +11768,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Book.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "2fcb0235b13e00c78db47d06b931555a70e1c5af68189cd66ca0e3c2fe523067",
       "upstream": "fmz200"
@@ -11396,6 +11782,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Book.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "6785d731f64bee40b8596efe421cde7012a92d2761ce83c3d74484fa670c416f",
       "upstream": "fmz200"
@@ -11430,6 +11817,7 @@
       ],
       "coverage": "body-or-script",
       "format": "surge",
+      "icon_source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/YouTube.png",
       "reason": "ddgksf2013 recommends Maasea's native Surge YouTube module",
       "source_sha256": "9c7464733c54417da36aff09482d1287cee5ecd531ad856842912704b5b3f64d",
       "upstream": "Maasea / ddgksf2013"
@@ -11443,6 +11831,7 @@
       ],
       "coverage": "body-or-script",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.zhishan.washer",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "1fd4fd658310ef4718f2ecc1cc867dfc5d3e81c5bad9c911d80ef08683b9c7b1",
       "upstream": "fmz200"
@@ -11501,6 +11890,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.drcuiyutao.babyhealth",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "d64c865e23f1627b6a579af0ac512d314f6511d0e9626cddc62fc9aa12a2d879",
       "upstream": "fmz200"
@@ -11514,6 +11904,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id974568444",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "a259df3e91fee128dd16043f55b8e57ff89587201010866bc761dc0d196bdb2a",
       "upstream": "fmz200"
@@ -11553,6 +11944,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Globe.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "c062294d445967c23dfce49c37ad389dede4841c6b9e5c141148a9b6bbeda384",
       "upstream": "fmz200"
@@ -11566,6 +11958,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id1064300704",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "ccfe31f5d0f0303e3c6a105e91e7c45f00b885595c47e6997e3ad1db753e966e",
       "upstream": "fmz200"
@@ -11579,6 +11972,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/YunmaiScale.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "9b2647d792748b5e7995fba3ef5e1fdb17541d71891faa1f50247ff0bb23156d",
       "upstream": "fmz200"
@@ -11617,6 +12011,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/luestr/IconResource/blob/main/App_icon/1024px/%E4%B8%AD%E5%85%B3%E6%9D%91%E5%9C%A8%E7%BA%BF.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "81e12129fd9182649b7073deeced12375be91c15798ced61bfb851da1304ac4d",
       "upstream": "fmz200"
@@ -11630,6 +12025,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id379594830",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "16832acd0e52dd51b6e066f1c9530c955dd6dad97ece820dc4879fc7349bb98b",
       "upstream": "fmz200"
@@ -11643,6 +12039,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.tencent.djcity",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "1260dcdb3baf62f8a08325f6d69acad8e31a4835d8113836606c4fc8137a45e8",
       "upstream": "fmz200"
@@ -11656,6 +12053,7 @@
       ],
       "coverage": "body-or-script",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id461317017",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "88f07b74ffc94e60f3f31308e51bac311b08b34e547afd141b1f7c100de28546",
       "upstream": "fmz200"
@@ -11669,6 +12067,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id1048525810",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "29c7bb64d89912af6d13bbc43d6b83b1a4236c15c5964930fb5272859babe2e9",
       "upstream": "fmz200"
@@ -11682,6 +12081,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.zjonline.lucheng",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "ca1aa10d9bb4bc04c97f401352ef068338336655aa403656992ce9fef191ea7b",
       "upstream": "fmz200"
@@ -11695,6 +12095,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id398453262",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "88be93e0a4c987cf4bb0d8404e4ce0264c3e9a9904a2b67d01b3e78335a9dd0e",
       "upstream": "fmz200"
@@ -11708,6 +12109,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Briefcase.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "14a3a440b713d2b640641130b554ec45343719136328533c370fe293834a9d3a",
       "upstream": "fmz200"
@@ -11721,6 +12123,7 @@
       ],
       "coverage": "body-or-script",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.hanweb.android.zhejiang.activity",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "b3dfff9bc7fa37b6f22474234389a3c163ac260f995746837f7bb5d93363b9d7",
       "upstream": "fmz200"
@@ -11734,6 +12137,7 @@
       ],
       "coverage": "body-or-script",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.hanweb.izhengzhou.android",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "5d82ed4972bea2d0b4f9fe4bf87edb66b7d1126511cbcb036831f4f31f7daee2",
       "upstream": "fmz200"
@@ -11747,6 +12151,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.zhengnengliang.precepts",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "8788242c91b4338b8d82a341cc191290a245090fb594bb3b251bd7858d46441a",
       "upstream": "fmz200"
@@ -11760,6 +12165,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Briefcase.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "7dcd463b30f4461054cd66648cfd7bf6f2addf236dfacae221c3f9f861dc2a16",
       "upstream": "fmz200"
@@ -11773,6 +12179,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.cdsg.zgph",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "c88f78159e36b54cb1e55e5f618eed970b94786aa93cd684cfe3a09e6e22c0e8",
       "upstream": "fmz200"
@@ -11799,6 +12206,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/ZhixingHC.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "fc2fb51c31f155ff2e961d31d0b330c772c59c0cf240e45663d8471004a02ffc",
       "upstream": "fmz200"
@@ -11843,6 +12251,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id1267221318",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "f6ad55f21de52aa800bd0fda5bb215b6c946d8bcc6674f574ddf2a3849e19724",
       "upstream": "fmz200"
@@ -11856,6 +12265,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/cn.beekee.zhongtong",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "6c6c383f4135029aaef954c3ad98b222552f8396a4d55d58453be81f8ef387a0",
       "upstream": "fmz200"
@@ -11869,6 +12279,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.sunboxsoft.charge.institute",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "3e631d1f00962b10fbb7325c0ca758900ddb04fd4b973956e3679080f6f1fd5a",
       "upstream": "fmz200"
@@ -11882,6 +12293,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/lightning.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "897c25884e802c25af06cb3bb6df4b248cc1a5fe9e4723a3446011afd9df8c2b",
       "upstream": "fmz200"
@@ -11895,6 +12307,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.badmintoncn.bbs",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "94d0f07f07826831b1bff8af75e4ab7569f546ec20fef06080039839e680e7f3",
       "upstream": "fmz200"
@@ -11908,6 +12321,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.zhubajie.client",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "7172edf58bae23a9b3989cb0176ad3484e88515020e1b36c64c1e4dcbdbf8412",
       "upstream": "fmz200"
@@ -11921,6 +12335,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.vanke.activity",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "88bb9d696a0133a7bae3ebd96d4a3c30f3866fd986b86c514c3684ba2e9bf0a0",
       "upstream": "fmz200"
@@ -11952,6 +12367,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Popcorn.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "7c6b78f8e58cc73ab2474d463fdd9906fb29e93b6ef1a7da5d99964a76d9c74d",
       "upstream": "fmz200"
@@ -11965,6 +12381,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id575826903",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "6f7da27ba5efdf8c27749da0cc9030750cfbdc5771f6779ea921e5be536083d0",
       "upstream": "fmz200"
@@ -11978,6 +12395,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.ziroom.ziroomcustomer",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "06b058efde5743ef05a1d55576bdb6561708ee4fe0223b9323224dedad1942d0",
       "upstream": "fmz200"
@@ -12022,6 +12440,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id803781859",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "9ea6b718ad81314573b7ebc6b8e2f3f13d7f753684d5ac78d8c64e6885aee03c",
       "upstream": "fmz200"
@@ -12034,6 +12453,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Popcorn.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "dcc4ba006ae6c45049536badd50011a0b171b07580844717557fe7a28296f168",
       "upstream": "fmz200"
@@ -12046,6 +12466,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/net.csdn.csdnplus",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "84a22a23b8a2bf6809604ef44f49707a4898ac178d512bfd0281b6866a472723",
       "upstream": "fmz200"
@@ -12059,6 +12480,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/cn.edaijia.android.client",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "f458b610e5583dc91d5ddc9b618ea627e448cd322d3e1f3179ed755486970fd4",
       "upstream": "fmz200"
@@ -12071,6 +12493,7 @@
       ],
       "coverage": "body-or-script",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Globe.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "aa2430f678b2131491914d03514b78b16817ae1d9ad7fcbd4500c4ab015011f6",
       "upstream": "fmz200"
@@ -12084,6 +12507,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id303191318",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "147e510de877783d392e6bafedcdca4a8e15feece4251eb7b001815c4ac5d9e6",
       "upstream": "fmz200"
@@ -12097,6 +12521,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://sj.qq.com/appdetail/com.iflytek.inputmethod",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "c00b49cef09cc2fb1992d180450ce0f0ccbab64cb4d541e14b5acfc6404c234a",
       "upstream": "fmz200"
@@ -12217,6 +12642,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Globe.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "511faa1d1b19ba8f22c9b092d1e26988684c472f5a93786986ed5635aba88cd8",
       "upstream": "fmz200"
@@ -12281,6 +12707,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Bike.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "bff388431dbf5d8ce7d090069d81f0dc55e0e9e875eb9112278149ce53d36fa3",
       "upstream": "fmz200"
@@ -12293,6 +12720,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Category_Popcorn.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "c141b0fe9aea5cd6c7f89dd0705dc7c3fad688190da0714b3fb16ba6c8925dc3",
       "upstream": "fmz200"
@@ -12305,6 +12733,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/luestr/IconResource/blob/main/App_icon/120px/PikPak.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "ca521eb06600fc0015b89cfb4a0032298edde0b142365d356702e4cb65e5eff1",
       "upstream": "fmz200"
@@ -12340,6 +12769,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://apps.apple.com/cn/app/id6446477593",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "ba0ba0b7ba8997c425c1bfc1f35ea4b7e5f01dbded1c6fca1f5c1948c9eb1929",
       "upstream": "fmz200"
@@ -12352,6 +12782,7 @@
       ],
       "coverage": "rewrites",
       "format": "surge",
+      "icon_source": "https://github.com/fmz200/wool_scripts/blob/main/icons/apps/Udn.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "ff32f7506acfde6df21a8b8bf2ef8b21f57dcd2a01ce575dbecdc0fee6ef286d",
       "upstream": "fmz200"
@@ -12364,6 +12795,7 @@
       ],
       "coverage": "body-or-script",
       "format": "surge",
+      "icon_source": "https://github.com/Koolson/Qure/blob/master/IconSet/Color/Game.png",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
       "source_sha256": "0622088b9036276647dbf6a6bd475bad45e512cc7343ba2d8b913261caf13f01",
       "upstream": "fmz200"

@@ -5,6 +5,7 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/XingHuoEnglish.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!icon=https://pp.myapp.com/ma_icon/0/icon_42298248_1793080886/256
 
 # Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partX/XingHuoEnglish.sgmodule
 # Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.

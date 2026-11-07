@@ -7,6 +7,7 @@
 #!tg-channel=https://t.me/inaisi
 #!arguments=dshxfg_enable:true
 #!requirement=CORE_VERSION>=20
+#!icon=https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/40/c8/c0/40c8c02f-de0a-2619-5978-43b439d509a5/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/100x100bb.jpg
 
 # Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partD/DongHuaFeng.sgmodule
 # Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.

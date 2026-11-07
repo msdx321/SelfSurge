@@ -177,6 +177,7 @@ def _write_generated(files: dict[Path, bytes]) -> None:
 
 
 def build() -> tuple[dict[Path, bytes], dict, list[dict]]:
+    icons = json.loads((ROOT / "module-icons.json").read_text(encoding="utf-8"))
     selected, decisions, excluded = select(discover())
     resource_sources = set().union(*(
         resource_urls(candidate.text) for candidate in selected
@@ -287,8 +288,17 @@ def build() -> tuple[dict[Path, bytes], dict, list[dict]]:
             app_modules = {path.name: files[path].decode() for path in files
                            if path.parent == Path("modules") and path.name != STARTUP_MODULE_NAME}
             module, exclusions = configure_fallback(module, app_modules, decisions)
-        files[relative] = module.encode()
         metadata = _module_metadata(module)
+        if relative.name in icons and metadata.get("icon", "") in {
+            "", "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif",
+        }:
+            entry = icons[relative.name]
+            metadata["icon"] = entry["icon"]
+            module = re.sub(r"(?m)^#!icon=.*\n", "", module)
+            header, separator, body = module.partition("\n\n")
+            module = header + "\n#!icon=" + entry["icon"] + separator + body
+            decisions[relative.name]["icon_source"] = entry["source"]
+        files[relative] = module.encode()
         if "alias_of" in decisions[relative.name]:
             continue
         icon = metadata.get("icon", "")

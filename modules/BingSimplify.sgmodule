@@ -4,6 +4,7 @@
 #!author=@ddgksf2013
 #!date=2023-12-18
 #!requirement=CORE_VERSION>=20
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Bing.png
 
 # Source: https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/AdBlock/BingSimplify.conf
 # Adapted from Quantumult X by SelfSurge; upstream attribution:

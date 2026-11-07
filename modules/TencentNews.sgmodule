@@ -6,6 +6,7 @@
 #!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/TencentNews.sgmodule
 #!tg-channel=https://t.me/inaisi
 #!arguments=tgxyxbwf_enable:true
+#!icon=https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/f9/23/e4/f923e456-9789-ebf6-7c18-caaacd244133/AppIconNew-0-0-1x_U007epad-0-9-0-85-220.png/100x100bb.jpg
 
 # Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partT/TencentNews.sgmodule
 # Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.

@@ -6,6 +6,7 @@
 #!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/AirChina.sgmodule
 #!tg-channel=https://t.me/inaisi
 #!arguments=vsgogojihhks_enable:true
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/1024px/%E4%B8%AD%E5%9B%BD%E5%9B%BD%E8%88%AA.png
 
 # Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partZ/AirChina.sgmodule
 # Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.

@@ -4,6 +4,7 @@
 #!author=@ddgksf2013
 #!date=2025-10-26
 #!requirement=CORE_VERSION>=20
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/AppStore.png
 
 # Source: https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/AdBlock/FakeiOSAds.conf
 # Adapted from Quantumult X by SelfSurge; upstream attribution:

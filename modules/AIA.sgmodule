@@ -6,6 +6,7 @@
 #!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/AIA.sgmodule
 #!tg-channel=https://t.me/inaisi
 #!requirement=CORE_VERSION>=20
+#!icon=https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/7f/bc/be/7fbcbe74-8dff-770a-8e24-93636e51ead1/Placeholder.mill/120x120Icon.ApSiOS01.png
 
 # Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partY/AIA.sgmodule
 # Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.

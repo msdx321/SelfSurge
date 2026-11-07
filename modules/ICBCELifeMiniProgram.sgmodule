@@ -6,6 +6,7 @@
 #!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/ICBCELifeMiniProgram.sgmodule
 #!tg-channel=https://t.me/inaisi
 #!requirement=CORE_VERSION>=20
+#!icon=https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/9f/01/54/9f0154b4-3732-e383-2d31-88de9726bab0/AppIcon-3-0-0-1x_U007emarketing-0-11-0-sRGB-85-220.png/100x100bb.jpg
 
 # Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partG/ICBCELifeMiniProgram.sgmodule
 # Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.

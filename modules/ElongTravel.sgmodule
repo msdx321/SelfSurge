@@ -6,6 +6,7 @@
 #!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/ElongTravel.sgmodule
 #!tg-channel=https://t.me/inaisi
 #!requirement=CORE_VERSION>=20
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/1024px/%E8%89%BA%E9%BE%99%E6%97%85%E8%A1%8C.png
 
 # Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partY/ElongTravel.sgmodule
 # Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.

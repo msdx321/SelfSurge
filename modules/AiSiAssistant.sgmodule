@@ -5,6 +5,7 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/AiSiAssistant.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/i4Assistant.png
 
 # Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partA/AiSiAssistant.sgmodule
 # Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.

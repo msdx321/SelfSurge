@@ -6,6 +6,7 @@
 #!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/360ChildGuard.sgmodule
 #!tg-channel=https://t.me/inaisi
 #!requirement=CORE_VERSION>=20
+#!icon=https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/21/51/de/2151de01-09b2-4546-597d-2576772de64c/Placeholder.mill/120x120Icon.ApSiOS01.png
 
 # Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/part3/360ChildGuard.sgmodule
 # Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.

@@ -2,6 +2,13 @@ SelfSurge discovers plugins from Kelee's catalog, fmz200's split Surge modules,
 and ddgksf2013's AdBlock rewrites. sources.json records selected sources,
 source checksums, alternatives, exclusions, and resource provenance.
 
+Application icons supplied by upstreams are preserved. module-icons.json records
+reviewed application icons and their source pages for modules with missing icons
+or generic author avatars. Entries marked kind=category are function icons used
+when the original application icon could not be verified, or for multi-app tools.
+These are added to both Surge module metadata and the web catalog during
+generation. Icon artwork and trademarks remain with their respective owners.
+
 Selection groups app names and filename aliases, preferring body/script
 cleanup, then URL rewrites, then domain rules. Ties prefer Kelee, fmz200,
 then ddgksf2013. This is a deterministic coverage heuristic, not a guarantee

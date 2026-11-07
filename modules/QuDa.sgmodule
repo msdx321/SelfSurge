@@ -6,6 +6,7 @@
 #!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/QuDa.sgmodule
 #!tg-channel=https://t.me/inaisi
 #!arguments=quda_enable:true
+#!icon=https://pp.myapp.com/ma_icon/0/icon_52438763_1789541006/256
 
 # Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partQ/QuDa.sgmodule
 # Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.

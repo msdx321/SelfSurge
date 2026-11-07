@@ -6,6 +6,7 @@
 #!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/CEB_SunshineHuiLife.sgmodule
 #!tg-channel=https://t.me/inaisi
 #!requirement=CORE_VERSION>=20
+#!icon=https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e8/6d/48/e86d48ba-b985-3105-f2bc-9d3fffa1e987/AppIcon-0-0-1x_U007emarketing-0-7-0-sRGB-85-220.jpeg/100x100bb.jpg
 
 # Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partG/CEB_SunshineHuiLife.sgmodule
 # Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.

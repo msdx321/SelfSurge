@@ -6,6 +6,7 @@
 #!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/PuDaXiBen.sgmodule
 #!tg-channel=https://t.me/inaisi
 #!requirement=CORE_VERSION>=20
+#!icon=https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/18/62/ea/1862ea3e-18ab-6602-b93b-4e7d9c2091bc/AppIcon-0-1x_U007emarketing-0-8-0-sRGB-85-220-0.png/100x100bb.jpg
 
 # Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partP/PuDaXiBen.sgmodule
 # Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.

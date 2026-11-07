@@ -6,6 +6,7 @@
 #!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/XiaomiMall.sgmodule
 #!tg-channel=https://t.me/inaisi
 #!arguments=xnmiuhig_enable:true
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/1024px/%E5%B0%8F%E7%B1%B3.png
 
 # Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partX/XiaomiMall.sgmodule
 # Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.

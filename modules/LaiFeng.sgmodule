@@ -5,6 +5,7 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/LaiFeng.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!icon=https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/4f/2d/b0/4f2db0d9-0fa2-6c66-ea49-8845ba86948a/AppIcon-0-0-1x_U007emarketing-0-11-0-sRGB-85-220.png/100x100bb.jpg
 
 # Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partL/LaiFeng.sgmodule
 # Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.

@@ -5,6 +5,7 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/CaiJingZaZhi.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!icon=https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/14/94/0b/14940be9-d7b4-1c38-1a74-b22a2f14e001/Placeholder.mill/120x120Icon.ApSiOS01.png
 
 # Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partC/CaiJingZaZhi.sgmodule
 # Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.

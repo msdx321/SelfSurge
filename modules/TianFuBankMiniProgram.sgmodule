@@ -6,6 +6,7 @@
 #!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/TianFuBankMiniProgram.sgmodule
 #!tg-channel=https://t.me/inaisi
 #!requirement=CORE_VERSION>=20
+#!icon=https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/c6/9b/b0/c69bb0c5-cbdc-726c-ff1f-2b79903bc66e/AppIcon-0-0-1x_U007emarketing-0-11-0-sRGB-85-220.png/100x100bb.jpg
 
 # Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partT/TianFuBankMiniProgram.sgmodule
 # Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.

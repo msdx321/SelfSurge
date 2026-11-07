@@ -6,6 +6,7 @@
 #!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/MeiRiJingXuan.sgmodule
 #!tg-channel=https://t.me/inaisi
 #!requirement=CORE_VERSION>=20
+#!icon=https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b2/4c/62/b24c62c2-f175-3c70-c332-c01dcc44a638/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/100x100bb.jpg
 
 # Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partM/MeiRiJingXuan.sgmodule
 # Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.

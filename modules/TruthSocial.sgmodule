@@ -5,6 +5,7 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/TruthSocial.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!icon=https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/f9/b8/8f/f9b88f9f-42de-7c0a-fd3e-449f7acedfc6/AppIcon-0-0-1x_U007epad-0-5-85-220.png/100x100bb.jpg
 
 # Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partT/TruthSocial.sgmodule
 # Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.

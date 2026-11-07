@@ -5,6 +5,7 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/KanTianXia.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!icon=https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/02/93/cf/0293cfc1-8e7e-034b-b23a-ea40aba2e937/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/100x100bb.jpg
 
 # Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partK/KanTianXia.sgmodule
 # Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.

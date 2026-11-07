@@ -7,6 +7,7 @@
 #!tg-channel=https://t.me/inaisi
 #!arguments=didiiuxk_enable:true
 #!requirement=CORE_VERSION>=20
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/DiDi.png
 
 # Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partD/DiDiChuxing.sgmodule
 # Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.
