@@ -1,0 +1,10 @@
+#!name=SelfSurge 状态助手
+#!desc=让 SelfSurge 目录页读取本机模块启用状态。需要开启脚本和 HTTPS 解密，并信任 Surge CA 证书。仅查询，不修改配置。
+#!category=工具
+#!author=SelfSurge
+
+[Script]
+selfsurge-module-status = type=http-request, pattern=^https://msdx321\.github\.io/SelfSurge/surge-status(?:\?.*)?$, script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/web/surge-status.js, timeout=5, engine=jsc
+
+[MITM]
+hostname = %APPEND% msdx321.github.io

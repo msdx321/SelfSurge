@@ -35,7 +35,13 @@ means no exclusions and retains full coverage. Matching app rules are then
 disabled by Surge line requirements; other general rules remain enabled.
 Exclusions use app aliases, exact patterns, and unambiguous service hosts.
 Shared service hosts alone do not establish app ownership. The parameter is
-manual: it does not read Surge's enabled-module state. This feature requires
+manual: copy the selected value into Surge and save it. The optional first-party
+web/SelfSurge_Status.sgmodule lets the catalog read module names and enabled
+states locally through GET /v1/modules. It requires scripting and trusted HTTPS
+decryption for msdx321.github.io. It exposes only this read operation, without
+an API key or configuration changes. The catalog matches unique names and
+filenames; renamed or ambiguous modules require manual selection.
+The exclusion parameter feature requires
 Core 22 (Surge iOS 5.11 / Mac 5.7) or later. Non-ad routing and
 TestFlight/membership tweaks are excluded. Upstream terms and attribution
 remain applicable; SelfSurge does not relicense these sources.
