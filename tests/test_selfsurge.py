@@ -290,7 +290,13 @@ class CatalogConversionTest(unittest.TestCase):
             encoding="utf-8"
         )
         if LIVE_UPSTREAM:
-            self.assertEqual(module, youtube_module(fetch_text(YOUTUBE_MODULE_URL)))
+            # build() adds catalog icons after converting the upstream module.
+            # The full generated output is checked in test_every_selected_plugin_converts.
+            expected = youtube_module(fetch_text(YOUTUBE_MODULE_URL))
+            self.assertEqual(
+                re.sub(r"(?m)^#!icon=.*\n", "", module),
+                re.sub(r"(?m)^#!icon=.*\n", "", expected),
+            )
         self.assertIn(f"# Selected via ddgksf2013: {YOUTUBE_REFERENCE_URL}", module)
         self.assertIn("#!category=去广告", module)
         self.assertIn("max-size=-1", module)
