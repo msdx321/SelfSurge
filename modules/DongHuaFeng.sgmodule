@@ -5,6 +5,7 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/DongHuaFeng.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
 #!arguments=dshxfg_enable:true
 #!requirement=CORE_VERSION>=20
 #!icon=https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/40/c8/c0/40c8c02f-de0a-2619-5978-43b439d509a5/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/100x100bb.jpg
@@ -12,13 +13,16 @@
 # Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partD/DongHuaFeng.sgmodule
 # Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.
 # License: GPL-3.0; see resources/licenses/fmz200-wool_scripts-LICENSE.
+#############################################
+
+
 
 [Map Local]
 ^https?:\/\/api\.gamer\.com\.tw\/mobile_app\/anime\/v\d\/anime_get_question\.php data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 [Script]
 # (黑屏25秒)
-DongHuaFeng-15 = type=http-response, pattern=^https?:\/\/api\.gamer\.com\.tw\/mobile_app\/anime\/v\d/(token|m3u8).php\?, script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/upstream/0ff4419465d79000.js, requires-body=true, timeout=60
+DongHuaFeng-19 = type=http-response, pattern=^https?:\/\/api\.gamer\.com\.tw\/mobile_app\/anime\/v\d/(token|m3u8).php\?, script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/upstream/0ff4419465d79000.js, requires-body=true, timeout=60
 
 [MITM]
 hostname = %APPEND% api.gamer.com.tw

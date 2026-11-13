@@ -5,12 +5,15 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/PeoplesDaily.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
 #!requirement=CORE_VERSION>=20
 #!icon=https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/27/32/4b/27324b91-7296-3c47-9320-34cab9270da0/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/100x100bb.jpg
 
 # Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partR/PeoplesDaily.sgmodule
 # Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.
 # License: GPL-3.0; see resources/licenses/fmz200-wool_scripts-LICENSE.
+#############################################
+
 
 [URL Rewrite]
 ^https?:\/\/app\.peopleapp\.com\/Api\/\d+/HomeApi\/(adv|getAdvertImage) - reject

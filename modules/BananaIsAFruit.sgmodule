@@ -5,12 +5,20 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/BananaIsAFruit.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
 #!arguments=xljnuiyivsuvgo_enable:true
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Globe.png
 
 # Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partX/BananaIsAFruit.sgmodule
 # Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.
 # License: GPL-3.0; see resources/licenses/fmz200-wool_scripts-LICENSE.
+#############################################
+
+
 
 [Script]
-BananaIsAFruit-11 = type=http-response, pattern=^https?:\/\/.+?\.(pipi|fuli|xiang(jiao|xiang))apps\.com\/(ucp\/index|getGlobalData|(\/|)vod\/reqplay\/), script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/upstream/15cb41bf88f26d12.js, requires-body=true, timeout=60
+BananaIsAFruit-15 = type=http-response, pattern=^https?:\/\/.+?\.(pipi|fuli|xiang(jiao|xiang))apps\.com\/(ucp\/index|getGlobalData|(\/|)vod\/reqplay\/), script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/upstream/15cb41bf88f26d12.js, requires-body=true, timeout=60
+
+
+[MITM]
+hostname = %APPEND% *.pipiapps.com, *.fuliapps.com, *.xiangjiaoapps.com, *.xiangxiangapps.com

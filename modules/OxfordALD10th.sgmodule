@@ -5,12 +5,15 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/OxfordALD10th.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
 #!requirement=CORE_VERSION>=20
 #!icon=https://pp.myapp.com/ma_icon/0/icon_54304739_1734404653/256
 
 # Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partN/OxfordALD10th.sgmodule
 # Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.
 # License: GPL-3.0; see resources/licenses/fmz200-wool_scripts-LICENSE.
+#############################################
+
 
 [Map Local]
 # 首页下方广告

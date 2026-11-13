@@ -5,6 +5,7 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/YouXiAPP.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
 #!arguments=yzxiapp_enable:true
 #!requirement=CORE_VERSION>=20
 #!icon=https://pp.myapp.com/ma_icon/0/icon_12191491_1788876386/256
@@ -12,6 +13,9 @@
 # Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partY/YouXiAPP.sgmodule
 # Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.
 # License: GPL-3.0; see resources/licenses/fmz200-wool_scripts-LICENSE.
+#############################################
+
+
 
 [Map Local]
 # 净化 感谢【TEXAS】分享
@@ -26,7 +30,7 @@
 ^https?:\/\/api\.ulife\.group\/auth\/account\/entrance data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 [Script]
-YouXiAPP-23 = type=http-response, pattern=^https?:\/\/api\.ulife\.group\/market\/homeIconDetail\/list\/v7, script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/upstream/9aefdaf10b336424.js, requires-body=true, timeout=60
+YouXiAPP-27 = type=http-response, pattern=^https?:\/\/api\.ulife\.group\/market\/homeIconDetail\/list\/v7, script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/upstream/9aefdaf10b336424.js, requires-body=true, timeout=60
 
 [MITM]
 hostname = %APPEND% api.ulife.group

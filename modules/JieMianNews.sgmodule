@@ -5,11 +5,14 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/JieMianNews.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
 #!icon=https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/c1/bc/99/c1bc99ea-48b5-1172-8d14-d55c6b1ba100/normal-0-0-1x_U007emarketing-0-8-0-85-220.png/100x100bb.jpg
 
 # Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partJ/JieMianNews.sgmodule
 # Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.
 # License: GPL-3.0; see resources/licenses/fmz200-wool_scripts-LICENSE.
+#############################################
+
 
 [URL Rewrite]
 ^https?:\/\/img\.jiemian\.com\/ads\/ - reject

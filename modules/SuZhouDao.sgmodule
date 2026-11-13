@@ -5,12 +5,15 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/SuZhouDao.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
 #!requirement=CORE_VERSION>=20
 #!icon=https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/76/35/69/763569c1-ce3c-84a9-9638-8ead7de57fb2/AppIcon-1x_U007emarketing-0-11-0-85-220-0.png/100x100bb.jpg
 
 # Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partS/SuZhouDao.sgmodule
 # Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.
 # License: GPL-3.0; see resources/licenses/fmz200-wool_scripts-LICENSE.
+#############################################
+
 
 [Map Local]
 # 更新提示 感谢【alist.choc.ga】分享

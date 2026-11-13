@@ -5,12 +5,15 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/XunYouAccelerator.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
 #!requirement=CORE_VERSION>=20
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/1024px/%E8%BF%85%E6%B8%B8%E6%89%8B%E6%B8%B8%E5%8A%A0%E9%80%9F%E5%99%A8.png
 
 # Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partX/XunYouAccelerator.sgmodule
 # Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.
 # License: GPL-3.0; see resources/licenses/fmz200-wool_scripts-LICENSE.
+#############################################
+
 
 [Map Local]
 ^https?:\/\/portal-xunyou\.qingcdn\.com\/api\/v\d\/ios\/ads\/ data-type=text data=" " status-code=200

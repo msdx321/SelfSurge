@@ -5,12 +5,20 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/AirChina.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
 #!arguments=vsgogojihhks_enable:true
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/1024px/%E4%B8%AD%E5%9B%BD%E5%9B%BD%E8%88%AA.png
 
 # Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partZ/AirChina.sgmodule
 # Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.
 # License: GPL-3.0; see resources/licenses/fmz200-wool_scripts-LICENSE.
+#############################################
+
+
 
 [Script]
-AirChina-11 = type=http-response, pattern=^https:\/\/m\.airchina\.com\.cn\/airchina\/gateway\/v\d(\.\d)*\/api\/services, script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/upstream/ef523f718bdc0ef5.js, timeout=60
+AirChina-15 = type=http-response, pattern=^https:\/\/m\.airchina\.com\.cn\/airchina\/gateway\/v\d(\.\d)*\/api\/services, script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/upstream/ef523f718bdc0ef5.js, timeout=60
+
+
+[MITM]
+hostname = %APPEND% m.airchina.com.cn

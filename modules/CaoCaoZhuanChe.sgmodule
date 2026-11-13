@@ -5,12 +5,15 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/CaoCaoZhuanChe.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
 #!requirement=CORE_VERSION>=20
 #!icon=https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/83/91/3c/83913c27-a920-0e28-f911-19c8a7b45779/AppIcon-0-0-1x_U007emarketing-0-6-0-sRGB-85-220.png/100x100bb.jpg
 
 # Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partC/CaoCaoZhuanChe.sgmodule
 # Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.
 # License: GPL-3.0; see resources/licenses/fmz200-wool_scripts-LICENSE.
+#############################################
+
 
 [URL Rewrite]
 ^https?:\/\/cap\.caocaokeji\.cn\/advert-bss\/ - reject

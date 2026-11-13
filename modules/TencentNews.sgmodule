@@ -5,12 +5,16 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/TencentNews.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
 #!arguments=tgxyxbwf_enable:true
 #!icon=https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/f9/23/e4/f923e456-9789-ebf6-7c18-caaacd244133/AppIconNew-0-0-1x_U007epad-0-9-0-85-220.png/100x100bb.jpg
 
 # Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partT/TencentNews.sgmodule
 # Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.
 # License: GPL-3.0; see resources/licenses/fmz200-wool_scripts-LICENSE.
+#############################################
+
+
 
 [URL Rewrite]
 #^https?:\/\/r\.inews\.qq\.com\/getSplash\?apptype=ios&startarticleid=&__qnr= reject-img
@@ -18,4 +22,8 @@
 ^https?:\/\/r\.inews\.qq\.com\/(getBannerAds|getNewsRemoteConfig|getSplash|searchHotCatList|upLoadLoc) - reject
 
 [Script]
-TencentNews-16 = type=http-response, pattern=^https?:\/\/(news\.ssp\.qq\.com\/app|r\.inews\.qq\.com\/(get(QQNewsUnreadList|TagFeedList)|gw\/page\/event_detail|news_feed\/hot_module_list)), script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/upstream/a4ac231868fb4ed3.js, requires-body=true, timeout=60
+TencentNews-20 = type=http-response, pattern=^https?:\/\/(news\.ssp\.qq\.com\/app|r\.inews\.qq\.com\/(get(QQNewsUnreadList|TagFeedList)|gw\/page\/event_detail|news_feed\/hot_module_list)), script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/upstream/a4ac231868fb4ed3.js, requires-body=true, timeout=60
+
+
+[MITM]
+hostname = %APPEND% r.inews.qq.com, news.ssp.qq.com

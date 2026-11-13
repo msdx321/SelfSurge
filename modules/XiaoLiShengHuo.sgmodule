@@ -5,11 +5,14 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/XiaoLiShengHuo.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
 #!icon=https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/ad/03/9f/ad039fcd-3720-327d-4a10-c22a14ce5f2e/AppIcon-0-0-1x_U007emarketing-0-6-0-0-85-220.png/100x100bb.jpg
 
 # Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partX/XiaoLiShengHuo.sgmodule
 # Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.
 # License: GPL-3.0; see resources/licenses/fmz200-wool_scripts-LICENSE.
+#############################################
+
 
 [Rule]
 DOMAIN-KEYWORD,mpos-pic.helipay.com,REJECT

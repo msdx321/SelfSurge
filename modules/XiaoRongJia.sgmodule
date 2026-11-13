@@ -5,12 +5,15 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/XiaoRongJia.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
 #!requirement=CORE_VERSION>=20
 #!icon=https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/f0/d0/ca/f0d0caaf-9364-6225-5881-ea0db08cd9ee/AppIcon-0-0-1x_U007ephone-0-11-0-85-220.png/100x100bb.jpg
 
 # Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partX/XiaoRongJia.sgmodule
 # Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.
 # License: GPL-3.0; see resources/licenses/fmz200-wool_scripts-LICENSE.
+#############################################
+
 
 [URL Rewrite]
 # 屏蔽固件更新
@@ -27,7 +30,7 @@
 
 [Script]
 # 我的页推广
-XiaoRongJia-24 = type=http-response, pattern=^https?:\/\/www\.myusmile\.online\/user\/plaqueTopic\/selectByType, script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/upstream/39b651a656f6ea84.js
+XiaoRongJia-27 = type=http-response, pattern=^https?:\/\/www\.myusmile\.online\/user\/plaqueTopic\/selectByType, script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/upstream/39b651a656f6ea84.js
 
 [MITM]
 hostname = %APPEND% myusmile.online, wemallh5.usmile.com, www.myusmile.online

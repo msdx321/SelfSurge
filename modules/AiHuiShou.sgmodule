@@ -5,11 +5,14 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/AiHuiShou.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
 #!icon=https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/47/ac/db/47acdbab-054c-9cbe-3846-86195b2253e8/Placeholder.mill/120x120Icon.ApSiOS01.png
 
 # Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partA/AiHuiShou.sgmodule
 # Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.
 # License: GPL-3.0; see resources/licenses/fmz200-wool_scripts-LICENSE.
+#############################################
+
 
 [URL Rewrite]
 ^https?:\/\/gw\.aihuishou\.com\/app-portal\/home\/getadvertisement - reject

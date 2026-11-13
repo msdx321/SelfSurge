@@ -5,12 +5,20 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/WinnipegStation.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
 #!arguments=wfnibovj_enable:true
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Magazine.png
 
 # Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partW/WinnipegStation.sgmodule
 # Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.
 # License: GPL-3.0; see resources/licenses/fmz200-wool_scripts-LICENSE.
+#############################################
+
+
 
 [Script]
-WinnipegStation-11 = type=http-response, pattern=^https:\/\/vue3-api\.zhixiny\.cn\/v1\/initui\?key=index, script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/upstream/8cd9d9503c513067.js, requires-body=true, timeout=60
+WinnipegStation-15 = type=http-response, pattern=^https:\/\/vue3-api\.zhixiny\.cn\/v1\/initui\?key=index, script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/upstream/8cd9d9503c513067.js, requires-body=true, timeout=60
+
+
+[MITM]
+hostname = %APPEND% vue3-api.zhixiny.cn

@@ -5,6 +5,7 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/Blued.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
 #!arguments=blued_enable:true
 #!requirement=CORE_VERSION>=20
 #!icon=https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/9d/30/79/9d307934-8dff-0cd2-7217-00f03d20db41/Placeholder.mill/120x120Icon.ApSiOS01.png
@@ -12,6 +13,9 @@
 # Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partB/Blued.sgmodule
 # Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.
 # License: GPL-3.0; see resources/licenses/fmz200-wool_scripts-LICENSE.
+#############################################
+
+
 
 [Map Local]
 # 主页推荐直播 
@@ -22,7 +26,7 @@
 
 [Script]
 # 登录后个人界面广告
-Blued-19 = type=http-response, pattern=^https?:\/\/social\.blued\.cn\/users\/.+\/more\/ios\?v=2, script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/upstream/e118fec1aaae6a11.js, requires-body=true, timeout=60
+Blued-23 = type=http-response, pattern=^https?:\/\/social\.blued\.cn\/users\/.+\/more\/ios\?v=2, script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/upstream/e118fec1aaae6a11.js, requires-body=true, timeout=60
 
 [MITM]
 hostname = %APPEND% social.blued.cn

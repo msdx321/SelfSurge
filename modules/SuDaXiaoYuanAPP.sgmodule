@@ -5,6 +5,7 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/SuDaXiaoYuanAPP.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
 #!arguments=sudaxnyr_enable:true
 #!requirement=CORE_VERSION>=20
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Lifestyle.png
@@ -12,6 +13,9 @@
 # Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partS/SuDaXiaoYuanAPP.sgmodule
 # Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.
 # License: GPL-3.0; see resources/licenses/fmz200-wool_scripts-LICENSE.
+#############################################
+
+
 
 [Map Local]
 ^https?:\/\/api\.sodalife\.xyz\/v1\/posters\?location=SODA_APP%3AHOME%3ABOTTOM data-type=text data="{}" status-code=200 header="Content-Type:application/json"
@@ -25,7 +29,7 @@
 ^https?:\/\/api\.sodalife\.xyz\/v1\/goods data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 [Script]
-SuDaXiaoYuanAPP-22 = type=http-response, pattern=^https?:\/\/api\.sodalife\.xyz\/v1\/posters\?location=SODA_APP%3AHOME%3ATOP, script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/upstream/cf2c05d120b06d0a.js, requires-body=true, timeout=60
+SuDaXiaoYuanAPP-26 = type=http-response, pattern=^https?:\/\/api\.sodalife\.xyz\/v1\/posters\?location=SODA_APP%3AHOME%3ATOP, script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/upstream/cf2c05d120b06d0a.js, requires-body=true, timeout=60
 
 [MITM]
 hostname = %APPEND% api.sodalife.xyz

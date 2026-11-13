@@ -5,12 +5,20 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://raw.githubusercontent.com/msdx321/SelfSurge/main/modules/XiaomiMall.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
 #!arguments=xnmiuhig_enable:true
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/1024px/%E5%B0%8F%E7%B1%B3.png
 
 # Source: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partX/XiaomiMall.sgmodule
 # Modified by SelfSurge: normalized metadata, jq syntax, and resource URLs.
 # License: GPL-3.0; see resources/licenses/fmz200-wool_scripts-LICENSE.
+#############################################
+
+
 
 [Script]
-XiaomiMall-11 = type=http-response, pattern=^https?:\/\/api\.m\.mi\.com\/v1\/app\/start, script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/upstream/99c1f7a94b665bd1.js, requires-body=true, timeout=60
+XiaomiMall-15 = type=http-response, pattern=^https?:\/\/api\.m\.mi\.com\/v1\/app\/start, script-path=https://raw.githubusercontent.com/msdx321/SelfSurge/main/scripts/upstream/99c1f7a94b665bd1.js, requires-body=true, timeout=60
+
+
+[MITM]
+hostname = %APPEND% api.m.mi.com
