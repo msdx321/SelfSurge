@@ -1,6 +1,7 @@
 import argparse
 import base64
 import json
+import os
 import re
 import sys
 from typing import NamedTuple
@@ -42,6 +43,10 @@ def plugin_url(value: str) -> str:
 
 def fetch_bytes(url: str, user_agent: str = LOON_USER_AGENT) -> bytes:
     request = Request(url, headers={"User-Agent": user_agent})
+    token = os.environ.get("GITHUB_TOKEN")
+    parsed = urlsplit(url)
+    if token and parsed.scheme == "https" and parsed.netloc == "api.github.com":
+        request.add_unredirected_header("Authorization", f"Bearer {token}")
     error = None
     for _ in range(3):
         try:

@@ -57,11 +57,14 @@ jobs:
 
       - name: Update generated files
         if: github.event_name != 'push'
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
         run: uv run --no-project python generate.py
 
       - name: Check live upstream compatibility
         if: github.event_name != 'push'
         env:
+          GITHUB_TOKEN: ${{ github.token }}
           SELFSURGE_LIVE_TESTS: "1"
         run: uv run --no-project python -m unittest discover -s tests -v
 
