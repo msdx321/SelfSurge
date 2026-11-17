@@ -2098,7 +2098,7 @@
       "url": "https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/shunfeng_json.js"
     },
     "scripts/upstream/504806e4bf45ae11.js": {
-      "sha256": "f5470b3343a96d3fd1e6a43c119e74320e24ade760222595569fedb27f2cb319",
+      "sha256": "b6888f7def18d423ee07b59ddf9f73575ac8947ee31dab972e6b2844fb370f33",
       "url": "https://github.com/sub-store-org/Sub-Store/releases/latest/download/cron-sync-artifacts.min.js"
     },
     "scripts/upstream/5123ae634fe0813c.js": {
@@ -2126,7 +2126,7 @@
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/fly.js"
     },
     "scripts/upstream/5f575b117bdf0130.js": {
-      "sha256": "6d30380cc68e112b5bcb5d9b2013d553d3c48612b1c61e78f0e0bfae3e48ca2c",
+      "sha256": "aca523a4e23ba7a3372e070e2d4f9cb4dfc6ecebef8b7e8d2cb6bd00f9b09d61",
       "url": "https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/rule-parser.js"
     },
     "scripts/upstream/6497035a5ea6a19f.js": {
@@ -2146,7 +2146,7 @@
       "url": "https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.js"
     },
     "scripts/upstream/71d45f38fd72e70b.js": {
-      "sha256": "6a0c1d8e05136e7f134bfbf0dd94a8ab7356b22607a1ba7bace57820e2bc7af1",
+      "sha256": "f99b893402fe30b783a10faf22a8f18c0fb86d30618f6e057545e04982e9ce7c",
       "url": "https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/script-hub.js"
     },
     "scripts/upstream/733ffc3b95115e5a.js": {
@@ -2158,7 +2158,7 @@
       "url": "https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/tuhu.js"
     },
     "scripts/upstream/7ded59db32c0c77c.js": {
-      "sha256": "51c0c091797cc46584d1b33c64b9f334dd874c139c9b936120d1356ebc710b7d",
+      "sha256": "cfdb6defefcfd0cbe8cf9f8f5a96cb544dc04c47232b2e87d1d05a4d41863e21",
       "url": "https://github.com/sub-store-org/Sub-Store/releases/latest/download/sub-store-0.min.js"
     },
     "scripts/upstream/884e36ed7bfefa03.js": {
@@ -2186,7 +2186,7 @@
       "url": "https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/caixinads.js"
     },
     "scripts/upstream/966e5950297fd9c8.js": {
-      "sha256": "c80d44193e6bbf88409be294d9e458f6187f5ab0954aa77f6a0c5c192f835153",
+      "sha256": "5cbd1dcfa94fe1181f7727c01d88eeef211298dd9694a0fcdd79b5276482777d",
       "url": "https://github.com/sub-store-org/Sub-Store/releases/latest/download/sub-store-1.min.js"
     },
     "scripts/upstream/9894f7225d37af86.js": {
@@ -2266,7 +2266,7 @@
       "url": "https://raw.githubusercontent.com/VirgilClyne/Cloudflare/main/js/1.1.1.1.request.js"
     },
     "scripts/upstream/d1171e6520deae64.js": {
-      "sha256": "c5e46afa219424e22bcba151dbd6f5e4c6caf518cfdf3317381f4c7e2068e51b",
+      "sha256": "b95ef99a043c934ff2870b8f973e749ea36c52837e704afaa6c68b138af2e483",
       "url": "https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/Rewrite-Parser.js"
     },
     "scripts/upstream/d7cd7fadf4b469af.js": {
@@ -10030,7 +10030,7 @@
       "format": "surge",
       "icon_source": "https://apps.apple.com/cn/app/id1109333848",
       "reason": "prefer body/script cleanup, then rewrites, then domain rules; ties: Kelee, fmz200, ddgksf2013",
-      "source_sha256": "ded2872f3a0c9e8cead31c6f61763de481578d2fcde1d06145bdf4023821db6e",
+      "source_sha256": "6b62a8b1dea2b09668803d86810ed1310b66f760485d59d3b6820143843adac7",
       "upstream": "fmz200"
     },
     "TianFuMobileBank.sgmodule": {
